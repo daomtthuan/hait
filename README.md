@@ -1,5 +1,5 @@
 # Project-Pancake180719
-CHUNG:
+<B>CHUNG:</B>
 Tên thư mục viết thường.
 Tên File: 
   Tên view: ViewLogin.php
