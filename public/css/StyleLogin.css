@@ -1,5 +1,5 @@
 #divBg {
-  background-image: linear-gradient(to bottom right, rgba(23, 77, 57, 0.6), rgba(23, 77, 57, 0.6)), url(./asset/img/bg.jpg);
+  background-image: linear-gradient(to bottom right, rgba(23, 77, 57, 0.6), rgba(23, 77, 57, 0.6)), url(../img/bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
