@@ -1,5 +1,6 @@
-# Project-Pancake180719
-<B>CHUNG:</B>
+# HAIT - Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện
+
+<b>CHUNG:</b>
 Tên thư mục viết thường.
 Tên File: 
   Tên view: ViewLogin.php
