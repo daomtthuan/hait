@@ -2,7 +2,7 @@
 	"Add url": {
 		"prefix": "ciurl",
 		"body": [
-			"<?php echo base_url('$1')?>",
+			"<?php echo base_url('public/$1')?>",
 		],
 		"description": "Add url"
 	}
