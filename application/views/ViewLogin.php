@@ -1,46 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+
   <meta charset="utf-8">
+  <title>HAIT - Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện</title>
+  <meta name="author" content="Nguyen Phuc Duy, Dao Minh Trung Thuan">
+  <meta name="keywords" content="hait, bệnh viện, nhiễm khuẩn, hệ thống quản lý, giám sát, hệ thống quản lý giám sát nhiễm khuẩn,hệ thống quản lý giám sát nhiễm khuẩn bệnh viện, daomtthuan, dualeola, dao minh trung thuan, nguyen phuc duy">
+  <meta name="description" content="HAIT - Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href=" <?php echo base_url('/public/css/Theme.css')?>">
-  <link rel="stylesheet" href="<?php echo base_url('/public/css/StyleLogin.css')?>">
+
   <script src="https://kit.fontawesome.com/d492333a0e.js"></script>
+  <link type="image/x-icon" rel="shortcut icon" href="<?php echo base_url('./public/img/logoicon.ico')?>">
+  <link href="<?php echo base_url('public/css/sb-admin-2.min.css')?>" rel="stylesheet">
+  <link href="<?php echo base_url('public/css/login.css')?>" rel="stylesheet">
 </head>
 
-<body>
-  <div id="divBg" class="media p-4">
-    <div id="divLogin" class="bg-light rounded shadow-lg border border-primary p-4 align-self-center col-sm-8 col-md-6 col-xl-4 offset-sm-2 offset-md-3 offset-xl-4">
-      <form action="" id="formLogin">
-        <h1 class="h4 mb-3 text-center text-primary"><small class="font-weight-normal">HỆ THỐNG QUẢN LÝ GIÁM SÁT</small><br>NHIỄM KHUẨN</h1>
-        <div class="form-group">
-          <label for="InputUsername">Tên đăng nhập</label>
-          <input type="text" class="form-control" id="InputUsername" name="InputUsername" placeholder="Tên đăng nhập">
+<body class="bg">
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      <div class="d-none d-md-flex col-md-4 col-lg-6">
+
+      </div>
+      <div class="col-md-8 col-lg-6 bg-light">
+        <div class="login d-flex align-items-center py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-9 col-lg-8 mx-auto">
+                <div class="text-center mb-5">
+                  <img src="<?php echo base_url('public/img/logo.png')?>" alt="">
+                  <h4>
+                    <small>Hệ Thống Quản Lý Giám Sát</small><br>
+                    <span class="text-primary mb-0">Nhiễm Khuẩn Bệnh Viện</span>
+                  </h4>
+                </div>
+                <h4 class="login-heading mb-4">Đăng nhập</h4>
+                <form action="" id="FormLogin" name="FormLogin">
+                  <div class="form-label-group">
+                    <input type="text" id="InputUsername" name="InputUsername" class="form-control" placeholder="Tên đăng nhập" required autofocus>
+                    <label for="InputUsername">Tên đăng nhập</label>
+                  </div>
+                  <div class="form-label-group">
+                    <input type="password" id="InputPassword" name="InputPassword" class="form-control" placeholder="Mật khẩu" required>
+                    <label for="InputPassword">Mật khẩu</label>
+                  </div>
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="InputRemember" name="InputRemember">
+                    <label class="custom-control-label" for="InputRemember">Ghi nhớ mật khẩu</label>
+                  </div>
+                  <button id="ButtonSubmit" name="ButtonSubmit" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Đăng nhập</button>
+                  <div class="text-right">
+                    <a href="#" class="small">Quên mật khẩu?</a><br>
+                    <a href="#" class="h5 mr-1"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="h5 mr-1"><i class="fab fa-github"></i></a>
+                    <a href="#" class="h5 mr-1"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="h5"><i class="fas fa-globe"></i></a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="InputPassword">Mật khẩu</label>
-          <input type="password" class="form-control" id="InputPassword" name="InputPassword" placeholder="Mật khẩu">
-        </div>
-        <div class="mb-2">
-          <button type="submit" class="btn btn-primary btn-block" name="ButtonSubmit">Đăng nhập</button>
-          <button type="submit" class="btn btn-outline-primary btn-block">Đăng nhập bằng Email đơn vị</button>
-        </div>
-        <div class="text-right text-primary">
-          <a href="#" class="small">Quên mật khẩu?</a><br>
-          <a href="#" class="small">Phẩn hồi</a><br>
-          <a href="#" class="h4"><i class="fab fa-facebook-square"></i></a>
-          <a href="#" class="h4"><i class="fab fa-twitter-square"></i></a>
-          <a href="#" class="h4"><i class="fab fa-github"></i></a>
-        </div>
-      </form>
+      </div>
+      <div class="col-md-8 col-lg-6 offset-md-4 offset-lg-6 fixed-bottom text-center">
+        <h6><small>Phiên bản 1.0</small></h6>
+      </div>
     </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="<?php echo base_url('/public/js/ScriptLogin.js')?>"></script>
+  <script src="<?php echo base_url('public/vendor/jquery/jquery.min.js')?>"></script>
+  <script src="<?php echo base_url('public/vendor/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
+  <script src="<?php echo base_url('public/vendor/jquery-easing/jquery.easing.min.js')?>"></script>
+  <script src="<?php echo base_url('public/js/sb-admin-2.min.js')?>"></script>
+
 </body>
 
 </html>

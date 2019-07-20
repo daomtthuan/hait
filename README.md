@@ -1,18 +1,19 @@
-# Project-Pancake180719
-<B>CHUNG:</B>
-Tên thư mục viết thường.
-Tên File: 
-  Tên view: ViewLogin.php
-  Tên Controller: ControllerLogin.php
-  Tên Model: ModalLogin.php
-QUY TẮC ĐĂT TÊN:
-- Thẻ: Tên thẻ + Tên
-  VD: InputLogin
-- ID = Name
-CẤU TRÚC THƯ MỤC
-FONTEND:
-Đặt hoàn toàn trong /public
--CSS
--JS
--FONT
-BACKEND: /APPLICATION
+# HAIT - Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện
+
+<b>CHUNG:</b><br>
+Tên thư mục viết thường.<br>
+Tên File:<br>
+  Tên view: ViewLogin.php<br>
+  Tên Controller: ControllerLogin.php<br>
+  Tên Model: ModalLogin.php<br>
+QUY TẮC ĐĂT TÊN:<br>
+- Thẻ: Tên thẻ + Tên<br>
+  VD: InputLogin<br>
+- ID = Name<br>
+CẤU TRÚC THƯ MỤC<br>
+FONTEND:<br>
+Đặt hoàn toàn trong /public<br>
+-CSS<br>
+-JS<br>
+-FONT<br>
+BACKEND: /APPLICATION<br>
