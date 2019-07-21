@@ -2,26 +2,23 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
-  <title>HAIT - Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện</title>
+  <title> Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện</title>
   <meta name="author" content="Nguyen Phuc Duy, Dao Minh Trung Thuan">
   <meta name="keywords" content="hait, bệnh viện, nhiễm khuẩn, hệ thống quản lý, giám sát, hệ thống quản lý giám sát nhiễm khuẩn,hệ thống quản lý giám sát nhiễm khuẩn bệnh viện, daomtthuan, dualeola, dao minh trung thuan, nguyen phuc duy">
   <meta name="description" content="HAIT - Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
   <script src="https://kit.fontawesome.com/d492333a0e.js"></script>
   <link type="image/x-icon" rel="shortcut icon" href="<?php echo base_url('./public/img/logoicon.ico')?>">
   <link href="<?php echo base_url('public/css/sb-admin-2.min.css')?>" rel="stylesheet">
   <link href="<?php echo base_url('public/css/login.css')?>" rel="stylesheet">
 </head>
 
-<body class="bg">
-  <div class="container-fluid">
+<body>
+  <div class="bg container-fluid">
     <div class="row no-gutter">
       <div class="d-none d-md-flex col-md-4 col-lg-6">
-
       </div>
       <div class="col-md-8 col-lg-6 bg-light">
         <div class="login d-flex align-items-center py-5">
@@ -68,12 +65,10 @@
       </div>
     </div>
   </div>
-
   <script src="<?php echo base_url('public/vendor/jquery/jquery.min.js')?>"></script>
   <script src="<?php echo base_url('public/vendor/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
   <script src="<?php echo base_url('public/vendor/jquery-easing/jquery.easing.min.js')?>"></script>
   <script src="<?php echo base_url('public/js/sb-admin-2.min.js')?>"></script>
-
 </body>
 
 </html>
