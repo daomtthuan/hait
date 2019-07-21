@@ -9,8 +9,8 @@
   <meta name="description" content="HAIT - Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <script src="https://kit.fontawesome.com/d492333a0e.js"></script>
   <link type="image/x-icon" rel="shortcut icon" href="<?php echo base_url('./public/img/logoicon.ico')?>">
+  <link href="<?php echo base_url('public/vendor/fontawesome-free/css/all.min.css')?>" rel="stylesheet">
   <link href="<?php echo base_url('public/css/sb-admin-2.min.css')?>" rel="stylesheet">
   <link href="<?php echo base_url('public/css/login.css')?>" rel="stylesheet">
 </head>
