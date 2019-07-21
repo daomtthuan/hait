@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Lỗi 404: Truy cập bị từ chối</title>
+	<title>Lỗi 404: Không tìm thấy</title>
 	<meta name="author" content="Nguyen Phuc Duy, Dao Minh Trung Thuan">
 	<meta name="keywords" content="hait, bệnh viện, nhiễm khuẩn, hệ thống quản lý, giám sát, hệ thống quản lý giám sát nhiễm khuẩn,hệ thống quản lý giám sát nhiễm khuẩn bệnh viện, daomtthuan, dualeola, dao minh trung thuan, nguyen phuc duy">
 	<meta name="description" content="HAIT - Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện">
@@ -17,8 +17,8 @@
 	<div class="mx-auto mt-5">
 		<div class="text-center">
 			<div class="error mx-auto text-primary" data-text="404">404</div>
-			<p class="lead  mb-5">Truy cập bị từ chối</p>
-			<p class="mb-0">Có vẻ như bạn đang cố gắng vào nơi bạn không có quyền truy cập ?</p>
+			<p class="lead  mb-5">Trang không tìm thấy</p>
+			<p class="mb-0">Có vẻ như bạn đang cố gắng truy cập vào một nơi không tồn tại ?</p>
 		</div>
 	</div>
 </body>
