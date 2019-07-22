@@ -11,8 +11,13 @@ class User extends CI_Controller {
 	}
 	public function index()
 	{
+		$data['subview']='tools/form';
+		$this->load->view('layout/main',$data);
+	}
+	public function view()
+	{
 		$data['subview']='tools/datatable';
-		$this->load->view('user/main',$data);
+		$this->load->view('layout/main',$data);
 	}
 
 }
