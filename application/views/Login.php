@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title> Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện</title>
+  <title>Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện</title>
   <meta name="author" content="Nguyen Phuc Duy, Dao Minh Trung Thuan">
   <meta name="keywords" content="hait, bệnh viện, nhiễm khuẩn, hệ thống quản lý, giám sát, hệ thống quản lý giám sát nhiễm khuẩn,hệ thống quản lý giám sát nhiễm khuẩn bệnh viện, daomtthuan, dualeola, dao minh trung thuan, nguyen phuc duy">
   <meta name="description" content="HAIT - Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện">
@@ -35,18 +35,18 @@
                 <h4 class="login-heading mb-4">Đăng nhập</h4>
                 <form action="" id="FormLogin" name="FormLogin">
                   <div class="form-label-group">
-                    <input type="text" id="InputUsername" name="InputUsername" class="form-control" placeholder="Tên đăng nhập" required autofocus>
-                    <label for="InputUsername">Tên đăng nhập</label>
+                    <input type="text" id="inputUsername" name="inputUsername" class="form-control" placeholder="Tên đăng nhập" required autofocus>
+                    <label for="inputUsername">Tên đăng nhập</label>
                   </div>
                   <div class="form-label-group">
-                    <input type="password" id="InputPassword" name="InputPassword" class="form-control" placeholder="Mật khẩu" required>
-                    <label for="InputPassword">Mật khẩu</label>
+                    <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Mật khẩu" required>
+                    <label for="inputPassword">Mật khẩu</label>
                   </div>
                   <div class="custom-control custom-checkbox mb-3">
-                    <input type="checkbox" class="custom-control-input" id="InputRemember" name="InputRemember">
-                    <label class="custom-control-label" for="InputRemember">Ghi nhớ mật khẩu</label>
+                    <input type="checkbox" class="custom-control-input" id="inputRemember" name="inputRemember">
+                    <label class="custom-control-label" for="inputRemember">Ghi nhớ mật khẩu</label>
                   </div>
-                  <button id="ButtonSubmit" name="ButtonSubmit" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Đăng nhập</button>
+                  <button id="buttonSubmit" name="buttonSubmit" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Đăng nhập</button>
                   <div class="text-right">
                     <a href="#" class="small">Quên mật khẩu?</a><br>
                     <a href="#" class="h5 mr-1"><i class="fab fa-facebook-f"></i></a>
