@@ -1,10 +1,17 @@
 {
 	"Add url": {
-		"prefix": "ciurl",
+		"prefix": "ci-url",
 		"body": [
 			"<?php echo base_url('public/$1')?>",
 		],
 		"description": "Add url"
+	},
+	"Add subview": {
+		"prefix": "ci-subview",
+		"body": [
+			"<?php $this->load->view($$1)?>",
+		],
+		"description": "Add Add subview"
 	}
 	// Place your hait workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
 	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope

@@ -1,17 +1,18 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class ControllerLogin extends CI_Controller {
+class _404 extends CI_Controller {
 
 	public function __construct()
 	{
 		parent::__construct();
 
+		//Do your magic here
 	}
 	public function index(){
-		$this->load->view('Login');
+		$this->load->view('error/404');
 	}
 
 }
 
-/* End of file Controllername.php */
+?>

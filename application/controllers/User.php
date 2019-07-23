@@ -1,25 +1,25 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
 
-class User extends CI_Controller {
+defined('BASEPATH') OR exit('No direct script access allowed');
+class user extends CI_Controller {
 
 	public function __construct()
 	{
 		parent::__construct();
-
-		//Do your magic here
 	}
+
 	public function index()
 	{
-		$data['subview']='tools/form';
-		$this->load->view('layout/main',$data);
+		$data['main']='user/home';
+		$this->load->view('general/layout',$data);
 	}
-	public function view()
+
+	public function list_form()
 	{
-		$data['subview']='tools/datatable';
-		$this->load->view('layout/main',$data);
+		$data['main']='tools/datatable';
+		$this->load->view('general/layout',$data);
 	}
 
 }
 
-/* End of file Controllername.php */
+?>
