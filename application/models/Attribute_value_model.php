@@ -16,11 +16,10 @@ class Attribute_value_model extends CI_Model
 
 		$query = $this->db->get('attribute_value');
 		$data=$query->result_array();
-
 		return $data;
 	}
-	public function update($id,$data){
-		$this->db->where('attribute_value_id', $id);
+	public function update($data){
+		$this->db->where('attribute_value_id', $data['attribute_value_id']);
 		$this->db->update('attribute_value', $data);
 	}
 	public function delete($id){
