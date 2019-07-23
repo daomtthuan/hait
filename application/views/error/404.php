@@ -10,7 +10,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link type="image/x-icon" rel="shortcut icon" href="<?php base_url('/public/img/logoicon.ico')?>">
-	<link href="<?php echo  base_url('/public/css/sb-admin-2.min.css')?>" rel="stylesheet">
+	<link href="<?php echo  base_url('/public/css/theme.min.css')?>" rel="stylesheet">
 </head>
 
 <body class="bg-light">

@@ -11,7 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link type="image/x-icon" rel="shortcut icon" href="<?php echo base_url('./public/img/logoicon.ico')?>">
 	<link href="<?php echo base_url('public/vendor/fontawesome-free/css/all.min.css')?>" rel="stylesheet">
-	<link href="<?php echo base_url('public/css/sb-admin-2.min.css')?>" rel="stylesheet">
+	<link href="<?php echo base_url('public/css/theme.min.css')?>" rel="stylesheet">
 	<link href="<?php echo base_url('public/css/custom.css')?>" rel="stylesheet">
 </head>
 
@@ -214,7 +214,8 @@
 	<script src="<?php echo base_url('public/vendor/jquery/jquery.min.js')?>"></script>
 	<script src="<?php echo base_url('public/vendor/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
 	<script src="<?php echo base_url('public/vendor/jquery-easing/jquery.easing.min.js')?>"></script>
-	<script src="<?php echo base_url('public/js/sb-admin-2.min.js')?>"></script>
+	<script src="<?php echo base_url('public/js/theme.min.js')?>"></script>
+	<script src="<?php echo base_url('public/js/custom.js')?>"></script>
 </body>
 
 </html>
