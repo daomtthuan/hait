@@ -9,9 +9,10 @@
 	<meta name="description" content="HAIT - Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link type="image/x-icon" rel="shortcut icon" href="<?php echo base_url('./public/img/logoicon.ico')?>">
 	<link href="<?php echo base_url('public/vendor/fontawesome-free/css/all.min.css')?>" rel="stylesheet">
 	<link href="<?php echo base_url('public/css/sb-admin-2.min.css')?>" rel="stylesheet">
-	<link href="<?php echo base_url('public/css/layout.css')?>" rel="stylesheet">
+	<link href="<?php echo base_url('public/css/custom.css')?>" rel="stylesheet">
 </head>
 
 <body>
@@ -37,6 +38,11 @@
 					<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
 						<i class="fas fa-bars"></i>
 					</button>
+
+					<div class="nav-item font-weight-bold text-primary ellipsis">
+						<?php echo $page_title?>
+					</div>
+
 					<ul class="navbar-nav ml-auto">
 						<!-- Nav Item - Alerts -->
 						<li class="nav-item dropdown no-arrow mx-1">
