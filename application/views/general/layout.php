@@ -15,7 +15,7 @@
 	<link href="<?php echo base_url('public/css/custom.css')?>" rel="stylesheet">
 </head>
 
-<body>
+<body id="page-top">
 	<div id="wrapper">
 		<ul id="sidebar" class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion transition">
 			<li>
@@ -39,7 +39,7 @@
 						<i class="fas fa-bars"></i>
 					</button>
 
-					<div class="nav-item font-weight-bold text-primary ellipsis">
+					<div class="nav-item font-weight-bold text-primary ellipsis cursor-default">
 						<?php echo $page_title?>
 					</div>
 
