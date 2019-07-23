@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Attribute_value extends CI_Model
+class Attribute_value_model extends CI_Model
 {
 	public function __construct()
 	{
@@ -9,21 +9,21 @@ class Attribute_value extends CI_Model
 
 		//Do your magic here
 	}
-	public function add_value($data){
+	public function add($data){
 		$this->db->insert('attribute_value',$data);
 	}
-	public function get_value(){
+	public function get(){
 
 		$query = $this->db->get('attribute_value');
 		$data=$query->result_array();
 
 		return $data;
 	}
-	public function update_value($id,$data){
+	public function update($id,$data){
 		$this->db->where('attribute_value_id', $id);
 		$this->db->update('attribute_value', $data);
 	}
-	public function delete__value($id){
+	public function delete($id){
 		$this->db->where('attribute_value_id', $id);
 		$this->db->delete('attribute_value');
 	}
