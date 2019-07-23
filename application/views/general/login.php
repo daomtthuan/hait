@@ -9,10 +9,10 @@
   <meta name="description" content="HAIT - Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link type="image/x-icon" rel="shortcut icon" href="<?php echo base_url('./public/img/logoicon.ico')?>">
-  <link href="<?php echo base_url('public/vendor/fontawesome-free/css/all.min.css')?>" rel="stylesheet">
-  <link href="<?php echo base_url('public/css/theme.min.css')?>" rel="stylesheet">
-  <link href="<?php echo base_url('public/css/login.css')?>" rel="stylesheet">
+  <link type="image/x-icon" rel="shortcut icon" href="<?php echo base_url('./public/img/logoicon.ico') ?>">
+  <link href="<?php echo base_url('public/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet">
+  <link href="<?php echo base_url('public/css/theme.min.css') ?>" rel="stylesheet">
+  <link href="<?php echo base_url('public/css/login.css') ?>" rel="stylesheet">
 </head>
 
 <body>
@@ -27,7 +27,7 @@
               <div class="col-md-9 col-lg-8 mx-auto">
                 <div class="text-center mb-5">
                   <h4 class="text-primary font-weight-bold mb-0">HAIT</h4>
-                  <img src="<?php echo base_url('public/img/logo.png')?>" alt="">
+                  <img src="<?php echo base_url('public/img/logo.png') ?>" alt="">
                   <h4>
                     <small>HỆ THỐNG QUẢN LÝ</small><br>
                     <span class="text-primary mb-0">GIÁM SÁT NHIỄM KHUẨN BỆNH VIỆN</span>
@@ -47,7 +47,7 @@
                     <input type="checkbox" class="custom-control-input" id="inputRemember" name="inputRemember">
                     <label class="custom-control-label" for="inputRemember">Ghi nhớ mật khẩu</label>
                   </div>
-                  <button id="buttonSubmit" name="buttonSubmit" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" onclick="window.location='<?php echo base_url('/user')?>'">Đăng nhập</button>
+                  <button id="buttonSubmit" name="buttonSubmit" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" onclick="window.location='<?php echo base_url('/user') ?>'">Đăng nhập</button>
                   <div class="text-right">
                     <a href="#" class="small">Quên mật khẩu?</a><br>
                     <a href="#" class="h5 mr-1"><i class="fab fa-facebook-f"></i></a>
@@ -66,10 +66,10 @@
       </div>
     </div>
   </div>
-  <script src="<?php echo base_url('public/vendor/jquery/jquery.min.js')?>"></script>
-  <script src="<?php echo base_url('public/vendor/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
-  <script src="<?php echo base_url('public/vendor/jquery-easing/jquery.easing.min.js')?>"></script>
-  <script src="<?php echo base_url('public/js/theme.min.js')?>"></script>
+  <script src="<?php echo base_url('public/vendor/jquery/jquery.min.js') ?>"></script>
+  <script src="<?php echo base_url('public/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+  <script src="<?php echo base_url('public/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
+  <script src="<?php echo base_url('public/js/theme.min.js') ?>"></script>
 </body>
 
 </html>

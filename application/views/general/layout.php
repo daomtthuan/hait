@@ -9,10 +9,10 @@
 	<meta name="description" content="HAIT - Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link type="image/x-icon" rel="shortcut icon" href="<?php echo base_url('./public/img/logoicon.ico')?>">
-	<link href="<?php echo base_url('public/vendor/fontawesome-free/css/all.min.css')?>" rel="stylesheet">
-	<link href="<?php echo base_url('public/css/theme.min.css')?>" rel="stylesheet">
-	<link href="<?php echo base_url('public/css/custom.css')?>" rel="stylesheet">
+  <link type="image/x-icon" rel="shortcut icon" href="<?php echo base_url('./public/img/logoicon.ico') ?>">
+	<link href="<?php echo base_url('public/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet">
+	<link href="<?php echo base_url('public/css/theme.min.css') ?>" rel="stylesheet">
+	<link href="<?php echo base_url('public/css/custom.css') ?>" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -21,12 +21,12 @@
 			<li>
 				<div class="sidebar-brand d-flex align-items-center justify-content-center bg-white">
 					<div class="sidebar-brand-icon">
-						<img src="<?php echo base_url('public/img/logo.png')?>" width="33" height="33" alt="">
+						<img src="<?php echo base_url('public/img/logo.png') ?>" width="33" height="33" alt="">
 					</div>
 					<div class="sidebar-brand-text text-primary mx-3 cursor-default">HAIT</div>
 				</div>
 			</li>
-			<?php $this->load->view('user/sidebar')?>
+			<?php $this->load->view('user/sidebar') ?>
 			<hr class="sidebar-divider d-none d-md-block">
 			<div class="text-center d-none d-md-inline">
 				<button class="rounded-circle border-0" id="sidebarToggle"></button>
@@ -40,7 +40,7 @@
 					</button>
 
 					<div class="nav-item font-weight-bold text-primary ellipsis cursor-default">
-						<?php echo $page_title?>
+						<?php echo $page_title ?>
 					</div>
 
 					<ul class="navbar-nav ml-auto">
@@ -181,7 +181,7 @@
 					</ul>
 				</nav>
 				<main id="main" class="container-fluid">
-					<?php $this->load->view($main)?>
+					<?php $this->load->view($main) ?>
 				</main>
 			</div>
 			<footer class="sticky-footer bg-white">
@@ -205,17 +205,20 @@
 				<div class="modal-body">Bạn có chắc muốn đăng xuất?</div>
 				<div class="modal-footer">
 					<button class="btn btn-secondary" type="button" data-dismiss="modal">Huỷ bỏ</button>
-					<a class="btn btn-primary" href="<?php echo base_url()?>">Đăng xuất</a>
+					<a class="btn btn-primary" href="<?php echo base_url() ?>">Đăng xuất</a>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<script src="<?php echo base_url('public/vendor/jquery/jquery.min.js')?>"></script>
-	<script src="<?php echo base_url('public/vendor/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
-	<script src="<?php echo base_url('public/vendor/jquery-easing/jquery.easing.min.js')?>"></script>
-	<script src="<?php echo base_url('public/js/theme.min.js')?>"></script>
-	<script src="<?php echo base_url('public/js/custom.js')?>"></script>
+	<script src="<?php echo base_url('public/vendor/jquery/jquery.min.js') ?>"></script>
+	<script src="<?php echo base_url('public/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+	<script src="<?php echo base_url('public/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
+	<script src="<?php echo base_url('public/js/theme.min.js') ?>"></script>
+	<script src="<?php echo base_url('public/js/custom.js') ?>"></script>
+
+	<script src="<?php echo base_url('public/js/custom.js') ?>"></script>
+	<script src="<?php echo base_url('public/js/general/form.js') ?>"></script>
 </body>
 
 </html>

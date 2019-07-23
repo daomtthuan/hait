@@ -1,7 +1,7 @@
 <?php
 
 defined('BASEPATH') OR exit('No direct script access allowed');
-class user extends CI_Controller {
+class User extends CI_Controller {
 
 	public function __construct()
 	{
@@ -12,6 +12,7 @@ class user extends CI_Controller {
 	{
 		$data['main']='user/home';
 		$data['page_title'] = ucfirst('Trang chủ');
+		$data['script'] = ucfirst('');
 		$this->load->view('general/layout',$data);
 	}
 
@@ -19,6 +20,7 @@ class user extends CI_Controller {
 	{
 		$data['main']='tools/form';
 		$data['page_title'] = ucfirst('Tạo mới biểu mẫu');
+		$data['script'] = ucfirst('');
 		$this->load->view('general/layout',$data);
 	}
 
@@ -26,6 +28,7 @@ class user extends CI_Controller {
 	{
 		$data['main']='tools/datatable';
 		$data['page_title'] = ucfirst('Danh sách biểu mẫu');
+		$data['script'] = ucfirst('');
 		$this->load->view('general/layout',$data);
 	}
 

@@ -1,15 +1,22 @@
 {
+	"Add variable": {
+		"prefix": "ci-var",
+		"body": [
+			"<?php echo $1 ?>",
+		],
+		"description": "Add variable"
+	},
 	"Add url": {
 		"prefix": "ci-url",
 		"body": [
-			"<?php echo base_url('public/$1')?>",
+			"<?php echo base_url('public/$1') ?>",
 		],
 		"description": "Add url"
 	},
 	"Add subview": {
 		"prefix": "ci-subview",
 		"body": [
-			"<?php $this->load->view($$1)?>",
+			"<?php $this->load->view($$1) ?>",
 		],
 		"description": "Add Add subview"
 	}

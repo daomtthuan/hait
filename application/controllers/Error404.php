@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class _404 extends CI_Controller {
+class Error404 extends CI_Controller {
 
 	public function __construct()
 	{
@@ -10,7 +10,7 @@ class _404 extends CI_Controller {
 		//Do your magic here
 	}
 	public function index(){
-		$this->load->view('error/404');
+		$this->load->view('error/error404');
 	}
 
 }

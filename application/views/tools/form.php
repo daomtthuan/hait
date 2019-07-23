@@ -38,16 +38,16 @@
         <div class="col-sm-6">
 
           <div class="form-group">
-            <label class="text-dark" for="NgayVaoKhoa">Ngày vào khoa</label>
-            <input id="NgayVaoKhoa" name="NgayVaoKhoa" type="date" class="form-control ellipsis" required autofocus>
+            <label class="text-dark" for="ngay_vao_khoa">Ngày vào khoa</label>
+            <input id="ngay_vao_khoa" name="ngay_vao_khoa" type="date" class="form-control ellipsis" required autofocus>
           </div>
 
         </div>
         <div class="col-sm-6">
 
           <div class="form-group">
-            <label class="text-dark" for="NgayVaoVien">Ngày vào viện</label>
-            <input id="NgayVaoVien" name="NgayVaoVien" type="date" class="form-control ellipsis" required>
+            <label class="text-dark" for="ngay_vao_vien">Ngày vào viện</label>
+            <input id="ngay_vao_vien" name="ngay_vao_vien" type="date" class="form-control ellipsis" required>
           </div>
 
         </div>
@@ -57,32 +57,32 @@
 
         <div class="col-md-4">
           <div class="form-group">
-            <label class="text-dark" for="MaBenhAn">Mã bệnh án</label>
-            <input id="MaBenhAn" name="MaBenhAn" type="text" class="form-control ellipsis" required>
+            <label class="text-dark" for="msba">Mã bệnh án</label>
+            <input id="msba" name="msba" type="text" class="form-control ellipsis" required>
           </div>
         </div>
 
         <div class="col-md-4">
 
           <div class="form-group">
-            <label class="text-dark" for="BenhVien">Bệnh viện</label>
-            <input id="BenhVien" name="BenhVien" type="text" class="form-control ellipsis" required>
+            <label class="text-dark" for="company_name">Bệnh viện</label>
+            <input id="company_name" name="company_name" type="text" class="form-control ellipsis" readonly>
           </div>
 
         </div>
         <div class="col-md-4">
 
           <div class="form-group">
-            <label class="text-dark" for="Khoa">Khoa</label>
-            <input id="Khoa" name="Khoa" type="text" class="form-control ellipsis" required>
+            <label class="text-dark" for="room_name">Khoa</label>
+            <input id="room_name" name="room_name" type="text" class="form-control ellipsis" readonly>
           </div>
 
         </div>
       </div>
 
       <div class="form-group">
-        <label class="text-dark" for="NgayDieuTra">Ngày điều tra</label>
-        <input id="NgayDieuTra" name="NgayDieuTra" type="date" class="form-control ellipsis" required>
+        <label class="text-dark" for="ngay_dieu_tra">Ngày điều tra</label>
+        <input id="ngay_dieu_tra" name="ngay_dieu_tra" type="date" class="form-control ellipsis" required>
       </div>
 
       <div class="row">
