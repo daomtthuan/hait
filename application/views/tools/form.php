@@ -2,25 +2,25 @@
 <hr class="sidebar-divider d-none d-md-block">
 <div class="mb-2"><small>* Vui lòng điền đầy đủ thông tin bên dưới</small></div>
 <div class="row mb-3 progress-form">
-  <div class="col-3 progress-form-step active">
+  <div id="dotstep1" class="col-3 progress-form-step active">
     <div class="progress">
       <div class="progress-bar"></div>
     </div>
     <a href="#" class="progress-form-dot"></a>
   </div>
-  <div class="col-3 progress-form-step disabled">
+  <div id="dotstep2" class="col-3 progress-form-step disabled">
     <div class="progress">
       <div class="progress-bar"></div>
     </div>
     <a href="#" class="progress-form-dot"></a>
   </div>
-  <div class="col-3 progress-form-step disabled">
+  <div id="dotstep3" class="col-3 progress-form-step disabled">
     <div class="progress">
       <div class="progress-bar"></div>
     </div>
     <a href="#" class="progress-form-dot"></a>
   </div>
-  <div class="col-3 progress-form-step disabled">
+  <div id="dotstep4" class="col-3 progress-form-step disabled">
     <div class="progress">
       <div class="progress-bar"></div>
     </div>
@@ -40,14 +40,17 @@
           <div class="form-group">
             <label class="text-dark" for="ngay_vao_khoa">Ngày vào khoa</label>
             <input id="ngay_vao_khoa" name="ngay_vao_khoa" type="date" class="form-control ellipsis" required autofocus>
+            <div class="invalid-tooltip"></div>
           </div>
 
         </div>
+
         <div class="col-sm-6">
 
           <div class="form-group">
             <label class="text-dark" for="ngay_vao_vien">Ngày vào viện</label>
             <input id="ngay_vao_vien" name="ngay_vao_vien" type="date" class="form-control ellipsis" required>
+            <div class="invalid-tooltip"></div>
           </div>
 
         </div>
@@ -56,10 +59,13 @@
       <div class="row">
 
         <div class="col-md-4">
+
           <div class="form-group">
             <label class="text-dark" for="msba">Mã bệnh án</label>
             <input id="msba" name="msba" type="text" class="form-control ellipsis" required>
+            <div class="invalid-tooltip"></div>
           </div>
+
         </div>
 
         <div class="col-md-4">
@@ -67,6 +73,7 @@
           <div class="form-group">
             <label class="text-dark" for="company_name">Bệnh viện</label>
             <input id="company_name" name="company_name" type="text" class="form-control ellipsis" readonly>
+            <div class="invalid-tooltip"></div>
           </div>
 
         </div>
@@ -75,6 +82,7 @@
           <div class="form-group">
             <label class="text-dark" for="room_name">Khoa</label>
             <input id="room_name" name="room_name" type="text" class="form-control ellipsis" readonly>
+            <div class="invalid-tooltip"></div>
           </div>
 
         </div>
@@ -83,6 +91,7 @@
       <div class="form-group">
         <label class="text-dark" for="ngay_dieu_tra">Ngày điều tra</label>
         <input id="ngay_dieu_tra" name="ngay_dieu_tra" type="date" class="form-control ellipsis" required>
+        <div class="invalid-tooltip"></div>
       </div>
 
       <div class="row">
@@ -91,6 +100,7 @@
           <div class="form-group">
             <label class="text-dark" for="HoTenNguoiBenh">Họ tên người bệnh</label>
             <input id="HoTenNguoiBenh" name="HoTenNguoiBenh" type="text" class="form-control ellipsis" required>
+            <div class="invalid-tooltip"></div>
           </div>
 
         </div>
@@ -99,6 +109,7 @@
           <div class="form-group">
             <label class="text-dark" for="NamSinh">Năm sinh</label>
             <input id="NamSinh" name="NamSinh" type="number" class="form-control ellipsis" required>
+            <div class="invalid-tooltip"></div>
           </div>
 
         </div>
@@ -122,11 +133,13 @@
       <div class="form-group">
         <label class="text-dark" for="NoiChuyenToi">Nơi chuyển tới</label>
         <input id="NoiChuyenToi" name="NoiChuyenToi" type="text" class="form-control ellipsis" required>
+        <div class="invalid-tooltip"></div>
       </div>
 
       <div class="form-group">
         <label class="text-dark" for="ChuanDoanLucVao">Chuẩn đoán lúc vào</label>
         <input id="ChuanDoanLucVao" name="ChuanDoanLucVao" type="text" class="form-control ellipsis" required>
+        <div class="invalid-tooltip"></div>
       </div>
 
       <div class="row">
@@ -135,6 +148,7 @@
           <div class="form-group">
             <label class="text-dark" for="NgayRaVien">Ngày ra viện</label>
             <input id="NgayRaVien" name="NgayRaVien" type="date" class="form-control ellipsis" required>
+            <div class="invalid-tooltip"></div>
           </div>
 
         </div>
@@ -142,7 +156,8 @@
 
           <div class="form-group">
             <label class="text-dark" for="ChuanDoanXacDinh">Chuẩn đoán xác định</label>
-            <input id="ChuanDoanXacDinh" name="ChuanDoanXacDinh" type="text" class="form-control ellipsis ellipsis" required>
+            <input id="ChuanDoanXacDinh" name="ChuanDoanXacDinh" type="text" class="form-control ellipsis" required>
+            <div class="invalid-tooltip"></div>
           </div>
 
         </div>
@@ -181,6 +196,7 @@
 </form>
 
 <div class="row mb-3">
-  <button id="buttonStepBack" class="btn btn-secondary ml-2 mr-auto">Trở về</button>
-  <button id="buttonStepNext" class="btn btn-primary mr-2">Kế tiếp</button>
+  <button id="buttonStepBack" class="btn btn-secondary ml-2" style="display: none">Trở về</button>
+  <button id="buttonStepNext" class="btn btn-primary ml-auto mr-2">Kế tiếp</button>
+  <button id="buttonSubmit" name="buttonSubmit" type="submit" class="btn btn-primary ml-auto mr-2" style="display: none">Hoàn thành</button>
 </div>
