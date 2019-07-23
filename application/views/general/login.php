@@ -26,6 +26,7 @@
             <div class="row">
               <div class="col-md-9 col-lg-8 mx-auto">
                 <div class="text-center mb-5">
+                  <h4 class="text-primary font-weight-bold mb-0">HAIT</h4>
                   <img src="<?php echo base_url('public/img/logo.png')?>" alt="">
                   <h4>
                     <small>HỆ THỐNG QUẢN LÝ</small><br>
@@ -46,7 +47,7 @@
                     <input type="checkbox" class="custom-control-input" id="inputRemember" name="inputRemember">
                     <label class="custom-control-label" for="inputRemember">Ghi nhớ mật khẩu</label>
                   </div>
-                  <button id="buttonSubmit" name="buttonSubmit" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Đăng nhập</button>
+                  <button id="buttonSubmit" name="buttonSubmit" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" onclick="window.location='<?php echo base_url('/user')?>'">Đăng nhập</button>
                   <div class="text-right">
                     <a href="#" class="small">Quên mật khẩu?</a><br>
                     <a href="#" class="h5 mr-1"><i class="fab fa-facebook-f"></i></a>
