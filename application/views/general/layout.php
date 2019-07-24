@@ -216,9 +216,8 @@
 	<script src="<?php echo base_url('public/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
 	<script src="<?php echo base_url('public/js/theme.min.js') ?>"></script>
 	<script src="<?php echo base_url('public/js/custom.js') ?>"></script>
-
 	<script src="<?php echo base_url('public/js/custom.js') ?>"></script>
-	<script src="<?php echo base_url('public/js/general/form.js') ?>"></script>
+	<?php echo $script ?>
 </body>
 
 </html>
