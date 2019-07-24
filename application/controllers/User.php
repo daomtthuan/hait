@@ -21,8 +21,7 @@ class User extends My_Controller {
 	{
 		$data['main']='tools/form';
 		$data['page_title'] = ucfirst('Tạo mới biểu mẫu');
-		$data['script'] = ucfirst('<script src="'.$this->config->base_url().'public/js/tools/new_form.js"></script>');
-
+		$data['script'] = ucfirst('');
 		$this->load->view('general/layout',$data);
 	}
 

@@ -60,18 +60,34 @@
 
 .progress-form>.progress-form-step.complete>.progress>.progress-bar {
   width: 100%;
+  transition: width .2s;
+  -moz-transition: width .2s;
+  -o-transition: width .2s;
+  -webkit-transition: width .2s
 }
 
 .progress-form>.progress-form-step.active>.progress>.progress-bar {
   width: 50%;
+  transition: width .2s;
+  -moz-transition: width .2s;
+  -o-transition: width .2s;
+  -webkit-transition: width .2s
 }
 
 .progress-form>.progress-form-step:first-child.active>.progress>.progress-bar {
   width: 0%;
+  transition: width .2s;
+  -moz-transition: width .2s;
+  -o-transition: width .2s;
+  -webkit-transition: width .2s
 }
 
 .progress-form>.progress-form-step:last-child.active>.progress>.progress-bar {
   width: 100%;
+  transition: width .2s;
+  -moz-transition: width .2s;
+  -o-transition: width .2s;
+  -webkit-transition: width .2s
 }
 
 .progress-form>.progress-form-step.disabled>.progress-form-dot {
@@ -85,10 +101,18 @@
 .progress-form>.progress-form-step:first-child>.progress {
   left: 50%;
   width: 50%;
+  transition: width .2s;
+  -moz-transition: width .2s;
+  -o-transition: width .2s;
+  -webkit-transition: width .2s
 }
 
 .progress-form>.progress-form-step:last-child>.progress {
   width: 50%;
+  transition: width .2s;
+  -moz-transition: width .2s;
+  -o-transition: width .2s;
+  -webkit-transition: width .2s
 }
 
 .progress-form>.progress-form-step.disabled a.progress-form-dot {
