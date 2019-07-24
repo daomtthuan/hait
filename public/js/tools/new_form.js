@@ -1,21 +1,27 @@
 $(document).ready(function () {
   var now = new Date();
-  var day = ("0" + now.getDate()).slice(-2);
-  var month = ("0" + (now.getMonth() + 1)).slice(-2);
-  var today = now.getFullYear() + "-" + (month) + "-" + (day);
-  $("#ngay_dieu_tra").val(today);
+  $("#ngay_dieu_tra").val(now.getFullYear() + "-" + (("0" + (now.getMonth() + 1)).slice(-2)) + "-" + (("0" + now.getDate()).slice(-2)));
 
   $("#buttonStepNext").click(function () {
     var step = ($(".progress-form-step.active").attr("id")).slice(7);
     var isValid = false;
     switch (step) {
       case "1":
-        $("#buttonStepBack").fadeIn(200);
+
+        $('#step1 input.form-control').blur(function () {
+          if (!$(this).val()) {
+            alert();
+          }
+        });
+
+        if (isValid)
+          $("#buttonStepBack").fadeIn(200);
         break;
       case "2":
         break;
       case "3":
-        $(this).fadeOut(200, function () { $("#buttonSubmit").fadeIn(200) });
+        if (isValid)
+          $(this).fadeOut(200, function () { $("#buttonSubmit").fadeIn(200) });
         break;
       default:
         return;
