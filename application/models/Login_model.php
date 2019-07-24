@@ -35,6 +35,32 @@ class Login_model extends CI_Model
 			return false;
 		}
 	}
+	function check_role($user_name){
+		echo 'User_name:'.$user_name;
+		$user_id = $this->get_user_id($user_name);
+		echo 'User_id:'.$user_id;
+		$this->db->select('role_id');
+		$this->db->from('room');
+		$this->db->join('company', 'room.company_id = company.company_id');
+		$this->db->join('membership', 'room.room_id = membership.room_id');
+		$this->db->where('membership.user_id',$user_id);
+		$query = $this->db->get();
+		$row = $query->row();
+		$role_id=$row->role_id;
+		return $role_id;
+	}
+	function get_user_id($username)
+	{
+		$this->db->where('username',$username);
+		$query = $this->db->get('login');
+		$row = $query->row();
+		$user_id="";
+		if (isset($row))
+		{
+			$user_id=$row->user_id;
+		}
+		return $user_id;
+	}
 }
 
 /* End of file .php */

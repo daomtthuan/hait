@@ -10,12 +10,34 @@ class Login extends CI_Controller {
 		$this->load->library(array('form_validation','session'));
 	}
 	public function index(){
+		$user=$this->session->userdata('login');
+		if($user){
+			if($role =$this->Login_model->check_role($user)){
+				if($role=='admin'){
+					redirect( base_url('admin') );
+				} elseif ($role=='user'){
+					redirect( base_url('user') );
+				} else{
+					$this->load->view('general/login');
+					print_r('The account role not set');
+				}
+			}
+		}
 		if($this->input->post()){
 			$this->form_validation->set_rules('general/login', 'Đăng nhập', 'callback_check_login');
 			if($this->form_validation->run()){
-				$user=$this->input->post('inputUsername');
-				$this->session->set_userdata('login',$user);
-				redirect(base_url('user'));
+				$user_name=$this->input->post('inputUsername');
+				$this->session->set_userdata('login',$user_name);
+				if($role =$this->Login_model->check_role($user_name)){
+					if($role=='admin'){
+						redirect( base_url('admin') );
+					} elseif ($role=='user'){
+						redirect( base_url('user') );
+					} else{
+						$this->load->view('general/login');
+						print_r('The account role not set');
+					}
+				}
 			}
 
 
@@ -37,6 +59,14 @@ class Login extends CI_Controller {
 			return false;
 		};
 
+	}
+	public function logout(){
+		{
+			if($this->session->userdata('login')){
+				$this->session->unset_userdata('login');
+				redirect(base_url('login'));
+			}
+		}
 	}
 
 }

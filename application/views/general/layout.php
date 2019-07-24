@@ -152,10 +152,9 @@
 						<li class="nav-item dropdown no-arrow">
 							<a class="nav-link dropdown-toggle" href="" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<span class="mr-2 d-none d-lg-inline text-gray-600 small">
-									<!-- Tên của User -->
-									Tài khoản: <?php echo $this->session->userdata('login');?>
-								</span>
-								<!-- avatar User -->
+									<!-- Tên của User -ài khoản:-->
+						           Tài khoản: <?php echo $this->session->userdata('login');?>
+
 								<img class="img-profile rounded-circle" src="https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.0-9/53347625_954684504722691_2104953662064295936_n.jpg?_nc_cat=102&_nc_oc=AQme7v9N7SpMmi9c_lMzSsWdIM2ZojStywlLcljz4225boNtyOkVNDjgUUN_F8BsA0E&_nc_ht=scontent.fsgn2-2.fna&oh=45f4d7a2165982aded7996540b631e4e&oe=5DE30A15">
 							</a>
 							<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -172,7 +171,7 @@
 									Liên hệ
 								</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+								<a  class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">
 									<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
 									Đănng xuất
 								</a>
@@ -205,7 +204,7 @@
 				<div class="modal-body">Bạn có chắc muốn đăng xuất?</div>
 				<div class="modal-footer">
 					<button class="btn btn-secondary" type="button" data-dismiss="modal">Huỷ bỏ</button>
-					<a class="btn btn-primary" href="<?php echo base_url() ?>">Đăng xuất</a>
+					<a class="btn btn-primary" href="<?php echo base_url('login/logout') ?>">Đăng xuất</a>
 				</div>
 			</div>
 		</div>
