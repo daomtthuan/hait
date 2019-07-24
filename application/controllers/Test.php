@@ -6,13 +6,13 @@ class Test extends My_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('Template_model');
 
 		//Do your magic here
 	}
-	public function index()
-	{
-		
-	}
+public function index(){
+		$this->Template_model->get(1);
+}
 
 }
 
