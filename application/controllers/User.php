@@ -1,11 +1,12 @@
 <?php
 
 defined('BASEPATH') OR exit('No direct script access allowed');
-class User extends CI_Controller {
+class User extends My_Controller {
 
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('Login_model');
 	}
 
 	public function index()
@@ -32,7 +33,6 @@ class User extends CI_Controller {
 		$data['script'] = ucfirst('');
 		$this->load->view('general/layout',$data);
 	}
-
 }
 
-?>
+
