@@ -7,13 +7,6 @@ $(document).ready(function () {
     var isValid = true;
     switch (step) {
       case "1":
-
-        $('#step1 input.form-control').blur(function () {
-          if (!$(this).val()) {
-            alert();
-          }
-        });
-
         if (isValid)
           $("#buttonStepBack").fadeIn(200);
         break;
@@ -36,25 +29,22 @@ $(document).ready(function () {
 
   $("#buttonStepBack").click(function () {
     var step = ($(".progress-form-step.active").attr("id")).slice(7);
-    var isValid = false;
     switch (step) {
       case "1":
         return;
       case "2":
-        $(this).fadeOut(200);
-        break;
-      case "3":
+        $(this).fadeIn(200);
         break;
       case "4":
         $("#buttonSubmit").fadeOut(200, function () { $("#buttonStepNext").fadeIn(200) });
         break;
+      default:
+        return;
     }
-    if (isValid) {
-      $("#step" + eval(step) + "").fadeOut(200);
-      $("#step" + eval(step - 1) + "").fadeIn(200);
-      $(".progress-form-step:eq(" + eval(step - 2) + ")").addClass("active").removeClass("complete");
-      $(".progress-form-step:eq(" + eval(step - 1) + ")").addClass("disabled").removeClass("active");
-    }
+    $("#step" + eval(step) + "").fadeOut(200);
+    $("#step" + eval(step - 1) + "").fadeIn(200);
+    $(".progress-form-step:eq(" + eval(step - 2) + ")").addClass("active").removeClass("complete");
+    $(".progress-form-step:eq(" + eval(step - 1) + ")").addClass("disabled").removeClass("active");
   });
 
 });
