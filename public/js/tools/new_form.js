@@ -7,6 +7,8 @@ $(document).ready(function () {
     var isValid = true;
     switch (step) {
       case "1":
+
+
         if (isValid)
           $("#buttonStepBack").fadeIn(200);
         break;
@@ -38,8 +40,6 @@ $(document).ready(function () {
       case "4":
         $("#buttonSubmit").fadeOut(200, function () { $("#buttonStepNext").fadeIn(200) });
         break;
-      default:
-        return;
     }
     $("#step" + eval(step) + "").fadeOut(200);
     $("#step" + eval(step - 1) + "").fadeIn(200);
