@@ -10,6 +10,11 @@ class Template_model extends CI_Model
 	 }
 	public function get($form_id)
 	{
+		$this->db->select('*');
+		$this->db->from('attribute_value');
+		$this->db->join('attribute', 'attribute_value.attribute_id = attribute.id');
+		$query = $this->db->get();
+
 		echo 'ok';
 		$query=$this->db->query("SELECT * FROM attribute_value AS av INNER JOIN attribute AS a ON av.attribute_id = a.attribute_id WHERE av.attribute_value_id IN (SELECT attribute_value_id FROM product_attribute WHERE product_id= '1') ORDER BY a.attribute_name");
 		$data=$query->result_array();
