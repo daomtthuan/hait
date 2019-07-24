@@ -6,7 +6,7 @@ class My_controller extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->check_user_login();
+		//$this->check_user_login();
 
 	}
 	private function check_user_login(){
