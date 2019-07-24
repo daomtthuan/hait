@@ -4,7 +4,7 @@ $(document).ready(function () {
 
   $("#buttonStepNext").click(function () {
     var step = ($(".progress-form-step.active").attr("id")).slice(7);
-    var isValid = false;
+    var isValid = true;
     switch (step) {
       case "1":
 
