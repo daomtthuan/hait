@@ -23,6 +23,18 @@ class Login_model extends CI_Model
 		$this->db->where('login_id', $login_id);
 		$this->db->delete('login');
 	}
+	function check_exists($data)
+	{
+		$this->db->where('username',$data['username']);
+		$this->db->where('password',$data['password']);
+		$query = $this->db->get('login');
+		if ($query->num_rows() > 0){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
 }
 
 /* End of file .php */

@@ -31,7 +31,19 @@ class User extends CI_Controller {
 		$data['script'] = ucfirst('');
 		$this->load->view('general/layout',$data);
 	}
+	function check_exists($data)
+	{
+		$this->db->where('user',$data['username']);
+		$this->db->where('user',$data['password']);
+		$query = $this->db->get('login');
+		if ($query->num_rows() > 0){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
 
 }
 
-?>
+

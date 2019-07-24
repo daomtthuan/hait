@@ -153,7 +153,7 @@
 							<a class="nav-link dropdown-toggle" href="" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<span class="mr-2 d-none d-lg-inline text-gray-600 small">
 									<!-- Tên của User -->
-									Tên của user
+									Tài khoản: <?php echo $this->session->userdata('login');?>
 								</span>
 								<!-- avatar User -->
 								<img class="img-profile rounded-circle" src="https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.0-9/53347625_954684504722691_2104953662064295936_n.jpg?_nc_cat=102&_nc_oc=AQme7v9N7SpMmi9c_lMzSsWdIM2ZojStywlLcljz4225boNtyOkVNDjgUUN_F8BsA0E&_nc_ht=scontent.fsgn2-2.fna&oh=45f4d7a2165982aded7996540b631e4e&oe=5DE30A15">
