@@ -14,6 +14,18 @@ $(document).ready(function () {
     }
   });
 
+  $("#step6 .step-option input[type='radio']").on("click", function () {
+    if ($(this).val() == "1") {
+      $("." + $(this).attr("name")).fadeIn(200);
+      $("." + $(this).attr("name") + " input").removeAttr("readonly");
+    }
+    else {
+      $("." + $(this).attr("name")).fadeOut(200);
+      $("." + $(this).attr("name") + " input[type='radio']").attr("readonly", "readonly").prop("checked",false);
+      $("." + $(this).attr("name") + " input[type!='radio']").attr("readonly", "readonly").val(null);
+    }
+  });
+
   $("#buttonStepNext").click(function () {
     var step = ($(".progress-form-step.active").attr("id")).slice(7);
     var isValid = true;
