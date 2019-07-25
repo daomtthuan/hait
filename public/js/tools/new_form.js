@@ -3,6 +3,17 @@ $(document).ready(function () {
 
   $("#ngay_dieu_tra").val(now.getFullYear() + "-" + (("0" + (now.getMonth() + 1)).slice(-2)) + "-" + (("0" + now.getDate()).slice(-2)));
 
+  $("#step5 input[type='radio']").on("click", function () {
+    if ($(this).val() == "1") {
+      $("." + $(this).attr("name")).fadeIn(200);
+      $("." + $(this).attr("name") + " input").removeAttr("readonly");
+    }
+    else {
+      $("." + $(this).attr("name")).fadeOut(200);
+      $("." + $(this).attr("name") + " input").attr("readonly", "readonly").val(null);
+    }
+  });
+
   $("#buttonStepNext").click(function () {
     var step = ($(".progress-form-step.active").attr("id")).slice(7);
     var isValid = true;
