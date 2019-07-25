@@ -58,6 +58,11 @@ class Template_model extends CI_Model
 		$this->db->where('form_attribute_id', $key);
 		$this->db->update('value', $data);
 	}
+	public function call_proc(){
+		$query=$this->db->query("call pivot_form");
+		$data=$query->result_array();
+		print_r($data);
+	}
 
 
 }

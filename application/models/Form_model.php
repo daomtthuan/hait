@@ -23,6 +23,11 @@ class Form_model extends CI_Model
 		$this->db->where('form_id', $id);
 		$this->db->delete('form');
 	}
+	public function table(){
+		$query=$this->db->query("call pivot_gridview");
+		$data=$query->result_array();
+		return $data;
+	}
 }
 
 /* End of file .php */

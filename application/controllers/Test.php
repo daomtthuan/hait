@@ -27,6 +27,16 @@ class Test extends My_Controller {
 		$id=$this->Template_model->get_id($name,$form_id);
 		return $id;
 	}
+	public function create(){
+		$this->Template_model->insert(1,1,1);
+	}
+	public function call(){
+		$this->Template_model->call_proc();
+	}
+	public function grib(){
+		$this->load->view('tools/grib.php');
+	}
+
 
 }
 
