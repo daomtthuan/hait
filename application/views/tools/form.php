@@ -200,7 +200,7 @@
         <div class="row">
           <div class="col-md-6 order-md-1">
             <div class="form-group">
-              <div class="text-dark cursor-default">Thuốc ƯCMD non-steroid</div>
+              <div class="text-dark cursor-default">Thuốc Ức chế miễn dịch non-steroid</div>
               <div class="custom-control custom-radio">
                 <input type="radio" id="co_thuoc_ucmd" name="thuoc_ucmd" class="custom-control-input" value="1" required>
                 <label class="custom-control-label" for="co_thuoc_ucmd">Có</label>
@@ -208,7 +208,7 @@
               <div class="custom-control custom-radio">
                 <input type="radio" id="khong_thuoc_ucmd" name="thuoc_ucmd" class="custom-control-input" value="0" required>
                 <label class="custom-control-label" for="khong_thuoc_ucmd">Không</label>
-                <div class="invalid-feedback" style="margin-left: -24px">Có sử dụng Thuốc ƯCMD non-steroid hay không?</div>
+                <div class="invalid-feedback" style="margin-left: -24px">Có sử dụng Thuốc Ức chế miễn dịch non-steroid hay không?</div>
               </div>
             </div>
           </div>
@@ -1051,7 +1051,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 order-md-3 nkvm" style="display: none">
+          <div class="col-md-6 order-md-2 nkvm" style="display: none">
             <div class="form-group">
               <div class="text-dark cursor-default">Biểu hiện sưng</div>
               <div class="custom-control custom-radio">
@@ -1065,7 +1065,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 order-md-3 nkvm" style="display: none">
+          <div class="col-md-6 order-md-4 nkvm" style="display: none">
             <div class="form-group">
               <div class="text-dark cursor-default">Biểu hiện đau</div>
               <div class="custom-control custom-radio">
@@ -1079,7 +1079,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 order-md-3 nkvm" style="display: none">
+          <div class="col-md-6 order-md-5 nkvm" style="display: none">
             <div class="form-group">
               <div class="text-dark cursor-default">Phẫu thuật lại</div>
               <div class="custom-control custom-radio">
@@ -1093,7 +1093,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 order-md-3 nkvm" style="display: none">
+          <div class="col-md-6 order-md-7 nkvm" style="display: none">
             <div class="form-group">
               <div class="text-dark cursor-default">Dịch vết mổ</div>
               <div class="custom-control custom-radio">
@@ -1107,7 +1107,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 order-md-3 nkvm" style="display: none">
+          <div class="col-md-6 order-md-8 nkvm" style="display: none">
             <div class="form-group">
               <div class="text-dark cursor-default">Toác vết mổ tự nhiên</div>
               <div class="custom-control custom-radio">
@@ -1121,7 +1121,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 order-md-3 nkvm" style="display: none">
+          <div class="col-md-6 order-md-9 nkvm" style="display: none">
             <div class="form-group">
               <div class="text-dark cursor-default">Chủ động mở vết mổ</div>
               <div class="custom-control custom-radio">
@@ -1135,7 +1135,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 order-md-3 nkvm" style="display: none">
+          <div class="col-md-6 order-md-10 nkvm" style="display: none">
             <div class="form-group">
               <div class="text-dark cursor-default">Chảy mủ tại vết mổ/qua dẫn lưu</div>
               <div class="custom-control custom-radio">
@@ -1147,6 +1147,12 @@
                 <label class="custom-control-label" for="khong_chay_mu">Không</label>
                 <div class="invalid-feedback" style="margin-left: -24px">Có Chảy mủ tại vết mổ/qua dẫn lưu hay không?</div>
               </div>
+            </div>
+          </div>
+          <div class="col-12 order-md-11 nkvm" style="display: none">
+            <div class="form-group">
+              <label class="text-dark" for="trieu_chung_chi_diem">Triệu chứng chỉ điểm và ngày xuất hiện đầu tiên</label>
+              <textarea id="khatrieu_chung_chi_diemc" name="trieu_chung_chi_diem" type="text" class="form-control ellipsis"></textarea>
             </div>
           </div>
         </div>
