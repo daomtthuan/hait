@@ -21,9 +21,14 @@ $(document).ready(function () {
     }
     else {
       $("." + $(this).attr("name")).fadeOut(200);
-      $("." + $(this).attr("name") + " input[type='radio']").attr("readonly", "readonly").prop("checked",false);
+      $("." + $(this).attr("name") + " input[type='radio']").attr("readonly", "readonly").prop("checked", false);
       $("." + $(this).attr("name") + " input[type!='radio']").attr("readonly", "readonly").val(null);
     }
+  });
+
+  $("#step7 input[type='radio']").on("click", function () {
+    if ($(this).val() == "1") $("." + $(this).attr("name")).fadeIn(200);
+    else $("." + $(this).attr("name")).fadeOut(200);
   });
 
   $("#buttonStepNext").click(function () {
