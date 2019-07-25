@@ -34,7 +34,7 @@
 }
 
 .progress-form>.progress-form-step>.progress-form-dot:after {
-  content: ' ';
+  content: " ";
   width: 14px;
   height: 14px;
   background: var(--light);
