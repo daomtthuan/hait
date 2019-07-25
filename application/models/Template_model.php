@@ -8,6 +8,15 @@ class Template_model extends CI_Model
 	 	parent::__construct();
 	 	//Do your magic here
 	 }
+	 function get_value($form_id){
+		 $like_pt=$form_id.'_';
+		 $this->db->select('attribute_name,value');
+		 $this->db->like('form_attribute_id', $like_pt);
+		 $query = $this->db->get('value');
+		 $data=$query->result_array();
+		 return $data;
+
+	 }
 	public function insert($template_id,$form_id,$part)
 	{
 		$this->db->select('*');
