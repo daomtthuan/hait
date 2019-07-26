@@ -1081,7 +1081,7 @@
                 <label class="custom-control-label" for="co_dat_ong_thong_da_day">Có</label>
               </div>
               <div class="custom-control custom-radio">
-                <input type="radio" id="khong_dat_ong_thong_da_day" name="dat_ong_thong_da_day" class="custom-control-input" value="0">
+                <input type="radio" id="khong_dat_ong_thong_da_day" name="dat_ong_thong_da_day" class="custom-control-input" value="0" checked>
                 <label class="custom-control-label" for="khong_dat_ong_thong_da_day">Không</label>
                 <div class="invalid-feedback" style="margin-left: -24px">Có Đặt ống thông dạ dày hay không?</div>
               </div>
