@@ -25,6 +25,14 @@ class User extends My_Controller {
 		$this->load->view('general/layout',$data);
 	}
 
+	public function edit_form()
+	{
+		$data['main']='tools/form';
+		$data['page_title'] = ucfirst('Chỉnh sửa biểu mẫu');
+		$data['script'] = ucfirst('');
+		$this->load->view('general/layout',$data);
+	}
+
 	public function list_form()
 	{
 		$data['main']='tools/datatable';
