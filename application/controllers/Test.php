@@ -36,7 +36,10 @@ class Test extends My_Controller {
 	public function grib(){
 		$this->load->view('tools/grib.php');
 	}
-
+	public function ajax(){
+		$data=$this->Template_model->get_value(1);
+		echo json_encode($data);
+	}
 
 }
 
