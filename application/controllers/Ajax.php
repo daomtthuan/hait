@@ -13,6 +13,11 @@ class Ajax extends My_Controller {
 		$data=$this->Template_model->get_value($id);
 		echo json_encode($data);
 	}
+	public function formList(){
+		$this->load->model('Form_model');
+		$data=$this->Form_model->table();
+		echo json_encode($data);
+	}
 
 }
 
