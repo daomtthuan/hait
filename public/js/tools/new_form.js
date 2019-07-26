@@ -4,6 +4,11 @@ $(document).ready(function () {
 
   $("#ngay_dieu_tra").val(now.getFullYear() + "-" + (("0" + (now.getMonth() + 1)).slice(-2)) + "-" + (("0" + now.getDate()).slice(-2)));
 
+  $("#step2 input[type='checkbox']").on("click", function () {
+    if ($(this).prop("checked")) $("." + $(this).attr("name")).fadeIn(200);
+    else $("." + $(this).attr("name")).fadeOut(200);
+  });
+
   $("#step5 input[type='radio']").on("click", function () {
     if ($(this).val() == "1") {
       $("." + $(this).attr("name")).fadeIn(200);
@@ -51,7 +56,7 @@ $(document).ready(function () {
     });
     if (isValid) {
       if (step == 1) $("#buttonStepBack").fadeIn(200);
-      else if (step == numberStep-1) $(this).fadeOut(200, function () { $("#buttonSubmit").fadeIn(200) });
+      else if (step == numberStep - 1) $(this).fadeOut(200, function () { $("#buttonSubmit").fadeIn(200) });
       $("#step" + eval(step)).fadeOut(200);
       $("#step" + eval(step + 1)).fadeIn(200);
       $("#step" + eval(step + 1) + " input").attr("required", "required");
