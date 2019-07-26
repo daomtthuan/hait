@@ -29,7 +29,7 @@ class User extends My_Controller {
 	{
 		$data['main']='tools/form';
 		$data['page_title'] = ucfirst('Chỉnh sửa biểu mẫu');
-		$data['script'] = ucfirst('');
+		$data['script'] = ucfirst('<script>var url = "'.base_url().'ajax/get/1"</script><script src="'.$this->config->base_url().'public/js/tools/edit_form.js"></script>');
 		$this->load->view('general/layout',$data);
 	}
 
