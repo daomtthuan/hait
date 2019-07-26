@@ -27,8 +27,8 @@
 				</tfoot>
 				<tbody >
 				<tr ng-repeat = "item in list">
-					<td>{{ item. }}</td>
-					<td>{{ student.value }}</td>
+					<td>{{ item.attribute_name }}</td>
+					<td>{{ item.value }}</td>
 				</tr>
 				</tbody>
 			</table>
@@ -41,7 +41,8 @@
 <script>
 	var databaseApp = angular.module("databaseApp", []);
 	databaseApp.controller("databaseController", function($scope,$http) {
-		var url = "<?php echo base_url('test/ajax') ?>";
+		var form_id=1;
+		var url = "<?php echo base_url('ajax/get/') ?>"+ form_id;
 		$http.get(url).then( function(response) {
 			$scope.list = response.data;
 		});
