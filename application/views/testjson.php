@@ -1,51 +1,27 @@
 <html>
-<head>
-	<title>Angular JS Includes</title>
 
-	<style>
-		table, th , td {
-			border: 1px solid grey;
-			border-collapse: collapse;
-			padding: 5px;
-		}
-		table tr:nth-child(odd) {
-			background-color: #f2f2f2;
-		}
-		table tr:nth-child(even) {
-			background-color: #ffffff;
-		}
-	</style>
+<head>
+
 </head>
 
 <body>
-<h2>AngularJS Sample Application</h2>
-<div ng-app = "" ng-controller = "studentController">
 
-	<table>
-		<tr>
-			<th>Name</th>
-			<th>Roll No</th>
-		</tr>
+	<div>
 
-		<tr ng-repeat = "student in students">
-			<td>{{ student.attribute_name }}</td>
-			<td>{{ student.value }}</td>
-		</tr>
-	</table>
-</div>
+	</div>
 
-<script>
-	function studentController($scope,$http) {
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+	<script>
 		var url = "http://localhost:8080/hait/api/get_value";
-
-		$http.get(url).then( function(response) {
-			$scope.students = response.data;
+		$.getJSON(url, function (data) {
+			data.forEach(element => {
+				$("div").append("<strong>" + element.attribute_name + ":</strong> " + element.value + "<br>");
+			});
 		});
-	}
-</script>
+	</script>
 
-<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js">
-</script>
 
 </body>
+
 </html>
