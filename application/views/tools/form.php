@@ -174,7 +174,7 @@
     </div>
   </div>
 
-  <div id="step2">
+  <div id="step2" class="was-validated" style="display: none">
     <div class="card shadow mb-4 border-primary">
       <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">2. Nhiễm khuẩn bệnh viện</h6>
