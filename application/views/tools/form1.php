@@ -1,206 +1,184 @@
-<?php
-	$this->load->model('Template_model');
-?>
 <h1 class="h3 mb-4 text-gray-800">PHIẾU GIÁM SÁT NGANG NHIỄM KHUẨN BỆNH VIỆN</h1>
 <hr class="sidebar-divider d-none d-md-block">
 <div class="mb-2"><small>* Vui lòng điền đầy đủ thông tin bên dưới</small></div>
-<div class="row mb-3 progress-form">
-  <div id="dotstep1" class="col-3 progress-form-step active">
-    <div class="progress">
-      <div class="progress-bar"></div>
-    </div>
-    <a href="#" class="progress-form-dot"></a>
-  </div>
-  <div id="dotstep2" class="col-3 progress-form-step disabled">
-    <div class="progress">
-      <div class="progress-bar"></div>
-    </div>
-    <a href="#" class="progress-form-dot"></a>
-  </div>
-  <div id="dotstep3" class="col-3 progress-form-step disabled">
-    <div class="progress">
-      <div class="progress-bar"></div>
-    </div>
-    <a href="#" class="progress-form-dot"></a>
-  </div>
-  <div id="dotstep4" class="col-3 progress-form-step disabled">
-    <div class="progress">
-      <div class="progress-bar"></div>
-    </div>
-    <a href="#" class="progress-form-dot"></a>
-  </div>
+<div class="d-none d-sm-block">
+	<div class="row mb-3 progress-form">
+		<div id="dotstep1" class="col-1 offset-2 progress-form-step active">
+			<div class="progress">
+				<div class="progress-bar"></div>
+			</div>
+			<a href="#" class="progress-form-dot"></a>
+		</div>
+		<div id="dotstep2" class="col-1 progress-form-step disabled">
+			<div class="progress">
+				<div class="progress-bar"></div>
+			</div>
+			<a href="#" class="progress-form-dot"></a>
+		</div>
+		<div id="dotstep3" class="col-1 progress-form-step disabled">
+			<div class="progress">
+				<div class="progress-bar"></div>
+			</div>
+			<a href="#" class="progress-form-dot"></a>
+		</div>
+		<div id="dotstep4" class="col-1 progress-form-step disabled">
+			<div class="progress">
+				<div class="progress-bar"></div>
+			</div>
+			<a href="#" class="progress-form-dot"></a>
+		</div>
+		<div id="dotstep5" class="col-1 progress-form-step disabled">
+			<div class="progress">
+				<div class="progress-bar"></div>
+			</div>
+			<a href="#" class="progress-form-dot"></a>
+		</div>
+		<div id="dotstep6" class="col-1 progress-form-step disabled">
+			<div class="progress">
+				<div class="progress-bar"></div>
+			</div>
+			<a href="#" class="progress-form-dot"></a>
+		</div>
+		<div id="dotstep7" class="col-1 progress-form-step disabled">
+			<div class="progress">
+				<div class="progress-bar"></div>
+			</div>
+			<a href="#" class="progress-form-dot"></a>
+		</div>
+		<div id="dotstep8" class="col-1 progress-form-step disabled">
+			<div class="progress">
+				<div class="progress-bar"></div>
+			</div>
+			<a href="#" class="progress-form-dot"></a>
+		</div>
+	</div>
 </div>
-<form method="post" class="mb-3">
+<form method="post" action="<?php echo base_url('user/test_form')?>" class="mb-3">
+	<input id="form_id" name="form_id" type="text" class="d-none">
+	<div id="step1" class="was-validated">
+		<div class="card shadow mb-4 border-primary">
+			<div class="card-header py-3">
+				<h6 class="m-0 font-weight-bold text-primary">1. Thông tin chung</h6>
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label class="text-dark" for="ngay_vao_khoa">Ngày vào khoa</label>
+							<input id="ngay_vao_khoa" name="ngay_vao_khoa" type="date" class="form-control ellipsis" required>
+							<div class="invalid-feedback">Vui lòng nhập Ngày vào khoa</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label class="text-dark" for="ngay_vao_vien">Ngày vào viện</label>
+							<input id="ngay_vao_vien" name="ngay_vao_vien" type="date" class="form-control ellipsis" required>
+							<div class="invalid-feedback">Vui lòng nhập Ngày vào viện</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="text-dark" for="msba">Mã bệnh án</label>
+							<input id="msba" name="msba" type="text" class="form-control ellipsis" required>
+							<div class="invalid-feedback">Vui lòng nhập Mã bệnh án</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="text-dark" for="company_name">Bệnh viện</label>
+							<input id="company_name" name="company_name" type="text" class="form-control ellipsis" readonly required>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="text-dark" for="room_name">Khoa</label>
+							<input id="room_name" name="room_name" type="text" class="form-control ellipsis" readonly required>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="text-dark" for="ngay_dieu_tra">Ngày điều tra</label>
+					<input id="ngay_dieu_tra" name="ngay_dieu_tra" type="date" class="form-control ellipsis" required>
+					<div class="invalid-feedback">Vui lòng nhập Ngày điều tra</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-lg-6">
+						<div class="form-group">
+							<label class="text-dark" for="ho_ten_bn">Họ tên người bệnh</label>
+							<input id="ho_ten_bn" name="ho_ten_bn" type="text" class="form-control ellipsis" required>
+							<div class="invalid-feedback">Vui lòng nhập Họ tên người bệnh</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<div class="form-group">
+							<label class="text-dark" for="nam_sinh">Năm sinh</label>
+							<input id="nam_sinh" name="nam_sinh" type="number" class="form-control ellipsis" required>
+							<div class="invalid-feedback">Vui lòng nhập Năm sinh người bệnh</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<div class="form-group">
+							<div class="text-dark cursor-default">Giới tính</div>
+							<div class="custom-control custom-radio">
+								<input type="radio" id="gioi_tinh_nam" name="gioi_tinh" class="custom-control-input" value="1" required>
+								<label class="custom-control-label" for="gioi_tinh_nam">Nam</label>
+							</div>
+							<div class="custom-control custom-radio">
+								<input type="radio" id="gioi_tinh_nu" name="gioi_tinh" class="custom-control-input" value="0" required>
+								<label class="custom-control-label" for="gioi_tinh_nu">Nữ</label>
+								<div class="invalid-feedback" style="margin-left: -24px">Vui lòng chọn giới tính người bệnh</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="text-dark" for="noi_chuyen_toi">Nơi chuyển tới</label>
+					<input id="noi_chuyen_toi" name="noi_chuyen_toi" type="text" class="form-control ellipsis" required>
+					<div class="invalid-feedback">Vui lòng nhập Nơi chuyển tới</div>
+				</div>
+				<div class="form-group">
+					<label class="text-dark" for="chan_doan_luc_vao">Chẩn đoán lúc vào</label>
+					<input id="chan_doan_luc_vao" name="chan_doan_luc_vao" type="text" class="form-control ellipsis" required>
+					<div class="invalid-feedback">Vui lòng nhập Chẩn đoán lúc vào</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="text-dark" for="ngay_ra_vien">Ngày ra viện</label>
+							<input id="ngay_ra_vien" name="ngay_ra_vien" type="date" class="form-control ellipsis" required>
+							<div class="invalid-feedback">Vui lòng nhập ngày ra viện</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="text-dark" for="chuan_doan_xac_dinh">Chẩn đoán xác định</label>
+							<input id="chan_doan_xac_dinh" name="chan_doan_xac_dinh" type="text" class="form-control ellipsis" required>
+							<div class="invalid-feedback">Vui lòng nhập Chẩn đoán xác định</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="text-dark cursor-default">Nhiễm khuẩn lúc vào</div>
+					<div class="custom-control custom-radio">
+						<input type="radio" id="co_nhiem_khuan_luc_vao" name="nhiem_khuan_luc_vao" class="custom-control-input" value="1" required>
+						<label class="custom-control-label" for="co_nhiem_khuan_luc_vao">Có</label>
+					</div>
+					<div class="custom-control custom-radio">
+						<input type="radio" id="khong_nhiem_khuan_luc_vao" name="nhiem_khuan_luc_vao" class="custom-control-input" value="0" required>
+						<label class="custom-control-label" for="khong_nhiem_khuan_luc_vao">Không</label>
+						<div class="invalid-feedback" style="margin-left: -24px">Người bệnh có nhiễm khuẩn lúc vào hay không?</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-  <div id="step1" class="card shadow mb-4 border-primary">
-    <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">1. Thông tin chung</h6>
-    </div>
-    <div class="card-body">
-      <div class="row">
-        <div class="col-sm-6">
+	<div class="row mt-3">
+		<button id="buttonStepBack" type="button" class="btn btn-secondary ml-2" style="display: none">Trở về</button>
+		<button id="buttonStepNext" type="button" class="btn btn-primary ml-auto mr-2">Kế tiếp</button>
+		<button id="buttonSubmit" name="buttonSubmit" type="submit" class="btn btn-primary ml-auto mr-2" >Hoàn thành</button>
+	</div>
 
-          <div class="form-group">
-            <label class="text-dark" for="ngay_vao_khoa">Ngày vào khoa</label>
-            <input name="<?php echo $this->Template_model->get_id('ngay_vao_khoa',$form_id) ?>" id="ngay_vao_khoa" type="date" class="form-control ellipsis" required autofocus>
-            <div class="invalid-tooltip"></div>
-          </div>
-
-        </div>
-
-        <div class="col-sm-6">
-
-          <div class="form-group">
-            <label class="text-dark" for="ngay_vao_vien">Ngày vào viện</label>
-            <input name="<?php echo $this->Template_model->get_id('ngay_vao_vien',$form_id) ?>" id="ngay_vao_vien" type="date" class="form-control ellipsis" required>
-            <div class="invalid-tooltip"></div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="row">
-
-        <div class="col-md-4">
-
-          <div class="form-group">
-            <label class="text-dark" for="msba">Mã bệnh án</label>
-            <input name="<?php echo $this->Template_model->get_id('msba',$form_id) ?>" id="msba" type="text" class="form-control ellipsis" required>
-            <div class="invalid-tooltip"></div>
-          </div>
-
-        </div>
-
-        <div class="col-md-4">
-
-          <div class="form-group">
-            <label class="text-dark" for="company_name">Bệnh viện</label>
-            <input id="company_name" name="company_name" type="text" class="form-control ellipsis" readonly>
-            <div class="invalid-tooltip"></div>
-          </div>
-
-        </div>
-        <div class="col-md-4">
-
-          <div class="form-group">
-            <label class="text-dark" for="room_name">Khoa</label>
-            <input id="room_name" name="room_name" type="text" class="form-control ellipsis" readonly>
-            <div class="invalid-tooltip"></div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="text-dark" for="ngay_dieu_tra">Ngày điều tra</label>
-        <input name="ngay_dieu_tra" id="ngay_dieu_tra" type="date" class="form-control ellipsis" required>
-        <div class="invalid-tooltip"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12 col-lg-6">
-
-          <div class="form-group">
-            <label class="text-dark" for="HoTenNguoiBenh">Họ tên người bệnh</label>
-            <input name="<?php echo $this->Template_model->get_id('ho_ten_bn',$form_id) ?>" id="ho_ten_bn" type="text" class="form-control ellipsis" required>
-            <div class="invalid-tooltip"></div>
-          </div>
-
-        </div>
-        <div class="col-md-6 col-lg-3">
-
-          <div class="form-group">
-            <label class="text-dark" for="NamSinh">Năm sinh</label>
-            <input name="<?php echo $this->Template_model->get_id('nam_sinh',$form_id) ?>" id="nam_sinh" type="number" class="form-control ellipsis" required>
-            <div class="invalid-tooltip"></div>
-          </div>
-
-        </div>
-        <div class="col-md-6 col-lg-3">
-
-          <div class="form-group">
-            <div class="text-dark mb-3 cursor-default">Giới tính</div>
-            <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" value="1" id="Nam" name="<?php echo $this->Template_model->get_id('gioi_tinh',$form_id) ?>" class="custom-control-input">
-              <label class="custom-control-label" for="Nam">Nam</label>
-            </div>
-            <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" value="0" id="Nu" name="<?php echo $this->Template_model->get_id('gioi_tinh',$form_id) ?>" class="custom-control-input">
-              <label class="custom-control-label" for="Nu">Nữ</label>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="text-dark" for="NoiChuyenToi">Nơi chuyển tới</label>
-        <input id="noi_chuyen_toi" name="<?php echo $this->Template_model->get_id('noi_chuyen_toi',$form_id) ?>" type="text" class="form-control ellipsis" required>
-        <div class="invalid-tooltip"></div>
-      </div>
-
-      <div class="form-group">
-        <label class="text-dark" for="ChuanDoanLucVao">Chuẩn đoán lúc vào</label>
-        <input id="chan_doan_luc_vao" name="<?php echo $this->Template_model->get_id('chan_doan_luc_vao',$form_id) ?>" type="text" class="form-control ellipsis" required>
-        <div class="invalid-tooltip"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
-
-          <div class="form-group">
-            <label class="text-dark" for="NgayRaVien">Ngày ra viện</label>
-            <input id="ngay_ra_vien" name="<?php echo $this->Template_model->get_id('ngay_ra_vien',$form_id) ?>" type="date" class="form-control ellipsis" required>
-            <div class="invalid-tooltip"></div>
-          </div>
-
-        </div>
-        <div class="col-md-6">
-
-          <div class="form-group">
-            <label class="text-dark" for="ChuanDoanXacDinh">Chuẩn đoán xác định</label>
-            <input id="chan_doan_xac_dinh" name="<?php echo $this->Template_model->get_id('chan_doan_xac_dinh',$form_id) ?>" type="text" class="form-control ellipsis" required>
-            <div class="invalid-tooltip"></div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="form-group">
-        <div class="text-dark mb-3 cursor-default">Nhiễm khuẩn lúc vào</div>
-        <div class="custom-control custom-radio custom-control-inline">
-          <input type="radio" value="1" id="nhiem_khuan_luc_vao" name="<?php echo $this->Template_model->get_id('nhiem_khuan_luc_vao',$form_id) ?>" class="custom-control-input">
-          <label class="custom-control-label" for="CoNhiemKhuanLucVao">Có</label>
-        </div>
-        <div class="custom-control custom-radio custom-control-inline">
-          <input type="radio" value="0" id="KhongNhiemKhuanLucVao" name="<?php echo $this->Template_model->get_id('nhiem_khuan_luc_vao',$form_id) ?>" class="custom-control-input">
-          <label class="custom-control-label" for="KhongNhiemKhuanLucVao">Không</label>
-        </div>
-		  <button id="buttonSubmit" name="buttonSubmit" type="submit" class="btn btn-primary ml-auto mr-2" >Hoàn thành</button>
-      </div>
-
-    </div>
-  </div>
-
-  <div id="step2">
-
-  </div>
-  <div id="step3">
-
-  </div>
-  <div id="step4">
-
-  </div>
-  <div id="step5">
-
-  </div>
-  <div id="step6">
-
-  </div>
 </form>
-
-<div class="row mb-3">
-  <button id="buttonStepBack" class="btn btn-secondary ml-2" style="display: none">Trở về</button>
-  <button id="buttonStepNext" class="btn btn-primary ml-auto mr-2">Kế tiếp</button>
-  <button id="buttonSubmit" name="buttonSubmit" type="submit" class="btn btn-primary ml-auto mr-2" >Hoàn thành</button>
-</div>

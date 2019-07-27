@@ -31,13 +31,14 @@ class User extends My_Controller {
 		if($this->input->post()){
 			$this->load->model('Form_model');
 			$form_id=$this->Form_model->insert_new_form(1,'Khoa noi',1);
-			$this->Template_model->insert_form($template_id,$form_id);
+			$this->load->model('Template_model');
+			$this->Template_model->insert_form(1,$form_id);
 			echo 'Form '.$form_id.'creat success';
 			$data = $this->input->post(NULL,TRUE);
 			foreach($data as $key => $val)
 			{
 				$this->load->model('Value_model');
-				$this->Value_model->update_value($form_id,$key,$val);
+				$this->Value_model->update($form_id,$key,$val);
 			}
 		}
 	}
@@ -53,6 +54,7 @@ class User extends My_Controller {
 			'<script src="'.base_url('public/js/tools/edit_form.js').'"></script>';
 
 		$this->load->view('general/layout',$data);
+
 	}
 
 	public function list_form()
@@ -69,5 +71,39 @@ class User extends My_Controller {
 			'<script src="'.base_url('public/js/tools/list_form.js').'"></script>';
 
 		$this->load->view('general/layout',$data);
+	}
+	public function test_form()
+	{
+		$data['role'] = 'user';
+		$data['page_title'] = 'Tạo mới biểu mẫu';
+
+		$data['main']='tools/form1';
+	    $data['script'] = '<script src="'.base_url('public/js/tools/new_form.js').'"></script>';
+
+		$this->load->view('general/layout',$data);
+		if($this->input->post()){
+			$this->load->model('Form_model');
+			$form_id=$this->Form_model->insert_new_form(1,'Khoa noi',1);
+			$this->load->model('Template_model');
+			$this->Template_model->insert_form(1,$form_id);
+			echo 'Form '.$form_id.'creat success';
+			$data = $this->input->post(NULL,TRUE);
+			foreach($data as $key => $val)
+			{
+				$this->load->model('Value_model');
+				$this->Value_model->update($form_id,$key,$val);
+			}
+			/*
+			$this->load->model('Form_model');
+			$form_id=$this->Form_model->insert_new_form(1,'Khoa noi',1);
+			$this->Template_model->insert_form(1,$form_id);
+			echo 'Form '.$form_id.'creat success';
+			$data = $this->input->post(NULL,TRUE);
+			foreach($data as $key => $val)
+			{
+				$this->load->model('Value_model');
+				$this->Value_model->update($form_id,$key,$val);
+			}*/
+		}
 	}
 }
