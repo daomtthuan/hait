@@ -7,6 +7,7 @@ class My_controller extends CI_Controller {
 	{
 		parent::__construct();
 		//$this->check_user_login();
+		ini_set('max_execution_time', 300);
 
 	}
 	private function check_user_login(){

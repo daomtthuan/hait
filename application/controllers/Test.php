@@ -40,7 +40,12 @@ class Test extends My_Controller {
 		$data=$this->Template_model->get_value(1);
 		echo json_encode($data);
 	}
-
+	public function new_form($template_id){
+		$this->load->model('Form_model');
+		$form_id=$this->Form_model->insert_new_form(1,'Khoa noi',1);
+		$this->Template_model->insert_form($template_id,$form_id);
+		echo 'Form '.$form_id.'creat success';
+	}
 }
 
 /* End of file Controllername.php */

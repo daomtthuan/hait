@@ -1,4 +1,3 @@
-<input id="form_id" name="form_id" type="text" class="d-none">
 <h1 class="h3 mb-4 text-gray-800">PHIẾU GIÁM SÁT NGANG NHIỄM KHUẨN BỆNH VIỆN</h1>
 <hr class="sidebar-divider d-none d-md-block">
 <div class="mb-2"><small>* Vui lòng điền đầy đủ thông tin bên dưới</small></div>
@@ -54,7 +53,8 @@
     </div>
   </div>
 </div>
-<form action="" class="mb-3">
+<form method="post" action="<?php echo base_url('user/new_form')?>" class="mb-3">
+	<input id="form_id" name="form_id" type="text" class="d-none">
   <div id="step1" class="was-validated">
     <div class="card shadow mb-4 border-primary">
       <div class="card-header py-3">
@@ -140,7 +140,7 @@
         </div>
         <div class="form-group">
           <label class="text-dark" for="chan_doan_luc_vao">Chẩn đoán lúc vào</label>
-          <input id="chuan_doan_luc_vao" name="chuan_doan_luc_vao" type="text" class="form-control ellipsis" required>
+          <input id="chan_doan_luc_vao" name="chan_doan_luc_vao" type="text" class="form-control ellipsis" required>
           <div class="invalid-feedback">Vui lòng nhập Chẩn đoán lúc vào</div>
         </div>
         <div class="row">
@@ -154,7 +154,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label class="text-dark" for="chuan_doan_xac_dinh">Chẩn đoán xác định</label>
-              <input id="chuan_doan_xac_dinh" name="chuan_doan_xac_dinh" type="text" class="form-control ellipsis" required>
+              <input id="chan_doan_xac_dinh" name="chan_doan_xac_dinh" type="text" class="form-control ellipsis" required>
               <div class="invalid-feedback">Vui lòng nhập Chẩn đoán xác định</div>
             </div>
           </div>
@@ -1726,6 +1726,7 @@
   <div class="row mt-3">
     <button id="buttonStepBack" type="button" class="btn btn-secondary ml-2" style="display: none">Trở về</button>
     <button id="buttonStepNext" type="button" class="btn btn-primary ml-auto mr-2">Kế tiếp</button>
-    <button id="buttonSubmit" name="buttonSubmit" type="submit" class="btn btn-primary ml-auto mr-2" style="display: none">Hoàn thành</button>
+
   </div>
+	<button id="buttonSubmit" name="buttonSubmit" type="submit" class="btn btn-primary ml-auto mr-2" >Hoàn thành</button>
 </form>

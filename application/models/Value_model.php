@@ -15,8 +15,14 @@ class Value_model extends CI_Model
 		$data=$query->result_array();
 		return $data;
 	}
-	public function update($data){
-		$this->db->where('form_attribute_id', $data['form_attribute_id']);
+	public function update($form_id,$key,$value){
+		echo 'Key'.$key.'value'.$value;
+		$like_pt=$form_id.'_';
+		$data = array(
+			'value' => $value,
+		);
+		$this->db->like('form_attribute_id', $like_pt);
+		$this->db->where('attribute_name',$key);
 		$this->db->update('value', $data);
 	}
 	public function delete($id){
