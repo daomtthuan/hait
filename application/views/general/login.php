@@ -10,7 +10,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link type="image/x-icon" rel="shortcut icon" href="<?php echo base_url('./public/img/logoicon.ico') ?>">
-  <link href="<?php echo base_url('public/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous">
   <link href="<?php echo base_url('public/css/theme.min.css') ?>" rel="stylesheet">
   <link href="<?php echo base_url('public/css/login.css') ?>" rel="stylesheet">
 </head>
@@ -34,7 +34,7 @@
                   </h4>
                 </div>
                 <h4 class="login-heading mb-4">Đăng nhập</h4>
-                <form  method="post" id="FormLogin" name="FormLogin">
+                <form method="post" id="FormLogin" name="FormLogin">
                   <div class="form-label-group">
                     <input type="text" id="inputUsername" name="inputUsername" class="form-control" placeholder="Tên đăng nhập" required autofocus>
                     <label for="inputUsername">Tên đăng nhập</label>
@@ -66,9 +66,9 @@
       </div>
     </div>
   </div>
-  <script src="<?php echo base_url('public/vendor/jquery/jquery.min.js') ?>"></script>
-  <script src="<?php echo base_url('public/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
-  <script src="<?php echo base_url('public/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha256-fzFFyH01cBVPYzl16KT40wqjhgPtq6FFUB6ckN2+GGw=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
   <script src="<?php echo base_url('public/js/theme.min.js') ?>"></script>
 </body>
 

@@ -6,40 +6,56 @@ class User extends My_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Login_model');
 	}
 
 	public function index()
 	{
-		$data['main']='user/home';
-		$data['page_title'] = ucfirst('Trang chủ');
-		$data['script'] = ucfirst('');
+		$data['role'] = 'user';
+		$data['page_title'] = 'Trang chủ';
+
+		$data['main']= 'user/home';
+		$data['script'] = '';
+
 		$this->load->view('general/layout',$data);
 	}
 
 	public function new_form()
 	{
+		$data['role'] = 'user';
+		$data['page_title'] = 'Tạo mới biểu mẫu';
+
 		$data['main']='tools/form';
-		$data['page_title'] = ucfirst('Tạo mới biểu mẫu');
-		$data['script'] = ucfirst('<script src="'.base_url('public/js/tools/new_form.js').'"></script>');
+		$data['script'] = '<script src="'.base_url('public/js/tools/new_form.js').'"></script>';
+
 		$this->load->view('general/layout',$data);
 	}
 
-	public function edit_form()
+	public function edit_form($form_id)
 	{
+		$data['role'] = 'user';
+		$data['page_title'] = 'Chỉnh sửa biểu mẫu';
+
 		$data['main']='tools/form';
-		$data['page_title'] = ucfirst('Chỉnh sửa biểu mẫu');
-		$data['script'] = ucfirst('<script>var url = "'.base_url('ajax/get/1').'"</script><script src="'.base_url('public/js/tools/edit_form.js').'"></script>');
+		$data['script'] =
+			'<script>var json = "'.base_url('ajax/get/'.$form_id).'"</script>'.
+			'<script src="'.base_url('public/js/tools/edit_form.js').'"></script>';
+
 		$this->load->view('general/layout',$data);
 	}
 
 	public function list_form()
 	{
+		$data['role'] = 'user';
+		$data['page_title'] = 'Danh sách biểu mẫu';
+
 		$data['main']='tools/list_form';
-		$data['page_title'] = ucfirst('Danh sách biểu mẫu');
-		$data['script'] = ucfirst('<script>var editUrl = "'.base_url('user/edit_form').'", jsonUrl = "'.base_url('ajax/formList').'"</script><script src="'.base_url('public/js/tools/list_form.js').'"></script>');
+		$data['script'] =
+			'<script>'.
+				'var edit = "'.base_url('user/edit_form').'",'.
+				'json = "'.base_url('ajax/formList').'"'.
+			'</script>'.
+			'<script src="'.base_url('public/js/tools/list_form.js').'"></script>';
+
 		$this->load->view('general/layout',$data);
 	}
 }
-
-
