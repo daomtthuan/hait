@@ -4,13 +4,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện</title>
-	<meta name="author" content="Nguyen Phuc Duy, Dao Minh Trung Thuan">
-	<meta name="keywords" content="hait, bệnh viện, nhiễm khuẩn, hệ thống quản lý, giám sát, hệ thống quản lý giám sát nhiễm khuẩn,hệ thống quản lý giám sát nhiễm khuẩn bệnh viện, daomtthuan, dualeola, dao minh trung thuan, nguyen phuc duy">
+	<meta name="author" content="Dao Minh Trung Thuan">
+	<meta name="keywords" content="hait, bệnh viện, nhiễm khuẩn, hệ thống quản lý, giám sát, hệ thống quản lý giám sát nhiễm khuẩn,hệ thống quản lý giám sát nhiễm khuẩn bệnh viện, daomtthuan, dao minh trung thuan">
 	<meta name="description" content="HAIT - Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link type="image/x-icon" rel="shortcut icon" href="<?php echo base_url('./public/img/logoicon.ico') ?>">
-	<link href="<?php echo base_url('public/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet">
+	<link type="image/x-icon" rel="shortcut icon" href="<?php echo base_url('./public/img/logoicon.ico') ?>">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous">
 	<link href="<?php echo base_url('public/css/theme.min.css') ?>" rel="stylesheet">
 	<link href="<?php echo base_url('public/css/custom.css') ?>" rel="stylesheet">
 </head>
@@ -26,7 +26,7 @@
 					<div class="sidebar-brand-text text-primary mx-3 cursor-default">HAIT</div>
 				</div>
 			</li>
-			<?php $this->load->view('user/sidebar') ?>
+			<?php $this->load->view($role.'/sidebar') ?>
 			<hr class="sidebar-divider d-none d-md-block">
 			<div class="text-center d-none d-md-inline">
 				<button class="rounded-circle border-0" id="sidebarToggle"></button>
@@ -152,10 +152,10 @@
 						<li class="nav-item dropdown no-arrow">
 							<a class="nav-link dropdown-toggle" href="" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<span class="mr-2 d-none d-lg-inline text-gray-600 small">
-									<!-- Tên của User -ài khoản:-->
-						           Tài khoản: <?php echo $this->session->userdata('login');?>
+									<!-- Tên của User Tài khoản:-->
+									Tài khoản: <?php echo $this->session->userdata('login');?>
 
-								<img class="img-profile rounded-circle" src="https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.0-9/53347625_954684504722691_2104953662064295936_n.jpg?_nc_cat=102&_nc_oc=AQme7v9N7SpMmi9c_lMzSsWdIM2ZojStywlLcljz4225boNtyOkVNDjgUUN_F8BsA0E&_nc_ht=scontent.fsgn2-2.fna&oh=45f4d7a2165982aded7996540b631e4e&oe=5DE30A15">
+									<img class="img-profile rounded-circle" src="https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.0-9/53347625_954684504722691_2104953662064295936_n.jpg?_nc_cat=102&_nc_oc=AQme7v9N7SpMmi9c_lMzSsWdIM2ZojStywlLcljz4225boNtyOkVNDjgUUN_F8BsA0E&_nc_ht=scontent.fsgn2-2.fna&oh=45f4d7a2165982aded7996540b631e4e&oe=5DE30A15">
 							</a>
 							<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
 								<a class="dropdown-item" href="#">
@@ -167,11 +167,20 @@
 									Cài đặt
 								</a>
 								<a class="dropdown-item" href="#">
-									<i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-									Liên hệ
+									<i class="fas fa-phone fa-sm fa-fw mr-2 text-gray-400"></i>
+									Liên hệ hỗ trợ
+								</a>
+								<a class="dropdown-item" href="#">
+									<i class="fas fa-comments fa-sm fa-fw mr-2 text-gray-400"></i>
+									Góp ý phản hồi
 								</a>
 								<div class="dropdown-divider"></div>
-								<a  class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">
+								<div id="themeDark" class="dropdown-item cursor-pointer">
+									<i class="fas fa-toggle-off fa-sm fa-fw mr-2 text-gray-400"></i>
+									Giao diện tối
+								</div>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">
 									<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
 									Đănng xuất
 								</a>
@@ -186,7 +195,7 @@
 			<footer class="sticky-footer bg-white">
 				<div class="container my-auto">
 					<div class="copyright text-center my-auto">
-						<span>Copyright &copy; Nguyen Phuc Duy & Daomtthuan 2019</span>
+						<h6><small>Phiên bản 1.0.0</small><br><span>Copyright &copy; Daomtthuan 2019</span></h6>
 					</div>
 				</div>
 			</footer>
@@ -195,11 +204,11 @@
 	<a class="scroll-to-top rounded" href="#page-top">
 		<i class="fas fa-angle-up"></i>
 	</a>
-	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title text-primary" id="exampleModalLabel">Thông báo</h5>
+					<h5 class="modal-title text-primary" id="modal-label">Thông báo</h5>
 				</div>
 				<div class="modal-body">Bạn có chắc muốn đăng xuất?</div>
 				<div class="modal-footer">
@@ -209,11 +218,11 @@
 			</div>
 		</div>
 	</div>
-
-	<script src="<?php echo base_url('public/vendor/jquery/jquery.min.js') ?>"></script>
-	<script src="<?php echo base_url('public/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
-	<script src="<?php echo base_url('public/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
-	<script src="<?php echo base_url('public/js/theme.min.js') ?>"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha256-fzFFyH01cBVPYzl16KT40wqjhgPtq6FFUB6ckN2+GGw=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
+	<script src="<?php echo base_url('public/js/general/theme.min.js') ?>"></script>
+	<script src="<?php echo base_url('public/js/general/layout.js') ?>"></script>
 	<?php echo $script ?>
 </body>
 

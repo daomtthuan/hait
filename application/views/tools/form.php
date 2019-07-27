@@ -1,3 +1,4 @@
+<input id="form_id" name="form_id" type="text" class="d-none">
 <h1 class="h3 mb-4 text-gray-800">PHIẾU GIÁM SÁT NGANG NHIỄM KHUẨN BỆNH VIỆN</h1>
 <hr class="sidebar-divider d-none d-md-block">
 <div class="mb-2"><small>* Vui lòng điền đầy đủ thông tin bên dưới</small></div>
@@ -138,9 +139,9 @@
           <div class="invalid-feedback">Vui lòng nhập Nơi chuyển tới</div>
         </div>
         <div class="form-group">
-          <label class="text-dark" for="chuan_doan_luc_vao">Chuẩn đoán lúc vào</label>
+          <label class="text-dark" for="chan_doan_luc_vao">Chẩn đoán lúc vào</label>
           <input id="chuan_doan_luc_vao" name="chuan_doan_luc_vao" type="text" class="form-control ellipsis" required>
-          <div class="invalid-feedback">Vui lòng nhập Chuẩn đoán lúc vào</div>
+          <div class="invalid-feedback">Vui lòng nhập Chẩn đoán lúc vào</div>
         </div>
         <div class="row">
           <div class="col-md-6">
@@ -152,9 +153,9 @@
           </div>
           <div class="col-md-6">
             <div class="form-group">
-              <label class="text-dark" for="chuan_doan_xac_dinh">Chuẩn đoán xác định</label>
+              <label class="text-dark" for="chuan_doan_xac_dinh">Chẩn đoán xác định</label>
               <input id="chuan_doan_xac_dinh" name="chuan_doan_xac_dinh" type="text" class="form-control ellipsis" required>
-              <div class="invalid-feedback">Vui lòng nhập Chuẩn đoán xác định</div>
+              <div class="invalid-feedback">Vui lòng nhập Chẩn đoán xác định</div>
             </div>
           </div>
         </div>

@@ -4,15 +4,15 @@
 <head>
   <meta charset="utf-8">
   <title>Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện</title>
-  <meta name="author" content="Nguyen Phuc Duy, Dao Minh Trung Thuan">
-  <meta name="keywords" content="hait, bệnh viện, nhiễm khuẩn, hệ thống quản lý, giám sát, hệ thống quản lý giám sát nhiễm khuẩn,hệ thống quản lý giám sát nhiễm khuẩn bệnh viện, daomtthuan, dualeola, dao minh trung thuan, nguyen phuc duy">
+  <meta name="author" content="Dao Minh Trung Thuan">
+  <meta name="keywords" content="hait, bệnh viện, nhiễm khuẩn, hệ thống quản lý, giám sát, hệ thống quản lý giám sát nhiễm khuẩn,hệ thống quản lý giám sát nhiễm khuẩn bệnh viện, daomtthuan, dao minh trung thuan">
   <meta name="description" content="HAIT - Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link type="image/x-icon" rel="shortcut icon" href="<?php echo base_url('./public/img/logoicon.ico') ?>">
-  <link href="<?php echo base_url('public/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous">
   <link href="<?php echo base_url('public/css/theme.min.css') ?>" rel="stylesheet">
-  <link href="<?php echo base_url('public/css/login.css') ?>" rel="stylesheet">
+  <link href="<?php echo base_url('public/css/login.min.css') ?>" rel="stylesheet">
 </head>
 
 <body>
@@ -34,7 +34,7 @@
                   </h4>
                 </div>
                 <h4 class="login-heading mb-4">Đăng nhập</h4>
-                <form  method="post" id="FormLogin" name="FormLogin">
+                <form method="post" id="FormLogin" name="FormLogin">
                   <div class="form-label-group">
                     <input type="text" id="inputUsername" name="inputUsername" class="form-control" placeholder="Tên đăng nhập" required autofocus>
                     <label for="inputUsername">Tên đăng nhập</label>
@@ -62,14 +62,13 @@
         </div>
       </div>
       <div class="col-md-8 col-lg-6 offset-md-4 offset-lg-6 fixed-bottom text-center">
-        <h6><small>Phiên bản 1.0</small></h6>
+        <h6><small>Phiên bản 1.0.0</small><br><span>Copyright &copy; Daomtthuan 2019</span></h6>
       </div>
     </div>
   </div>
-  <script src="<?php echo base_url('public/vendor/jquery/jquery.min.js') ?>"></script>
-  <script src="<?php echo base_url('public/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
-  <script src="<?php echo base_url('public/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
-  <script src="<?php echo base_url('public/js/theme.min.js') ?>"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha256-fzFFyH01cBVPYzl16KT40wqjhgPtq6FFUB6ckN2+GGw=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
 </body>
 
 </html>
