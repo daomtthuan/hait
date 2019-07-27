@@ -54,13 +54,13 @@
   </div>
 </div>
 <form method="post" action="<?php echo base_url('user/new_form')?>" class="mb-3">
-	<input id="form_id" name="form_id" type="text" class="d-none">
+  <input id="form_id" name="form_id" type="text" class="d-none" readonly>
   <div id="step1" class="was-validated">
     <div class="card shadow mb-4 border-primary">
-      <div class="card-header py-3">
+      <div class="card-header bg-light py-3">
         <h6 class="m-0 font-weight-bold text-primary">1. Thông tin chung</h6>
       </div>
-      <div class="card-body">
+      <div class="card-body bg-white">
         <div class="row">
           <div class="col-sm-6">
             <div class="form-group">
@@ -177,461 +177,19 @@
 
   <div id="step2" class="was-validated" style="display: none">
     <div class="card shadow mb-4 border-primary">
-      <div class="card-header py-3">
+      <div class="card-header bg-light py-3">
         <h6 class="m-0 font-weight-bold text-primary">2. Nhiễm khuẩn bệnh viện</h6>
       </div>
-      <div class="card-body">
-        <div class="form-group">
-          <div class="text-dark cursor-default">Loại nhiễm khuẩn <small>(Nếu có)</small></div>
-          <div class="custom-control custom-checkbox custom-control">
-            <input type="checkbox" id="loai_nhiem_khuan_1" name="loai_nhiem_khuan_1" class="custom-control-input" value="1">
-            <label class="custom-control-label" for="loai_nhiem_khuan_1">1</label>
-          </div>
-          <div class="loai_nhiem_khuan_1 was-validated" style="display: none">
-            <div class="mt-2">Triệu chứng lâm sàng</div>
-            <div class="text-danger mt-2">Có ít nhất 1 trong 3 tiêu chí sau</div>
-            <div class="form-group mt-2 row col-12">
-              <div class="col-md-6">Sốt &gt; 38&deg;C</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_sot" name="loai_nhiem_khuan_1_sot" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_sot">Có</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_sot" name="loai_nhiem_khuan_1_sot" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_sot">Không</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-6">Bạch cầu giảm (&lt; 4.000 BC/mm3) hoặc Bạch cầu tăng (&ge; 12.000 BC/mm3)</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_bach_cau" name="loai_nhiem_khuan_1_bach_cau" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_bach_cau">Có</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_bach_cau" name="loai_nhiem_khuan_1_bach_cau" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_bach_cau">Không</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-6">Người bệnh &ge; 70 tuổi, thay đổi trang thái tâm thần không rõ nguyên nhân</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_tam_than" name="loai_nhiem_khuan_1_tam_than" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_tam_than">Có</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_tam_than" name="loai_nhiem_khuan_1_tam_than" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_tam_than">Không</label>
-                </div>
-              </div>
-            </div>
-            <div class="text-danger mt-2">Có ít nhất 1 trong 4 tiêu chí sau</div>
-            <div class="form-group mt-2 row col-12">
-              <div class="col-md-6">Xuất hiện đờm mủ hoặc thay đổi tính chất đờm hoặc tăng dịch tiết hô hấp, hoặc tăng yêu cầu hút đờm</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_dom" name="loai_nhiem_khuan_1_dom" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_dom">Có</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_dom" name="loai_nhiem_khuan_1_dom" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_dom">Không</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-6">Xuất hiện ho hoặc tiếng ho nặng hơn, hoặc khó thở, hoặc thở nhanh</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_ho" name="loai_nhiem_khuan_1_ho" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_ho">Có</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_ho" name="loai_nhiem_khuan_1_ho" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_ho">Không</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-6">Rale phổi hoặc tiếng thổi thanh phế quản</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_rale" name="loai_nhiem_khuan_1_rale" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_rale">Có</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_rale" name="loai_nhiem_khuan_1_rale" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_rale">Không</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-6">Thông khí xấu đi (VD: độ bão hòa O2 (PaO2/FiO2 &le; 240), tăng nhu cầu O2 hoặc tăng nhu cầu thở máy)</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_thong_khi" name="loai_nhiem_khuan_1_thong_khi" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_thong_khi">Có</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_thong_khi" name="loai_nhiem_khuan_1_thong_khi" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_thong_khi">Không</label>
-                </div>
-              </div>
-            </div>
-            <div class="mt-2">Kết quả xét nghiệm thăm dò</div>
-            <div class="mt-2 text-danger">Xét nghiệm X-quang</div>
-            <div class="row col-12">
-              <small>Có 2 hoặc nhiều phim chụp X-quang tim phổi có ít nhất một trong các kết quả. (ngoại trừ (*): <i>Với những người bệnh không có bệnh về phổi hoặc bệnh tim mạch (ví dụ: hội chứng SHH, loạn sản phế quản phổi, phù phổi, bệnh phổi tắc nghẽn mạn tính), 1 kết quả chụp X-quang là chấp nhận được</i>)</small>
-            </div>
-            <div class="form-group mt-2 row col-12">
-              <div class="col-md-6">Hình ảnh hang phổi</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_hang_phoi" name="loai_nhiem_khuan_1_hang_phoi" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_hang_phoi">Có</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_hang_phoi" name="loai_nhiem_khuan_1_hang_phoi" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_hang_phoi">Không</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-6">Hình ảnh đông đặc phổi</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_dac_phoi" name="loai_nhiem_khuan_1_dac_phoi" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_dac_phoi">Có</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_dac_phoi" name="loai_nhiem_khuan_1_dac_phoi" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_dac_phoi">Không</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-6">Hình ảnh thâm nhiễm mới hoặc thâm nhiễm cũ tiến triển</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_tham_nhiem" name="loai_nhiem_khuan_1_tham_nhiem" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_tham_nhiem">Có</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_tham_nhiem" name="loai_nhiem_khuan_1_tham_nhiem" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_tham_nhiem">Không</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-6">Tràn khí phổi, với trẻ em &le; 1 tuổi</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_tran_khi_phoi" name="loai_nhiem_khuan_1_tran_khi_phoi" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_tran_khi_phoi">Có</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_tran_khi_phoi" name="loai_nhiem_khuan_1_tran_khi_phoi" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_tran_khi_phoi">Không</label>
-                </div>
-              </div>
-            </div>
-            <div class="mt-2 text-danger">Kết quả vi sinh là vi khuẩn hoặc nấm sợi</div>
-            <div class="form-group mt-2 row col-12">
-              <div class="col-md-6">Cấy máu không liên quan đến nhiễm khuẩn nơi khác</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_cay_mau" name="loai_nhiem_khuan_1_cay_mau" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_cay_mau">Dương tính</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_cay_mau" name="loai_nhiem_khuan_1_cay_mau" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_cay_mau">Âm tính</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-6">Cấy mẫu bệnh phẩm dịch màng phổi</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_cay_mau_benh_pham" name="loai_nhiem_khuan_1_cay_mau_benh_pham" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_cay_mau_benh_pham">Dương tính</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_cay_mau_benh_pham" name="loai_nhiem_khuan_1_cay_mau_benh_pham" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_cay_mau_benh_pham">Âm tính</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-6">Nuôi cấy định lượng vi khuẩn mẫu xét nghiệm dịch đường hô hấp dưới (ví dụ: dịch rửa phế quản, dịch hút phế quản lấy qua nội soi)</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_nuoi_cay" name="loai_nhiem_khuan_1_nuoi_cay" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_nuoi_cay">Dương tính</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_nuoi_cay" name="loai_nhiem_khuan_1_nuoi_cay" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_nuoi_cay">Âm tính</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-6">Tế bào dịch hút rửa phế quản chứa bao gồm vi khuẩn nội bảo qua soi trực tiếp trên kính hiển vi (ví dụ: nhuộm Gram) &gt; 5% </div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_hut_rua" name="loai_nhiem_khuan_1_hut_rua" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_hut_rua">Có</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_hut_rua" name="loai_nhiem_khuan_1_hut_rua" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_hut_rua">Không</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-12 mb-1">Kiểm tra mô bệnh học cho thấy ít nhất một trong những bằng chứng viêm phổi dưới đây:</div>
-              <div class="col-md-6">Hình thành ổ áp xe hoặc ổ hợp nhất với sự tích lũy mạnh của BC đa nhân trong tiểu phế quản và phế nang</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_hinh_anh" name="loai_nhiem_khuan_1_hinh_anh" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_hinh_anh">Có</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_hinh_anh" name="loai_nhiem_khuan_1_hinh_anh" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_hinh_anh">Không</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-6">Định lượng mẫu bệnh phẩm nhu mô phổi</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_dinh_luong" name="loai_nhiem_khuan_1_dinh_luong" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_dinh_luong">Có</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_dinh_luong" name="loai_nhiem_khuan_1_dinh_luong" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_dinh_luong">Không</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-6">Nhu mô phổi bị xâm lấn bởi sợi nấm hoặc giả sợi nấm.</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_nhu_mo" name="loai_nhiem_khuan_1_nhu_mo" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_nhu_mo">Có</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_nhu_mo" name="loai_nhiem_khuan_1_nhu_mo" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_nhu_mo">Không</label>
-                </div>
-              </div>
-            </div>
-            <div class="mt-2 text-danger">Kết quả vi sinh là Legionella, Chlamydia, Mycoplasma và các tác nhân hiếm gặp khác</div>
-            <div class="form-group mt-2 row col-12">
-              <div class="col-md-6">Cấy dịch tiết đường hô hấp vi rút, hoặc vi khuẩn Chlamydia</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_cay_dich_tiet" name="loai_nhiem_khuan_1_cay_dich_tiet" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_cay_dich_tiet">Dương tính</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_cay_dich_tiet" name="loai_nhiem_khuan_1_cay_dich_tiet" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_cay_dich_tiet">Âm tính</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-6">Phát hiện dịch tiết đường hô hấp với kháng nguyên hoặc kháng thể vi rút (ví dụ: ELISA, FAMA, PCR)</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_phat_hien_dich_tiet" name="loai_nhiem_khuan_1_phat_hien_dich_tiet" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_phat_hien_dich_tiet">Dương tính</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_phat_hien_dich_tiet" name="loai_nhiem_khuan_1_phat_hien_dich_tiet" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_phat_hien_dich_tiet">Âm tính</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-6">Tăng 4 lần từng cặp huyết thanh (IgG) với tác nhân gây bệnh (ví dụ: vi rút cúm, vi khuẩn Chlamydia)</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_tang_4" name="loai_nhiem_khuan_1_tang_4" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_tang_4">Dương tính</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_tang_4" name="loai_nhiem_khuan_1_tang_4" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_tang_4">Âm tính</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-6">PCR với vi khuẩn Chlamydia hoặc Mycoplasma</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_pcr" name="loai_nhiem_khuan_1_pcr" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_pcr">Dương tính</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_pcr" name="loai_nhiem_khuan_1_pcr" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_pcr">Âm tính</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-6">Micro-IF với vi khuẩn Chlamydia</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_micro" name="loai_nhiem_khuan_1_micro" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_micro">Dương tính</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_micro" name="loai_nhiem_khuan_1_micro" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_micro">Âm tính</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-6">Cấy dịch tiết hoặc mô đường hô hấp hoặc nhìn thấy được vi khuẩn Legionella spp bằng micro-IF</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_cay_dt_mo_duong_hh" name="loai_nhiem_khuan_1_cay_dt_mo_duong_hh" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_cay_dt_mo_duong_hh">Dương tính</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_cay_dt_mo_duong_hh" name="loai_nhiem_khuan_1_cay_dt_mo_duong_hh" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_cay_dt_mo_duong_hh">Âm tính</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-6">Phát hiện vi khuẩn Legionella pneumophila nhóm huyết thanh 1 kháng nguyên trong nước tiểu bằng RIA hoặc ELISA</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_phat_hien_vi_khuan" name="loai_nhiem_khuan_1_phat_hien_vi_khuan" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_phat_hien_vi_khuan">Dương tính</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_phat_hien_vi_khuan" name="loai_nhiem_khuan_1_phat_hien_vi_khuan" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_phat_hien_vi_khuan">Âm tính</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-6">Tăng gấp 4 lần trong L.pneumophila nhóm huyết thanh 1 giá kháng thể đến &ge; 1: 128 trong cặp huyết thanh cấp tính và huyết thanh hồi phục bằng IFA gián tiếp</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_tang_gap_4" name="loai_nhiem_khuan_1_tang_gap_4" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_tang_gap_4">Dương tính</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_tang_gap_4" name="loai_nhiem_khuan_1_tang_gap_4" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_tang_gap_4">Âm tính</label>
-                </div>
-              </div>
-            </div>
-            <div class="mt-2 text-danger">Đối với bệnh nhân suy giảm miễn dịch</div>
-            <div class="form-group mt-2 row col-12">
-              <div class="col-md-6">Cấy máu và đờm với Candida spp</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_cay_mau_dom" name="loai_nhiem_khuan_1_cay_mau_dom" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_cay_mau_dom">Dương tính</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_cay_mau_dom" name="loai_nhiem_khuan_1_cay_mau_dom" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_cay_mau_dom">Âm tính</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-6">Bằng chứng của nấm hoặc vi khuẩn Pneumocystiscarinii từ dịch tiết đường hô hấp dưới bị ô nhiễm (ví dụ: dịch hút rửa phế quản hoặc dịch nội soi phế quản) bằng một trong hai phương pháp: Soi trực tiếp dưới kính hiển vi, Cấy nấm</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="co_loai_nhiem_khuan_1_bang_chung" name="loai_nhiem_khuan_1_bang_chung" class="custom-control-input" value="1" required>
-                  <label class="custom-control-label" for="co_loai_nhiem_khuan_1_bang_chung">Dương tính</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="khong_loai_nhiem_khuan_1_bang_chung" name="loai_nhiem_khuan_1_bang_chung" class="custom-control-input" value="0" required>
-                  <label class="custom-control-label" for="khong_loai_nhiem_khuan_1_bang_chung">Âm tính</label>
-                </div>
-              </div>
-            </div>
-            <div class="mt-2 text-danger">Kết quả cấy vi sinh: Cấy đàm</div>
-            <div>
-              Tên vi khuẩn: STEPTOCOCUS PNEUMONIA<br>
-              Loại kháng sinh và kết quả
-            </div>
-            <div class="form-group mt-2 row col-12">
-              <div class="col-md-6">Amoxcillin</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-checkbox custom-control-inline">
-                  <input type="checkbox" id="S_loai_nhiem_khuan_1_amoxcillin" name="loai_nhiem_khuan_1_cay_mau_dom" class="custom-control-input" value="S" required>
-                  <label class="custom-control-label" for="S_loai_nhiem_khuan_1_amoxcillin">S</label>
-                </div>
-                <div class="custom-control custom-checkbox custom-control-inline">
-                  <input type="checkbox" id="I_loai_nhiem_khuan_1_amoxcillin" name="loai_nhiem_khuan_1_cay_mau_dom" class="custom-control-input" value="I" required>
-                  <label class="custom-control-label" for="I_loai_nhiem_khuan_1_amoxcillin">I</label>
-                </div>
-                <div class="custom-control custom-checkbox custom-control-inline">
-                  <input type="checkbox" id="R_loai_nhiem_khuan_1_amoxcillin" name="loai_nhiem_khuan_1_cay_mau_dom" class="custom-control-input" value="R" required>
-                  <label class="custom-control-label" for="R_loai_nhiem_khuan_1_amoxcillin">R</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row col-12">
-              <div class="col-md-6">Cefotaxim</div>
-              <div class="col-md-6">
-                <div class="custom-control custom-checkbox custom-control-inline">
-                  <input type="checkbox" id="S_loai_nhiem_khuan_1_cefotaxim" name="loai_nhiem_khuan_1_cay_mau_dom" class="custom-control-input" value="S" required>
-                  <label class="custom-control-label" for="S_loai_nhiem_khuan_1_cefotaxim">S</label>
-                </div>
-                <div class="custom-control custom-checkbox custom-control-inline">
-                  <input type="checkbox" id="I_loai_nhiem_khuan_1_cefotaxim" name="loai_nhiem_khuan_1_cay_mau_dom" class="custom-control-input" value="I" required>
-                  <label class="custom-control-label" for="I_loai_nhiem_khuan_1_cefotaxim">I</label>
-                </div>
-                <div class="custom-control custom-checkbox custom-control-inline">
-                  <input type="checkbox" id="R_loai_nhiem_khuan_1_cefotaxim" name="loai_nhiem_khuan_1_cay_mau_dom" class="custom-control-input" value="R" required>
-                  <label class="custom-control-label" for="R_loai_nhiem_khuan_1_cefotaxim">R</label>
-                </div>
-              </div>
-            </div>
-            <hr>
-          </div>
-          <div class="custom-control custom-checkbox custom-control">
-            <input type="checkbox" id="loai_nhiem_khuan_2" name="loai_nhiem_khuan_2" class="custom-control-input" value="2">
-            <label class="custom-control-label" for="loai_nhiem_khuan_2">2</label>
-          </div>
-          <div class="custom-control custom-checkbox custom-control">
-            <input type="checkbox" id="loai_nhiem_khuan_3" name="loai_nhiem_khuan_3" class="custom-control-input" value="3">
-            <label class="custom-control-label" for="loai_nhiem_khuan_3">3</label>
-          </div>
-          <div class="custom-control custom-checkbox custom-control">
-            <input type="checkbox" id="loai_nhiem_khuan_4" name="loai_nhiem_khuan_4" class="custom-control-input" value="4">
-            <label class="custom-control-label" for="loai_nhiem_khuan_4">4</label>
-          </div>
-          <div class="custom-control custom-checkbox custom-control">
-            <input type="checkbox" id="loai_nhiem_khuan_5" name="loai_nhiem_khuan_5" class="custom-control-input" value="5">
-            <label class="custom-control-label" for="loai_nhiem_khuan_5">5</label>
-          </div>
-        </div>
-      </div>
+      <div class="card-body bg-white"></div>
     </div>
   </div>
 
   <div id="step3" class="was-validated" style="display: none">
     <div class="card shadow mb-4 border-primary">
-      <div class="card-header py-3">
+      <div class="card-header bg-light py-3">
         <h6 class="m-0 font-weight-bold text-primary">3. Các thuốc/sinh phẩm sử dụng trong quá trình điều trị tại khoa</h6>
       </div>
-      <div class="card-body">
+      <div class="card-body bg-white">
         <div class="row">
           <div class="col-md-6 order-md-1">
             <div class="form-group">
@@ -730,10 +288,10 @@
 
   <div id="step4" class="was-validated" style="display: none">
     <div class="card shadow mb-4 border-primary">
-      <div class="card-header py-3">
+      <div class="card-header bg-light py-3">
         <h6 class="m-0 font-weight-bold text-primary">4. Bệnh kèm theo</h6>
       </div>
-      <div class="card-body">
+      <div class="card-body bg-white">
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
@@ -889,10 +447,10 @@
 
   <div id="step5" class="was-validated" style="display: none">
     <div class="card shadow mb-4 border-primary">
-      <div class="card-header py-3">
+      <div class="card-header bg-light py-3">
         <h6 class="m-0 font-weight-bold text-primary">5. Thủ thuật can thiệp</h6>
       </div>
-      <div class="card-body">
+      <div class="card-body bg-white">
         <div class="row">
           <div class="col-xl-4">
             <div class="form-group">
@@ -1113,10 +671,10 @@
 
   <div id="step6" class="was-validated" style="display: none">
     <div class="card shadow mb-4 border-primary">
-      <div class="card-header py-3">
+      <div class="card-header bg-light py-3">
         <h6 class="m-0 font-weight-bold text-primary">6. Phẫu thuật</h6>
       </div>
-      <div class="card-body">
+      <div class="card-body bg-white">
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
@@ -1597,10 +1155,10 @@
 
   <div id="step7" class="was-validated" style="display: none">
     <div class="card shadow mb-4 border-primary">
-      <div class="card-header py-3">
+      <div class="card-header bg-light py-3">
         <h6 class="m-0 font-weight-bold text-primary">7. Kháng sinh sử dụng ở người bệnh không phẫu thuật</h6>
       </div>
-      <div class="card-body">
+      <div class="card-body bg-white">
         <div class="row">
           <div class="col-12">
             <div class="form-group">
@@ -1673,10 +1231,10 @@
 
   <div id="step8" class="was-validated" style="display: none">
     <div class="card shadow mb-4 border-primary">
-      <div class="card-header py-3">
+      <div class="card-header bg-light py-3">
         <h6 class="m-0 font-weight-bold text-primary">8. Kết quả điều trị</h6>
       </div>
-      <div class="card-body">
+      <div class="card-body bg-white">
         <div class="row">
           <div class="col-12">
             <div class="form-group">
@@ -1726,7 +1284,6 @@
   <div class="row mt-3">
     <button id="buttonStepBack" type="button" class="btn btn-secondary ml-2" style="display: none">Trở về</button>
     <button id="buttonStepNext" type="button" class="btn btn-primary ml-auto mr-2">Kế tiếp</button>
-
+    <button id="buttonSubmit" name="buttonSubmit" type="submit" class="btn btn-primary ml-auto mr-2" style="display: none">Hoàn thành</button>
   </div>
-	<button id="buttonSubmit" name="buttonSubmit" type="submit" class="btn btn-primary ml-auto mr-2" >Hoàn thành</button>
 </form>

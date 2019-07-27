@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
   var
-    themeLight = ["bg-gradient-primary", "text-gray-700", "bg-white", "text-primary", "text-dark", "btn-primary", "btn-outline-primary"],
-    themeDark = ["bg-gradient-dark", "text-gray-500", "bg-black", "text-white", "text-light", "btn-light", "btn-outline-light"];
+    themeLight = ["bg-gradient-primary", "bg-white", "bg-light", "text-gray-900", "text-gray-800", "text-gray-700", "text-gray-600", "text-gray-400", "text-gray-300", "text-gray-200", "text-gray-100", "text-primary", "text-dark", "btn-primary", "btn-outline-primary", "border-primary"],
+    themeDark = ["bg-gradient-dark", "bg-black", "bg-gray-800", "text-gray-100", "text-gray-200", "text-gray-300", "text-gray-400", "text-gray-600", "text-gray-700", "text-gray-800", "text-gray-900", "text-white", "text-light", "btn-light", "btn-outline-light", "border-light"];
 
   function setTheme() {
     if (localStorage.getItem("recentTheme") == "dark") {
@@ -18,7 +18,7 @@ $(document).ready(function () {
       $("#toggleTheme").addClass("fa-toggle-off").removeClass("fa-toggle-on");
     }
   }
-  
+
   setTheme();
 
   $("#themeDark").on("click", function () {

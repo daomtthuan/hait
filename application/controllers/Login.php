@@ -39,8 +39,6 @@ class Login extends CI_Controller {
 					}
 				}
 			}
-
-
 		}
 		$this->load->view('general/login');
 	}
@@ -58,7 +56,6 @@ class Login extends CI_Controller {
 		{
 			return false;
 		};
-
 	}
 	public function logout(){
 		{
@@ -81,3 +78,4 @@ class Login extends CI_Controller {
 				redirect(base_url('user'));
 			}
  * */
+?>

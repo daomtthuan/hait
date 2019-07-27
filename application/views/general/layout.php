@@ -32,7 +32,7 @@
 				<button class="rounded-circle border-0" id="sidebarToggle"></button>
 			</div>
 		</ul>
-		<div id="content-wrapper" class="d-flex flex-column">
+		<div id="content-wrapper" class="d-flex flex-column bg-light">
 			<div id="content">
 				<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 					<button id="sidebarToggleTop" class="btn btn-primary d-md-none mr-3">
@@ -188,7 +188,7 @@
 						</li>
 					</ul>
 				</nav>
-				<main id="main" class="container-fluid">
+				<main id="main" class="container-fluid bg-light text-gray-700">
 					<?php $this->load->view($main) ?>
 				</main>
 			</div>
