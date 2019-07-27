@@ -7,8 +7,24 @@ class Form_model extends CI_Model
 	{
 		parent::__construct();
 	}
+	function  insert_new_form($user_create,$room_name,$room_id){
+		$data=array(
+			'loai_form' => 'CHINH' ,
+			'user_create' => $user_create,
+			'user_check' => '',
+			'status'=>'CREATE',
+			'infection'=>'0',
+			'room_name'=>$room_name,
+			'room_id'=>$room_id
+		);
+		$this->db->insert('form',$data);
+		$lastid=$this->db->insert_id();
+		return $lastid;
+	}
 	public function add($data){
 		$this->db->insert('form',$data);
+		$lastid=$this->db->insert_id();
+		return $lastid;
 	}
 	public function get(){
 		$query = $this->db->get('form');
@@ -28,6 +44,7 @@ class Form_model extends CI_Model
 		$data=$query->result_array();
 		return $data;
 	}
+
 }
 
 /* End of file .php */

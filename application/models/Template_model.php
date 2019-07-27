@@ -6,8 +6,8 @@ class Template_model extends CI_Model
 	 public function __construct()
 	 {
 	 	parent::__construct();
-	 	//Do your magic here
 	 }
+
 	 function get_value($form_id){
 		 $like_pt=$form_id.'_';
 		 $this->db->select('attribute_name,value');
@@ -17,24 +17,29 @@ class Template_model extends CI_Model
 		 return $data;
 
 	 }
-	public function insert($template_id,$form_id,$part)
+	public function insert_form($template_id,$form_id)
 	{
+		/* Get attribute list form databse
+		 * */
 		$this->db->select('*');
 		$this->db->from('attribute_value');
 		$this->db->join('attribute', 'attribute_value.attribute_id = attribute.attribute_id');
 		$this->db->join('product_attribute', 'product_attribute.attribute_value_id = attribute_value.attribute_value_id');
 		$this->db->where('product_id',$template_id);
 		$query = $this->db->get();
+		/*
+		 * Inset in to Form_Detail*/
 		foreach ($query->result() as $row)
 		{
 			$form_attribute_id=$form_id.'_'.$row->attribute_value_id;
 			$data = array(
 				'form_id' => $form_id ,
 				'attribute_id' => $row->attribute_value_id,
-				'field_part' => $part,
+				'field_part' => "Main",
 				'form_attribute_id'=>$form_attribute_id
 			);
 			$this->db->insert('form_detail', $data);
+			/*Insert into table Value*/
 			$value_data=array(
 				'value'=>$row->default_value,
 				'data_type'=>$row->data_type,
@@ -43,6 +48,7 @@ class Template_model extends CI_Model
 			);
 			$this->db->insert('value', $value_data);
 		}
+
 	}
 	public function get_id($name,$form_id){
 	 	$like_pt=$form_id.'_';

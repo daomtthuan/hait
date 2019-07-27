@@ -23,6 +23,18 @@ class User extends My_Controller {
 		$data['page_title'] = ucfirst('Tạo mới biểu mẫu');
 		$data['script'] = ucfirst('<script src="'.base_url('public/js/tools/new_form.js').'"></script>');
 		$this->load->view('general/layout',$data);
+		if($this->input->post()){
+			$this->load->model('Form_model');
+			$form_id=$this->Form_model->insert_new_form(1,'Khoa noi',1);
+			$this->Template_model->insert_form($template_id,$form_id);
+			echo 'Form '.$form_id.'creat success';
+			$data = $this->input->post(NULL,TRUE);
+			foreach($data as $key => $val)
+			{
+				$this->load->model('Value_model');
+				$this->Value_model->update_value($form_id,$key,$val);
+			}
+		}
 	}
 
 	public function edit_form()
