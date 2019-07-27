@@ -35,7 +35,7 @@
 		<div id="content-wrapper" class="d-flex flex-column">
 			<div id="content">
 				<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-					<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+					<button id="sidebarToggleTop" class="btn btn-primary d-md-none mr-3">
 						<i class="fas fa-bars"></i>
 					</button>
 
@@ -159,29 +159,29 @@
 							</a>
 							<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
 								<a class="dropdown-item" href="#">
-									<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+									<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-500"></i>
 									Thông tin tài khoản
 								</a>
 								<a class="dropdown-item" href="#">
-									<i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+									<i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-500"></i>
 									Cài đặt
 								</a>
 								<a class="dropdown-item" href="#">
-									<i class="fas fa-phone fa-sm fa-fw mr-2 text-gray-400"></i>
+									<i class="fas fa-phone fa-sm fa-fw mr-2 text-gray-500"></i>
 									Liên hệ hỗ trợ
 								</a>
 								<a class="dropdown-item" href="#">
-									<i class="fas fa-comments fa-sm fa-fw mr-2 text-gray-400"></i>
+									<i class="fas fa-comments fa-sm fa-fw mr-2 text-gray-500"></i>
 									Góp ý phản hồi
 								</a>
 								<div class="dropdown-divider"></div>
 								<div id="themeDark" class="dropdown-item cursor-pointer">
-									<i class="fas fa-toggle-off fa-sm fa-fw mr-2 text-gray-400"></i>
+									<i id="toggleTheme" class="fas fa-toggle-off mr-2 text-gray-500"></i>
 									Giao diện tối
 								</div>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">
-									<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+									<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-500"></i>
 									Đănng xuất
 								</a>
 							</div>

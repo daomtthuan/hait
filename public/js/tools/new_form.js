@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  
   var now = new Date();
   var numberStep = 8;
 
