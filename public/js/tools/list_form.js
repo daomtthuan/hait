@@ -1,7 +1,6 @@
 $.getJSON(json, function (data) {
-  var index = 0;
-  data.forEach(element => {
-    var row = '<tr><th scope="row">' + (++index) + '</th>';
+  data.forEach(function (element, index) {
+    var row = '<tr><th scope="row">' + eval(index + 1) + '</th>';
     row += '<td>' + element.date_create + '</td>';
     row += '<td>' + element.status + '</td>';
     row += '<td>' + element.msba + '</td>';
