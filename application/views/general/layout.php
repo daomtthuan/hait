@@ -21,7 +21,7 @@
 			<li>
 				<div class="sidebar-brand d-flex align-items-center justify-content-center bg-white">
 					<div class="sidebar-brand-icon">
-						<img src="<?php echo base_url('public/img/logo.png') ?>" width="33" height="33" alt="">
+						<img id="logo" src="<?php echo base_url('public/img') ?>" width="33" height="33" alt="">
 					</div>
 					<div class="sidebar-brand-text text-primary mx-3 cursor-default">HAIT</div>
 				</div>
@@ -177,7 +177,7 @@
 								<div class="dropdown-divider"></div>
 								<div id="themeDark" class="dropdown-item cursor-pointer">
 									<i id="toggleTheme" class="fas fa-toggle-off mr-2 text-gray-500"></i>
-									Giao diện tối
+									Giao diện tối <small>(thử nghiệm)</small>
 								</div>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">
