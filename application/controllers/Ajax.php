@@ -18,7 +18,7 @@ class Ajax extends My_Controller {
 		$data=$this->Form_model->table();
 		echo json_encode($data);
 	}
-	public function ksList(){
+	public function listKs(){
 		$this->load->model('Khang_sinh_model');
 		$data=$this->Khang_sinh_model->get();
 		echo json_encode($data);
