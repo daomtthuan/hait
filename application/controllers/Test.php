@@ -46,6 +46,19 @@ class Test extends My_Controller {
 		$this->Template_model->insert_form($template_id,$form_id);
 		echo 'Form '.$form_id.'creat success';
 	}
+	public function datatype(){
+		/*
+		$this->load->model('Attribute_value_model');
+		$data_type= $this->Attribute_value_model->search('ngay_vao_khoa');
+		echo $data_type;*/
+		/*
+		$this->load->model('Form_model');
+		$form_id=$this->Form_model->insert_new_form(1,'Khoa noi',1);
+		echo $form_id;
+		*/
+		$this->load->model('Value_model');
+		$this->Value_model->update_datatype(1);
+	}
 }
 
 /* End of file Controllername.php */

@@ -13,11 +13,17 @@ class Attribute_value_model extends CI_Model
 		$this->db->insert('attribute_value',$data);
 	}
 	public function get(){
-
 		$query = $this->db->get('attribute_value');
 		$data=$query->result_array();
 		return $data;
 	}
+	public function search($attribute_name){
+	$call_procedure ="call search_datatype('$attribute_name')";
+	$query=$this->db->query($call_procedure);
+	$row = $query->row();
+	$data_type= $row->data_type;
+	return $data_type;
+}
 	public function update($data){
 		$this->db->where('attribute_value_id', $data['attribute_value_id']);
 		$this->db->update('attribute_value', $data);
