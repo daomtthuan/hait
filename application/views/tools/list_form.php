@@ -9,10 +9,9 @@
       <th scope="col">Họ tên bệnh nhân</th>
       <th scope="col">Năm sinh</th>
       <th scope="col">Chuẩn đoán xác định</th>
+      <th scope="col">Thao tác</th>
     </tr>
   </thead>
   <tbody>
-
- 
   </tbody>
 </table>

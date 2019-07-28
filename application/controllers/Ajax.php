@@ -21,4 +21,4 @@ class Ajax extends My_Controller {
 
 }
 
-/* End of file Controllername.php */
+?>
