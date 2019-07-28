@@ -17,7 +17,7 @@
 	<div class="mx-auto mt-5">
 		<div class="text-center">
 			<div class="error mx-auto text-primary" data-text="404">404</div>
-			<p class="lead  mb-5">Trang không tìm thấy</p>
+			<p class="lead mb-5">Trang không tìm thấy</p>
 			<p class="mb-0">Có vẻ như bạn đang cố gắng truy cập vào một nơi không tồn tại ?</p>
 		</div>
 	</div>
