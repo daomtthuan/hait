@@ -11,6 +11,7 @@ class Khang_sinh_model extends CI_Model
 		$this->db->insert('khang_sinh',$data);
 	}
 	public function get(){
+		$this->db->select('ma_khang_sinh,ten_khang_sinh');
 		$query = $this->db->get('khang_sinh');
 		$data=$query->result_array();
 		return $data;

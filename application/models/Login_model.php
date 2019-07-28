@@ -61,6 +61,17 @@ class Login_model extends CI_Model
 		}
 		return $user_id;
 	}
+	function get_user_data($user_name){
+		$user_id = $this->get_user_id($user_name);
+		$this->db->select('*');
+		$this->db->from('room');
+		$this->db->join('company', 'room.company_id = company.company_id');
+		$this->db->join('membership', 'room.room_id = membership.room_id');
+		$this->db->where('membership.user_id',$user_id);
+		$query = $this->db->get();
+		$data = $query->result();
+		return $data;
+	}
 }
 
 /* End of file .php */

@@ -28,6 +28,10 @@ class Login extends CI_Controller {
 			if($this->form_validation->run()){
 				$user_name=$this->input->post('inputUsername');
 				$this->session->set_userdata('login',$user_name);
+				$data=$this->Login_model->get_user_data($user_name);
+				foreach ($data as $key=>$val){
+					$this->session->set_userdata($key,$val);
+				}
 				if($role =$this->Login_model->check_role($user_name)){
 					if($role=='admin'){
 						redirect( base_url('admin') );

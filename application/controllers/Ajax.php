@@ -18,6 +18,17 @@ class Ajax extends My_Controller {
 		$data=$this->Form_model->table();
 		echo json_encode($data);
 	}
+	public function ksList(){
+		$this->load->model('Khang_sinh_model');
+		$data=$this->Khang_sinh_model->get();
+		echo json_encode($data);
+	}
+	public function insertForm(){
+		if($this->input->post()){
+			//get_data here
+		}
+	}
+
 
 }
 

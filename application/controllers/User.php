@@ -84,5 +84,3 @@ class User extends My_Controller {
 		}
 	}
 }
-
-?>

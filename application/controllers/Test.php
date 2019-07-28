@@ -56,8 +56,12 @@ class Test extends My_Controller {
 		$form_id=$this->Form_model->insert_new_form(1,'Khoa noi',1);
 		echo $form_id;
 		*/
+		/*
 		$this->load->model('Value_model');
 		$this->Value_model->update_datatype(1);
+		*/
+		$this->load->model('Login_model');
+		print_r($this->Login_model->get_user_data('npduy')) ;
 	}
 }
 
