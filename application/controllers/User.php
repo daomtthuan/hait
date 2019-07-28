@@ -19,6 +19,7 @@ class User extends My_Controller {
 		$this->load->view('general/layout',$data);
 	}
 
+	/*
 	public function new_form()
 	{
 		$data['role'] = 'user';
@@ -37,6 +38,27 @@ class User extends My_Controller {
 			$this->Value_model->insert($data,$form_id,1);
 		}
 	}
+	*/
+
+	public function new_form($step)
+	{
+		$data['role'] = 'user';
+		$data['page_title'] = 'Tạo mới biểu mẫu - Bước '.$step;
+
+		$data['main']='tools/form/step'.$step;
+		$data['script'] =
+			'<script>'.
+				'function setText(name) { sessionStorage.setItem(name, $("#" + name).val()) }'.
+				'function setRadio(name) { sessionStorage.setItem(name, $("[name=\'" + name + "\']:checked").val()) }'.
+				'function getText(name) { $("#" + name).val(sessionStorage.getItem(name)) }'.
+				'function getRadio(name) { $("[name=\'" + name + "\'][value=\'" + sessionStorage.getItem(name) + "\']").attr("checked","checked") }'.
+			'</script>'.
+			'<script src="'.base_url('public/js/tools/new_form/step'.$step.'.js').'"></script>';
+
+		$this->load->view('general/layout',$data);
+	}
+
+
 	public function edit_form($form_id)
 	{
 		$data['role'] = 'user';

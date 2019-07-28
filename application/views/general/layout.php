@@ -19,13 +19,14 @@
 	<div id="wrapper">
 		<ul id="sidebar" class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion transition">
 			<li>
-				<div class="sidebar-brand d-flex align-items-center justify-content-center bg-white">
+				<div class="sidebar-brand d-flex align-items-center justify-content-center">
 					<div class="sidebar-brand-icon">
-						<img src="<?php echo base_url('public/img/logo.png') ?>" width="33" height="33" alt="">
+						<img id="logo" src="<?php echo base_url('public/img/logo.png') ?>" width="33" height="33" alt="">
 					</div>
-					<div class="sidebar-brand-text text-primary mx-3 cursor-default">HAIT</div>
+					<div class="sidebar-brand-text mx-3 cursor-default">HAIT</div>
 				</div>
 			</li>
+			<hr class="sidebar-divider my-0">
 			<?php $this->load->view($role.'/sidebar') ?>
 			<hr class="sidebar-divider d-none d-md-block">
 			<div class="text-center d-none d-md-inline">
@@ -175,10 +176,10 @@
 									Góp ý phản hồi
 								</a>
 								<div class="dropdown-divider"></div>
-								<div id="themeDark" class="dropdown-item cursor-pointer">
+								<a id="themeDark" class="dropdown-item cursor-pointer disabled">
 									<i id="toggleTheme" class="fas fa-toggle-off mr-2 text-gray-500"></i>
-									Giao diện tối
-								</div>
+									Giao diện tối <small>(sắp có)</small>
+								</a>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">
 									<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-500"></i>
@@ -222,7 +223,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha256-fzFFyH01cBVPYzl16KT40wqjhgPtq6FFUB6ckN2+GGw=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
 	<script src="<?php echo base_url('public/js/general/theme.min.js') ?>"></script>
-	<script src="<?php echo base_url('public/js/general/layout.js') ?>"></script>
 	<?php echo $script ?>
 </body>
 
