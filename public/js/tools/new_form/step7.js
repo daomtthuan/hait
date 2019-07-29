@@ -1,4 +1,8 @@
-function setText(name) { sessionStorage.setItem(name, $("#" + name).val()) }
+function setText(name) {
+  var value = $("#" + name).val();
+  if (value != "") sessionStorage.setItem(name, value);
+}
+
 function setRadio(name) {
   sessionStorage.setItem(name, $("[name='" + name + "']:checked").val());
   if (name = "dan_luu") {
@@ -21,7 +25,11 @@ function setRadio(name) {
     setText("trieu_chung_chi_diem");
   }
 }
-function getText(name) { $("#" + name).val(sessionStorage.getItem(name)) }
+
+function getText(name) {
+  $("#" + name).val(sessionStorage.getItem(name));
+}
+
 function getRadio(name) {
   $("[name='" + name + "'][value='" + sessionStorage.getItem(name) + "']").prop("checked", true);
   if (name = "dan_luu" || name == "nkvm") {

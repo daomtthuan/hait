@@ -1,19 +1,27 @@
-function setText(name) { sessionStorage.setItem(name, $("#" + name).val()) }
+function setText(name) {
+  var value = $("#" + name).val();
+  if (value != "") sessionStorage.setItem(name, value);
+}
+
 function setRadio(name) {
-  sessionStorage.setItem(name, $("[name='" + name + "']:checked").val());
+  var value = $("[name='" + name + "']:checked").val();
+  if (value != undefined) sessionStorage.setItem(name, value);
   setText("ngaybd_" + name);
   setText("ngaykt_" + name);
 }
-function getText(name) { $("#" + name).val(sessionStorage.getItem(name)) }
+
+function getText(name) {
+  $("#" + name).val(sessionStorage.getItem(name));
+}
+
 function getRadio(name) {
-  if (sessionStorage.getItem(name) == 1) {
-    $("[name='" + name + "'][value='1']").prop("checked", true);
+  $("[name='" + name + "'][value='" + sessionStorage.getItem(name) + "']").prop("checked", true);
+  if ($("[name='" + name + "'][type='radio'][value='1']").is(":checked")) {
     $("." + name).fadeIn(200);
     $("." + name + " input").removeAttr("readonly");
     getText("ngaybd_" + name);
     getText("ngaykt_" + name);
   }
-  else $("[name='" + name + "'][value='0']").prop("checked", true);
 }
 
 $(document).ready(function () {

@@ -315,7 +315,9 @@
             <div class="invalid-feedback">Vui lòng nhập Số ngày đặt dẫn lưu</div>
           </div>
         </div>
+        <hr class="col-12 dan_luu mt-0" style="display: none">
       </div>
+
       <div class="row step-option">
         <div class="col-12">
           <div class="form-group">
@@ -349,7 +351,7 @@
         </div>
         <div class="col-md-12 nkvm text-dark cursor-default" style="display: none">Biểu hiện tại vết mổ</div>
         <div class="col-md-6 order-md-1 nkvm" style="display: none">
-          <div class="form-group">
+          <div class="form-group col-12">
             <div class="text-dark cursor-default">Biểu hiện sốt &gt; 38&deg;C</div>
             <div class="custom-control custom-radio">
               <input type="radio" id="co_bieu_hien_sot" name="bieu_hien_sot" class="custom-control-input" value="1" required>
@@ -363,7 +365,7 @@
           </div>
         </div>
         <div class="col-md-6 order-md-3 nkvm" style="display: none">
-          <div class="form-group">
+          <div class="form-group col-12">
             <div class="text-dark cursor-default">Biểu hiện đỏ</div>
             <div class="custom-control custom-radio">
               <input type="radio" id="co_bieu_hien_do" name="bieu_hien_do" class="custom-control-input" value="1" required>
@@ -377,21 +379,21 @@
           </div>
         </div>
         <div class="col-md-6 order-md-2 nkvm" style="display: none">
-          <div class="form-group">
+          <div class="form-group col-12">
             <div class="text-dark cursor-default">Biểu hiện sưng</div>
             <div class="custom-control custom-radio">
-              <input type="radio" id="co_bieu_hien_sung" name="bieu_hien_sung" class="custom-control-input" value="1" required >
+              <input type="radio" id="co_bieu_hien_sung" name="bieu_hien_sung" class="custom-control-input" value="1" required>
               <label class="custom-control-label" for="co_bieu_hien_sung">Có</label>
             </div>
             <div class="custom-control custom-radio">
-              <input type="radio" id="khong_bieu_hien_sung" name="bieu_hien_sung" class="custom-control-input" value="0" required >
+              <input type="radio" id="khong_bieu_hien_sung" name="bieu_hien_sung" class="custom-control-input" value="0" required>
               <label class="custom-control-label" for="khong_bieu_hien_sung">Không</label>
               <div class="invalid-feedback" style="margin-left: -24px">Có Biểu hiện sưng hay không?</div>
             </div>
           </div>
         </div>
         <div class="col-md-6 order-md-4 nkvm" style="display: none">
-          <div class="form-group">
+          <div class="form-group col-12">
             <div class="text-dark cursor-default">Biểu hiện đau</div>
             <div class="custom-control custom-radio">
               <input type="radio" id="co_bieu_hien_dau" name="bieu_hien_dau" class="custom-control-input" value="1" required>
@@ -405,7 +407,7 @@
           </div>
         </div>
         <div class="col-md-6 order-md-5 nkvm" style="display: none">
-          <div class="form-group">
+          <div class="form-group col-12">
             <div class="text-dark cursor-default">Phẫu thuật lại</div>
             <div class="custom-control custom-radio">
               <input type="radio" id="co_phau_thuat_lai" name="phau_thuat_lai" class="custom-control-input" value="1" required>
@@ -419,7 +421,7 @@
           </div>
         </div>
         <div class="col-md-6 order-md-7 nkvm" style="display: none">
-          <div class="form-group">
+          <div class="form-group col-12">
             <div class="text-dark cursor-default">Dịch vết mổ</div>
             <div class="custom-control custom-radio">
               <input type="radio" id="co_dich_vet_mo" name="dich_vet_mo" class="custom-control-input" value="1" required>
@@ -433,7 +435,7 @@
           </div>
         </div>
         <div class="col-md-6 order-md-8 nkvm" style="display: none">
-          <div class="form-group">
+          <div class="form-group col-12">
             <div class="text-dark cursor-default">Toác vết mổ tự nhiên</div>
             <div class="custom-control custom-radio">
               <input type="radio" id="co_toac_vet_mo_tu_nhien" name="toac_vet_mo_tu_nhien" class="custom-control-input" value="1" required>
@@ -447,7 +449,7 @@
           </div>
         </div>
         <div class="col-md-6 order-md-9 nkvm" style="display: none">
-          <div class="form-group">
+          <div class="form-group col-12">
             <div class="text-dark cursor-default">Chủ động mở vết mổ</div>
             <div class="custom-control custom-radio">
               <input type="radio" id="co_chu_dong_mo_vm" name="chu_dong_mo_vm" class="custom-control-input" value="1" required>
@@ -461,7 +463,7 @@
           </div>
         </div>
         <div class="col-md-6 order-md-10 nkvm" style="display: none">
-          <div class="form-group">
+          <div class="form-group col-12">
             <div class="text-dark cursor-default">Chảy mủ tại vết mổ/qua dẫn lưu</div>
             <div class="custom-control custom-radio">
               <input type="radio" id="co_chay_mu" name="chay_mu" class="custom-control-input" value="1" required>
@@ -475,9 +477,9 @@
           </div>
         </div>
         <div class="col-12 order-md-11 nkvm" style="display: none">
-          <div class="form-group">
+          <div class="form-group col-12">
             <label class="text-dark" for="trieu_chung_chi_diem">Triệu chứng chỉ điểm và ngày xuất hiện đầu tiên</label>
-            <textarea id="trieu_chung_chi_diem" name="trieu_chung_chi_diem" type="text" class="form-control ellipsis" required></textarea>
+            <textarea id="trieu_chung_chi_diem" name="trieu_chung_chi_diem" type="text" class="form-control ellipsis" readonly required></textarea>
           </div>
         </div>
       </div>

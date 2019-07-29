@@ -35,19 +35,19 @@
         <div class="col-md-4">
           <div class="form-group">
             <label class="text-dark" for="company_name">Bệnh viện</label>
-            <input id="company_name" name="company_name" type="text" class="form-control ellipsis" readonly required required>
+            <input id="company_name" name="company_name" type="text" class="form-control ellipsis" readonly required>
           </div>
         </div>
         <div class="col-md-4">
           <div class="form-group">
             <label class="text-dark" for="room_name">Khoa</label>
-            <input id="room_name" name="room_name" type="text" class="form-control ellipsis" readonly required required>
+            <input id="room_name" name="room_name" type="text" class="form-control ellipsis" readonly required>
           </div>
         </div>
       </div>
       <div class="form-group">
         <label class="text-dark" for="ngay_dieu_tra">Ngày điều tra</label>
-        <input id="ngay_dieu_tra" name="ngay_dieu_tra" type="date" class="form-control ellipsis" required>
+        <input id="ngay_dieu_tra" name="ngay_dieu_tra" type="date" class="form-control ellipsis" readonly required>
         <div class="invalid-feedback">Vui lòng nhập Ngày điều tra</div>
       </div>
       <div class="row">

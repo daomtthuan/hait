@@ -1,11 +1,16 @@
-function setText(name) { sessionStorage.setItem(name, $("#" + name).val()) }
+function setText(name) {
+  var value = $("#" + name).val();
+  if (value != "") sessionStorage.setItem(name, value);
+}
+
 function setRadio(name) {
-  sessionStorage.setItem(name, $("[name='" + name + "']:checked").val());
-  if (name = "dan_luu") {
+  var value = $("[name='" + name + "']:checked").val();
+  if (value != undefined) sessionStorage.setItem(name, value);
+  if (name == "dan_luu") {
     setRadio("dan_luu_tai_vm");
     setRadio("dan_luu_ngoai_vm");
     setRadio("dan_luu_kin");
-    setRadio("so_ngay_dat_dan_luu");
+    setText("so_ngay_dat_dan_luu");
   }
   else if (name == "nkvm") {
     setRadio("loai_nhiem_khuan_vm");
@@ -21,14 +26,19 @@ function setRadio(name) {
     setText("trieu_chung_chi_diem");
   }
 }
-function getText(name) { $("#" + name).val(sessionStorage.getItem(name)) }
+
+function getText(name) {
+  $("#" + name).val(sessionStorage.getItem(name));
+}
+
 function getRadio(name) {
   $("[name='" + name + "'][value='" + sessionStorage.getItem(name) + "']").prop("checked", true);
-  if (name = "dan_luu" || name == "nkvm") {
+  if (name == "dan_luu" || name == "nkvm") {
     if ($(".step-option [name='" + name + "'][type='radio'][value='1']").is(":checked")) {
       $("." + name).fadeIn(200);
       $("." + name + " input").removeAttr("readonly");
-      if (name = "dan_luu") {
+      $("." + name + " textarea").removeAttr("readonly");
+      if (name == "dan_luu") {
         getRadio("dan_luu_tai_vm");
         getRadio("dan_luu_ngoai_vm");
         getRadio("dan_luu_kin");
@@ -75,6 +85,7 @@ $(document).ready(function () {
       $("." + $(this).attr("name")).fadeOut(200);
       $("." + $(this).attr("name") + " input[type='radio']").attr("readonly", "readonly").prop("checked", false);
       $("." + $(this).attr("name") + " input[type!='radio']").attr("readonly", "readonly").val(null);
+      $("." + $(this).attr("name") + " textarea").attr("readonly", "readonly").val(null);
     }
   });
 
