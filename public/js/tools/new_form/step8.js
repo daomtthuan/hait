@@ -1,22 +1,61 @@
+function setText(name) {
+  var value = $("#" + name).val();
+  if (value != "") sessionStorage.setItem(name, value);
+}
+
+function setRadio(name) {
+  var value = $("[name='" + name + "']:checked").val();
+  if (value != undefined) sessionStorage.setItem(name, value);
+}
+
+function getText(name) {
+  $("#" + name).val(sessionStorage.getItem(name));
+}
+
+function getRadio(name) {
+  $("[name='" + name + "'][value='" + sessionStorage.getItem(name) + "']").prop("checked", true);
+}
+
 $(document).ready(function () {
 
-  $("#buttonStepNext").click(function () {
+  getRadio("ket_qua_dieu_tri");
+  getRadio("nam_vien");
+
+  $("[name='ket_qua_dieu_tri']").on("click", function () {
+    if ($(this).val() == "5") {
+      $(".ket_qua_dieu_tri").fadeIn(200);
+      $(".ket_qua_dieu_tri input").removeAttr("readonly");
+    }
+    else {
+      $(".ket_qua_dieu_tri").fadeOut(200);
+      $(".ket_qua_dieu_tri input").attr("readonly", "readonly").prop("checked", false);
+    }
+  });
+
+  $("#buttonSubmit").click(function (event) {
+    event.preventDefault();
+
+    setRadio("ket_qua_dieu_tri");
+    setRadio("nam_vien");
+
     var isValid = true;
     $(".invalid-feedback").each(function () {
       if ($(this).css("display") == "block") {
         isValid = false;
-        $("html, body").animate({ scrollTop:$(this).closest(".form-group").offset().top }, "slow")
-        return;
+        $("html, body").animate({ scrollTop: $(this).closest(".form-group").offset().top }, "slow");
+        return false;
       }
     });
 
     if (isValid) {
-      window.location.href = urlNext;
+      if (sessionStorage.getItem("completed") == 7) sessionStorage.setItem("completed", 8);
+      alert();
     }
   });
 
   $("#buttonStepBack").click(function () {
-      window.location.href = urlBack;
+    setRadio("ket_qua_dieu_tri");
+    setRadio("nam_vien");
   });
 
 });

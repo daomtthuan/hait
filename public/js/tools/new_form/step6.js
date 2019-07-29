@@ -80,6 +80,7 @@ $(document).ready(function () {
     if ($(this).val() == "1") {
       $("." + $(this).attr("name")).fadeIn(200);
       $("." + $(this).attr("name") + " input").removeAttr("readonly");
+      $("." + $(this).attr("name") + " textarea").removeAttr("readonly");
     }
     else {
       $("." + $(this).attr("name")).fadeOut(200);

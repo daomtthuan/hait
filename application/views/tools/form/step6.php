@@ -336,15 +336,15 @@
         <div class="col-md-12 nkvm" style="display: none">
           <div class="text-dark cursor-default">Loại nhiễm khuẩn vết mổ</div>
           <div class="custom-control custom-radio custom-control">
-            <input type="radio" id="loai_nhiem_khuan_vm_1" name="loai_nhiem_khuan_vm" class="custom-control-input" value="1" required>
+            <input type="radio" id="loai_nhiem_khuan_vm_1" name="loai_nhiem_khuan_vm" class="custom-control-input" value="1" readonly required>
             <label class="custom-control-label" for="loai_nhiem_khuan_vm_1">Nông</label>
           </div>
           <div class="custom-control custom-radio custom-control">
-            <input type="radio" id="loai_nhiem_khuan_vm_2" name="loai_nhiem_khuan_vm" class="custom-control-input" value="2" required>
+            <input type="radio" id="loai_nhiem_khuan_vm_2" name="loai_nhiem_khuan_vm" class="custom-control-input" value="2" readonly required>
             <label class="custom-control-label" for="loai_nhiem_khuan_vm_2">Sâu</label>
           </div>
           <div class="custom-control custom-radio custom-control">
-            <input type="radio" id="loai_nhiem_khuan_vm_3" name="loai_nhiem_khuan_vm" class="custom-control-input" value="3" required>
+            <input type="radio" id="loai_nhiem_khuan_vm_3" name="loai_nhiem_khuan_vm" class="custom-control-input" value="3" readonly required>
             <label class="custom-control-label" for="loai_nhiem_khuan_vm_3">Khoang cơ thể</label>
             <div class="invalid-feedback" style="margin-left: -24px">Vui lòng chọn Loại nhiễm khuẩn vết mổ</div>
           </div>
@@ -354,11 +354,11 @@
           <div class="form-group col-12">
             <div class="text-dark cursor-default">Biểu hiện sốt &gt; 38&deg;C</div>
             <div class="custom-control custom-radio">
-              <input type="radio" id="co_bieu_hien_sot" name="bieu_hien_sot" class="custom-control-input" value="1" required>
+              <input type="radio" id="co_bieu_hien_sot" name="bieu_hien_sot" class="custom-control-input" value="1" readonly required>
               <label class="custom-control-label" for="co_bieu_hien_sot">Có</label>
             </div>
             <div class="custom-control custom-radio">
-              <input type="radio" id="khong_bieu_hien_sot" name="bieu_hien_sot" class="custom-control-input" value="0" required>
+              <input type="radio" id="khong_bieu_hien_sot" name="bieu_hien_sot" class="custom-control-input" value="0" readonly required>
               <label class="custom-control-label" for="khong_bieu_hien_sot">Không</label>
               <div class="invalid-feedback" style="margin-left: -24px">Có Biểu hiện sốt hay không?</div>
             </div>
@@ -368,11 +368,11 @@
           <div class="form-group col-12">
             <div class="text-dark cursor-default">Biểu hiện đỏ</div>
             <div class="custom-control custom-radio">
-              <input type="radio" id="co_bieu_hien_do" name="bieu_hien_do" class="custom-control-input" value="1" required>
+              <input type="radio" id="co_bieu_hien_do" name="bieu_hien_do" class="custom-control-input" value="1" readonly required>
               <label class="custom-control-label" for="co_bieu_hien_do">Có</label>
             </div>
             <div class="custom-control custom-radio">
-              <input type="radio" id="khong_bieu_hien_do" name="bieu_hien_do" class="custom-control-input" value="0" required>
+              <input type="radio" id="khong_bieu_hien_do" name="bieu_hien_do" class="custom-control-input" value="0" readonly required>
               <label class="custom-control-label" for="khong_bieu_hien_do">Không</label>
               <div class="invalid-feedback" style="margin-left: -24px">Có Biểu hiện đỏ hay không?</div>
             </div>
@@ -382,11 +382,11 @@
           <div class="form-group col-12">
             <div class="text-dark cursor-default">Biểu hiện sưng</div>
             <div class="custom-control custom-radio">
-              <input type="radio" id="co_bieu_hien_sung" name="bieu_hien_sung" class="custom-control-input" value="1" required>
+              <input type="radio" id="co_bieu_hien_sung" name="bieu_hien_sung" class="custom-control-input" value="1" readonly required>
               <label class="custom-control-label" for="co_bieu_hien_sung">Có</label>
             </div>
             <div class="custom-control custom-radio">
-              <input type="radio" id="khong_bieu_hien_sung" name="bieu_hien_sung" class="custom-control-input" value="0" required>
+              <input type="radio" id="khong_bieu_hien_sung" name="bieu_hien_sung" class="custom-control-input" value="0" readonly required>
               <label class="custom-control-label" for="khong_bieu_hien_sung">Không</label>
               <div class="invalid-feedback" style="margin-left: -24px">Có Biểu hiện sưng hay không?</div>
             </div>
@@ -396,11 +396,11 @@
           <div class="form-group col-12">
             <div class="text-dark cursor-default">Biểu hiện đau</div>
             <div class="custom-control custom-radio">
-              <input type="radio" id="co_bieu_hien_dau" name="bieu_hien_dau" class="custom-control-input" value="1" required>
+              <input type="radio" id="co_bieu_hien_dau" name="bieu_hien_dau" class="custom-control-input" value="1" readonly required>
               <label class="custom-control-label" for="co_bieu_hien_dau">Có</label>
             </div>
             <div class="custom-control custom-radio">
-              <input type="radio" id="khong_bieu_hien_dau" name="bieu_hien_dau" class="custom-control-input" value="0" required>
+              <input type="radio" id="khong_bieu_hien_dau" name="bieu_hien_dau" class="custom-control-input" value="0" readonly required>
               <label class="custom-control-label" for="khong_bieu_hien_dau">Không</label>
               <div class="invalid-feedback" style="margin-left: -24px">Có Biểu hiện đau hay không?</div>
             </div>
@@ -410,11 +410,11 @@
           <div class="form-group col-12">
             <div class="text-dark cursor-default">Phẫu thuật lại</div>
             <div class="custom-control custom-radio">
-              <input type="radio" id="co_phau_thuat_lai" name="phau_thuat_lai" class="custom-control-input" value="1" required>
+              <input type="radio" id="co_phau_thuat_lai" name="phau_thuat_lai" class="custom-control-input" value="1" readonly required>
               <label class="custom-control-label" for="co_phau_thuat_lai">Có</label>
             </div>
             <div class="custom-control custom-radio">
-              <input type="radio" id="khong_phau_thuat_lai" name="phau_thuat_lai" class="custom-control-input" value="0" required>
+              <input type="radio" id="khong_phau_thuat_lai" name="phau_thuat_lai" class="custom-control-input" value="0" readonly required>
               <label class="custom-control-label" for="khong_phau_thuat_lai">Không</label>
               <div class="invalid-feedback" style="margin-left: -24px">Có Phẫu thuật lại hay không?</div>
             </div>
@@ -424,11 +424,11 @@
           <div class="form-group col-12">
             <div class="text-dark cursor-default">Dịch vết mổ</div>
             <div class="custom-control custom-radio">
-              <input type="radio" id="co_dich_vet_mo" name="dich_vet_mo" class="custom-control-input" value="1" required>
+              <input type="radio" id="co_dich_vet_mo" name="dich_vet_mo" class="custom-control-input" value="1" readonly required>
               <label class="custom-control-label" for="co_dich_vet_mo">Có</label>
             </div>
             <div class="custom-control custom-radio">
-              <input type="radio" id="khong_dich_vet_mo" name="dich_vet_mo" class="custom-control-input" value="0" required>
+              <input type="radio" id="khong_dich_vet_mo" name="dich_vet_mo" class="custom-control-input" value="0" readonly required>
               <label class="custom-control-label" for="khong_dich_vet_mo">Không</label>
               <div class="invalid-feedback" style="margin-left: -24px">Có Dịch vết mổ hay không?</div>
             </div>
@@ -438,11 +438,11 @@
           <div class="form-group col-12">
             <div class="text-dark cursor-default">Toác vết mổ tự nhiên</div>
             <div class="custom-control custom-radio">
-              <input type="radio" id="co_toac_vet_mo_tu_nhien" name="toac_vet_mo_tu_nhien" class="custom-control-input" value="1" required>
+              <input type="radio" id="co_toac_vet_mo_tu_nhien" name="toac_vet_mo_tu_nhien" class="custom-control-input" value="1" readonly required>
               <label class="custom-control-label" for="co_toac_vet_mo_tu_nhien">Có</label>
             </div>
             <div class="custom-control custom-radio">
-              <input type="radio" id="khong_toac_vet_mo_tu_nhien" name="toac_vet_mo_tu_nhien" class="custom-control-input" value="0" required>
+              <input type="radio" id="khong_toac_vet_mo_tu_nhien" name="toac_vet_mo_tu_nhien" class="custom-control-input" value="0" readonly required>
               <label class="custom-control-label" for="khong_toac_vet_mo_tu_nhien">Không</label>
               <div class="invalid-feedback" style="margin-left: -24px">Có Toác vết mổ tự nhiên hay không?</div>
             </div>
@@ -452,11 +452,11 @@
           <div class="form-group col-12">
             <div class="text-dark cursor-default">Chủ động mở vết mổ</div>
             <div class="custom-control custom-radio">
-              <input type="radio" id="co_chu_dong_mo_vm" name="chu_dong_mo_vm" class="custom-control-input" value="1" required>
+              <input type="radio" id="co_chu_dong_mo_vm" name="chu_dong_mo_vm" class="custom-control-input" value="1" readonly required>
               <label class="custom-control-label" for="co_chu_dong_mo_vm">Có</label>
             </div>
             <div class="custom-control custom-radio">
-              <input type="radio" id="khong_chu_dong_mo_vm" name="chu_dong_mo_vm" class="custom-control-input" value="0" required>
+              <input type="radio" id="khong_chu_dong_mo_vm" name="chu_dong_mo_vm" class="custom-control-input" value="0" readonly required>
               <label class="custom-control-label" for="khong_chu_dong_mo_vm">Không</label>
               <div class="invalid-feedback" style="margin-left: -24px">Có Chủ động mở vết mổ hay không?</div>
             </div>
@@ -466,11 +466,11 @@
           <div class="form-group col-12">
             <div class="text-dark cursor-default">Chảy mủ tại vết mổ/qua dẫn lưu</div>
             <div class="custom-control custom-radio">
-              <input type="radio" id="co_chay_mu" name="chay_mu" class="custom-control-input" value="1" required>
+              <input type="radio" id="co_chay_mu" name="chay_mu" class="custom-control-input" value="1" readonly required>
               <label class="custom-control-label" for="co_chay_mu">Có</label>
             </div>
             <div class="custom-control custom-radio">
-              <input type="radio" id="khong_chay_mu" name="chay_mu" class="custom-control-input" value="0" required>
+              <input type="radio" id="khong_chay_mu" name="chay_mu" class="custom-control-input" value="0" readonly required>
               <label class="custom-control-label" for="khong_chay_mu">Không</label>
               <div class="invalid-feedback" style="margin-left: -24px">Có Chảy mủ tại vết mổ/qua dẫn lưu hay không?</div>
             </div>
