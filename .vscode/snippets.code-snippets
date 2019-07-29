@@ -6,7 +6,7 @@
 		],
 		"description": "Add variable"
 	},
-	
+
 	"Add url from public": {
 		"prefix": "ci-url",
 		"body": [
@@ -26,11 +26,11 @@
 	"Add string script javascript": {
 		"prefix": "ci-javascript",
 		"body": [
-			"'${1:line 1}'.",
-			"'${2:line 2}'.",
-			"'${3:line 3}'.",
-			"'${4:line 4}'.",
-			"'${5:line end}'",
+			"'<script>'.",
+			"\t'${1:line 1}'.",
+			"\t'${2:line 2}'.",
+			"\t'${3:line 3}'.",
+			"'</script>'",
 		],
 		"description": "Add string script javascript"
 	},

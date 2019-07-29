@@ -1,60 +1,8 @@
 <h1 class="h3 mb-4 text-gray-800">PHIẾU GIÁM SÁT NGANG NHIỄM KHUẨN BỆNH VIỆN</h1>
 <hr class="sidebar-divider">
 <div class="mb-2"><small>* Vui lòng điền đầy đủ thông tin bên dưới</small></div>
-<div class="d-none d-sm-block">
-  <div class="row mb-3 progress-form">
-    <div id="dotstep1" class="col-1 offset-2 progress-form-step active">
-      <div class="progress">
-        <div class="progress-bar"></div>
-      </div>
-      <a href="#" class="progress-form-dot"></a>
-    </div>
-    <div id="dotstep2" class="col-1 progress-form-step disabled">
-      <div class="progress">
-        <div class="progress-bar"></div>
-      </div>
-      <a href="#" class="progress-form-dot"></a>
-    </div>
-    <div id="dotstep3" class="col-1 progress-form-step disabled">
-      <div class="progress">
-        <div class="progress-bar"></div>
-      </div>
-      <a href="#" class="progress-form-dot"></a>
-    </div>
-    <div id="dotstep4" class="col-1 progress-form-step disabled">
-      <div class="progress">
-        <div class="progress-bar"></div>
-      </div>
-      <a href="#" class="progress-form-dot"></a>
-    </div>
-    <div id="dotstep5" class="col-1 progress-form-step disabled">
-      <div class="progress">
-        <div class="progress-bar"></div>
-      </div>
-      <a href="#" class="progress-form-dot"></a>
-    </div>
-    <div id="dotstep6" class="col-1 progress-form-step disabled">
-      <div class="progress">
-        <div class="progress-bar"></div>
-      </div>
-      <a href="#" class="progress-form-dot"></a>
-    </div>
-    <div id="dotstep7" class="col-1 progress-form-step disabled">
-      <div class="progress">
-        <div class="progress-bar"></div>
-      </div>
-      <a href="#" class="progress-form-dot"></a>
-    </div>
-    <div id="dotstep8" class="col-1 progress-form-step disabled">
-      <div class="progress">
-        <div class="progress-bar"></div>
-      </div>
-      <a href="#" class="progress-form-dot"></a>
-    </div>
-  </div>
-</div>
 <form class="mb-3 was-validated">
-  <input id="form_id" name="form_id" type="text" class="d-none" readonly>
+  <input id="form_id" name="form_id" type="text" class="d-none" readonly required>
   <div class="card shadow mb-4 border-primary">
     <div class="card-header bg-light py-3">
       <h6 class="m-0 font-weight-bold text-primary">Bước 1. Thông tin chung</h6>
@@ -87,13 +35,13 @@
         <div class="col-md-4">
           <div class="form-group">
             <label class="text-dark" for="company_name">Bệnh viện</label>
-            <input id="company_name" name="company_name" type="text" class="form-control ellipsis" readonly required>
+            <input id="company_name" name="company_name" type="text" class="form-control ellipsis" readonly required required>
           </div>
         </div>
         <div class="col-md-4">
           <div class="form-group">
             <label class="text-dark" for="room_name">Khoa</label>
-            <input id="room_name" name="room_name" type="text" class="form-control ellipsis" readonly required>
+            <input id="room_name" name="room_name" type="text" class="form-control ellipsis" readonly required required>
           </div>
         </div>
       </div>
@@ -173,6 +121,6 @@
     </div>
   </div>
 </form>
-<div class="row mt-3">
-  <button id="buttonStepNext" type="button" class="btn btn-primary ml-auto mr-2">Kế tiếp</button>
+<div class="row mt-3 mb-3">
+  <a id="buttonStepNext" class="btn btn-primary ml-auto mr-2" href="<?php echo base_url($role.'/new-form/2') ?>">Kế tiếp</a>
 </div>

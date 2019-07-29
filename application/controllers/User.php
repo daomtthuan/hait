@@ -10,6 +10,7 @@ class User extends My_Controller {
 
 	public function index()
 	{
+		$data['navi'] = '';
 		$data['role'] = 'user';
 		$data['page_title'] = 'Trang chủ';
 
@@ -19,41 +20,14 @@ class User extends My_Controller {
 		$this->load->view('general/layout',$data);
 	}
 
-	/*
-	public function new_form()
-	{
-		$data['role'] = 'user';
-		$data['page_title'] = 'Tạo mới biểu mẫu';
-
-		$data['main']='tools/form';
-		$data['script'] = '<script src="'.base_url('public/js/tools/new_form.js').'"></script>';
-
-		$this->load->view('general/layout',$data);
-
-		if($this->input->post()){
-			$this->load->model('Form_model');
-			$form_id=$this->Form_model->insert_new_form(1,'Khoa noi',1);
-			$this->load->model('Value_model');
-			$data = $this->input->post(NULL,TRUE);
-			$this->Value_model->insert($data,$form_id,1);
-		}
-	}
-	*/
-
 	public function new_form($step)
 	{
+		$data['navi'] = $step>1 ? '<script>if (!(sessionStorage.getItem("completed") >= '.($step-1).')) window.location.href = "'.base_url('user/new-form/'.($step-1)).'"</script>' : '';
 		$data['role'] = 'user';
 		$data['page_title'] = 'Tạo mới biểu mẫu - Bước '.$step;
 
-		$data['main']='tools/form/step'.$step;
-		$data['script'] =
-			'<script>'.
-				'function setText(name) { sessionStorage.setItem(name, $("#" + name).val()) }'.
-				'function setRadio(name) { sessionStorage.setItem(name, $("[name=\'" + name + "\']:checked").val()) }'.
-				'function getText(name) { $("#" + name).val(sessionStorage.getItem(name)) }'.
-				'function getRadio(name) { $("[name=\'" + name + "\'][value=\'" + sessionStorage.getItem(name) + "\']").attr("checked","checked") }'.
-			'</script>'.
-			'<script src="'.base_url('public/js/tools/new_form/step'.$step.'.js').'"></script>';
+		$data['main'] = 'tools/form/step'.$step;
+		$data['script'] = '<script src="'.base_url('public/js/tools/new_form/step'.$step.'.js').'"></script>';
 
 		$this->load->view('general/layout',$data);
 	}
@@ -61,48 +35,33 @@ class User extends My_Controller {
 
 	public function edit_form($form_id)
 	{
+		$data['navi'] = '';
 		$data['role'] = 'user';
 		$data['page_title'] = 'Chỉnh sửa biểu mẫu';
 
-		$data['main']='tools/form';
+		$data['main'] = 'tools/form';
 		$data['script'] =
 			'<script>var json = "'.base_url('ajax/get/'.$form_id).'"</script>'.
 			'<script src="'.base_url('public/js/tools/edit_form.js').'"></script>';
 
 		$this->load->view('general/layout',$data);
-
 	}
 
 	public function list_form()
 	{
+		$data['navi'] = '';
 		$data['role'] = 'user';
 		$data['page_title'] = 'Danh sách biểu mẫu';
 
-		$data['main']='tools/list_form';
+		$data['main'] = 'tools/list_form';
 		$data['script'] =
 			'<script>'.
-				'var edit = "'.base_url('user/edit_form').'",'.
+				'var edit = "'.base_url('user/edit-form').'",'.
 				'json = "'.base_url('ajax/formList').'"'.
 			'</script>'.
 			'<script src="'.base_url('public/js/tools/list_form.js').'"></script>';
 
 		$this->load->view('general/layout',$data);
 	}
-	public function test_form()
-	{
-		$data['role'] = 'user';
-		$data['page_title'] = 'Tạo mới biểu mẫu';
-		$data['main']='tools/form_test';
-	    $data['script'] = '<script src="'.base_url('public/js/tools/new_form.js').'"></script>';
 
-		$this->load->view('general/layout',$data);
-
-		if($this->input->post()){
-			$this->load->model('Form_model');
-			$form_id=$this->Form_model->insert_new_form(1,'Khoa noi',1);
-			$this->load->model('Value_model');
-			$data = $this->input->post(NULL,TRUE);
-			$this->Value_model->insert($data,$form_id,1);
-		}
-	}
 }
