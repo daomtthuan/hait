@@ -69,8 +69,8 @@ class Login_model extends CI_Model
 		$this->db->join('membership', 'room.room_id = membership.room_id');
 		$this->db->where('membership.user_id',$user_id);
 		$query = $this->db->get();
-		$data = $query->result();
-		return $data;
+		$row = $query->row();
+		return $row;
 	}
 }
 

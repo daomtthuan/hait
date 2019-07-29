@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Ajax extends My_Controller {
+class Ajax extends MY_Controller {
 
 	public function __construct()
 	{
@@ -27,6 +27,10 @@ class Ajax extends My_Controller {
 		if($this->input->post()){
 			//get_data here
 		}
+	}
+	public function readSession(){
+		$data= $this->session->userdata();
+		echo json_encode($data);
 	}
 
 
