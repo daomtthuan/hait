@@ -58,15 +58,15 @@
           <div class="form-group">
             <div class="text-dark cursor-default">Mục đích sử dụng kháng sinh</div>
             <div class="custom-control custom-radio custom-control">
-              <input type="radio" id="muc_dich_su_dung_1" name="muc_dich_su_dung" class="custom-control-input" value="1" required>
+              <input type="radio" id="muc_dich_su_dung_1" name="muc_dich_su_dung" class="custom-control-input" value="1" readonly required>
               <label class="custom-control-label" for="muc_dich_su_dung_1">Điều trị nhiễm khuẩn</label>
             </div>
             <div class="custom-control custom-radio custom-control">
-              <input type="radio" id="muc_dich_su_dung_2" name="muc_dich_su_dung" class="custom-control-input" value="2" required>
+              <input type="radio" id="muc_dich_su_dung_2" name="muc_dich_su_dung" class="custom-control-input" value="2" readonly required>
               <label class="custom-control-label" for="muc_dich_su_dung_2">Phòng ngừa nhiễm khuẩn</label>
             </div>
             <div class="custom-control custom-radio custom-control">
-              <input type="radio" id="muc_dich_su_dung_3" name="muc_dich_su_dung" class="custom-control-input" value="3" required>
+              <input type="radio" id="muc_dich_su_dung_3" name="muc_dich_su_dung" class="custom-control-input" value="3" readonly required>
               <label class="custom-control-label" for="muc_dich_su_dung_3">Không xác định</label>
               <div class="invalid-feedback" style="margin-left: -24px">Vui lòng chọn mục đích sử dụng kháng sinh</div>
             </div>

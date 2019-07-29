@@ -49,7 +49,19 @@ $(document).ready(function () {
 
     if (isValid) {
       if (sessionStorage.getItem("completed") == 7) sessionStorage.setItem("completed", 8);
-      alert();
+
+      function toStringPartJson(name) {
+        var value = sessionStorage.getItem(name);
+        if (value != null) return "\"" + name + "\":\"" + value + "\",";
+        else return "";
+      }
+
+      var stringJson = "\"form_id\":null,";
+      for (var i = 0; i < sessionStorage.length; i++) stringJson += toStringPartJson(sessionStorage.key(i));
+      stringJson = "{" + stringJson.slice(0, -1) + "}"
+
+      // TODO gửi file json form này cho server
+      var form = JSON.parse(stringJson);
     }
   });
 

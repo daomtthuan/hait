@@ -60,6 +60,9 @@ $(document).ready(function () {
 
     if (isValid) {
       if (sessionStorage.getItem("completed") == null) sessionStorage.setItem("completed", 1);
+
+
+
       window.location = this.href;
     }
   });
