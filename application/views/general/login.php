@@ -27,7 +27,7 @@
               <div class="col-md-9 col-lg-8 mx-auto">
                 <div class="text-center mb-5">
                   <h4 class="text-primary font-weight-bold mb-0">HAIT</h4>
-                  <img src="<?php echo base_url('public/img/logo.png') ?>" alt="">
+                  <img src="<?php echo base_url('public/img/logo_color.png') ?>" alt="">
                   <h4>
                     <small>HỆ THỐNG QUẢN LÝ</small><br>
                     <span class="text-primary mb-0">GIÁM SÁT NHIỄM KHUẨN BỆNH VIỆN</span>

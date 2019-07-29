@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+	<?php echo $navi ?>
 	<meta charset="utf-8">
 	<title>Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện</title>
 	<meta name="author" content="Dao Minh Trung Thuan">
@@ -193,7 +194,7 @@
 					<?php $this->load->view($main) ?>
 				</main>
 			</div>
-			<footer class="sticky-footer bg-white">
+			<footer class="sticky-footer bg-white mt-3">
 				<div class="container my-auto">
 					<div class="copyright text-center my-auto">
 						<h6><small>Phiên bản 1.0.0</small><br><span>Copyright &copy; Daomtthuan 2019</span></h6>

@@ -18,36 +18,24 @@ function getRadio(name) {
 
 $(document).ready(function () {
 
-  getText("ngay_vao_khoa");
-  getText("ngay_vao_vien");
-  getText("msba");
-  getText("ho_ten_bn");
-  getText("nam_sinh");
-  getRadio("gioi_tinh");
-  getText("noi_chuyen_toi");
-  getText("chan_doan_luc_vao");
-  getText("ngay_ra_vien");
-  getText("chan_doan_xac_dinh");
-  getRadio("nhiem_khuan_luc_vao");
-
-  var now = new Date();
-  $("#ngay_dieu_tra").val(now.getFullYear() + "-" + (("0" + (now.getMonth() + 1)).slice(-2)) + "-" + (("0" + now.getDate()).slice(-2)));
+  getRadio("thuoc_ucmd");
+  getRadio("thuoc_steroid");
+  getRadio("thuoc_loet_da_day");
+  getRadio("dieu_tri_hoa_hoc");
+  getRadio("dieu_tri_tia_xa");
+  getRadio("truyen_mau");
+  getText("khac_step3");
 
   $("#buttonStepNext").click(function (event) {
     event.preventDefault();
 
-    setText("form_id");
-    setText("ngay_vao_khoa");
-    setText("ngay_vao_vien");
-    setText("msba");
-    setText("ho_ten_bn");
-    setText("nam_sinh");
-    setRadio("gioi_tinh");
-    setText("noi_chuyen_toi");
-    setText("chan_doan_luc_vao");
-    setText("ngay_ra_vien");
-    setText("chan_doan_xac_dinh");
-    setRadio("nhiem_khuan_luc_vao");
+    setRadio("thuoc_ucmd");
+    setRadio("thuoc_steroid");
+    setRadio("thuoc_loet_da_day");
+    setRadio("dieu_tri_hoa_hoc");
+    setRadio("dieu_tri_tia_xa");
+    setRadio("truyen_mau");
+    setText("khac_step3");
 
     var isValid = true;
     $(".invalid-feedback").each(function () {
@@ -59,12 +47,19 @@ $(document).ready(function () {
     });
 
     if (isValid) {
-      if (sessionStorage.getItem("completed") == null) sessionStorage.setItem("completed", 1);
-
-
-
+      if (sessionStorage.getItem("completed") == 2) sessionStorage.setItem("completed", 3);
       window.location = this.href;
     }
+  });
+
+  $("#buttonStepBack").click(function () {
+    setRadio("thuoc_ucmd");
+    setRadio("thuoc_steroid");
+    setRadio("thuoc_loet_da_day");
+    setRadio("dieu_tri_hoa_hoc");
+    setRadio("dieu_tri_tia_xa");
+    setRadio("truyen_mau");
+    setText("khac_step3");
   });
 
 });
