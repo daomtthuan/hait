@@ -25,7 +25,7 @@ class Ajax extends MY_Controller {
 	}
 	public function insertForm(){
 		if($this->input->post()){
-			//get_data here
+			echo 'get data';
 		}
 	}
 	public function readSession(){
