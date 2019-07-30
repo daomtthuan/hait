@@ -25,12 +25,13 @@ class User extends MY_Controller {
 		$data['page_title'] = 'Tạo mới biểu mẫu - Bước '.$step;
 
 		$data['main'] = 'tools/form/step'.$step;
-		$data['script'] = '<script src="'.base_url('public/js/tools/new_form/step'.$step.'.js').'"></script>';
+		$data['script'] = '';
 
 		$this->load->view('general/layout',$data);
 	}
 
-
+	//  TODO làm lại controller edit_form
+/*
 	public function edit_form($form_id)
 	{
 		$data['role'] = 'user';
@@ -43,6 +44,7 @@ class User extends MY_Controller {
 
 		$this->load->view('general/layout',$data);
 	}
+	*/
 
 	public function list_form()
 	{
