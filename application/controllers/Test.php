@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Test extends My_Controller {
+class Test extends MY_Controller {
 
 	public function __construct()
 	{
@@ -61,7 +61,8 @@ class Test extends My_Controller {
 		$this->Value_model->update_datatype(1);
 		*/
 		$this->load->model('Login_model');
-		print_r($this->Login_model->get_user_data('npduy')) ;
+		$data=$this->Login_model->get_user_data('npduy') ;
+		print_r($data);
 	}
 }
 
