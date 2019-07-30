@@ -10,7 +10,6 @@ class User extends MY_Controller {
 
 	public function index()
 	{
-		$data['navi'] = '';
 		$data['role'] = 'user';
 		$data['page_title'] = 'Trang chủ';
 
@@ -22,7 +21,6 @@ class User extends MY_Controller {
 
 	public function new_form($step)
 	{
-		$data['navi'] = $step>1 ? '<script>if (!(sessionStorage.getItem("completed") >= '.($step-1).')) window.location.href = "'.base_url('user/new-form/'.($step-1)).'"</script>' : '';
 		$data['role'] = 'user';
 		$data['page_title'] = 'Tạo mới biểu mẫu - Bước '.$step;
 
@@ -35,7 +33,6 @@ class User extends MY_Controller {
 
 	public function edit_form($form_id)
 	{
-		$data['navi'] = '';
 		$data['role'] = 'user';
 		$data['page_title'] = 'Chỉnh sửa biểu mẫu';
 
@@ -49,7 +46,6 @@ class User extends MY_Controller {
 
 	public function list_form()
 	{
-		$data['navi'] = '';
 		$data['role'] = 'user';
 		$data['page_title'] = 'Danh sách biểu mẫu';
 

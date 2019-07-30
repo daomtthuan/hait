@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-	<?php echo $navi ?>
 	<meta charset="utf-8">
 	<title>Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện</title>
 	<meta name="author" content="Dao Minh Trung Thuan">

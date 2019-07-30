@@ -1,3 +1,7 @@
+<script>
+  var completed = sessionStorage.getItem("completed");
+  if (completed < 3) window.location = "<?php echo base_url('user/new-form/')?>" + "/" +completed;
+</script>
 <h1 class="h3 mb-4 text-gray-800">PHIẾU GIÁM SÁT NGANG NHIỄM KHUẨN BỆNH VIỆN</h1>
 <hr class="sidebar-divider">
 <div class="mb-2"><small>* Vui lòng điền đầy đủ thông tin bên dưới</small></div>
@@ -162,3 +166,4 @@
   <a id="buttonStepBack" class="btn btn-secondary ml-2" href="<?php echo base_url($role.'/new-form/3') ?>">Trở về</a>
   <a id="buttonStepNext" class="btn btn-primary ml-auto mr-2" href="<?php echo base_url($role.'/new-form/5') ?>">Kế tiếp</a>
 </div>
+<script src="<?php echo base_url('public/js/tools/new_form/step4.js') ?>" defer></script>
