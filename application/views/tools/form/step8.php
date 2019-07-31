@@ -1,5 +1,5 @@
 <script>
-  var urlPost = "<?php echo base_url('ajax/insertForm')?>";
+  var urlPost = "<?php echo base_url('ajax/New_form')?>";
   var completed = sessionStorage.getItem("completed");
   if (completed < 7) window.location = "<?php echo base_url('user/new-form/')?>" + "/" +completed;
 </script>

@@ -59,14 +59,16 @@ $(document).ready(function () {
       var stringJson = "\"form_id\":null,";
       for (var i = 0; i < sessionStorage.length; i++) stringJson += toStringPartJson(sessionStorage.key(i));
       stringJson = "{" + stringJson.slice(0, -1) + "}"
-
       $.ajax({
         url: urlPost,
         type: "post",
-        dataType: "json",
-        contentType: 'application/json',
-        data: JSON.parse(stringJson),
-        success: function () { alert("Ahihi đồ ngu") },
+        dataType: "application/json",
+		  data: stringJson,
+		  contentType: "application/json;charset=UTF-8",
+         success: function (data) {  console.log("ss" + data) },
+		  error: function(data) {
+			  console.log( "fail"+data);
+		  }
       });
 
     }
