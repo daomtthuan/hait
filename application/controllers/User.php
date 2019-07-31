@@ -21,14 +21,18 @@ class User extends MY_Controller {
 
 	public function new_form($step)
 	{
+		if ($step == '7-1') $step = "7_1";
+		else if ($step == '7-2') $step = "7_2";
+
 		$data['role'] = 'user';
-		$data['page_title'] = 'Tạo mới biểu mẫu - Bước '.$step;
+		$data['page_title'] = 'Tạo mới biểu mẫu - Bước '.(($step == '7_1' || $step == '7_2' ) ? '7' : $step);
 
 		$data['main'] = 'tools/form/step'.$step;
-		$data['script'] = '';
 
 		$this->load->view('general/layout',$data);
 	}
+
+
 
 	//  TODO làm lại controller edit_form
 /*
@@ -52,12 +56,6 @@ class User extends MY_Controller {
 		$data['page_title'] = 'Danh sách biểu mẫu';
 
 		$data['main'] = 'tools/list_form';
-		$data['script'] =
-			'<script>'.
-				'var edit = "'.base_url('user/edit-form').'",'.
-				'json = "'.base_url('ajax/formList').'"'.
-			'</script>'.
-			'<script src="'.base_url('public/js/tools/list_form.js').'"></script>';
 
 		$this->load->view('general/layout',$data);
 	}

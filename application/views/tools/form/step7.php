@@ -1,87 +1,49 @@
 <script>
   var completed = sessionStorage.getItem("completed");
-  if (completed < 6) window.location = "<?php echo base_url('user/new-form/')?>" + "/" +completed;
+  if (completed < 6) window.location = "<?php echo base_url('user/new-form/')?>" + "/" + completed;
+  else {
+    var part = sessionStorage.getItem("phau_thuat");
+
+    if (part == 1) {
+      sessionStorage.removeItem("khang_sinh");
+      sessionStorage.removeItem("muc_dich_su_dung");
+    }
+    else {
+      sessionStorage.removeItem("vi_tri_phau_thuat");
+      sessionStorage.removeItem("ngay_phau_thuat");
+      sessionStorage.removeItem("loai_phau_thuat");
+      sessionStorage.removeItem("implant");
+      sessionStorage.removeItem("phau_thuat_noi_soi");
+      sessionStorage.removeItem("thoi_gian");
+      sessionStorage.removeItem("diem_asa");
+      sessionStorage.removeItem("loai_vet_mo");
+      sessionStorage.removeItem("gay_me");
+      sessionStorage.removeItem("gay_te");
+
+      if (sessionStorage.getItem("dan_luu") == 1) {
+        sessionStorage.removeItem("dan_luu_tai_vm");
+        sessionStorage.removeItem("dan_luu_ngoai_vm");
+        sessionStorage.removeItem("dan_luu_kin");
+        sessionStorage.removeItem("so_ngay_dat_dan_luu");
+      }
+      sessionStorage.removeItem("dan_luu");
+
+      if (sessionStorage.getItem("nkvm") == 1) {
+        sessionStorage.removeItem("loai_nhiem_khuan_vm");
+        sessionStorage.removeItem("bieu_hien_sot");
+        sessionStorage.removeItem("bieu_hien_do");
+        sessionStorage.removeItem("bieu_hien_sung");
+        sessionStorage.removeItem("bieu_hien_dau");
+        sessionStorage.removeItem("phau_thuat_lai");
+        sessionStorage.removeItem("dich_vet_mo");
+        sessionStorage.removeItem("toac_vet_mo_tu_nhien");
+        sessionStorage.removeItem("chu_dong_mo_vm");
+        sessionStorage.removeItem("chay_mu");
+        sessionStorage.removeItem("trieu_chung_chi_diem");
+      }
+      sessionStorage.removeItem("nkvm");
+    }
+
+    window.location = "<?php echo base_url('user/new-form/')?>" + "7-" + part;
+  }
 </script>
-<h1 class="h3 mb-4 text-gray-800">PHIẾU GIÁM SÁT NGANG NHIỄM KHUẨN BỆNH VIỆN</h1>
-<hr class="sidebar-divider">
-<div class="mb-2"><small>* Vui lòng điền đầy đủ thông tin bên dưới</small></div>
-<form class="mb-3 was-validated">
-  <div class="card shadow mb-4 border-primary">
-    <div class="card-header bg-light py-3">
-      <h6 class="m-0 font-weight-bold text-primary">7. Kháng sinh sử dụng ở người bệnh không phẫu thuật</h6>
-    </div>
-    <div class="card-body bg-white">
-      <div class="row">
-        <div class="col-12">
-          <div class="form-group">
-            <div class="text-dark cursor-default">Kháng sinh sử dụng ở người bệnh không phẫu thuật</div>
-            <div class="custom-control custom-radio">
-              <input type="radio" id="co_khang_sinh" name="khang_sinh" class="custom-control-input" value="1" required>
-              <label class="custom-control-label" for="co_khang_sinh">Có</label>
-            </div>
-            <div class="custom-control custom-radio">
-              <input type="radio" id="khong_khang_sinh" name="khang_sinh" class="custom-control-input" value="0" required>
-              <label class="custom-control-label" for="khong_khang_sinh">Không</label>
-              <div class="invalid-feedback" style="margin-left: -24px">Người bệnh không phẫu thuật có sử dụng kháng sinh không?</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 khang_sinh" style="display: none">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Tên kháng sinh</th>
-                <th scope="col">Ngày bắt đầu</th>
-                <th scope="col">Ngày kết thúc</th>
-                <th scope="col">Liều/đơn dùng</th>
-              </tr>zz
-            </thead>
-            <tbody>
-              <tr>
-                <td>ABC</th>
-                <td>1/7/2019</td>
-                <td>3/7/2019</td>
-                <td>1 viên</td>
-              </tr>
-              <tr>
-                <td>ABC</th>
-                <td>1/7/2019</td>
-                <td>3/7/2019</td>
-                <td>1 viên</td>
-              </tr>
-              <tr>
-                <td>ABC</th>
-                <td>1/7/2019</td>
-                <td>3/7/2019</td>
-                <td>1 viên</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="col-12 khang_sinh" style="display: none">
-          <div class="form-group">
-            <div class="text-dark cursor-default">Mục đích sử dụng kháng sinh</div>
-            <div class="custom-control custom-radio custom-control">
-              <input type="radio" id="muc_dich_su_dung_1" name="muc_dich_su_dung" class="custom-control-input" value="1" readonly required>
-              <label class="custom-control-label" for="muc_dich_su_dung_1">Điều trị nhiễm khuẩn</label>
-            </div>
-            <div class="custom-control custom-radio custom-control">
-              <input type="radio" id="muc_dich_su_dung_2" name="muc_dich_su_dung" class="custom-control-input" value="2" readonly required>
-              <label class="custom-control-label" for="muc_dich_su_dung_2">Phòng ngừa nhiễm khuẩn</label>
-            </div>
-            <div class="custom-control custom-radio custom-control">
-              <input type="radio" id="muc_dich_su_dung_3" name="muc_dich_su_dung" class="custom-control-input" value="3" readonly required>
-              <label class="custom-control-label" for="muc_dich_su_dung_3">Không xác định</label>
-              <div class="invalid-feedback" style="margin-left: -24px">Vui lòng chọn mục đích sử dụng kháng sinh</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</form>
-<div class="row mt-3">
-  <a id="buttonStepBack" class="btn btn-secondary ml-2" href="<?php echo base_url($role.'/new-form/6') ?>">Trở về</a>
-  <a id="buttonStepNext" class="btn btn-primary ml-auto mr-2" href="<?php echo base_url($role.'/new-form/8') ?>">Kế tiếp</a>
-</div>
-<script src="<?php echo base_url('public/js/tools/new_form/step7.js') ?>" defer></script>
