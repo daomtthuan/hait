@@ -32,24 +32,6 @@ class User extends MY_Controller {
 		$this->load->view('general/layout',$data);
 	}
 
-
-
-	//  TODO làm lại controller edit_form
-/*
-	public function edit_form($form_id)
-	{
-		$data['role'] = 'user';
-		$data['page_title'] = 'Chỉnh sửa biểu mẫu';
-
-		$data['main'] = 'tools/form';
-		$data['script'] =
-			'<script>var json = "'.base_url('ajax/get/'.$form_id).'"</script>'.
-			'<script src="'.base_url('public/js/tools/edit_form.js').'"></script>';
-
-		$this->load->view('general/layout',$data);
-	}
-	*/
-
 	public function list_form()
 	{
 		$data['role'] = 'user';
