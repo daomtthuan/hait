@@ -29,6 +29,7 @@ class Login extends CI_Controller {
 				$user_name=$this->input->post('inputUsername');
 				$this->session->set_userdata('login',$user_name);
 				$data=$this->Login_model->get_user_data($user_name);
+				print_r($data);
 				foreach ($data as $key=>$val){
 					$this->session->set_userdata($key,$val);
 				}

@@ -522,3 +522,4 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 $config['enable_profiler'] = TRUE;
+$config['subclass_prefix']='MY_';
