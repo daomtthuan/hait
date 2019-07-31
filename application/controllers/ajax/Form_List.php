@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 require(APPPATH . '/libraries/REST_Controller.php');
-class Listks extends REST_Controller
+class Form_List extends REST_Controller
 {
 
 	public function __construct($config = 'rest')
@@ -12,8 +12,8 @@ class Listks extends REST_Controller
 
 	function index_get()
 	{
-		$this->load->model('Khang_sinh_model');
-		$data=$this->Khang_sinh_model->get();
+		$this->load->model('Form_model');
+		$data=$this->Form_model->table();
 		if ($data) {
 			$this->response($data, REST_Controller::HTTP_OK);
 		} else {
@@ -26,4 +26,5 @@ class Listks extends REST_Controller
 	 */
 
 }
+
 

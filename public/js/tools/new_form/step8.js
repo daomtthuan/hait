@@ -1,11 +1,13 @@
 function setText(name) {
   var value = $("#" + name).val();
   if (value != "") sessionStorage.setItem(name, value);
+  else sessionStorage.removeItem(name);
 }
 
 function setRadio(name) {
   var value = $("[name='" + name + "']:checked").val();
   if (value != undefined) sessionStorage.setItem(name, value);
+  else sessionStorage.removeItem(name);
 }
 
 function getText(name) {
@@ -33,45 +35,30 @@ $(document).ready(function () {
   });
 
   $("#buttonSubmit").click(function (event) {
-    event.preventDefault();
-
     setRadio("ket_qua_dieu_tri");
     setRadio("nam_vien");
 
-    var isValid = true;
-    $(".invalid-feedback").each(function () {
-      if ($(this).css("display") == "block") {
-        isValid = false;
-        $("html, body").animate({ scrollTop: $(this).closest(".form-group").offset().top }, "slow");
-        return false;
+    function toStringPartJson(name) {
+      var value = sessionStorage.getItem(name);
+      if (value != null) return "\"" + name + "\":\"" + value + "\",";
+      else return "";
+    }
+
+    var stringJson = "\"form_id\":null,";
+    for (var i = 0; i < sessionStorage.length; i++) stringJson += toStringPartJson(sessionStorage.key(i));
+    stringJson = "{" + stringJson.slice(0, -1) + "}"
+    $.ajax({
+      url: new_from,
+      type: "post",
+      dataType: "application/json",
+      data: stringJson,
+      contentType: "application/json;charset=UTF-8",
+      success: function (data) { console.log("ss" + data) },
+      error: function (data) {
+        console.log("fail" + data);
       }
     });
 
-    if (isValid) {
-      if (sessionStorage.getItem("completed") == 7) sessionStorage.setItem("completed", 8);
-
-      function toStringPartJson(name) {
-        var value = sessionStorage.getItem(name);
-        if (value != null) return "\"" + name + "\":\"" + value + "\",";
-        else return "";
-      }
-
-      var stringJson = "\"form_id\":null,";
-      for (var i = 0; i < sessionStorage.length; i++) stringJson += toStringPartJson(sessionStorage.key(i));
-      stringJson = "{" + stringJson.slice(0, -1) + "}"
-      $.ajax({
-        url: urlPost,
-        type: "post",
-        dataType: "application/json",
-		  data: stringJson,
-		  contentType: "application/json;charset=UTF-8",
-         success: function (data) {  console.log("ss" + data) },
-		  error: function(data) {
-			  console.log( "fail"+data);
-		  }
-      });
-
-    }
   });
 
   $("#buttonStepBack").click(function () {

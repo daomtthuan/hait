@@ -1,11 +1,13 @@
 function setText(name) {
   var value = $("#" + name).val();
   if (value != "") sessionStorage.setItem(name, value);
+  else sessionStorage.removeItem(name);
 }
 
 function setRadio(name) {
   var value = $("[name='" + name + "']:checked").val();
   if (value != undefined) sessionStorage.setItem(name, value);
+  else sessionStorage.removeItem(name);
   setText("ngaybd_" + name);
   setText("ngaykt_" + name);
 }
@@ -47,8 +49,6 @@ $(document).ready(function () {
   });
 
   $("#buttonStepNext").click(function (event) {
-    event.preventDefault();
-
     setRadio("tho_may_xam_nhap");
     setRadio("dat_noi_khi_quan");
     setRadio("mo_khi_quan");
@@ -57,20 +57,6 @@ $(document).ready(function () {
     setRadio("duong_truyen_tmnv");
     setRadio("dat_ong_thong_da_day");
     setText("khac_step5");
-
-    var isValid = true;
-    $(".invalid-feedback").each(function () {
-      if ($(this).css("display") == "block") {
-        isValid = false;
-        $("html, body").animate({ scrollTop: $(this).closest(".form-group").offset().top }, "slow");
-        return false;
-      }
-    });
-
-    if (isValid) {
-      if (sessionStorage.getItem("completed") == 4) sessionStorage.setItem("completed", 5);
-      window.location = this.href;
-    }
   });
 
   $("#buttonStepBack").click(function () {

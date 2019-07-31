@@ -1,7 +1,8 @@
 <script>
-  var completed = sessionStorage.getItem("completed");
-  if (completed < 6) window.location = "<?php echo base_url('user/new-form/')?>" + "/" + completed;
-  else if (sessionStorage.getItem("phau_thuat") == 1) window.location = "<?php echo base_url('user/new-form/')?>" + "7-1";
+  var part = sessionStorage.getItem("phau_thuat");
+  if (part == null) window.location = "<?php echo base_url('user/new-form/6')?>";
+  else if (part == 1) window.location = "<?php echo base_url('user/new-form/7-1')?>";
+  var json = "<?php echo base_url('ajax/antibiotic-list') ?>";
 </script>
 <h1 class="h3 mb-4 text-gray-800">PHIẾU GIÁM SÁT NGANG NHIỄM KHUẨN BỆNH VIỆN</h1>
 <hr class="sidebar-divider">

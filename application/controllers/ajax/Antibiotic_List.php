@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 require(APPPATH . '/libraries/REST_Controller.php');
-class Formlist extends REST_Controller
+class Antibiotic_List extends REST_Controller
 {
 
 	public function __construct($config = 'rest')
@@ -12,8 +12,8 @@ class Formlist extends REST_Controller
 
 	function index_get()
 	{
-		$this->load->model('Form_model');
-		$data=$this->Form_model->table();
+		$this->load->model('Khang_sinh_model');
+		$data=$this->Khang_sinh_model->get();
 		if ($data) {
 			$this->response($data, REST_Controller::HTTP_OK);
 		} else {
@@ -26,5 +26,4 @@ class Formlist extends REST_Controller
 	 */
 
 }
-
 

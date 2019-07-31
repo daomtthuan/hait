@@ -1,11 +1,13 @@
 function setText(name) {
   var value = $("#" + name).val();
   if (value != "") sessionStorage.setItem(name, value);
+  else sessionStorage.removeItem(name);
 }
 
 function setRadio(name) {
   var value = $("[name='" + name + "']:checked").val();
   if (value != undefined) sessionStorage.setItem(name, value);
+  else sessionStorage.removeItem(name);
 }
 
 function getText(name) {
@@ -34,8 +36,6 @@ $(document).ready(function () {
   $("#ngay_dieu_tra").val(now.getFullYear() + "-" + (("0" + (now.getMonth() + 1)).slice(-2)) + "-" + (("0" + now.getDate()).slice(-2)));
 
   $("#buttonStepNext").click(function (event) {
-    event.preventDefault();
-
     setText("form_id");
     setText("ngay_vao_khoa");
     setText("ngay_vao_vien");
@@ -48,23 +48,6 @@ $(document).ready(function () {
     setText("ngay_ra_vien");
     setText("chan_doan_xac_dinh");
     setRadio("nhiem_khuan_luc_vao");
-
-    var isValid = true;
-    $(".invalid-feedback").each(function () {
-      if ($(this).css("display") == "block") {
-        isValid = false;
-        $("html, body").animate({ scrollTop: $(this).closest(".form-group").offset().top }, "slow");
-        return false;
-      }
-    });
-
-    if (isValid) {
-      if (sessionStorage.getItem("completed") == null) sessionStorage.setItem("completed", 1);
-
-
-
-      window.location = this.href;
-    }
   });
 
 });

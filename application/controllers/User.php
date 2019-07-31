@@ -26,18 +26,16 @@ class User extends MY_Controller {
 
 		$data['role'] = 'user';
 		$data['page_title'] = 'Tạo mới biểu mẫu - Bước '.(($step == '7_1' || $step == '7_2' ) ? '7' : $step);
-
 		$data['main'] = 'tools/form/step'.$step;
 
 		$this->load->view('general/layout',$data);
 	}
 
-	public function list_form()
+	public function form_list()
 	{
 		$data['role'] = 'user';
 		$data['page_title'] = 'Danh sách biểu mẫu';
-
-		$data['main'] = 'tools/list_form';
+		$data['main'] = 'tools/form_list';
 
 		$this->load->view('general/layout',$data);
 	}

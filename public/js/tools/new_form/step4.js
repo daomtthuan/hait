@@ -1,11 +1,13 @@
 function setText(name) {
   var value = $("#" + name).val();
   if (value != "") sessionStorage.setItem(name, value);
+  else sessionStorage.removeItem(name);
 }
 
 function setRadio(name) {
   var value = $("[name='" + name + "']:checked").val();
   if (value != undefined) sessionStorage.setItem(name, value);
+  else sessionStorage.removeItem(name);
 }
 
 function getText(name) {
@@ -31,8 +33,6 @@ $(document).ready(function () {
   getText("khac_step4");
 
   $("#buttonStepNext").click(function (event) {
-    event.preventDefault();
-
     setRadio("ho_hap_man_tinh");
     setRadio("gan_man_tinh");
     setRadio("tim_mach");
@@ -44,20 +44,6 @@ $(document).ready(function () {
     setRadio("bong");
     setRadio("cao_huyet_ap");
     setText("khac_step4");
-
-    var isValid = true;
-    $(".invalid-feedback").each(function () {
-      if ($(this).css("display") == "block") {
-        isValid = false;
-        $("html, body").animate({ scrollTop: $(this).closest(".form-group").offset().top }, "slow");
-        return false;
-      }
-    });
-
-    if (isValid) {
-      if (sessionStorage.getItem("completed") == 3) sessionStorage.setItem("completed", 4);
-      window.location = this.href;
-    }
   });
 
   $("#buttonStepBack").click(function () {

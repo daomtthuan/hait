@@ -20,7 +20,7 @@
     <div class="bg-white py-2 collapse-inner rounded">
       <h6 class="collapse-header text-gray-700">Biểu mẫu khảo sát</h6>
       <a class="collapse-item text-dark" href="<?php echo base_url($role.'/new-form/1')?>"><i class="fas fa-file-medical mr-2"></i>Tạo mới</a>
-      <a class="collapse-item text-dark" href="<?php echo base_url($role.'/list-form')?>"><i class="fas fa-clipboard-list mr-2"></i>Danh sách</a>
+      <a class="collapse-item text-dark" href="<?php echo base_url($role.'/form-list')?>"><i class="fas fa-clipboard-list mr-2"></i>Danh sách</a>
     </div>
   </div>
 </li>

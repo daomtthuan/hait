@@ -1,7 +1,3 @@
-<script>
-  var completed = sessionStorage.getItem("completed");
-  if (completed < 2) window.location = "<?php echo base_url('user/new-form/')?>" + "/" +completed;
-</script>
 <h1 class="h3 mb-4 text-gray-800">PHIẾU GIÁM SÁT NGANG NHIỄM KHUẨN BỆNH VIỆN</h1>
 <hr class="sidebar-divider">
 <div class="mb-2"><small>* Vui lòng điền đầy đủ thông tin bên dưới</small></div>

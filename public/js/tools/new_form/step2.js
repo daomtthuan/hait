@@ -1,11 +1,13 @@
 function setText(name) {
   var value = $("#" + name).val();
   if (value != "") sessionStorage.setItem(name, value);
+  else sessionStorage.removeItem(name);
 }
 
 function setRadio(name) {
   var value = $("[name='" + name + "']:checked").val();
   if (value != undefined) sessionStorage.setItem(name, value);
+  else sessionStorage.removeItem(name);
 }
 
 function getText(name) {
@@ -21,27 +23,11 @@ $(document).ready(function () {
 
 
   $("#buttonStepNext").click(function (event) {
-    event.preventDefault();
 
-
-
-    var isValid = true;
-    $(".invalid-feedback").each(function () {
-      if ($(this).css("display") == "block") {
-        isValid = false;
-        $("html, body").animate({ scrollTop: $(this).closest(".form-group").offset().top }, "slow");
-        return false;
-      }
-    });
-
-    if (isValid) {
-      if (sessionStorage.getItem("completed") == 1) sessionStorage.setItem("completed", 2);
-      window.location = this.href;
-    }
   });
 
   $("#buttonStepBack").click(function () {
-    
+
   });
 
 });

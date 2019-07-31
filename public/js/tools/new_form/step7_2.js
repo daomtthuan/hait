@@ -1,11 +1,13 @@
 function setText(name) {
   var value = $("#" + name).val();
   if (value != "") sessionStorage.setItem(name, value);
+  else sessionStorage.removeItem(name);
 }
 
 function setRadio(name) {
   var value = $("[name='" + name + "']:checked").val();
   if (value != undefined) sessionStorage.setItem(name, value);
+  else sessionStorage.removeItem(name);
   if (name == "khang_sinh") setRadio("muc_dich_su_dung");
 }
 
@@ -32,23 +34,7 @@ $(document).ready(function () {
   });
 
   $("#buttonStepNext").click(function (event) {
-    event.preventDefault();
-
     setRadio("khang_sinh");
-
-    var isValid = true;
-    $(".invalid-feedback").each(function () {
-      if ($(this).css("display") == "block") {
-        isValid = false;
-        $("html, body").animate({ scrollTop: $(this).closest(".form-group").offset().top }, "slow");
-        return false;
-      }
-    });
-
-    if (isValid) {
-      if (sessionStorage.getItem("completed") == 6) sessionStorage.setItem("completed", 7);
-      window.location = this.href;
-    }
   });
 
   $("#buttonStepBack").click(function () {
