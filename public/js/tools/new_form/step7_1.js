@@ -125,14 +125,20 @@ $(document).ready(function () {
     }
   });
 
-  // $("#them_khang_sinh_truoc_phau_thuat").on("click", function () {
-  //   khang_sinh_truoc_phau_thuat.row.add([
-  //     "<button>hahaha</button>",
-  //     "<button>hahaha</button>",
-  //     "<button>hahaha</button>",
-  //     "<button>hahaha</button>",
-  //   ]).draw(true);
-  // });
+  $("#submit_khang_sinh_truoc_phau_thuat").on("click", function () {
+    khang_sinh_truoc_phau_thuat.row.add([
+      "<button type='button' class='btn btn-sm btn-danger buttonDelete'><i class='fas fa-trash-alt'></i></button>",
+      $("#select_khang_sinh_truoc_phau_thuat").val(),
+      $("#ngaybd_khang_sinh_truoc_phau_thuat").val(),
+      $("#ngaykt_khang_sinh_truoc_phau_thuat").val(),
+      $("#lieu_khang_sinh_truoc_phau_thuat").val(),
+    ]).draw(true);
+
+    $(".buttonDelete").on("click", function () {
+      $(this).closest("tr").remove();
+    });
+  });
+
 
   $(".dataTables_wrapper>:first-child>div").attr("class", "col-sm-12 col-lg-6");
   $(".dataTables_length label select").addClass("ml-1");

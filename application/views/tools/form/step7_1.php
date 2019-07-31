@@ -495,7 +495,6 @@
   <a id="buttonStepNext" class="btn btn-primary ml-auto mr-2" href="<?php echo base_url($role.'/new-form/8') ?>">Kế tiếp</a>
 </div>
 
-// TODO làm tiếp form nhập kháng sinh
 <div class="modal fade" id="modal_khang_sinh_truoc_phau_thuat" tabindex="-1" role="dialog" aria-labelledby="title_khang_sinh_truoc_phau_thuat" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -515,19 +514,19 @@
           <div class="invalid-feedback">Vui lòng nhập Ngày bắt đầu sử dụng</div>
         </div>
         <div class="form-group">
-          <label for="ngaybd_khang_sinh_truoc_phau_thuat">Ngày bắt đầu</label>
-          <input type="date" class="form-control" id="ngaybd_khang_sinh_truoc_phau_thuat" required>
+          <label for="ngaykt_khang_sinh_truoc_phau_thuat">Ngày kết thúc</label>
+          <input type="date" class="form-control" id="ngaykt_khang_sinh_truoc_phau_thuat" required>
           <div class="invalid-feedback">Vui lòng nhập Ngày kết thúc sử dụng</div>
         </div>
         <div class="form-group">
-          <label for="ngaybd_khang_sinh_truoc_phau_thuat">Ngày bắt đầu</label>
-          <input type="text" class="form-control" id="ngaybd_khang_sinh_truoc_phau_thuat" required>
+          <label for="lieu_khang_sinh_truoc_phau_thuat">Liều/đơn dùng</label>
+          <input type="text" class="form-control" id="lieu_khang_sinh_truoc_phau_thuat" required>
           <div class="invalid-feedback">Vui lòng nhập Liều/đơn dùng</div>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ bỏ</button>
-        <button type="button" class="btn btn-primary">Thêm vào</button>
+        <button id="submit_khang_sinh_truoc_phau_thuat" type="button" class="btn btn-primary" >Thêm vào</button>
       </div>
     </div>
   </div>
