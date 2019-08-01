@@ -20,10 +20,4 @@ class Antibiotic_List extends REST_Controller
 			$this->response(NULL, REST_Controller::HTTP_NOT_FOUND);
 		}
 	}
-
-	/**
-	 *
-	 */
-
 }
-

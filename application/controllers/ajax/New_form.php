@@ -46,7 +46,4 @@ class New_Form extends REST_Controller
 			$this->response(array('status' => 'success'));
 		}
 	}
-
 }
-
-

@@ -20,4 +20,3 @@ class Readss extends REST_Controller
 		}
 	}
 }
-
