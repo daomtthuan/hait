@@ -1,107 +1,35 @@
-function setRadio(name) {
+function getPair(name) {
   var value = $("[name='" + name + "']:checked").val();
-  if (value != undefined) sessionStorage.setItem(name, value);
-  else sessionStorage.removeItem(name);
+  if (value != undefined) return '"' + name + '":"' + value + '",';
+  else return '';
 }
 
-function getRadio(name) {
-  $("[name='" + name + "'][value='" + sessionStorage.getItem(name) + "']").prop("checked", true);
+function putInto(step, name) {
+  if (step.hasOwnProperty(name))
+    $("[name='" + name + "'][value='" + step[name] + "']").prop("checked", true);
 }
 
 $(document).ready(function () {
 
-  getRadio("phau_thuat");
+  var href = $("#buttonStepNext").attr("href");
+  const name = ["phau_thuat"];
 
-  $("#buttonStepNext").click(function (event) {
-    event.preventDefault();
+  if (sessionStorage.step6 != null) {
+    var step6 = JSON.parse(sessionStorage.step6);
+    name.forEach(element => putInto(step6, element));
+  }
 
-    setRadio("phau_thuat");
+  if ($("#co_phau_thuat").is(":checked")) $("#buttonStepNext").attr("href", href + "1");
+  else $("#buttonStepNext").attr("href", href + "2");
 
-    var part = sessionStorage.getItem("phau_thuat");
-    if (part == 1) {
-      sessionStorage.removeItem("khang_sinh");
-      sessionStorage.removeItem("muc_dich_su_dung");
-      window.location = this.href + "-1";
-    }
-    else if (part == 2) {
-      sessionStorage.removeItem("vi_tri_phau_thuat");
-      sessionStorage.removeItem("ngay_phau_thuat");
-      sessionStorage.removeItem("loai_phau_thuat");
-      sessionStorage.removeItem("implant");
-      sessionStorage.removeItem("phau_thuat_noi_soi");
-      sessionStorage.removeItem("thoi_gian");
-      sessionStorage.removeItem("diem_asa");
-      sessionStorage.removeItem("loai_vet_mo");
-      sessionStorage.removeItem("gay_me");
-      sessionStorage.removeItem("gay_te");
-
-      if (sessionStorage.getItem("dan_luu") == 1) {
-        sessionStorage.removeItem("dan_luu_tai_vm");
-        sessionStorage.removeItem("dan_luu_ngoai_vm");
-        sessionStorage.removeItem("dan_luu_kin");
-        sessionStorage.removeItem("so_ngay_dat_dan_luu");
-      }
-      sessionStorage.removeItem("dan_luu");
-
-      if (sessionStorage.getItem("nkvm") == 1) {
-        sessionStorage.removeItem("loai_nhiem_khuan_vm");
-        sessionStorage.removeItem("bieu_hien_sot");
-        sessionStorage.removeItem("bieu_hien_do");
-        sessionStorage.removeItem("bieu_hien_sung");
-        sessionStorage.removeItem("bieu_hien_dau");
-        sessionStorage.removeItem("phau_thuat_lai");
-        sessionStorage.removeItem("dich_vet_mo");
-        sessionStorage.removeItem("toac_vet_mo_tu_nhien");
-        sessionStorage.removeItem("chu_dong_mo_vm");
-        sessionStorage.removeItem("chay_mu");
-        sessionStorage.removeItem("trieu_chung_chi_diem");
-      }
-      sessionStorage.removeItem("nkvm");
-      window.location = this.href + "-2";
-    }
+  $("[name='phau_thuat']").on("click", function () {
+    if ($(this).val() == "1") $("#buttonStepNext").attr("href", href + "1");
+    else $("#buttonStepNext").attr("href", href + "2");
   });
 
-  $("#buttonStepBack").click(function () {
-    setRadio("phau_thuat");
-    if (sessionStorage.getItem("phau_thuat") == 1) {
-      sessionStorage.removeItem("khang_sinh");
-      sessionStorage.removeItem("muc_dich_su_dung");
-    }
-    else {
-      sessionStorage.removeItem("vi_tri_phau_thuat");
-      sessionStorage.removeItem("ngay_phau_thuat");
-      sessionStorage.removeItem("loai_phau_thuat");
-      sessionStorage.removeItem("implant");
-      sessionStorage.removeItem("phau_thuat_noi_soi");
-      sessionStorage.removeItem("thoi_gian");
-      sessionStorage.removeItem("diem_asa");
-      sessionStorage.removeItem("loai_vet_mo");
-      sessionStorage.removeItem("gay_me");
-      sessionStorage.removeItem("gay_te");
-
-      if (sessionStorage.getItem("dan_luu") == 1) {
-        sessionStorage.removeItem("dan_luu_tai_vm");
-        sessionStorage.removeItem("dan_luu_ngoai_vm");
-        sessionStorage.removeItem("dan_luu_kin");
-        sessionStorage.removeItem("so_ngay_dat_dan_luu");
-      }
-      sessionStorage.removeItem("dan_luu");
-
-      if (sessionStorage.getItem("nkvm") == 1) {
-        sessionStorage.removeItem("loai_nhiem_khuan_vm");
-        sessionStorage.removeItem("bieu_hien_sot");
-        sessionStorage.removeItem("bieu_hien_do");
-        sessionStorage.removeItem("bieu_hien_sung");
-        sessionStorage.removeItem("bieu_hien_dau");
-        sessionStorage.removeItem("phau_thuat_lai");
-        sessionStorage.removeItem("dich_vet_mo");
-        sessionStorage.removeItem("toac_vet_mo_tu_nhien");
-        sessionStorage.removeItem("chu_dong_mo_vm");
-        sessionStorage.removeItem("chay_mu");
-        sessionStorage.removeItem("trieu_chung_chi_diem");
-      }
-      sessionStorage.removeItem("nkvm");
-    }
+  $("#buttonStepNext, #buttonStepBack").click(function () {
+    var stringJson = '';
+    name.forEach(element => { stringJson += getPair(element) });
+    sessionStorage.step6 = "{" + stringJson.slice(0, -1) + "}"
   });
-
 });

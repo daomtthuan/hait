@@ -6,10 +6,10 @@
   }
 </style>
 <script>
-  var part = sessionStorage.getItem("phau_thuat");
-  if (part == null) window.location = "<?php echo base_url('user/new-form/6')?>";
-  else if (part == 2) window.location = "<?php echo base_url('user/new-form/7-2')?>";
-  var json = "<?php echo base_url('ajax/antibiotic-list') ?>";
+  var part = JSON.parse(sessionStorage.step6).phau_thuat;
+  if (part == null) window.location = "<?php echo base_url('user/form/6')?>";
+  else if (part == 2) window.location = "<?php echo base_url('user/form/7-2')?>";
+  var antibioticUrl = "<?php echo base_url('ajax/antibiotic-list') ?>";
 </script>
 <h1 class="h3 mb-4 text-gray-800">PHIẾU GIÁM SÁT NGANG NHIỄM KHUẨN BỆNH VIỆN</h1>
 <hr class="sidebar-divider">
@@ -163,19 +163,20 @@
 
         <div class="col-12 mb-3">
           <div class="text-dark cursor-default mb-2">
-            <button id="them_khang_sinh_truoc_phau_thuat" class="btn btn-primary btn-sm mr-1" type="button" data-toggle="modal" data-target="#modal_khang_sinh_truoc_phau_thuat"><i class="fas fa-plus"></i></button>
             Kháng sinh trước phẫu thuật
+            <button id="them_khang_sinh_truoc_phau_thuat" class="btn btn-primary btn-sm ml-auto" type="button" data-toggle="modal" data-target="#modal_khang_sinh_truoc_phau_thuat"><i class="fas fa-plus"></i></button>
+            <button id="xoa_khang_sinh_truoc_phau_thuat" class="btn btn-danger btn-sm ml-1" type="button"><i class='fas fa-trash-alt'></i></button>
           </div>
           <div class="col-12 border">
             <div class="table-responsive-lg my-2">
               <table id="khang_sinh_truoc_phau_thuat" class="table table-sm table-bordered table-hover" style="width:100%">
                 <thead class="thead-light">
                   <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Tên kháng sinh</th>
-                    <th scope="col">Ngày bắt đầu</th>
-                    <th scope="col">Ngày kết thúc</th>
-                    <th scope="col">Liều/đơn dùng</th>
+                    <th name="ma_khang_sinh" scope="col">Mã kháng sinh</th>
+                    <th name="ten_khang_sinh" scope="col">Tên kháng sinh</th>
+                    <th name="ngaybd" scope="col">Ngày bắt đầu</th>
+                    <th name="ngaykt" scope="col">Ngày kết thúc</th>
+                    <th name="lieu" scope="col">Liều/đơn dùng</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -184,75 +185,53 @@
             </div>
           </div>
         </div>
-        <div class="col-12">
-          <div class="text-dark cursor-default">Kháng sinh dự phòng<br>
-            <small>* Nếu có, ghi rõ thông tin kháng sinh đã sử dụng</small>
+        <div class="col-12 mb-3">
+          <div class="text-dark cursor-default mb-2">
+            Kháng sinh dự phòng
+            <button id="them_khang_sinh_du_phong" class="btn btn-primary btn-sm ml-auto" type="button" data-toggle="modal" data-target="#modal_khang_sinh_du_phong"><i class="fas fa-plus"></i></button>
+            <button id="xoa_khang_sinh_du_phong" class="btn btn-danger btn-sm ml-1" type="button"><i class='fas fa-trash-alt'></i></button>
           </div>
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Tên kháng sinh</th>
-                <th scope="col">Liều 1 bắt đầu</th>
-                <th scope="col">Liều 2 <small>(Nếu có)</small></th>
-                <th scope="col">Liều/đơn dùng</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>ABC</th>
-                <td>1/7/2019</td>
-                <td>3/7/2019</td>
-                <td>1 viên</td>
-              </tr>
-              <tr>
-                <td>ABC</th>
-                <td>1/7/2019</td>
-                <td>3/7/2019</td>
-                <td>1 viên</td>
-              </tr>
-              <tr>
-                <td>ABC</th>
-                <td>1/7/2019</td>
-                <td>3/7/2019</td>
-                <td>1 viên</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="col-12 border">
+            <div class="table-responsive-lg my-2">
+              <table id="khang_sinh_du_phong" class="table table-sm table-bordered table-hover" style="width:100%">
+                <thead class="thead-light">
+                  <tr>
+                    <th name="ma_khang_sinh" scope="col">Mã kháng sinh</th>
+                    <th name="ten_khang_sinh" scope="col">Tên kháng sinh</th>
+                    <th name="lieu1" scope="col">Liều 1 bắt đầu</th>
+                    <th name="lieu2" scope="col">Liều 2 <small>(Nếu có)</small></th>
+                    <th name="lieu" scope="col">Liều/đơn dùng</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
-        <div class="col-12">
-          <div class="text-dark cursor-default">Kháng sinh sau phẫu thuật<br>
-            <small>* Ngày bắt đầu tính từ liều kháng sinh sau phẫu thuật, ngày kết thúc là ngày điều tra</small>
+        <div class="col-12 mb-3">
+          <div class="text-dark cursor-default mb-2">
+            Kháng sinh sau phẫu thuật
+            <button id="them_khang_sinh_sau_phau_thuat" class="btn btn-primary btn-sm ml-auto" type="button" data-toggle="modal" data-target="#modal_khang_sinh_sau_phau_thuat"><i class="fas fa-plus"></i></button>
+            <button id="xoa_khang_sinh_sau_phau_thuat" class="btn btn-danger btn-sm ml-1" type="button"><i class='fas fa-trash-alt'></i></button>
           </div>
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Tên kháng sinh</th>
-                <th scope="col">Ngày bắt đầu</th>
-                <th scope="col">Ngày kết thúc</th>
-                <th scope="col">Liều/đơn dùng</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>ABC</th>
-                <td>1/7/2019</td>
-                <td>3/7/2019</td>
-                <td>1 viên</td>
-              </tr>
-              <tr>
-                <td>ABC</th>
-                <td>1/7/2019</td>
-                <td>3/7/2019</td>
-                <td>1 viên</td>
-              </tr>
-              <tr>
-                <td>ABC</th>
-                <td>1/7/2019</td>
-                <td>3/7/2019</td>
-                <td>1 viên</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="col-12 border">
+            <div class="table-responsive-lg my-2">
+              <table id="khang_sinh_sau_phau_thuat" class="table table-sm table-bordered table-hover" style="width:100%">
+                <thead class="thead-light">
+                  <tr>
+                    <th name="ma_khang_sinh" scope="col">Mã kháng sinh</th>
+                    <th name="ten_khang_sinh" scope="col">Tên kháng sinh</th>
+                    <th name="ngaybd" scope="col">Ngày bắt đầu</th>
+                    <th name="ngaykt" scope="col">Ngày kết thúc</th>
+                    <th name="lieu" scope="col">Liều/đơn dùng</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row step-option was-validated">
@@ -491,8 +470,8 @@
   </div>
 </form>
 <div class="row mt-3">
-  <a id="buttonStepBack" class="btn btn-secondary ml-2" href="<?php echo base_url($role.'/new-form/6') ?>">Trở về</a>
-  <a id="buttonStepNext" class="btn btn-primary ml-auto mr-2" href="<?php echo base_url($role.'/new-form/8') ?>">Kế tiếp</a>
+  <a id="buttonStepBack" class="btn btn-secondary ml-2" href="<?php echo base_url($role.'/form/6') ?>">Trở về</a>
+  <a id="buttonStepNext" class="btn btn-primary ml-auto mr-2" href="<?php echo base_url($role.'/form/8') ?>">Kế tiếp</a>
 </div>
 
 <div class="modal fade" id="modal_khang_sinh_truoc_phau_thuat" tabindex="-1" role="dialog" aria-labelledby="title_khang_sinh_truoc_phau_thuat" aria-hidden="true">
@@ -504,7 +483,8 @@
       <div class="modal-body was-validated">
         <div class="form-group">
           <label for="select_khang_sinh_truoc_phau_thuat">Tên kháng sinh</label>
-          <select id="select_khang_sinh_truoc_phau_thuat" class="custom-select" required>
+          <select id="select_khang_sinh_truoc_phau_thuat" class="select_khang_sinh custom-select" required>
+            <option disabled selected value style="display: none"> </option>
           </select>
           <div class="invalid-feedback">Vui lòng chọn loại Kháng sinh trước phẫu thuật</div>
         </div>
@@ -526,16 +506,85 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ bỏ</button>
-        <button id="submit_khang_sinh_truoc_phau_thuat" type="button" class="btn btn-primary" >Thêm vào</button>
+        <button id="submit_khang_sinh_truoc_phau_thuat" type="button" class="btn btn-primary">Thêm vào</button>
       </div>
     </div>
   </div>
 </div>
-
-<script defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha256-fzFFyH01cBVPYzl16KT40wqjhgPtq6FFUB6ckN2+GGw=" crossorigin="anonymous"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
-<script defer src="<?php echo base_url('public/js/general/theme.min.js') ?>"></script>
+<div class="modal fade" id="modal_khang_sinh_du_phong" tabindex="-1" role="dialog" aria-labelledby="title_khang_sinh_du_phong" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-primary" id="title_khang_sinh_du_phong">Thêm kháng sinh dự phòng</h5>
+      </div>
+      <div class="modal-body">
+        <div class="form-group was-validated">
+          <label for="select_khang_sinh_du_phong">Tên kháng sinh</label>
+          <select id="select_khang_sinh_du_phong" class="select_khang_sinh custom-select" required>
+            <option disabled selected value style="display: none"> </option>
+          </select>
+          <div class="invalid-feedback">Vui lòng chọn loại Kháng sinh trước phẫu thuật</div>
+        </div>
+        <div class="form-group was-validated">
+          <label for="lieu1_khang_sinh_du_phong">Liều 1 bắt đầu</label>
+          <input type="date" class="form-control" id="lieu1_khang_sinh_du_phong" required>
+          <div class="invalid-feedback">Vui lòng nhập Ngày liều 1 bắt đầu</div>
+        </div>
+        <div class="form-group">
+          <label for="lieu2_khang_sinh_du_phong">Liều 2 bắt đầu<small>(Nếu có)</small></label>
+          <input type="date" class="form-control" id="lieu2_khang_sinh_du_phong" required>
+          <div class="invalid-feedback">Vui lòng nhập Ngày liều 2 bắt đầu<small>(Nếu có)</small></div>
+        </div>
+        <div class="form-group was-validated">
+          <label for="lieu_khang_sinh_du_phong">Liều/đơn dùng</label>
+          <input type="text" class="form-control" id="lieu_khang_sinh_du_phong" required>
+          <div class="invalid-feedback">Vui lòng nhập Liều/đơn dùng</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ bỏ</button>
+        <button id="submit_khang_sinh_du_phong" type="button" class="btn btn-primary">Thêm vào</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal_khang_sinh_sau_phau_thuat" tabindex="-1" role="dialog" aria-labelledby="title_khang_sinh_sau_phau_thuat" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-primary" id="title_khang_sinh_sau_phau_thuat">Thêm kháng sinh sau phẫu thuật</h5>
+      </div>
+      <div class="modal-body was-validated">
+        <div class="form-group">
+          <label for="select_khang_sinh_sau_phau_thuat">Tên kháng sinh</label>
+          <select id="select_khang_sinh_sau_phau_thuat" class="select_khang_sinh custom-select" required>
+            <option disabled selected value style="display: none"> </option>
+          </select>
+          <div class="invalid-feedback">Vui lòng chọn loại Kháng sinh trước phẫu thuật</div>
+        </div>
+        <div class="form-group">
+          <label for="ngaybd_khang_sinh_sau_phau_thuat">Ngày bắt đầu</label>
+          <input type="date" class="form-control" id="ngaybd_khang_sinh_sau_phau_thuat" required>
+          <div class="invalid-feedback">Vui lòng nhập Ngày bắt đầu sử dụng</div>
+        </div>
+        <div class="form-group">
+          <label for="ngaykt_khang_sinh_sau_phau_thuat">Ngày kết thúc</label>
+          <input type="date" class="form-control" id="ngaykt_khang_sinh_sau_phau_thuat" required>
+          <div class="invalid-feedback">Vui lòng nhập Ngày kết thúc sử dụng</div>
+        </div>
+        <div class="form-group">
+          <label for="lieu_khang_sinh_sau_phau_thuat">Liều/đơn dùng</label>
+          <input type="text" class="form-control" id="lieu_khang_sinh_sau_phau_thuat" required>
+          <div class="invalid-feedback">Vui lòng nhập Liều/đơn dùng</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ bỏ</button>
+        <button id="submit_khang_sinh_sau_phau_thuat" type="button" class="btn btn-primary">Thêm vào</button>
+      </div>
+    </div>
+  </div>
+</div>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js" integrity="sha256-t5ZQTZsbQi8NxszC10CseKjJ5QeMw5NINtOXQrESGSU=" crossorigin="anonymous" defer></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/dataTables.bootstrap4.min.js" integrity="sha256-hJ44ymhBmRPJKIaKRf3DSX5uiFEZ9xB/qx8cNbJvIMU=" crossorigin="anonymous" defer></script>
 <script defer src="<?php echo base_url('public/js/tools/new_form/step7_1.js') ?>"></script>

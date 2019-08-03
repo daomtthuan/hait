@@ -19,7 +19,7 @@ class User extends MY_Controller {
 		$this->load->view('general/layout',$data);
 	}
 
-	public function new_form($step)
+	public function form($step = "1")
 	{
 		if ($step == '7-1') $step = "7_1";
 		else if ($step == '7-2') $step = "7_2";

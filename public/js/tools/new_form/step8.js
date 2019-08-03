@@ -1,27 +1,24 @@
-function setText(name) {
-  var value = $("#" + name).val();
-  if (value != "") sessionStorage.setItem(name, value);
-  else sessionStorage.removeItem(name);
-}
-
-function setRadio(name) {
+function getPair(name) {
   var value = $("[name='" + name + "']:checked").val();
-  if (value != undefined) sessionStorage.setItem(name, value);
-  else sessionStorage.removeItem(name);
+  if (value != undefined) return '"' + name + '":"' + value + '",';
+  else return '';
 }
 
-function getText(name) {
-  $("#" + name).val(sessionStorage.getItem(name));
-}
-
-function getRadio(name) {
-  $("[name='" + name + "'][value='" + sessionStorage.getItem(name) + "']").prop("checked", true);
+function putInto(step, name) {
+  if (step.hasOwnProperty(name))
+    $("[name='" + name + "'][value='" + step[name] + "']").prop("checked", true);
 }
 
 $(document).ready(function () {
 
-  getRadio("ket_qua_dieu_tri");
-  getRadio("nam_vien");
+  var part = JSON.parse(sessionStorage.step6).phau_thuat;
+  if (part != null)
+    $("#buttonStepBack").attr("href", $("#buttonStepBack").attr("href") + "/7-" + part);
+  else $("#buttonStepBack").attr("href", $("#buttonStepBack").attr("href") + "/6");
+  const name = [
+    "ket_qua_dieu_tri",
+    "nam_vien"
+  ];
 
   $("[name='ket_qua_dieu_tri']").on("click", function () {
     if ($(this).val() == "5") {
@@ -34,36 +31,38 @@ $(document).ready(function () {
     }
   });
 
+  if (sessionStorage.step8 != null) {
+    var step8 = JSON.parse(sessionStorage.step8);
+    name.forEach(element => putInto(step8, element));
+  }
+
+  $("#buttonStepBack").click(function () {
+    var stringJson = '';
+    name.forEach(element => { stringJson += getPair(element) });
+    sessionStorage.step8 = "{" + stringJson.slice(0, -1) + "}"
+  });
+
+
   $("#buttonSubmit").click(function (event) {
     setRadio("ket_qua_dieu_tri");
     setRadio("nam_vien");
 
     function toStringPartJson(name) {
       var value = sessionStorage.getItem(name);
-      if (value != null) return "\"" + name + "\":\"" + value + "\",";
-      else return "";
+      return '"' + name + '":"' + value + '\",';
     }
 
-    var stringJson = "\"form_id\":null,";
+    var stringJson = '';
     for (var i = 0; i < sessionStorage.length; i++) stringJson += toStringPartJson(sessionStorage.key(i));
-    stringJson = "{" + stringJson.slice(0, -1) + "}"
+    stringJson = '{' + stringJson.slice(0, -1) + '}';
     $.ajax({
-      url: new_from,
+      url: urlUpdate,
       type: "post",
-      dataType: "application/json",
       data: stringJson,
       contentType: "application/json;charset=UTF-8",
       success: function (data) { console.log("ss" + data) },
-      error: function (data) {
-        console.log("fail" + data);
-      }
+      error: function (data) { console.log("fail" + data) }
     });
-
-  });
-
-  $("#buttonStepBack").click(function () {
-    setRadio("ket_qua_dieu_tri");
-    setRadio("nam_vien");
   });
 
 });

@@ -47,7 +47,7 @@
                     <input type="checkbox" class="custom-control-input" id="inputRemember" name="inputRemember">
                     <label class="custom-control-label" for="inputRemember">Ghi nhớ mật khẩu</label>
                   </div>
-                  <button id="buttonSubmit" name="buttonSubmit" value="Đăng nhập" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" onclick="window.location='<?php echo base_url('/user') ?>'">Đăng nhập</button>
+                  <button id="buttonSubmit" name="buttonSubmit" value="Đăng nhập" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Đăng nhập</button>
                   <div class="text-right">
                     <a href="#" class="small">Quên mật khẩu?</a><br>
                     <a href="#" class="h5 mr-1"><i class="fab fa-facebook-f"></i></a>

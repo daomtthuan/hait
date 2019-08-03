@@ -1,53 +1,60 @@
-function setText(name) {
-  var value = $("#" + name).val();
-  if (value != "") sessionStorage.setItem(name, value);
-  else sessionStorage.removeItem(name);
+function getPair(name) {
+  switch ($("[name='" + name + "']").attr("type")) {
+    case "radio":
+      var value = $("[name='" + name + "']:checked").val();
+      if (value != undefined) return '"' + name + '":"' + value + '",';
+      break;
+
+    default:
+      var value = $("[name='" + name + "']").val();
+      if (value != "") return '"' + name + '":"' + value + '",';
+      break;
+  }
+  return '';
 }
 
-function setRadio(name) {
-  var value = $("[name='" + name + "']:checked").val();
-  if (value != undefined) sessionStorage.setItem(name, value);
-  else sessionStorage.removeItem(name);
-}
+function putInto(step, name) {
+  if (step.hasOwnProperty(name))
+    switch ($("[name='" + name + "']").attr("type")) {
+      case "radio":
+        $("[name='" + name + "'][value='" + step[name] + "']").prop("checked", true);
+        break;
 
-function getText(name) {
-  $("#" + name).val(sessionStorage.getItem(name));
-}
-
-function getRadio(name) {
-  $("[name='" + name + "'][value='" + sessionStorage.getItem(name) + "']").prop("checked", true);
+      default:
+        $("[name='" + name + "']").val(step[name]);
+        break;
+    }
 }
 
 $(document).ready(function () {
 
-  getText("ngay_vao_khoa");
-  getText("ngay_vao_vien");
-  getText("msba");
-  getText("ho_ten_bn");
-  getText("nam_sinh");
-  getRadio("gioi_tinh");
-  getText("noi_chuyen_toi");
-  getText("chan_doan_luc_vao");
-  getText("ngay_ra_vien");
-  getText("chan_doan_xac_dinh");
-  getRadio("nhiem_khuan_luc_vao");
+  const name = [
+    "ngay_vao_khoa",
+    "ngay_vao_vien",
+    "msba",
+    "ngay_dieu_tra",
+    "ho_ten_bn",
+    "nam_sinh",
+    "gioi_tinh",
+    "noi_chuyen_toi",
+    "chan_doan_luc_vao",
+    "ngay_ra_vien",
+    "chan_doan_xac_dinh",
+    "nhiem_khuan_luc_vao"];
 
-  var now = new Date();
-  $("#ngay_dieu_tra").val(now.getFullYear() + "-" + (("0" + (now.getMonth() + 1)).slice(-2)) + "-" + (("0" + now.getDate()).slice(-2)));
+  if (sessionStorage.step1 != null) {
+    var step1 = JSON.parse(sessionStorage.step1);
+    name.forEach(element => putInto(step1, element));
+  }
 
-  $("#buttonStepNext").click(function (event) {
-    setText("form_id");
-    setText("ngay_vao_khoa");
-    setText("ngay_vao_vien");
-    setText("msba");
-    setText("ho_ten_bn");
-    setText("nam_sinh");
-    setRadio("gioi_tinh");
-    setText("noi_chuyen_toi");
-    setText("chan_doan_luc_vao");
-    setText("ngay_ra_vien");
-    setText("chan_doan_xac_dinh");
-    setRadio("nhiem_khuan_luc_vao");
+  if ($("#ngay_dieu_tra").val() == "") {
+    var now = new Date();
+    $("#ngay_dieu_tra").val(now.getFullYear() + "-" + (("0" + (now.getMonth() + 1)).slice(-2)) + "-" + (("0" + now.getDate()).slice(-2)));
+  }
+
+  $("#buttonStepNext").click(function () {
+    var stringJson = '';
+    name.forEach(element => { stringJson += getPair(element) });
+    sessionStorage.step1 = "{" + stringJson.slice(0, -1) + "}"
   });
-
 });

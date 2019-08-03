@@ -1,51 +1,51 @@
-function setText(name) {
-  var value = $("#" + name).val();
-  if (value != "") sessionStorage.setItem(name, value);
-  else sessionStorage.removeItem(name);
+function getPair(name) {
+  switch ($("[name='" + name + "']").attr("type")) {
+    case "radio":
+      var value = $("[name='" + name + "']:checked").val();
+      if (value != undefined) return '"' + name + '":"' + value + '",';
+      break;
+
+    default:
+      var value = $("[name='" + name + "']").val();
+      if (value != "") return '"' + name + '":"' + value + '",';
+      break;
+  }
+  return '';
 }
 
-function setRadio(name) {
-  var value = $("[name='" + name + "']:checked").val();
-  if (value != undefined) sessionStorage.setItem(name, value);
-  else sessionStorage.removeItem(name);
-}
+function putInto(step, name) {
+  if (step.hasOwnProperty(name))
+    switch ($("[name='" + name + "']").attr("type")) {
+      case "radio":
+        $("[name='" + name + "'][value='" + step[name] + "']").prop("checked", true);
+        break;
 
-function getText(name) {
-  $("#" + name).val(sessionStorage.getItem(name));
-}
-
-function getRadio(name) {
-  $("[name='" + name + "'][value='" + sessionStorage.getItem(name) + "']").prop("checked", true);
+      default:
+        $("[name='" + name + "']").val(step[name]);
+        break;
+    }
 }
 
 $(document).ready(function () {
 
-  getRadio("thuoc_ucmd");
-  getRadio("thuoc_steroid");
-  getRadio("thuoc_loet_da_day");
-  getRadio("dieu_tri_hoa_hoc");
-  getRadio("dieu_tri_tia_xa");
-  getRadio("truyen_mau");
-  getText("khac_step3");
+  const name = [
+    "thuoc_ucmd",
+    "thuoc_steroid",
+    "thuoc_loet_da_day",
+    "dieu_tri_hoa_hoc",
+    "dieu_tri_tia_xa",
+    "truyen_mau",
+    "khac_step3"
+  ];
 
-  $("#buttonStepNext").click(function (event) {
-    setRadio("thuoc_ucmd");
-    setRadio("thuoc_steroid");
-    setRadio("thuoc_loet_da_day");
-    setRadio("dieu_tri_hoa_hoc");
-    setRadio("dieu_tri_tia_xa");
-    setRadio("truyen_mau");
-    setText("khac_step3");
+  if (sessionStorage.step3 != null) {
+    var step3 = JSON.parse(sessionStorage.step3);
+    name.forEach(element => putInto(step3, element));
+  }
+
+  $("#buttonStepNext, #buttonStepBack").click(function () {
+    var stringJson = '';
+    name.forEach(element => { stringJson += getPair(element) });
+    sessionStorage.step3 = "{" + stringJson.slice(0, -1) + "}"
   });
-
-  $("#buttonStepBack").click(function () {
-    setRadio("thuoc_ucmd");
-    setRadio("thuoc_steroid");
-    setRadio("thuoc_loet_da_day");
-    setRadio("dieu_tri_hoa_hoc");
-    setRadio("dieu_tri_tia_xa");
-    setRadio("truyen_mau");
-    setText("khac_step3");
-  });
-
 });

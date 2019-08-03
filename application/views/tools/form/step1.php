@@ -2,7 +2,6 @@
 <hr class="sidebar-divider">
 <div class="mb-2"><small>* Vui lòng điền đầy đủ thông tin bên dưới</small></div>
 <form class="mb-3 rounded-lg was-validated">
-  <input id="form_id" name="form_id" type="text" class="d-none" readonly required>
   <div class="card shadow mb-4 border-primary rounded-lg">
     <div class="card-header bg-light py-3">
       <h6 class="m-0 font-weight-bold text-primary">Bước 1. Thông tin chung</h6>
@@ -122,10 +121,6 @@
   </div>
 </form>
 <div class="row mt-3 mb-3">
-  <a id="buttonStepNext" class="btn btn-primary ml-auto mr-2" href="<?php echo base_url($role.'/new-form/2') ?>">Kế tiếp</a>
+  <a id="buttonStepNext" class="btn btn-primary ml-auto mr-2" href="<?php echo base_url($role.'/form/2') ?>">Kế tiếp</a>
 </div>
-<script defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha256-fzFFyH01cBVPYzl16KT40wqjhgPtq6FFUB6ckN2+GGw=" crossorigin="anonymous"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
-<script defer src="<?php echo base_url('public/js/general/theme.min.js') ?>"></script>
 <script defer src="<?php echo base_url('public/js/tools/new_form/step1.js') ?>"></script>

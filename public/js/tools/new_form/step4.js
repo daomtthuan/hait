@@ -1,63 +1,55 @@
-function setText(name) {
-  var value = $("#" + name).val();
-  if (value != "") sessionStorage.setItem(name, value);
-  else sessionStorage.removeItem(name);
+function getPair(name) {
+  switch ($("[name='" + name + "']").attr("type")) {
+    case "radio":
+      var value = $("[name='" + name + "']:checked").val();
+      if (value != undefined) return '"' + name + '":"' + value + '",';
+      break;
+
+    default:
+      var value = $("[name='" + name + "']").val();
+      if (value != "") return '"' + name + '":"' + value + '",';
+      break;
+  }
+  return '';
 }
 
-function setRadio(name) {
-  var value = $("[name='" + name + "']:checked").val();
-  if (value != undefined) sessionStorage.setItem(name, value);
-  else sessionStorage.removeItem(name);
-}
+function putInto(step, name) {
+  if (step.hasOwnProperty(name))
+    switch ($("[name='" + name + "']").attr("type")) {
+      case "radio":
+        $("[name='" + name + "'][value='" + step[name] + "']").prop("checked", true);
+        break;
 
-function getText(name) {
-  $("#" + name).val(sessionStorage.getItem(name));
-}
-
-function getRadio(name) {
-  $("[name='" + name + "'][value='" + sessionStorage.getItem(name) + "']").prop("checked", true);
+      default:
+        $("[name='" + name + "']").val(step[name]);
+        break;
+    }
 }
 
 $(document).ready(function () {
 
-  getRadio("ho_hap_man_tinh");
-  getRadio("gan_man_tinh");
-  getRadio("tim_mach");
-  getRadio("hiv_aids");
-  getRadio("ung_thu");
-  getRadio("tieu_duong");
-  getRadio("than_man_tinh");
-  getRadio("da_chan_thuong");
-  getRadio("bong");
-  getRadio("cao_huyet_ap");
-  getText("khac_step4");
+  const name = [
+    "ho_hap_man_tinh",
+    "gan_man_tinh",
+    "tim_mach",
+    "hiv_aids",
+    "ung_thu",
+    "tieu_duong",
+    "than_man_tinh",
+    "da_chan_thuong",
+    "bong",
+    "cao_huyet_ap",
+    "khac_step4"
+  ];
 
-  $("#buttonStepNext").click(function (event) {
-    setRadio("ho_hap_man_tinh");
-    setRadio("gan_man_tinh");
-    setRadio("tim_mach");
-    setRadio("hiv_aids");
-    setRadio("ung_thu");
-    setRadio("tieu_duong");
-    setRadio("than_man_tinh");
-    setRadio("da_chan_thuong");
-    setRadio("bong");
-    setRadio("cao_huyet_ap");
-    setText("khac_step4");
+  if (sessionStorage.step4 != null) {
+    var step4 = JSON.parse(sessionStorage.step4);
+    name.forEach(element => putInto(step4, element));
+  }
+
+  $("#buttonStepNext, #buttonStepBack").click(function () {
+    var stringJson = '';
+    name.forEach(element => { stringJson += getPair(element) });
+    sessionStorage.step4 = "{" + stringJson.slice(0, -1) + "}"
   });
-
-  $("#buttonStepBack").click(function () {
-    setRadio("ho_hap_man_tinh");
-    setRadio("gan_man_tinh");
-    setRadio("tim_mach");
-    setRadio("hiv_aids");
-    setRadio("ung_thu");
-    setRadio("tieu_duong");
-    setRadio("than_man_tinh");
-    setRadio("da_chan_thuong");
-    setRadio("bong");
-    setRadio("cao_huyet_ap");
-    setText("khac_step4");
-  });
-
 });
