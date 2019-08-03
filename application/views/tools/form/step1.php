@@ -123,4 +123,4 @@
 <div class="row mt-3 mb-3">
   <a id="buttonStepNext" class="btn btn-primary ml-auto mr-2" href="<?php echo base_url($role.'/form/2') ?>">Kế tiếp</a>
 </div>
-<script defer src="<?php echo base_url('public/js/tools/new_form/step1.js') ?>"></script>
+<script defer src="<?php echo base_url('public/js/tools/form/step1.js') ?>"></script>

@@ -42,41 +42,10 @@ function getTable(table) {
   return '';
 }
 
-// $("#submit_khang_sinh_truoc_phau_thuat").on("click", function () {
-//   table[0].row.add([
-//     $("#select_khang_sinh_truoc_phau_thuat").val(),
-//     $("#select_khang_sinh_truoc_phau_thuat option:selected").text(),
-//     $("#ngaybd_khang_sinh_truoc_phau_thuat").val(),
-//     $("#ngaykt_khang_sinh_truoc_phau_thuat").val(),
-//     $("#lieu_khang_sinh_truoc_phau_thuat").val(),
-//   ]).draw(true);
-// });
-
-// $("#submit_khang_sinh_du_phong").on("click", function () {
-//   table[1].row.add([
-//     $("#select_khang_sinh_du_phong").val(),
-//     $("#select_khang_sinh_du_phong option:selected").text(),
-//     $("#lieu1_khang_sinh_du_phong").val(),
-//     $("#lieu2_khang_sinh_du_phong").val(),
-//     $("#lieu_khang_sinh_du_phong").val(),
-//   ]).draw(true);
-// });
-
-// $("#submit_khang_sinh_sau_phau_thuat").on("click", function () {
-//   table[2].row.add([
-//     $("#select_khang_sinh_sau_phau_thuat").val(),
-//     $("#select_khang_sinh_sau_phau_thuat option:selected").text(),
-//     $("#ngaybd_khang_sinh_sau_phau_thuat").val(),
-//     $("#ngaykt_khang_sinh_sau_phau_thuat").val(),
-//     $("#lieu_khang_sinh_sau_phau_thuat").val(),
-//   ]).draw(true);
-// });
-
-
-function loadTable(table) {
-  if (JSON.parse(sessionStorage.step7)[table] != null) {
-
-  }
+function reformatDate(date) {
+  if (date == "") return "";
+  dateArray = date.split("-");
+  return dateArray[2] + "/" + dateArray[1] + "/" + dateArray[0];
 }
 
 $(document).ready(function () {
@@ -158,6 +127,31 @@ $(document).ready(function () {
     $("#khang_sinh_sau_phau_thuat").DataTable(config)
   ];
 
+  if (JSON.parse(sessionStorage.step7)[tableName[0]] != null)
+    JSON.parse(sessionStorage.step7)[tableName[0]].forEach(element => table[0].row.add([
+      element.ma_khang_sinh == null ? "" : element.ma_khang_sinh,
+      element.ten_khang_sinh == null ? "" : element.ten_khang_sinh,
+      element.ngaybd == null ? "" : element.ngaybd,
+      element.ngaykt == null ? "" : element.ngaykt,
+      element.lieu == null ? "" : element.lieu
+    ]).draw(false));
+  if (JSON.parse(sessionStorage.step7)[tableName[1]] != null)
+    JSON.parse(sessionStorage.step7)[tableName[1]].forEach(element => table[1].row.add([
+      element.ma_khang_sinh == null ? "" : element.ma_khang_sinh,
+      element.ten_khang_sinh == null ? "" : element.ten_khang_sinh,
+      element.lieu1 == null ? "" : element.lieu1,
+      element.lieu2 == null ? "" : element.lieu2,
+      element.lieu == null ? "" : element.lieu
+    ]).draw(false));
+  if (JSON.parse(sessionStorage.step7)[tableName[2]] != null)
+    JSON.parse(sessionStorage.step7)[tableName[2]].forEach(element => table[2].row.add([
+      element.ma_khang_sinh == null ? "" : element.ma_khang_sinh,
+      element.ten_khang_sinh == null ? "" : element.ten_khang_sinh,
+      element.ngaybd == null ? "" : element.ngaybd,
+      element.ngaykt == null ? "" : element.ngaykt,
+      element.lieu == null ? "" : element.lieu
+    ]).draw(false));
+
   if (sessionStorage.step7 != null) {
     var step7 = JSON.parse(sessionStorage.step7);
     name.forEach(element => putInto(step7, element));
@@ -203,30 +197,30 @@ $(document).ready(function () {
     table[0].row.add([
       $("#select_khang_sinh_truoc_phau_thuat").val(),
       $("#select_khang_sinh_truoc_phau_thuat option:selected").text(),
-      $("#ngaybd_khang_sinh_truoc_phau_thuat").val(),
-      $("#ngaykt_khang_sinh_truoc_phau_thuat").val(),
+      reformatDate($("#ngaybd_khang_sinh_truoc_phau_thuat").val()),
+      reformatDate($("#ngaykt_khang_sinh_truoc_phau_thuat").val()),
       $("#lieu_khang_sinh_truoc_phau_thuat").val(),
-    ]).draw(true);
+    ]).draw(false);
   });
 
   $("#submit_khang_sinh_du_phong").on("click", function () {
     table[1].row.add([
       $("#select_khang_sinh_du_phong").val(),
       $("#select_khang_sinh_du_phong option:selected").text(),
-      $("#lieu1_khang_sinh_du_phong").val(),
-      $("#lieu2_khang_sinh_du_phong").val(),
+      reformatDate($("#lieu1_khang_sinh_du_phong").val()),
+      reformatDate($("#lieu2_khang_sinh_du_phong").val()),
       $("#lieu_khang_sinh_du_phong").val(),
-    ]).draw(true);
+    ]).draw(false);
   });
 
   $("#submit_khang_sinh_sau_phau_thuat").on("click", function () {
     table[2].row.add([
       $("#select_khang_sinh_sau_phau_thuat").val(),
       $("#select_khang_sinh_sau_phau_thuat option:selected").text(),
-      $("#ngaybd_khang_sinh_sau_phau_thuat").val(),
-      $("#ngaykt_khang_sinh_sau_phau_thuat").val(),
+      reformatDate($("#ngaybd_khang_sinh_sau_phau_thuat").val()),
+      reformatDate($("#ngaykt_khang_sinh_sau_phau_thuat").val()),
       $("#lieu_khang_sinh_sau_phau_thuat").val(),
-    ]).draw(true);
+    ]).draw(false);
   });
 
   $(".modal-footer button").on("click", function () {

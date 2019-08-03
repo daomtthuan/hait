@@ -228,4 +228,4 @@
   <a id="buttonStepBack" class="btn btn-secondary ml-2" href="<?php echo base_url($role.'/form/4') ?>">Trở về</a>
   <a id="buttonStepNext" class="btn btn-primary ml-auto mr-2" href="<?php echo base_url($role.'/form/6') ?>">Kế tiếp</a>
 </div>
-<script defer src="<?php echo base_url('public/js/tools/new_form/step5.js') ?>"></script>
+<script defer src="<?php echo base_url('public/js/tools/form/step5.js') ?>"></script>

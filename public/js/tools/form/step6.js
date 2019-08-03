@@ -11,7 +11,7 @@ function putInto(step, name) {
 
 $(document).ready(function () {
 
-  var href = $("#buttonStepNext").attr("href");
+  var href = $("#buttonStepNext").attr("href").slice(0, -1) + "7-";
   const name = ["phau_thuat"];
 
   if (sessionStorage.step6 != null) {
@@ -20,7 +20,7 @@ $(document).ready(function () {
   }
 
   if ($("#co_phau_thuat").is(":checked")) $("#buttonStepNext").attr("href", href + "1");
-  else $("#buttonStepNext").attr("href", href + "2");
+  else if ($("#khong_phau_thuat").is(":checked")) $("#buttonStepNext").attr("href", href + "2");
 
   $("[name='phau_thuat']").on("click", function () {
     if ($(this).val() == "1") $("#buttonStepNext").attr("href", href + "1");
@@ -30,6 +30,9 @@ $(document).ready(function () {
   $("#buttonStepNext, #buttonStepBack").click(function () {
     var stringJson = '';
     name.forEach(element => { stringJson += getPair(element) });
-    sessionStorage.step6 = "{" + stringJson.slice(0, -1) + "}"
+    if (sessionStorage.step6 != "{" + stringJson.slice(0, -1) + "}") {
+      sessionStorage.step6 = "{" + stringJson.slice(0, -1) + "}";
+      sessionStorage.step7 = "{}";
+    }
   });
 });
