@@ -15,6 +15,7 @@ $(document).ready(function () {
   if (part != null)
     $("#buttonStepBack").attr("href", $("#buttonStepBack").attr("href") + "/7-" + part);
   else $("#buttonStepBack").attr("href", $("#buttonStepBack").attr("href") + "/6");
+
   const name = [
     "ket_qua_dieu_tri",
     "nam_vien"
@@ -42,26 +43,31 @@ $(document).ready(function () {
     sessionStorage.step8 = "{" + stringJson.slice(0, -1) + "}"
   });
 
-
   $("#buttonSubmit").click(function (event) {
-    setRadio("ket_qua_dieu_tri");
-    setRadio("nam_vien");
-
-    function toStringPartJson(name) {
-      var value = sessionStorage.getItem(name);
-      return '"' + name + '":"' + value + '\",';
-    }
+    event.preventDefault();
 
     var stringJson = '';
-    for (var i = 0; i < sessionStorage.length; i++) stringJson += toStringPartJson(sessionStorage.key(i));
-    stringJson = '{' + stringJson.slice(0, -1) + '}';
+    name.forEach(element => { stringJson += getPair(element) });
+    sessionStorage.step8 = "{" + stringJson.slice(0, -1) + "}"
+
+    var stringJson = '{"form_id":"' + sessionStorage.form_id + '",';
+    for (var i = 1; i <= 8; i++) {
+      stringJson += ('"step' + i + '":' + sessionStorage.getItem("step" + i) + ',');
+    }
+    stringJson = stringJson.slice(0, -1) + "}";
+
     $.ajax({
       url: urlUpdate,
       type: "post",
       data: stringJson,
       contentType: "application/json;charset=UTF-8",
-      success: function (data) { console.log("ss" + data) },
-      error: function (data) { console.log("fail" + data) }
+      success: function () {
+        $("#success").modal('toggle');
+        sessionStorage.clear();
+      },
+      error: function () {
+        $("#error").modal('toggle');
+      }
     });
   });
 

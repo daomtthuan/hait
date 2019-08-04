@@ -42,12 +42,6 @@ function getTable(table) {
   return '';
 }
 
-function reformatDate(date) {
-  if (date == "") return "";
-  dateArray = date.split("-");
-  return dateArray[2] + "/" + dateArray[1] + "/" + dateArray[0];
-}
-
 $(document).ready(function () {
 
   $.getJSON(antibioticUrl, function (data) {
@@ -141,8 +135,8 @@ $(document).ready(function () {
     khang_sinh_khong_phau_thuat.row.add([
       $("#select_khang_sinh_khong_phau_thuat").val(),
       $("#select_khang_sinh_khong_phau_thuat option:selected").text(),
-      reformatDate($("#ngaybd_khang_sinh_khong_phau_thuat").val()),
-      reformatDate($("#ngaykt_khang_sinh_khong_phau_thuat").val()),
+      $("#ngaybd_khang_sinh_khong_phau_thuat").val(),
+      $("#ngaykt_khang_sinh_khong_phau_thuat").val(),
       $("#lieu_khang_sinh_khong_phau_thuat").val(),
     ]).draw(false);
   });

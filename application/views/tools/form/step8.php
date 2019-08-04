@@ -57,6 +57,30 @@
 </form>
 <div class="row mt-3">
   <a id="buttonStepBack" class="btn btn-secondary ml-2" href="<?php echo base_url($role.'/form') ?>">Trở về</a>
-  <a id="buttonSubmit" class="btn btn-primary ml-auto mr-2">Hoàn thành</a>
+  <a id="buttonSubmit" class="btn btn-primary ml-auto mr-2" href="">Hoàn thành</a>
+</div>
+
+<div id="success" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="container mt-5 shadow">
+    <div class="alert alert-primary" role="alert">
+      <h4 class="alert-heading">Tạo mới biểu mẫu khảo sát thành công!</h4>
+      <a href="<?php echo base_url($role) ?>">Trang chủ</a><br>
+      <a href="<?php echo base_url($role.'/form/1') ?>">Tạo thêm biểu mẫu mới</a>
+      <hr>
+      <a href="<?php echo base_url($role.'/waiting-send-list') ?>">Danh sách biểu mẫu chờ gửi</a>
+    </div>
+  </div>
+</div>
+<div id="error" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="container mt-5 shadow">
+    <div class="alert alert-danger" role="alert">
+      <h4 class="alert-heading">Lỗi!</h4>
+      <p>Có lỗi trong quá trình tạo biểu mẫu, vui lòng liên hệ với Bộ phân hỗ trợ để khắc phục</p>
+      <a href="<?php echo base_url($role) ?>">Trang chủ</a><br>
+      <a href="<?php echo base_url($role.'/form/1') ?>">Tạo thêm biểu mẫu mới</a>
+      <hr>
+      <a href="<?php echo base_url($role.'/waiting-send-list') ?>">Danh sách biểu mẫu chờ gửi</a>
+    </div>
+  </div>
 </div>
 <script defer src="<?php echo base_url('public/js/tools/form/step8.js') ?>"></script>

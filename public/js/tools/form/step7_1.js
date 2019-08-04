@@ -42,12 +42,6 @@ function getTable(table) {
   return '';
 }
 
-function reformatDate(date) {
-  if (date == "") return "";
-  dateArray = date.split("-");
-  return dateArray[2] + "/" + dateArray[1] + "/" + dateArray[0];
-}
-
 $(document).ready(function () {
 
   $.getJSON(antibioticUrl, function (data) {
@@ -197,8 +191,8 @@ $(document).ready(function () {
     table[0].row.add([
       $("#select_khang_sinh_truoc_phau_thuat").val(),
       $("#select_khang_sinh_truoc_phau_thuat option:selected").text(),
-      reformatDate($("#ngaybd_khang_sinh_truoc_phau_thuat").val()),
-      reformatDate($("#ngaykt_khang_sinh_truoc_phau_thuat").val()),
+      $("#ngaybd_khang_sinh_truoc_phau_thuat").val(),
+      $("#ngaykt_khang_sinh_truoc_phau_thuat").val(),
       $("#lieu_khang_sinh_truoc_phau_thuat").val(),
     ]).draw(false);
   });
@@ -207,8 +201,8 @@ $(document).ready(function () {
     table[1].row.add([
       $("#select_khang_sinh_du_phong").val(),
       $("#select_khang_sinh_du_phong option:selected").text(),
-      reformatDate($("#lieu1_khang_sinh_du_phong").val()),
-      reformatDate($("#lieu2_khang_sinh_du_phong").val()),
+      $("#lieu1_khang_sinh_du_phong").val(),
+      $("#lieu2_khang_sinh_du_phong").val(),
       $("#lieu_khang_sinh_du_phong").val(),
     ]).draw(false);
   });
@@ -217,8 +211,8 @@ $(document).ready(function () {
     table[2].row.add([
       $("#select_khang_sinh_sau_phau_thuat").val(),
       $("#select_khang_sinh_sau_phau_thuat option:selected").text(),
-      reformatDate($("#ngaybd_khang_sinh_sau_phau_thuat").val()),
-      reformatDate($("#ngaykt_khang_sinh_sau_phau_thuat").val()),
+      $("#ngaybd_khang_sinh_sau_phau_thuat").val(),
+      $("#ngaykt_khang_sinh_sau_phau_thuat").val(),
       $("#lieu_khang_sinh_sau_phau_thuat").val(),
     ]).draw(false);
   });
