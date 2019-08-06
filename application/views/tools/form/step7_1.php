@@ -4,6 +4,10 @@
   .dataTables_filter {
     text-align: center !important;
   }
+
+  thead {
+    text-align: center
+  }
 </style>
 <script>
   var part = JSON.parse(sessionStorage.step6).phau_thuat;
@@ -475,7 +479,7 @@
 </div>
 
 <div class="modal fade" id="modal_khang_sinh_truoc_phau_thuat" tabindex="-1" role="dialog" aria-labelledby="title_khang_sinh_truoc_phau_thuat" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title text-primary" id="title_khang_sinh_truoc_phau_thuat">Thêm kháng sinh trước phẫu thuật</h5>
@@ -512,7 +516,7 @@
   </div>
 </div>
 <div class="modal fade" id="modal_khang_sinh_du_phong" tabindex="-1" role="dialog" aria-labelledby="title_khang_sinh_du_phong" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title text-primary" id="title_khang_sinh_du_phong">Thêm kháng sinh dự phòng</h5>
@@ -549,7 +553,7 @@
   </div>
 </div>
 <div class="modal fade" id="modal_khang_sinh_sau_phau_thuat" tabindex="-1" role="dialog" aria-labelledby="title_khang_sinh_sau_phau_thuat" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title text-primary" id="title_khang_sinh_sau_phau_thuat">Thêm kháng sinh sau phẫu thuật</h5>

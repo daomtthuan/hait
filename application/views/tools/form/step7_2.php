@@ -4,6 +4,10 @@
   .dataTables_filter {
     text-align: center !important;
   }
+
+  thead {
+    text-align: center
+  }
 </style>
 <script>
   var part = JSON.parse(sessionStorage.step6).phau_thuat;
@@ -86,7 +90,7 @@
   <a id="buttonStepNext" class="btn btn-primary ml-auto mr-2" href="<?php echo base_url($role.'/form/8') ?>">Kế tiếp</a>
 </div>
 <div class="modal fade" id="modal_khang_sinh_khong_phau_thuat" tabindex="-1" role="dialog" aria-labelledby="title_khang_sinh_khong_phau_thuat" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title text-primary" id="title_khang_sinh_khong_phau_thuat">Thêm kháng sinh sử dụng ở người bệnh không phẫu thuật</h5>

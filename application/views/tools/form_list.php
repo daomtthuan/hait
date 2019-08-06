@@ -4,6 +4,10 @@
   .dataTables_filter {
     text-align: center !important;
   }
+
+  thead {
+    text-align: center
+  }
 </style>
 <script>
   var edit = "<?php echo base_url('user/form-edit') ?>", listUrl = "<?php echo base_url('ajax/form-list') ?>";
