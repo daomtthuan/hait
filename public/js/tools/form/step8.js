@@ -62,8 +62,9 @@ $(document).ready(function () {
       data: stringJson,
       contentType: "application/json;charset=UTF-8",
       success: function () {
-        $("#success").modal('toggle');
-        sessionStorage.clear();
+      	alert('ok');
+        //$("#success").modal('toggle');
+        //sessionStorage.clear();
       },
       error: function () {
         $("#error").modal('toggle');

@@ -61,7 +61,7 @@ class Value_model extends CI_Model
 		$this->db->update('value', $data);
 	}
 	public function delete($id){
-		$this->db->where('form_attribute_id', $id);
+		$this->db->where('form_id', $id);
 		$this->db->delete('value');
 	}
 	//helper
