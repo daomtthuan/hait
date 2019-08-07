@@ -26,6 +26,22 @@ function putInto(step, name) {
     }
 }
 
+function getTable(table) {
+  if (!$("#" + table + " td").hasClass("dataTables_empty")) {
+    var Rows = [];
+    var $headers = $("#" + table + " th");
+    $("#" + table + " tbody tr").each(function (index) {
+      $cells = $(this).find("td");
+      Rows[index] = {};
+      $cells.each(function (cellIndex) {
+        if ($(this).html() != "") Rows[index][$($headers[cellIndex]).attr("name")] = $(this).html();
+      });
+    });
+    return '"' + table + '":' + JSON.stringify(Rows) + ',';
+  }
+  return '';
+}
+
 $(document).ready(function () {
 
   $.getJSON(antibioticUrl, function (data) {
@@ -37,6 +53,64 @@ $(document).ready(function () {
   $(".dataTables_filter label input").addClass("ml-2");
 
   const name = [
+    "vp_sot",
+    "vp_bach_cau",
+    "vp_tam_than",
+    "vp_dom_mu",
+    "vp_ho",
+    "vp_rale",
+    "vp_thong_khi",
+    "vp_hang_phoi",
+    "vp_dong_dac_phoi",
+    "vp_tham_nhiem",
+    "vp_tran_khi",
+    "vp_cay_dich",
+    "vp_phat_hien",
+    "vp_tang4",
+    "vp_pcr",
+    "vp_micro",
+    "vp_cay_dich_tiet",
+    "vp_phat_hien_vi_khuan",
+    "vp_tang_gap_4",
+    "vp_ten_vi_khuan",
+    "nktn_sot",
+    "nktn_dau_mu",
+    "nktn_mot_tieu",
+    "nktn_tieu_buot",
+    "nktn_tieu_dat",
+    "nktn_tieu_mau",
+    "nktn_cay_nuoc_tieu",
+    "nktn_soi_can",
+    "nktn_nhuom",
+    "nktn_ten_vi_khuan",
+    "nkh_sot",
+    "nkh_huyet_ap",
+    "nkh_than_nhiet",
+    "nkh_ngung_tho",
+    "nkh_nhip_tim",
+    "nkh_cay_mau_1",
+    "nkh_cay_mau_2",
+    "nkh_cay_mau_3",
+    "nkh_ten_vi_khuan",
+    "nkvm_loai_vet_mo",
+    "nkvm_vm_nong_30_ngay",
+    "nkvm_vm_nong_sot",
+    "nkvm_vm_nong_chay_mu",
+    "nkvm_vm_nong_dau",
+    "nkvm_vm_nong_mo_vm",
+    "nkvm_vm_nong_chan_doan",
+    "nkvm_vm_sau_30_ngay",
+    "nkvm_vm_sau_sot",
+    "nkvm_vm_sau_chay_mu",
+    "nkvm_vm_sau_toac",
+    "nkvm_vm_sau_mo_vm",
+    "nkvm_vm_sau_ap_xe",
+    "nkvm_vm_sau_chan_doan",
+    "nkvm_vm_vi_tri_30_ngay",
+    "nkvm_vm_vi_tri_chay_mu",
+    "nkvm_vm_vi_tri_ap_xe",
+    "nkvm_vm_vi_tri_chan_doan",
+    "nkvm_ten_vi_khuan"
   ];
 
   const tableName = ["vp_khang_sinh", "nktn_khang_sinh", "nkh_khang_sinh", "nkvm_khang_sinh"];
@@ -81,10 +155,29 @@ $(document).ready(function () {
       element.ten_khang_sinh == null ? "" : element.ten_khang_sinh,
       element.ket_qua == null ? "" : element.ket_qua
     ]).draw(false));
+  if (JSON.parse(sessionStorage.step2)[tableName[1]] != null)
+    JSON.parse(sessionStorage.step2)[tableName[1]].forEach(element => table[1].row.add([
+      element.ma_khang_sinh == null ? "" : element.ma_khang_sinh,
+      element.ten_khang_sinh == null ? "" : element.ten_khang_sinh,
+      element.ket_qua == null ? "" : element.ket_qua
+    ]).draw(false));
+  if (JSON.parse(sessionStorage.step2)[tableName[2]] != null)
+    JSON.parse(sessionStorage.step2)[tableName[2]].forEach(element => table[2].row.add([
+      element.ma_khang_sinh == null ? "" : element.ma_khang_sinh,
+      element.ten_khang_sinh == null ? "" : element.ten_khang_sinh,
+      element.ket_qua == null ? "" : element.ket_qua
+    ]).draw(false));
+  if (JSON.parse(sessionStorage.step2)[tableName[3]] != null)
+    JSON.parse(sessionStorage.step2)[tableName[3]].forEach(element => table[3].row.add([
+      element.ma_khang_sinh == null ? "" : element.ma_khang_sinh,
+      element.ten_khang_sinh == null ? "" : element.ten_khang_sinh,
+      element.ket_qua == null ? "" : element.ket_qua
+    ]).draw(false));
 
   if (sessionStorage.step2 != null) {
     var step2 = JSON.parse(sessionStorage.step2);
     name.forEach(element => putInto(step2, element));
+    if (step2.hasOwnProperty("nkbv")) step2.nkbv.forEach(element => $("[name='nkbv'][value='" + element + "']").prop("checked", true));
   }
 
   $("#nkbv tbody tr td [type='checkbox']").on("click", function () {
@@ -100,6 +193,22 @@ $(document).ready(function () {
     else
       $("." + $(this).attr("id")).prop("disabled", true);
   });
+
+  $("[name='nkvm_loai_vet_mo']").on("click", function () {
+    if ($(this).attr("id") == "nkvm_loai_vet_mo_nong") {
+      $(".nkvm_loai_vet_mo_nong").fadeIn(200);
+      $(".nkvm_loai_vet_mo_sau").fadeOut(200);
+      $(".nkvm_loai_vet_mo_sau input[type='radio']").prop("checked", false);
+    }
+    else {
+      $(".nkvm_loai_vet_mo_sau").fadeIn(200);
+      $(".nkvm_loai_vet_mo_nong").fadeOut(200);
+      $(".nkvm_loai_vet_mo_nong input[type='radio']").prop("checked", false);
+    }
+  });
+
+  if ($("#nkvm_loai_vet_mo_nong").is(":checked")) $(".nkvm_loai_vet_mo_nong").fadeIn(200);
+  else if ($("#nkvm_loai_vet_mo_sau").is(":checked")) $(".nkvm_loai_vet_mo_sau").fadeIn(200);
 
   table.forEach(function (element, index) {
     $("#" + tableName[index] + " tbody").on("click", "tr", function () {
@@ -141,7 +250,11 @@ $(document).ready(function () {
 
   $("#buttonStepNext, #buttonStepBack").click(function () {
     var stringJson = '';
+    var nkbv = [];
+    $("[name='nkbv']:checked").each(function () { nkbv.push($(this).val()); });
+    stringJson += '"nkbv":' + JSON.stringify(nkbv) + ',';
     name.forEach(element => { stringJson += getPair(element) });
-    sessionStorage.step3 = "{" + stringJson.slice(0, -1) + "}"
+    tableName.forEach(element => { stringJson += getTable(element) });
+    sessionStorage.step2 = "{" + stringJson.slice(0, -1) + "}"
   });
 });

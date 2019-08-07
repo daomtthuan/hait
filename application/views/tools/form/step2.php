@@ -215,12 +215,12 @@
             <div class="form-group was-validated">
               <div class="text-dark cursor-default">Thông khí xấu đi (VD: độ bão hòa O<sub>2</sub> (PaO<sub>2</sub>/FiO<sub>2</sub> &le; 240), tăng nhu cầu O<sub>2</sub> hoặc tăng nhu cầu thở máy)</div>
               <div class="custom-control custom-radio">
-                <input type="radio" id="co_vp_ho" name="vp_ho" class="custom-control-input" value="1" required>
-                <label class="custom-control-label" for="co_vp_ho">Có</label>
+                <input type="radio" id="co_vp_thong_khi" name="vp_thong_khi" class="custom-control-input" value="1" required>
+                <label class="custom-control-label" for="co_vp_thong_khi">Có</label>
               </div>
               <div class="custom-control custom-radio">
-                <input type="radio" id="khong_vp_ho" name="vp_ho" class="custom-control-input" value="0" required>
-                <label class="custom-control-label" for="khong_vp_ho">Không</label>
+                <input type="radio" id="khong_vp_thong_khi" name="vp_thong_khi" class="custom-control-input" value="0" required>
+                <label class="custom-control-label" for="khong_vp_thong_khi">Không</label>
               </div>
             </div>
           </div>
@@ -786,7 +786,7 @@
             </div>
           </div>
         </div>
-        <div class="row nkvm_loai_vet_mo_nong">
+        <div class="row nkvm_loai_vet_mo_nong"  style="display: none">
           <div class="col-12 font-weight-bold">
             Vết mổ nông
           </div>
@@ -869,7 +869,7 @@
             </div>
           </div>
         </div>
-        <div class="row nkvm_loai_vet_mo_sau">
+        <div class="row nkvm_loai_vet_mo_sau" style="display: none">
           <div class="col-12 font-weight-bold">
             Vết mổ sâu
           </div>
