@@ -45,12 +45,12 @@
                     <button required type="button" class="btn btn-sm btn-primary mt-1 viem_phoi" data-toggle="modal" data-target="#modal_viem_phoi" disabled><i class="fas fa-edit"></i></button>
                   </td>
                   <td class="was-validated">
-                    <input type="date" class="form-control ellipsis viem_phoi" required disabled>
+                    <input id="vp_ngay_xuat_hien" name="vp_ngay_xuat_hien" type="date" class="form-control ellipsis viem_phoi" required disabled>
                     <div class="invalid-feedback">Vui lòng nhập Ngày xuất hiện</div>
                   </td>
                   <td class="was-validated">
-                    <input type="text" class="form-control ellipsis viem_phoi" required disabled>
-                    <div class="invalid-feedback">Vui lòng nhập Ngày xuất hiện</div>
+                    <input id="vp_trieu_chung" name="vp_trieu_chung" type="text" class="form-control ellipsis viem_phoi" required disabled>
+                    <div class="invalid-feedback">Vui lòng nhập Triệu chứng chỉ diểm đầu tiên</div>
                   </td>
                 </tr>
                 <tr>
@@ -64,12 +64,12 @@
                     <button type="button" class="btn btn-sm btn-primary mt-1 nhiem_khuan_tiet_nieu" data-toggle="modal" data-target="#modal_nhiem_khuan_tiet_nieu" disabled><i class="fas fa-edit"></i></button>
                   </td>
                   <td class="was-validated">
-                    <input type="date" class="form-control ellipsis nhiem_khuan_tiet_nieu" required disabled>
+                    <input id="nktn_ngay_xuat_hien" name="nktn_ngay_xuat_hien" type="date" class="form-control ellipsis nhiem_khuan_tiet_nieu" required disabled>
                     <div class="invalid-feedback">Vui lòng nhập Ngày xuất hiện</div>
                   </td>
                   <td class="was-validated">
-                    <input type="text" class="form-control ellipsis nhiem_khuan_tiet_nieu" required disabled>
-                    <div class="invalid-feedback">Vui lòng nhập Ngày xuất hiện</div>
+                    <input id="nktn_trieu_chung" name="nktn_trieu_chung" type="text" class="form-control ellipsis nhiem_khuan_tiet_nieu" required disabled>
+                    <div class="invalid-feedback">Vui lòng nhập Triệu chứng chỉ điểm đầu tiên</div>
                   </td>
                 </tr>
                 <tr>
@@ -83,12 +83,12 @@
                     <button type="button" class="btn btn-sm btn-primary mt-1 nhiem_khuan_huyet" data-toggle="modal" data-target="#modal_nhiem_khuan_huyet" disabled><i class="fas fa-edit"></i></button>
                   </td>
                   <td class="was-validated">
-                    <input type="date" class="form-control ellipsis nhiem_khuan_huyet" required disabled>
+                    <input id="nkh_ngay_xuat_hien" name="nkh_ngay_xuat_hien" type="date" class="form-control ellipsis nhiem_khuan_huyet" required disabled>
                     <div class="invalid-feedback">Vui lòng nhập Ngày xuất hiện</div>
                   </td>
                   <td class="was-validated">
-                    <input type="text" class="form-control ellipsis nhiem_khuan_huyet" required disabled>
-                    <div class="invalid-feedback">Vui lòng nhập Ngày xuất hiện</div>
+                    <input id="nkh_trieu_chung" name="nkh_trieu_chung" type="text" class="form-control ellipsis nhiem_khuan_huyet" required disabled>
+                    <div class="invalid-feedback">Vui lòng nhập Triệu chứng chỉ điểm đầu tiên</div>
                   </td>
                 </tr>
                 <tr>
@@ -102,12 +102,12 @@
                     <button type="button" class="btn btn-sm btn-primary mt-1 nhiem_khuan_vet_mo" data-toggle="modal" data-target="#modal_nhiem_khuan_vet_mo" disabled><i class="fas fa-edit"></i></button>
                   </td>
                   <td class="was-validated">
-                    <input type="date" class="form-control ellipsis nhiem_khuan_vet_mo" required disabled>
+                    <input id="nkvm_ngay_xuat_hien" name="nkvm_ngay_xuat_hien" type="date" class="form-control ellipsis nhiem_khuan_vet_mo" required disabled>
                     <div class="invalid-feedback">Vui lòng nhập Ngày xuất hiện</div>
                   </td>
                   <td class="was-validated">
-                    <input type="text" class="form-control ellipsis nhiem_khuan_vet_mo" required disabled>
-                    <div class="invalid-feedback">Vui lòng nhập Ngày xuất hiện</div>
+                    <input id="nkvm_trieu_chung" name="nkvm_trieu_chung" type="text" class="form-control ellipsis nhiem_khuan_vet_mo" required disabled>
+                    <div class="invalid-feedback">Vui lòng nhập Triệu chứng chỉ điểm đầu tiên</div>
                   </td>
                 </tr>
               </tbody>

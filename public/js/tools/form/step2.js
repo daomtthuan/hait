@@ -53,6 +53,14 @@ $(document).ready(function () {
   $(".dataTables_filter label input").addClass("ml-2");
 
   const name = [
+    "vp_ngay_xuat_hien",
+    "vp_trieu_chung",
+    "nktn_ngay_xuat_hien",
+    "nktn_trieu_chung",
+    "nkh_ngay_xuat_hien",
+    "nkh_trieu_chung",
+    "nkvm_ngay_xuat_hien",
+    "nkvm_trieu_chung",
     "vp_sot",
     "vp_bach_cau",
     "vp_tam_than",
