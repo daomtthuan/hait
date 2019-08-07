@@ -94,7 +94,7 @@
         </div>
         <div class="col-md-6 was-validated">
           <div class="form-group">
-            <div class="text-dark cursor-default">Thận mãn tính</div>
+            <div class="text-dark cursor-default">Thận mạn tính</div>
             <div class="custom-control custom-radio">
               <input type="radio" id="co_than_man_tinh" name="than_man_tinh" class="custom-control-input" value="1" required>
               <label class="custom-control-label" for="co_than_man_tinh">Có</label>
@@ -102,7 +102,7 @@
             <div class="custom-control custom-radio">
               <input type="radio" id="khong_than_man_tinh" name="than_man_tinh" class="custom-control-input" value="0" required>
               <label class="custom-control-label" for="khong_than_man_tinh">Không</label>
-              <div class="invalid-feedback" style="margin-left: -24px">Có bệnh Thận mãn tính hay không?</div>
+              <div class="invalid-feedback" style="margin-left: -24px">Có bệnh Thận mạn tính hay không?</div>
             </div>
           </div>
         </div>

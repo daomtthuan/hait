@@ -82,11 +82,7 @@ $(document).ready(function () {
     "trieu_chung_chi_diem"
   ];
 
-  const tableName = [
-    "khang_sinh_truoc_phau_thuat",
-    "khang_sinh_du_phong",
-    "khang_sinh_sau_phau_thuat"
-  ];
+  const tableName = ["khang_sinh_truoc_phau_thuat", "khang_sinh_du_phong", "khang_sinh_sau_phau_thuat"];
 
   const config = {
     "language": {
@@ -188,33 +184,39 @@ $(document).ready(function () {
   });
 
   $("#submit_khang_sinh_truoc_phau_thuat").on("click", function () {
-    table[0].row.add([
-      $("#select_khang_sinh_truoc_phau_thuat").val(),
-      $("#select_khang_sinh_truoc_phau_thuat option:selected").text(),
-      $("#ngaybd_khang_sinh_truoc_phau_thuat").val(),
-      $("#ngaykt_khang_sinh_truoc_phau_thuat").val(),
-      $("#lieu_khang_sinh_truoc_phau_thuat").val(),
-    ]).draw(false);
+    if ($("#select_khang_sinh_truoc_phau_thuat").val() != null || $("#ngaybd_khang_sinh_truoc_phau_thuat").val() != "" || $("#ngaykt_khang_sinh_truoc_phau_thuat").val() != "" || $("#lieu_khang_sinh_truoc_phau_thuat").val() != "") {
+      table[0].row.add([
+        $("#select_khang_sinh_truoc_phau_thuat").val(),
+        $("#select_khang_sinh_truoc_phau_thuat option:selected").text(),
+        $("#ngaybd_khang_sinh_truoc_phau_thuat").val(),
+        $("#ngaykt_khang_sinh_truoc_phau_thuat").val(),
+        $("#lieu_khang_sinh_truoc_phau_thuat").val(),
+      ]).draw(false);
+    }
   });
 
   $("#submit_khang_sinh_du_phong").on("click", function () {
-    table[1].row.add([
-      $("#select_khang_sinh_du_phong").val(),
-      $("#select_khang_sinh_du_phong option:selected").text(),
-      $("#lieu1_khang_sinh_du_phong").val(),
-      $("#lieu2_khang_sinh_du_phong").val(),
-      $("#lieu_khang_sinh_du_phong").val(),
-    ]).draw(false);
+    if ($("#select_khang_sinh_du_phong").val() != null || $("#lieu1_khang_sinh_du_phong").val() != "" || $("#lieu2_khang_sinh_du_phong").val() != "" || $("#lieu_khang_sinh_du_phong").val() != "") {
+      table[1].row.add([
+        $("#select_khang_sinh_du_phong").val(),
+        $("#select_khang_sinh_du_phong option:selected").text(),
+        $("#lieu1_khang_sinh_du_phong").val(),
+        $("#lieu2_khang_sinh_du_phong").val(),
+        $("#lieu_khang_sinh_du_phong").val(),
+      ]).draw(false);
+    }
   });
 
   $("#submit_khang_sinh_sau_phau_thuat").on("click", function () {
-    table[2].row.add([
-      $("#select_khang_sinh_sau_phau_thuat").val(),
-      $("#select_khang_sinh_sau_phau_thuat option:selected").text(),
-      $("#ngaybd_khang_sinh_sau_phau_thuat").val(),
-      $("#ngaykt_khang_sinh_sau_phau_thuat").val(),
-      $("#lieu_khang_sinh_sau_phau_thuat").val(),
-    ]).draw(false);
+    if ($("#select_khang_sinh_sau_phau_thuat").val() != null || $("#ngaybd_khang_sinh_sau_phau_thuat").val() != "" || $("#ngaykt_khang_sinh_sau_phau_thuat").val() != "" || $("#lieu_khang_sinh_sau_phau_thuat").val() != "") {
+      table[2].row.add([
+        $("#select_khang_sinh_sau_phau_thuat").val(),
+        $("#select_khang_sinh_sau_phau_thuat option:selected").text(),
+        $("#ngaybd_khang_sinh_sau_phau_thuat").val(),
+        $("#ngaykt_khang_sinh_sau_phau_thuat").val(),
+        $("#lieu_khang_sinh_sau_phau_thuat").val(),
+      ]).draw(false);
+    }
   });
 
   $(".modal-footer button").on("click", function () {
