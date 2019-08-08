@@ -234,26 +234,47 @@ $(document).ready(function () {
     });
   });
 
+  var modal = "";
+
+  $(".btn_modal").click(function () {
+    modal = $(this).attr("data-target");
+  });
+
+  $("[data-target='#modal_khang_sinh']").click(function () {
+    $(modal).modal("hide");
+  });
+
+  $('#modal_khang_sinh').on("hidden.bs.modal", function () {
+     $(modal).modal("show");
+  })
+
   $("#submit_khang_sinh").on("click", function () {
     if ($("#select_khang_sinh").val() != null || $("[name='ket_qua']:checked").length != 0) {
       var
         ma_khang_sinh = $("#select_khang_sinh").val(),
         ten_khang_sinh = $("#select_khang_sinh option:selected").text(),
         ket_qua = $("[name='ket_qua']:checked").length == 0 ? "" : $("[name='ket_qua']:checked").val();
-      if ($("#modal_viem_phoi").hasClass("show"))
-        table[0].row.add([ma_khang_sinh, ten_khang_sinh, ket_qua]).draw(false);
-      else if ($("#modal_nhiem_khuan_tiet_nieu").hasClass("show"))
-        table[1].row.add([ma_khang_sinh, ten_khang_sinh, ket_qua]).draw(false);
-      else if ($("#modal_nhiem_khuan_huyet").hasClass("show"))
-        table[2].row.add([ma_khang_sinh, ten_khang_sinh, ket_qua]).draw(false);
-      else if ($("#modal_nhiem_khuan_vet_mo").hasClass("show"))
-        table[3].row.add([ma_khang_sinh, ten_khang_sinh, ket_qua]).draw(false);
+
+      switch (modal) {
+        case "#modal_viem_phoi":
+          table[0].row.add([ma_khang_sinh, ten_khang_sinh, ket_qua]).draw(false);
+          break;
+        case "#modal_nhiem_khuan_tiet_nieu":
+          table[1].row.add([ma_khang_sinh, ten_khang_sinh, ket_qua]).draw(false);
+          break;
+        case "#modal_nhiem_khuan_huyet":
+          table[2].row.add([ma_khang_sinh, ten_khang_sinh, ket_qua]).draw(false);
+          break;
+        case "#modal_nhiem_khuan_vet_mo":
+          table[3].row.add([ma_khang_sinh, ten_khang_sinh, ket_qua]).draw(false);
+          break;
+      }
     }
   });
 
   $("#modal_khang_sinh .modal-footer button").on("click", function () {
-    $(".modal-body input").prop("checked", false);
-    $(".modal-body select").val($(".modal-body select option:first").val());;
+    $("#modal_khang_sinh .modal-body input").prop("checked", false);
+    $("#modal_khang_sinh .modal-body select").val($(".modal-body select option:first").val());;
   });
 
   $("#buttonStepNext, #buttonStepBack").click(function () {
