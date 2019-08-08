@@ -42,7 +42,7 @@
                     </div>
                   </td>
                   <td class="text-center">
-                    <button required type="button" class="btn btn-sm btn-primary mt-1 viem_phoi" data-toggle="modal" data-target="#modal_viem_phoi" disabled><i class="fas fa-edit"></i></button>
+                    <button required type="button" class="btn_modal btn btn-sm btn-primary mt-1 viem_phoi" data-toggle="modal" data-target="#modal_viem_phoi" disabled><i class="fas fa-edit"></i></button>
                   </td>
                   <td class="was-validated">
                     <input id="vp_ngay_xuat_hien" name="vp_ngay_xuat_hien" type="date" class="form-control ellipsis viem_phoi" required disabled>
@@ -61,7 +61,7 @@
                     </div>
                   </td>
                   <td class="text-center">
-                    <button type="button" class="btn btn-sm btn-primary mt-1 nhiem_khuan_tiet_nieu" data-toggle="modal" data-target="#modal_nhiem_khuan_tiet_nieu" disabled><i class="fas fa-edit"></i></button>
+                    <button type="button" class="btn_modal btn btn-sm btn-primary mt-1 nhiem_khuan_tiet_nieu" data-toggle="modal" data-target="#modal_nhiem_khuan_tiet_nieu" disabled><i class="fas fa-edit"></i></button>
                   </td>
                   <td class="was-validated">
                     <input id="nktn_ngay_xuat_hien" name="nktn_ngay_xuat_hien" type="date" class="form-control ellipsis nhiem_khuan_tiet_nieu" required disabled>
@@ -80,7 +80,7 @@
                     </div>
                   </td>
                   <td class="text-center">
-                    <button type="button" class="btn btn-sm btn-primary mt-1 nhiem_khuan_huyet" data-toggle="modal" data-target="#modal_nhiem_khuan_huyet" disabled><i class="fas fa-edit"></i></button>
+                    <button type="button" class="btn_modal btn btn-sm btn-primary mt-1 nhiem_khuan_huyet" data-toggle="modal" data-target="#modal_nhiem_khuan_huyet" disabled><i class="fas fa-edit"></i></button>
                   </td>
                   <td class="was-validated">
                     <input id="nkh_ngay_xuat_hien" name="nkh_ngay_xuat_hien" type="date" class="form-control ellipsis nhiem_khuan_huyet" required disabled>
@@ -99,7 +99,7 @@
                     </div>
                   </td>
                   <td class="text-center">
-                    <button type="button" class="btn btn-sm btn-primary mt-1 nhiem_khuan_vet_mo" data-toggle="modal" data-target="#modal_nhiem_khuan_vet_mo" disabled><i class="fas fa-edit"></i></button>
+                    <button type="button" class="btn_modal btn btn-sm btn-primary mt-1 nhiem_khuan_vet_mo" data-toggle="modal" data-target="#modal_nhiem_khuan_vet_mo" disabled><i class="fas fa-edit"></i></button>
                   </td>
                   <td class="was-validated">
                     <input id="nkvm_ngay_xuat_hien" name="nkvm_ngay_xuat_hien" type="date" class="form-control ellipsis nhiem_khuan_vet_mo" required disabled>
@@ -427,6 +427,9 @@
           </div>
         </div>
       </div>
+      <div class="modal-footer">
+        <button type="button" class="btn_close_modal btn btn-secondary" data-dismiss="modal">Đóng</button>
+      </div>
     </div>
   </div>
 </div>
@@ -599,6 +602,9 @@
           </div>
         </div>
       </div>
+      <div class="modal-footer">
+        <button type="button" class="btn_close_modal btn btn-secondary" data-dismiss="modal">Đóng</button>
+      </div>
     </div>
   </div>
 </div>
@@ -737,7 +743,7 @@
           <div class="col-12">
             <div class="text-dark cursor-default mb-2">
               Kháng sinh
-              <button id="them_nkh_khang_sinh" class="btn btn-primary btn-sm ml-auto" type="button" data-toggle="modal" data-target="#modal_khang_sinh"><i class="fas fa-plus"></i></button>
+              <button id="them_nkh_khang_sinh" class="btn btn-primary btn-sm ml-auto" type="button" data-toggle="modal" data-target="#modal_khang_sinh" ><i class="fas fa-plus"></i></button>
               <button id="xoa_nkh_khang_sinh" class="btn btn-danger btn-sm ml-1" type="button"><i class='fas fa-trash-alt'></i></button>
             </div>
             <div class="col-12 border">
@@ -757,6 +763,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn_close_modal btn btn-secondary" data-dismiss="modal">Đóng</button>
       </div>
     </div>
   </div>
@@ -786,7 +795,7 @@
             </div>
           </div>
         </div>
-        <div class="row nkvm_loai_vet_mo_nong"  style="display: none">
+        <div class="row nkvm_loai_vet_mo_nong" style="display: none">
           <div class="col-12 font-weight-bold">
             Vết mổ nông
           </div>
@@ -1056,6 +1065,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn_close_modal btn btn-secondary" data-dismiss="modal">Đóng</button>
       </div>
     </div>
   </div>
