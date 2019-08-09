@@ -1,3 +1,10 @@
+/**
+ * @author Daomtthuan
+ * @email dao.mt.thuan@gmail.com
+ * @create date 2019-08-09 18:28:32
+ * @modify date 2019-08-09 18:29:14
+ */
+
 function getPair(name) {
   switch ($("[name='" + name + "']").attr("type")) {
     case "radio":
