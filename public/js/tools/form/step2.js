@@ -52,15 +52,9 @@ $(document).ready(function () {
   $(".dataTables_length label select").addClass("ml-1");
   $(".dataTables_filter label input").addClass("ml-2");
 
-  const name = [
+  const vp_name = [
     "vp_ngay_xuat_hien",
     "vp_trieu_chung",
-    "nktn_ngay_xuat_hien",
-    "nktn_trieu_chung",
-    "nkh_ngay_xuat_hien",
-    "nkh_trieu_chung",
-    "nkvm_ngay_xuat_hien",
-    "nkvm_trieu_chung",
     "vp_sot",
     "vp_bach_cau",
     "vp_tam_than",
@@ -80,7 +74,12 @@ $(document).ready(function () {
     "vp_cay_dich_tiet",
     "vp_phat_hien_vi_khuan",
     "vp_tang_gap_4",
-    "vp_ten_vi_khuan",
+    "vp_ten_vi_khuan"
+  ];
+
+  const nktn_name = [
+    "nktn_ngay_xuat_hien",
+    "nktn_trieu_chung",
     "nktn_sot",
     "nktn_dau_mu",
     "nktn_mot_tieu",
@@ -90,7 +89,12 @@ $(document).ready(function () {
     "nktn_cay_nuoc_tieu",
     "nktn_soi_can",
     "nktn_nhuom",
-    "nktn_ten_vi_khuan",
+    "nktn_ten_vi_khuan"
+  ];
+
+  const nkh_name = [
+    "nkh_ngay_xuat_hien",
+    "nkh_trieu_chung",
     "nkh_sot",
     "nkh_huyet_ap",
     "nkh_than_nhiet",
@@ -99,7 +103,12 @@ $(document).ready(function () {
     "nkh_cay_mau_1",
     "nkh_cay_mau_2",
     "nkh_cay_mau_3",
-    "nkh_ten_vi_khuan",
+    "nkh_ten_vi_khuan"
+  ];
+
+  const nkvm_name = [
+    "nkvm_ngay_xuat_hien",
+    "nkvm_trieu_chung",
     "nkvm_loai_vet_mo",
     "nkvm_vm_nong_30_ngay",
     "nkvm_vm_nong_sot",
@@ -184,8 +193,25 @@ $(document).ready(function () {
 
   if (sessionStorage.step2 != null) {
     var step2 = JSON.parse(sessionStorage.step2);
-    name.forEach(element => putInto(step2, element));
-    if (step2.hasOwnProperty("nkbv")) step2.nkbv.forEach(element => $("[name='nkbv'][value='" + element + "']").prop("checked", true));
+    if (step2.hasOwnProperty("nkbv")) {
+      step2.nkbv.forEach(element => {
+        $("[name='nkbv'][value='" + element + "']").prop("checked", true);
+        switch (element) {
+          case "1":
+            vp_name.forEach(element => putInto(step2.vp, element));
+            break;
+          case "2":
+            nktn_name.forEach(element => putInto(step2.nktn, element));
+            break;
+          case "3":
+            nkh_name.forEach(element => putInto(step2.nkh, element));
+            break;
+          case "4":
+            nkvm_name.forEach(element => putInto(step2.nkvm, element));
+            break;
+        }
+      });
+    }
   }
 
   $("#nkbv tbody tr td [type='checkbox']").on("click", function () {
@@ -245,7 +271,7 @@ $(document).ready(function () {
   });
 
   $('#modal_khang_sinh').on("hidden.bs.modal", function () {
-     $(modal).modal("show");
+    $(modal).modal("show");
   })
 
   $("#submit_khang_sinh").on("click", function () {
@@ -282,8 +308,32 @@ $(document).ready(function () {
     var nkbv = [];
     $("[name='nkbv']:checked").each(function () { nkbv.push($(this).val()); });
     stringJson += '"nkbv":' + JSON.stringify(nkbv) + ',';
-    name.forEach(element => { stringJson += getPair(element) });
+
+    if ($("[name='nkbv'][value='1']").is(":checked")) {
+      stringJson += ('"vp":{');
+      vp_name.forEach(element => { stringJson += getPair(element) });
+      stringJson = stringJson.slice(0, -1) + "},";
+    }
+
+    if ($("[name='nkbv'][value='2']").is(":checked")) {
+      stringJson += ('"nktn":{');
+      nktn_name.forEach(element => { stringJson += getPair(element) });
+      stringJson = stringJson.slice(0, -1) + "},";
+    }
+
+    if ($("[name='nkbv'][value='3']").is(":checked")) {
+      stringJson += ('"nkh":{');
+      nkh_name.forEach(element => { stringJson += getPair(element) });
+      stringJson = stringJson.slice(0, -1) + "},";
+    }
+
+    if ($("[name='nkbv'][value='4']").is(":checked")) {
+      stringJson += ('"nkvm":{');
+      nkvm_name.forEach(element => { stringJson += getPair(element) });
+      stringJson = stringJson.slice(0, -1) + "},";
+    }
+
     tableName.forEach(element => { stringJson += getTable(element) });
-    sessionStorage.step2 = "{" + stringJson.slice(0, -1) + "}"
+    sessionStorage.step2 = "{" + stringJson.slice(0, -1) + "}";
   });
 });
