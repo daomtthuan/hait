@@ -8,16 +8,6 @@ class Form_model extends CI_Model
 		parent::__construct();
 	}
 	function  insert_new_form($user_create,$room_name,$room_id){
-		/*
-		$this->db->set('loai_form', 'CHINH');
-		$this->db->set('user_create', $user_create);
-		$this->db->set('user_check', '');
-		$this->db->set('status', 'CREATE');
-		$this->db->set('infection', '0');
-		$this->db->set('room_name', $room_name);
-		$this->db->set('room_id', $room_id);
-		$this->db->insert('form');
-		*/
 		$data=array(
 			'loai_form' => "CHINH" ,
 			'user_create' => $user_create,

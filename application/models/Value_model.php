@@ -10,13 +10,6 @@ class Value_model extends CI_Model
 	public function insert_array( $batch){
 		$this->db->insert_batch('value', $batch);
 	}
-	public  function new_insert($source_data,$form_id,$form_part){
-		foreach($data as $key => $val)
-		{
-
-		}
-
-	}
 	public function insert($source_data,$form_id,$form_part){
 		$query1 = $this->db->get('view_datatype');
 		$batch=array();
@@ -61,7 +54,7 @@ class Value_model extends CI_Model
 		$this->db->update('value', $data);
 	}
 	public function delete($id){
-		$this->db->where('form_attribute_id', $id);
+		$this->db->where('form_id', $id);
 		$this->db->delete('value');
 	}
 	//helper
