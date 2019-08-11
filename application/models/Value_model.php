@@ -33,7 +33,7 @@ class Value_model extends CI_Model
 					$datatype=$row->data_type;
 				}
 			}
-			if($val && $datatype){
+			if($datatype){
 				$data=array(
 					"form_attribute_id"=>$form_attribute_id,
 					"form_id"=>$form_id,
@@ -66,6 +66,11 @@ class Value_model extends CI_Model
 		$this->db->where('form_id', $id);
 		$this->db->delete('value');
 	}
+	public function delete_sub($form_id,$form_part){
+		$this->db->where('form_id', $form_id);
+		$this->db->where('form_part',$form_part);
+		$this->db->delete('value');
+	}
 	//helper
 	public function search($attribute_name){
 		$call_procedure ="call search_datatype('$attribute_name')";
@@ -76,9 +81,6 @@ class Value_model extends CI_Model
 			return $row->data_type;
 
 		}
-	}
-	public function update_datatype($form_id){
-
 	}
 }
 

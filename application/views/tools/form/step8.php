@@ -1,5 +1,5 @@
 <script>
-  var urlUpdate = "<?php echo base_url('ajax/new-form')?>";
+  var urlUpdate = "<?php echo base_url('ajax/update-form')?>";
 </script>
 <h1 class="h3 mb-4 text-gray-800">PHIẾU GIÁM SÁT NGANG NHIỄM KHUẨN BỆNH VIỆN</h1>
 <hr class="sidebar-divider">
