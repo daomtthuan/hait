@@ -1104,7 +1104,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ bỏ</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
         <button id="submit_khang_sinh" type="button" class="btn btn-primary">Thêm vào</button>
       </div>
     </div>
