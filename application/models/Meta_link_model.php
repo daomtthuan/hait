@@ -7,7 +7,11 @@ class Meta_link_model extends CI_Model
 	{
 		parent::__construct();
 	}
-	public function add($data){
+	public function add($form_id,$sub_id){
+		$data=array(
+			"main_form"=>$form_id,
+			"relate_form"=>$sub_id
+		);
 		$this->db->insert('meta_link',$data);
 	}
 	public function get(){

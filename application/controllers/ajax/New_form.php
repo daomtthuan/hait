@@ -9,24 +9,52 @@ class New_Form extends REST_Controller
 		parent::__construct($config);
 		$this->load->model('Value_model');
 		$this->load->model('Form_model');
+		$this->load->model('Meta_link_model');
 	}
 	function index_post()
 	{
 		$data = $this->post(NULL,TRUE);
+		$object=json_decode($data);
+		log_message('debug',$object);
 		$form_id=$data['form_id'];
 		if($form_id){
 			//Cap nhat
 			$this->Value_model->delete($form_id);
 		} else {
 			//Them moi
-			$this->$form_id=$this->Form_model->insert_new_form(1,'Khoa noi',1);
+			$this->$form_id=$this->Form_model->insert_new_form(1,'Khoa noi',1,"CHINH");
 		}
 		log_message('debug', "Form id:". $data["form_id"]);
 		if($data["step1"]){
 			$this->Value_model->insert($data["step1"],$form_id,"step1");
 		}
 		if($data["step2"]){
-			$this->Value_model->insert($data["step2"],$form_id,"step2");
+			//Lấy dữ liệu step 2
+			$arr = $data["step2"];
+			//Lấy dữ liệu nhiễm khuẩn bệnh viện
+			$nkbv=$arr["nkbv"];
+			//Nếu có nhiễm khuẩn bệnh viện thì tiến hành insert
+			if($nkbv){
+				if($nkbv["vp"]){
+					//insert viêm phổi
+					$vp_id="";
+					$this->$vp_id=$this->Form_model->insert_new_form(1,'Khoa noi',1,"VP");
+				}
+				if($nkbv["nktn"]){
+					//insert nhiễm khuẩn tiết niệu
+					$this->$form_id=$this->Form_model->insert_new_form(1,'Khoa noi',1,"NKTN");
+				}
+				if($nkbv["nkh"]){
+					//insert nhiễm khuẩn huyết
+					$this->$form_id=$this->Form_model->insert_new_form(1,'Khoa noi',1,"NKH");
+				}
+				if($nkbv["nkvm"]){
+					//insert nhiễm khuẩn vết mổ
+					$this->$form_id=$this->Form_model->insert_new_form(1,'Khoa noi',1,"NKVM");
+				}
+			}
+
+			//$this->Value_model->step2($data["step2"],$form_id);
 		}
 		if($data["step3"]){
 			$this->Value_model->insert($data["step3"],$form_id,"step3");

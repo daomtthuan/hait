@@ -10,6 +10,15 @@ class Value_model extends CI_Model
 	public function insert_array( $batch){
 		$this->db->insert_batch('value', $batch);
 	}
+	public function step2($data){
+		if($data){
+
+			foreach ($data as $key=>$val){
+				log_message('debug',"step2: ".$key);
+			}
+		}
+
+	}
 	public function insert($source_data,$form_id,$form_part){
 		$query1 = $this->db->get('view_datatype');
 		$batch=array();

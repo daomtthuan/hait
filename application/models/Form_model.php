@@ -7,9 +7,9 @@ class Form_model extends CI_Model
 	{
 		parent::__construct();
 	}
-	function  insert_new_form($user_create,$room_name,$room_id){
+	function  insert_new_form($user_create,$room_name,$room_id,$type){
 		$data=array(
-			'loai_form' => "CHINH" ,
+			'loai_form' => $type ,
 			'user_create' => $user_create,
 			'user_check' => "",
 			'status'=>"CREATE",
