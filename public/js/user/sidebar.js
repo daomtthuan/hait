@@ -19,6 +19,6 @@ $(document).ready(function () {
       sessionStorage.step7 = "{}";
       sessionStorage.step8 = "{}";
       window.location = href;
-    }).fail(function () { al });
+    }).fail(function () { $("#error").modal("toggle"); });
   });
 });

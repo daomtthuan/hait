@@ -126,6 +126,17 @@
     </div>
   </div>
 </div>
+<div id="error" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog shadow-lg" role="document">
+    <div class="modal-content">
+      <div class="alert alert-danger m-0" role="alert">
+        <h4 class="alert-heading">Lỗi!</h4>
+        <p>Có lỗi trong quá trình tạo biểu mẫu, vui lòng liên hệ với Bộ phân hỗ trợ để khắc phục</p>
+        <a href="<?php echo base_url($role) ?>">Trang chủ</a><br>
+      </div>
+    </div>
+  </div>
+</div>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js" integrity="sha256-t5ZQTZsbQi8NxszC10CseKjJ5QeMw5NINtOXQrESGSU=" crossorigin="anonymous" defer></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/dataTables.bootstrap4.min.js" integrity="sha256-hJ44ymhBmRPJKIaKRf3DSX5uiFEZ9xB/qx8cNbJvIMU=" crossorigin="anonymous" defer></script>
 <script defer src="<?php echo base_url('public/js/tools/form/step7_2.js') ?>"></script>
