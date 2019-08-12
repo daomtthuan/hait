@@ -51,7 +51,7 @@ function getTable(table) {
 
 $(document).ready(function () {
 
-  $.getJSON(antibioticUrl, function (data) {
+  $.getJSON(antibiotic_list, function (data) {
     data.forEach(element => $(".select_khang_sinh").append("<option value='" + element.ma_khang_sinh + "'>" + element.ten_khang_sinh + "</option>"));
   });
 

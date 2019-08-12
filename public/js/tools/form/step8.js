@@ -64,17 +64,16 @@ $(document).ready(function () {
     stringJson = stringJson.slice(0, -1) + "}";
 
     $.ajax({
-      url: urlUpdate,
+      url: update_form,
       type: "post",
       data: stringJson,
       contentType: "application/json;charset=UTF-8",
       success: function () {
-      	alert('ok');
-        //$("#success").modal('toggle');
-        //sessionStorage.clear();
+        $("#success").modal("toggle");
+        sessionStorage.clear();
       },
       error: function () {
-        $("#error").modal('toggle');
+        $("#error").modal("toggle");
       }
     });
   });

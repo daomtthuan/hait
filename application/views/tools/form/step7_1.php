@@ -13,7 +13,7 @@
   var part = JSON.parse(sessionStorage.step6).phau_thuat;
   if (part == null) window.location = "<?php echo base_url('user/form/6')?>";
   else if (part == 2) window.location = "<?php echo base_url('user/form/7-2')?>";
-  var antibioticUrl = "<?php echo base_url('ajax/antibiotic-list') ?>";
+  var antibiotic_list = "<?php echo base_url('ajax/antibiotic-list') ?>";
 </script>
 <h1 class="h3 mb-4 text-gray-800">PHIẾU GIÁM SÁT NGANG NHIỄM KHUẨN BỆNH VIỆN</h1>
 <hr class="sidebar-divider">
