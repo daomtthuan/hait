@@ -6,8 +6,6 @@ class Product_attribute_model extends CI_Model
 	public function __construct()
 	{
 		parent::__construct();
-
-		//Do your magic here
 	}
 	public function get(){
 		$query = $this->db->get('product_attribute');
