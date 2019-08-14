@@ -32,10 +32,16 @@ class User extends MY_Controller {
 		$this->load->view('general/layout',$data);
 	}
 
-	public function list_form()	{
+	public function list_form($status)	{
+		switch ($status) {
+			case 'unfinished': $data['page_title'] = 'Danh sách biểu mẫu - Chưa hoàn thành'; break;
+			case 'verifying': $data['page_title'] = 'Danh sách biểu mẫu - Chờ kiểm duyệt'; break;
+			case 'verified': $data['page_title'] = 'Danh sách biểu mẫu - Đã kiểm duyệt'; break;
+			default: show_404();
+		}
+
 		$data['role'] = 'user';
-		$data['page_title'] = 'Danh sách biểu mẫu';
-		$data['main'] = 'tools/form_list';
+		$data['main'] = 'tools/form/list_form';
 
 		$this->load->view('general/layout',$data);
 	}

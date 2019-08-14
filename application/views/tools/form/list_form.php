@@ -10,11 +10,11 @@
   }
 </style>
 <script>
-  var edit = "<?php echo base_url('user/form-edit') ?>", listUrl = "<?php echo base_url('ajax/form-list') ?>";
+  var edit = "<?php echo base_url('user/edit-form/') ?>", listUrl = "<?php echo base_url('ajax/list-form/unfinished') ?>";
 </script>
 <div class="col-12 border">
   <div class="table-responsive-lg my-2">
-    <table id="form_list" class="table table-sm table-bordered table-hover" style="width:100%">
+    <table id="list" class="table table-sm table-bordered table-hover" style="width:100%">
       <thead class="thead-light">
         <tr>
           <th scope="col">Ngày tạo</th>
@@ -32,4 +32,4 @@
 </div>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js" integrity="sha256-t5ZQTZsbQi8NxszC10CseKjJ5QeMw5NINtOXQrESGSU=" crossorigin="anonymous" defer></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/dataTables.bootstrap4.min.js" integrity="sha256-hJ44ymhBmRPJKIaKRf3DSX5uiFEZ9xB/qx8cNbJvIMU=" crossorigin="anonymous" defer></script>
-<script defer src="<?php echo base_url('public/js/tools/form_list.js') ?>"></script>
+<script defer src="<?php echo base_url('public/js/tools/form/list_form.js') ?>"></script>

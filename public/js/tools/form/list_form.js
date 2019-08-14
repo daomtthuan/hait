@@ -2,12 +2,16 @@
  * @author Daomtthuan
  * @email dao.mt.thuan@gmail.com
  * @create date 2019-08-09 18:28:32
- * @modify date 2019-08-09 18:29:57
+ * @modify date 2019-08-15 00:32:15
  */
 
 $(document).ready(function () {
 
-  var form_list = $('#form_list').DataTable({
+  $(".dataTables_wrapper>:first-child>div").attr("class", "col-sm-12 col-lg-6");
+  $(".dataTables_length label select").addClass("ml-1");
+  $(".dataTables_filter label input").addClass("ml-2");
+
+  var list = $('#list').DataTable({
     "language": {
       "decimal": "",
       "emptyTable": "Không có dữ liệu",
@@ -36,7 +40,7 @@ $(document).ready(function () {
 
   $.getJSON(listUrl, data => {
     data.forEach(element => {
-      form_list.row.add([
+      list.row.add([
         element.date_create,
         element.status,
         element.msba,
