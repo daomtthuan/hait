@@ -7,6 +7,7 @@ class Test extends MY_Controller {
 	{
 		parent::__construct();
 		$this->load->model('Template_model');
+		$this->load->model('Form_model');
 		$this->load->helper('form');
 	}
 	public function index(){
@@ -64,6 +65,15 @@ class Test extends MY_Controller {
 		$data=$this->Login_model->get_user_data('npduy') ;
 		print_r($data);
 	}
+	public function libtest(){
+
+		$this->Mycar->turn_right('olala');
+	}
+	public function get_form(){
+		$data=$this->Form_model->get_form('all');
+		print_r($data);
+	}
+
 }
 
 /* End of file Controllername.php */

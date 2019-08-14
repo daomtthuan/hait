@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 require(APPPATH . '/libraries/REST_Controller.php');
+
 class List_Form extends REST_Controller
 {
 
@@ -9,10 +10,17 @@ class List_Form extends REST_Controller
 		parent::__construct($config);
 		$this->load->model('Template_model');
 	}
-	function index_get()
+	/*
+	 * Chức năng: lấy danh sách form
+	 * Giao thức: ajax
+	 * Tham số: status của form
+	 * Model sử dụng: Form_model->get_form();
+	 * */
+
+	function index_get($para)
 	{
 		$this->load->model('Form_model');
-		$data=$this->Form_model->table();
+		$data = $this->Form_model->get_form($para);
 		if ($data) {
 			$this->response($data, REST_Controller::HTTP_OK);
 		} else {
