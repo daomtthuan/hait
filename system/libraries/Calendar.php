@@ -464,7 +464,7 @@ class CI_Calendar {
 	// --------------------------------------------------------------------
 
 	/**
-	 * Set Default AttributeController Data
+	 * Set Default Template Data
 	 *
 	 * This is used in the event that the user has not created their own template
 	 *
@@ -503,7 +503,7 @@ class CI_Calendar {
 	// --------------------------------------------------------------------
 
 	/**
-	 * Parse AttributeController
+	 * Parse Template
 	 *
 	 * Harvests the data within the template {pseudo-variables}
 	 * used to display the calendar

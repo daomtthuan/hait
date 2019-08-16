@@ -866,7 +866,7 @@ class CI_Security {
 			// We'll store the already filtered attributes here
 			$attributes = array();
 
-			// AttributeController-catching pattern
+			// Attribute-catching pattern
 			$attributes_pattern = '#'
 				.'(?<name>[^\s\042\047>/=]+)' // attribute characters
 				// optional attribute-value
@@ -976,7 +976,7 @@ class CI_Security {
 	// --------------------------------------------------------------------
 
 	/**
-	 * AttributeController Conversion
+	 * Attribute Conversion
 	 *
 	 * @used-by	CI_Security::xss_clean()
 	 * @param	array	$match

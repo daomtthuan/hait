@@ -476,7 +476,7 @@ class CI_Table {
 	// --------------------------------------------------------------------
 
 	/**
-	 * Compile AttributeController
+	 * Compile Template
 	 *
 	 * @return	void
 	 */
@@ -501,7 +501,7 @@ class CI_Table {
 	// --------------------------------------------------------------------
 
 	/**
-	 * Default AttributeController
+	 * Default Template
 	 *
 	 * @return	array
 	 */

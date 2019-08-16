@@ -72,29 +72,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $active_group = 'default';
 $query_builder = TRUE;
-/*
-$db['default'] = array(
-	'dsn'	=> '',
-	'hostname' => 'remotemysql.com',
-	'username' => 'euqXR9SMzN',
-	'password' => 'Bszbi73m1L',
-	'database' => 'euqXR9SMzN',
-	'dbdriver' => 'mysqli',
-	'dbprefix' => '',
-	'pconnect' => FALSE,
-	'db_debug' => (ENVIRONMENT !== 'development'),
-	'cache_on' => FALSE,
-	'cachedir' => '',
-	'char_set' => 'utf8',
-	'dbcollat' => 'utf8_general_ci',
-	'swap_pre' => '',
-	'encrypt' => FALSE,
-	'compress' => FALSE,
-	'stricton' => FALSE,
-	'failover' => array(),
-	'save_queries' => TRUE
-);
-*/
+
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'db4free.net',

@@ -74,14 +74,14 @@ class CI_Unit_test {
 	public $strict = FALSE;
 
 	/**
-	 * AttributeController
+	 * Template
 	 *
 	 * @var	string
 	 */
 	protected $_template = NULL;
 
 	/**
-	 * AttributeController rows
+	 * Template rows
 	 *
 	 * @var	string
 	 */
@@ -343,7 +343,7 @@ class CI_Unit_test {
 	// --------------------------------------------------------------------
 
 	/**
-	 * Get Default AttributeController
+	 * Get Default Template
 	 *
 	 * @return	string
 	 */
@@ -358,7 +358,7 @@ class CI_Unit_test {
 	// --------------------------------------------------------------------
 
 	/**
-	 * Parse AttributeController
+	 * Parse Template
 	 *
 	 * Harvests the data within the template {pseudo-variables}
 	 *

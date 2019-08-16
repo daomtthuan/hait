@@ -6,6 +6,8 @@ class Attribute_model extends CI_Model
 		public function __construct()
 		{
 			parent::__construct();
+
+			//Do your magic here
 		}
 		public function add($attribute_name){
 			$data['attribute_id']='';

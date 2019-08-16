@@ -34,9 +34,8 @@ $config['base_url'] = 'http://localhost:8080/hait/';
 | something else. If you are using mod_rewrite to remove the page set this
 | variable so that it is blank.
 |
-*/
-$config['index_page'] = 'index.php';
-
+*///$config['index_page'] = 'index.php';
+	$config['index_page'] = '';
 /*
 |--------------------------------------------------------------------------
 | URI PROTOCOL
@@ -223,7 +222,7 @@ $config['allow_get_array'] = TRUE;
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 2;
+$config['log_threshold'] = 0;
 
 /*
 |--------------------------------------------------------------------------
@@ -521,5 +520,3 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
-$config['enable_profiler'] = TRUE;
-$config['subclass_prefix']='MY_';
