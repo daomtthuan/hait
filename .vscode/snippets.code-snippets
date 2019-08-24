@@ -6,7 +6,6 @@
 		],
 		"description": "Add variable"
 	},
-
 	"Add url from public": {
 		"prefix": "ci-url",
 		"body": [
@@ -14,15 +13,13 @@
 		],
 		"description": "Add url"
 	},
-
 	"Add view": {
 		"prefix": "ci-subview",
 		"body": [
-			"<?php $this->load->view(${1:view url}) ?>$0",
+			"<?php \\$this->load->view(${1:view url}) ?>$0",
 		],
 		"description": "Add Add subview"
 	},
-
 	"Add string script javascript": {
 		"prefix": "ci-javascript",
 		"body": [
@@ -34,4 +31,24 @@
 		],
 		"description": "Add string script javascript"
 	},
+	"Create view": {
+		"prefix": "ci-view",
+		"body": [
+			"<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>",
+			"$0"
+		],
+		"description": "Create view"
+	},
+	"Create controller": {
+		"prefix": "ci-controller",
+		"body": [
+			"<?php defined('BASEPATH') OR exit('No direct script access allowed');",
+			"class ${1:controller} extends CI_Controller {",
+			"  public function index() {",
+			"    \\$this->load->view('${0:view}');",
+			"  }",
+			"}"
+		],
+		"description": "Create controller"
+	}
 }
