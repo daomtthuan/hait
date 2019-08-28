@@ -10,7 +10,7 @@
   }
 </style>
 <script>
-  var edit = "<?php echo base_url('user/edit-form/') ?>", listUrl = "<?php echo base_url('ajax/list-form/unfinished') ?>";
+  var editUrl = "<?php echo base_url('user/form/1') ?>", listUrl = "<?php echo base_url('ajax/list-form/unfinished') ?>";
 </script>
 <div class="col-12 border">
   <div class="table-responsive-lg my-2">
@@ -18,11 +18,11 @@
       <thead class="thead-light">
         <tr>
           <th scope="col">Ngày tạo</th>
-          <th scope="col">Trạng thái</th>
           <th scope="col">Mã số bệnh án</th>
           <th scope="col">Họ tên bệnh nhân</th>
           <th scope="col">Năm sinh</th>
           <th scope="col">Chuẩn đoán xác định</th>
+          <th scope="col">Thao tác</th>
         </tr>
       </thead>
       <tbody>

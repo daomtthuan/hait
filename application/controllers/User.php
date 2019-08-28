@@ -10,9 +10,23 @@ class User extends MY_Controller {
 	public function index()	{
 		$data['role'] = 'user';
 		$data['page_title'] = 'Trang chủ';
-
 		$data['main']= 'user/home';
-		$data['script'] = '';
+
+		$this->load->view('general/layout',$data);
+	}
+
+	public function information()	{
+		$data['role'] = 'user';
+		$data['page_title'] = 'Thông tin tài khoản';
+		$data['main']= 'general/information';
+
+		$this->load->view('general/layout',$data);
+	}
+
+	public function alert()	{
+		$data['role'] = 'user';
+		$data['page_title'] = 'Thông báo';
+		$data['main']= 'general/alert';
 
 		$this->load->view('general/layout',$data);
 	}

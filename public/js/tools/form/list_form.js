@@ -40,14 +40,31 @@ $(document).ready(function () {
 
   $.getJSON(listUrl, data => {
     data.forEach(element => {
+      var tool = "";
+      switch (element.status) {
+        case "unfinished":
+          tool = `
+          <a id="`+ element.form_id +`" class="btn-finish btn btn-primary btn-sm" href=""><i class="fas fa-check"></i></a>
+          <a id="`+ element.form_id +`" class="btn-edit btn btn-secondary btn-sm" href="`+ editUrl + `"><i class="fas fa-pen"></i></a>
+          <a id="`+ element.form_id +`" class="btn-delete btn btn-danger btn-sm" href=""><i class="fas fa-trash-alt"></i></a>`;
+          break;
+
+        case "verifying":
+          tool = `<a id="`+ element.form_id +`" class="btn-view btn btn-secondary btn-sm" href=""><i class="fas fa-eye"></i></a>`;
+          break;
+        case "verified":
+          tool = `<a id="`+ element.form_id +`" class="btn-view btn btn-secondary btn-sm" href=""><i class="fas fa-eye"></i></a>`;
+          break;
+      }
+
       list.row.add([
         element.date_create,
-        element.status,
         element.msba,
         element.ho_ten_bn,
         element.nam_sinh,
-        element.chan_doan_xac_dinh
-      ]).draw(false);
+        element.chan_doan_xac_dinh,
+        tool
+      ]).draw(true);
     });
   });
 });
