@@ -18,6 +18,8 @@ class Login extends CI_Controller
 
 	public function index()
 	{
+		redirect('user');
+		/*
 		if (!$this->ion_auth->logged_in()) {
 			// redirect them to the login page
 			redirect(base_url(general/login));
@@ -53,11 +55,7 @@ class Login extends CI_Controller
 				}
 			}
 		}
-	}
-
-	public function login()
-	{
-
+		*/
 	}
 
 	public function check_login()
