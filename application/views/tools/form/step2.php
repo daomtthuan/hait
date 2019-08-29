@@ -1082,7 +1082,7 @@
         <div class="form-group">
           <label for="select_khang_sinh">Tên kháng sinh</label>
           <select id="select_khang_sinh" class="select_khang_sinh custom-select" required>
-            <option disabled selected value style="display: none"></option>
+            <option class="d-none" disabled selected value style="display: none"></option>
           </select>
           <div class="invalid-feedback">Vui lòng chọn loại Kháng sinh trước phẫu thuật</div>
         </div>
