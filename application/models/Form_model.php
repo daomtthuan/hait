@@ -28,7 +28,7 @@ class Form_model extends CI_Model
 			'status' => "unfinished",
 			'infection' => "0",
 			'room_name' => $room_name,
-			'room_id' => $room_id
+			'room_id' => $room_id,
 		);
 		$this->db->insert('form', $data);
 		$lastid = $this->db->insert_id();
@@ -45,6 +45,17 @@ class Form_model extends CI_Model
 		$data = array(
 			'form_id' => $form_id,
 			'status' => $status_id,
+		);
+		$this->db->where('form_id', $data['form_id']);
+		$this->db->update('form', $data);
+	}
+	/*
+	 * Hàm cập nhật content của form
+	 * */
+	public function update_content($form_id,$content){
+		$data = array(
+			'form_id' => $form_id,
+			'content' => $content,
 		);
 		$this->db->where('form_id', $data['form_id']);
 		$this->db->update('form', $data);

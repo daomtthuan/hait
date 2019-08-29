@@ -75,6 +75,29 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
+	'database' => 'local_hait',
+	'dbdriver' => 'mysqli',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'development'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);
+$db['default']['options'] = array(PDO::ATTR_TIMEOUT => 300);
+/*
+ * $db['default'] = array(
+	'dsn'	=> '',
 	'hostname' => 'db4free.net',
 	'username' => 'npduylab',
 	'password' => 'FzG3GFR2NBGwCAd',
@@ -94,4 +117,4 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
-$db['default']['options'] = array(PDO::ATTR_TIMEOUT => 300);
+ * */
