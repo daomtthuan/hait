@@ -556,4 +556,8 @@ if ( ! is_php('5.4'))
  *  Is there a "post_system" hook?
  * ------------------------------------------------------
  */
+if (function_exists("set_time_limit") == TRUE AND @ini_get("safe_mode") == 0)
+{
+	@set_time_limit(300);
+}
 	$EXT->call_hook('post_system');
