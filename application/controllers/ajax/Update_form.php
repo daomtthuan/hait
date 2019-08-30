@@ -9,11 +9,13 @@ class Update_Form extends REST_Controller
 		$this->load->model('Value_model');
 		$this->load->model('Form_model');
 		$this->load->model('Meta_link_model','meta');
+		$this->load->model('List_ks_model');
 	}
 	function index_post()
 	{
 		$data = $this->post(NULL,TRUE);
 		//log_message("debug",$data);
+		$dulieu = (object) $data;
 		$form_id=$data['form_id'];
 		$this->Form_model->update_content($form_id,json_encode($data));
 		if($form_id){
@@ -29,7 +31,7 @@ class Update_Form extends REST_Controller
 			$this->Value_model->insert($data["step1"],$form_id,"step1");
 		}
 		if(isset($data["step2"])){
-			log_message('debug',"Bước 2");
+			//log_message('debug',"Bước 2");
 			//Lấy dữ liệu step 2
 			$arr = $data["step2"];
 			//Lấy dữ liệu nhiễm khuẩn bệnh viện
@@ -82,13 +84,17 @@ class Update_Form extends REST_Controller
 		if(isset($data["step8"])){
 			$this->Value_model->insert($data["step8"],$form_id,"step8");
 		}
-		//
-
+		//Check list
+		$this->List_ks_model->create_list();
+		$this->response(array('status' => 'failed'));
+	    /*
 		$result=true;
 		if ($result === FALSE) {
 			$this->response(array('status' => 'failed'));
 		} else {
 			$this->response(array('status' => 'success'));
 		}
+	    */
+
 	}
 }

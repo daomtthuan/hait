@@ -23,6 +23,9 @@ class List_ks_model extends CI_Model
 		$this->db->where('list_id', $id);
 		$this->db->delete('list_ks');
 	}
+	public function create_list($data){
+
+	}
 }
 
 /* End of file .php */

@@ -69,7 +69,7 @@ $(document).ready(function () {
       contentType: "application/json;charset=UTF-8",
       success: function () {
         $("#success").modal("toggle");
-        sessionStorage.clear();
+        //sessionStorage.clear();
       },
       error: function () {
         $("#error").modal("toggle");

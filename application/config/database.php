@@ -72,7 +72,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $active_group = 'default';
 $query_builder = TRUE;
-
+/*
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
@@ -94,9 +94,9 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+*/
 $db['default']['options'] = array(PDO::ATTR_TIMEOUT => 300);
-/*
- * $db['default'] = array(
+$db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'db4free.net',
 	'username' => 'npduylab',
@@ -117,4 +117,3 @@ $db['default']['options'] = array(PDO::ATTR_TIMEOUT => 300);
 	'failover' => array(),
 	'save_queries' => TRUE
 );
- * */
