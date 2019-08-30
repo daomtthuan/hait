@@ -2,7 +2,7 @@
  * @author Daomtthuan
  * @email dao.mt.thuan@gmail.com
  * @create date 2019-08-09 18:28:32
- * @modify date 2019-08-09 18:28:32
+ * @modify date 2019-08-30 02:30:02
  */
 
 function getPair(name) {
@@ -52,7 +52,7 @@ function getTable(table) {
 $(document).ready(function () {
 
   $.getJSON(antibiotic_list, function (data) {
-    data.forEach(element => $(".select_khang_sinh").append("<option value='" + element.ma_khang_sinh + "'>" + element.ten_khang_sinh + "</option>"));
+    data.forEach(element => $(".select_khang_sinh").append("<option class='d-none' value='" + element.ma_khang_sinh + "'>" + element.ten_khang_sinh + "</option>"));
   });
 
   $(".dataTables_wrapper>:first-child>div").attr("class", "col-sm-12 col-lg-6");
@@ -263,6 +263,7 @@ $(document).ready(function () {
     });
 
     $("#xoa_" + tableName[index]).click(function () {
+      $("#select_khang_sinh option[value='" + $("#" + tableName[index] + ">tbody>tr.table-primary>td:eq(0)").text() + "']").removeClass(modal.substring(1));
       element.row(".table-primary").remove().draw(false);
     });
   });
@@ -275,9 +276,11 @@ $(document).ready(function () {
 
   $("[data-target='#modal_khang_sinh']").click(function () {
     $(modal).modal("hide");
+    $("#select_khang_sinh option").not("." + modal.substring(1)).removeClass("d-none");
   });
 
   $('#modal_khang_sinh').on("hidden.bs.modal", function () {
+    $("#select_khang_sinh option").addClass("d-none");
     $(modal).modal("show");
   })
 
@@ -288,6 +291,7 @@ $(document).ready(function () {
         ten_khang_sinh = $("#select_khang_sinh option:selected").text(),
         ket_qua = $("[name='ket_qua']:checked").length == 0 ? "" : $("[name='ket_qua']:checked").val();
 
+      $("#select_khang_sinh option[value='" + ma_khang_sinh + "']").addClass(modal.substring(1)).addClass("d-none");
       switch (modal) {
         case "#modal_viem_phoi":
           table[0].row.add([ma_khang_sinh, ten_khang_sinh, ket_qua]).draw(false);
@@ -307,7 +311,7 @@ $(document).ready(function () {
 
   $("#modal_khang_sinh .modal-footer button").on("click", function () {
     $("#modal_khang_sinh .modal-body input").prop("checked", false);
-    $("#modal_khang_sinh .modal-body select").val($(".modal-body select option:first").val());;
+    $("#modal_khang_sinh .modal-body select").val($(".modal-body select option:first").val());
   });
 
   $("#buttonStepNext, #buttonStepBack").click(function () {
