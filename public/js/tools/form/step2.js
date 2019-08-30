@@ -2,7 +2,7 @@
  * @author Daomtthuan
  * @email dao.mt.thuan@gmail.com
  * @create date 2019-08-09 18:28:32
- * @modify date 2019-08-30 02:30:02
+ * @modify date 2019-08-30 15:32:23
  */
 
 function getPair(name) {
@@ -285,7 +285,7 @@ $(document).ready(function () {
   })
 
   $("#submit_khang_sinh").on("click", function () {
-    if ($("#select_khang_sinh").val() != null || $("[name='ket_qua']:checked").length != 0) {
+    if ($("#select_khang_sinh").val() != null) {
       var
         ma_khang_sinh = $("#select_khang_sinh").val(),
         ten_khang_sinh = $("#select_khang_sinh option:selected").text(),

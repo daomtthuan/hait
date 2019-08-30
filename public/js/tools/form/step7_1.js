@@ -59,7 +59,7 @@ $(document).ready(function () {
   $(".dataTables_length label select").addClass("ml-1");
   $(".dataTables_filter label input").addClass("ml-2");
 
-  const name = [
+  conzt name = [
     "vi_tri_phau_thuat",
     "ngay_phau_thuat",
     "loai_phau_thuat",
