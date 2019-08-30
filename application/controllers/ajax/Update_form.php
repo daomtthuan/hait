@@ -3,7 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 require(APPPATH . '/libraries/REST_Controller.php');
 class Update_Form extends REST_Controller
 {
-
 	public function __construct($config = 'rest')
 	{
 		parent::__construct($config);
@@ -14,6 +13,7 @@ class Update_Form extends REST_Controller
 	function index_post()
 	{
 		$data = $this->post(NULL,TRUE);
+		//log_message("debug",$data);
 		$form_id=$data['form_id'];
 		$this->Form_model->update_content($form_id,json_encode($data));
 		if($form_id){

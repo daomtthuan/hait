@@ -73,6 +73,10 @@ class Test extends MY_Controller {
 		$data=$this->Form_model->get_form('all');
 		print_r($data);
 	}
+	public function test_json(){
+		$content=$this->Form_model->get_json(7);
+		print_r($content);
+	}
 
 }
 

@@ -61,6 +61,17 @@ class Form_model extends CI_Model
 		$this->db->update('form', $data);
 	}
 	/*
+	 * Lấy mảng json
+	 * */
+	public  function get_json($form_id){
+		$this->db->select('content');
+		$this->db->where('form_id', $form_id);
+		$query = $this->db->get('form');
+		$row = $query->row();
+		$content= $row->content;
+		return $content;
+	}
+	/*
 	 * Hàm lấy danh sách form
 	 * Tham số: $staus: all (tất cả form),unfinished, finnished;
 	 * */

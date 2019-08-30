@@ -62,11 +62,10 @@ $(document).ready(function () {
       stringJson += ('"step' + i + '":' + sessionStorage.getItem("step" + i) + ',');
     }
     stringJson = stringJson.slice(0, -1) + "}";
-
     $.ajax({
       url: update_form,
       type: "post",
-      data: stringJson,
+      data: post,
       contentType: "application/json;charset=UTF-8",
       success: function () {
         $("#success").modal("toggle");
