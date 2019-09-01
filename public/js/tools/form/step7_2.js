@@ -2,69 +2,70 @@
  * @author Daomtthuan
  * @email dao.mt.thuan@gmail.com
  * @create date 2019-08-09 18:28:32
- * @modify date 2019-08-09 18:29:41
+ * @modify date 2019-09-01 17:39:49
  */
 
-function getPair(name) {
-  switch ($("[name='" + name + "']").attr("type")) {
-    case "radio":
-      var value = $("[name='" + name + "']:checked").val();
-      if (value != undefined) return '"' + name + '":"' + value + '",';
-      break;
+$(document).ready(() => {
 
-    default:
-      var value = $("[name='" + name + "']").val();
-      if (value != "") return '"' + name + '":"' + value + '",';
-      break;
-  }
-  return '';
-}
+  let form = JSON.parse(sessionStorage.form);
 
-function putInto(step, name) {
-  if (step.hasOwnProperty(name))
+  function getPair(name) {
     switch ($("[name='" + name + "']").attr("type")) {
       case "radio":
-        $("[name='" + name + "'][value='" + step[name] + "']").prop("checked", true);
+        form[name] = $("[name='" + name + "']:checked").val();
         break;
 
       default:
-        $("[name='" + name + "']").val(step[name]);
+        form[name] = $("[name='" + name + "']").val();
         break;
     }
-}
 
-function getTable(table) {
-  if (!$("#" + table + " td").hasClass("dataTables_empty")) {
-    var Rows = [];
-    var $headers = $("#" + table + " th");
-    $("#" + table + " tbody tr").each(function (index) {
-      $cells = $(this).find("td");
-      Rows[index] = {};
-      $cells.each(function (cellIndex) {
-        if ($(this).html() != "") Rows[index][$($headers[cellIndex]).attr("name")] = $(this).html();
-      });
-    });
-    return '"' + table + '":' + JSON.stringify(Rows) + ',';
+    if (form[name] == "" || form[name] == undefined) delete form[name];
   }
-  return '';
-}
 
-$(document).ready(function () {
+  function putInto(name) {
+    if (form.hasOwnProperty(name))
+      switch ($("[name='" + name + "']").attr("type")) {
+        case "radio":
+          $("[name='" + name + "'][value='" + form[name] + "']").prop("checked", true);
+          break;
 
-  $.getJSON(antibiotic_list, function (data) {
-    data.forEach(element => $(".select_khang_sinh").append("<option value='" + element.ma_khang_sinh + "'>" + element.ten_khang_sinh + "</option>"));
-  });
+        default:
+          $("[name='" + name + "']").val(form[name]);
+          break;
+      }
+  }
+
+  function getTable(table) {
+    if (!$("#" + table + " td").hasClass("dataTables_empty")) {
+      let Rows = [];
+      let $headers = $("#" + table + " th");
+      $("#" + table + " tbody tr").each(function (index) {
+        $cells = $(this).find("td");
+        Rows[index] = {};
+        $cells.each(function (cellIndex) {
+          if ($(this).html() != "")
+            Rows[index][$($headers[cellIndex]).attr("name")] = $(this).html();
+        });
+        Rows[index].ksd = table;
+      });
+      form[table] = Rows;
+    }
+  }
+
+  $.getJSON(antibiotic_list, data => data.forEach(element => $(".select_khang_sinh").append("<option value='" + element.ma_khang_sinh + "'>" + element.ten_khang_sinh + "</option>"))
+  );
 
   $(".dataTables_wrapper>:first-child>div").attr("class", "col-sm-12 col-lg-6");
   $(".dataTables_length label select").addClass("ml-1");
   $(".dataTables_filter label input").addClass("ml-2");
 
-  const name = [
+  let name = [
     "khang_sinh",
     "muc_dich_su_dung"
   ];
 
-  const config = {
+  let config = {
     "language": {
       "decimal": "",
       "emptyTable": "Không có dữ liệu",
@@ -91,10 +92,10 @@ $(document).ready(function () {
     }
   };
 
-  khang_sinh_khong_phau_thuat = $("#khang_sinh_khong_phau_thuat").DataTable(config);
+  let khang_sinh_khong_phau_thuat = $("#khang_sinh_khong_phau_thuat").DataTable(config);
 
-  if (JSON.parse(sessionStorage.step7)["khang_sinh_khong_phau_thuat"] != null)
-    JSON.parse(sessionStorage.step7)["khang_sinh_khong_phau_thuat"].forEach(element => khang_sinh_khong_phau_thuat.row.add([
+  if (form["khang_sinh_khong_phau_thuat"] != null)
+    form["khang_sinh_khong_phau_thuat"].forEach(element => khang_sinh_khong_phau_thuat.row.add([
       element.ma_khang_sinh == null ? "" : element.ma_khang_sinh,
       element.ten_khang_sinh == null ? "" : element.ten_khang_sinh,
       element.ngaybd == null ? "" : element.ngaybd,
@@ -102,12 +103,9 @@ $(document).ready(function () {
       element.lieu == null ? "" : element.lieu
     ]).draw(false));
 
-  if (sessionStorage.step7 != null) {
-    var step7 = JSON.parse(sessionStorage.step7);
-    name.forEach(element => putInto(step7, element));
-  }
+  name.forEach(element => putInto(element));
 
-  $("[name='khang_sinh'][value='1']:checked").each(function () {
+  $("[name='khang_sinh'][value='1']:checked").each(() => {
     $(".khang_sinh").fadeIn(200);
     $(".khang_sinh input").removeAttr("readonly");
   });
@@ -134,30 +132,32 @@ $(document).ready(function () {
     }
   });
 
-  $("#xoa_khang_sinh_khong_phau_thuat").click(function () {
+  $("#xoa_khang_sinh_khong_phau_thuat").click(() => {
     khang_sinh_khong_phau_thuat.row(".table-primary").remove().draw(false);
   });
 
-  $("#submit_khang_sinh_khong_phau_thuat").on("click", function () {
-    khang_sinh_khong_phau_thuat.row.add([
-      $("#select_khang_sinh_khong_phau_thuat").val(),
-      $("#select_khang_sinh_khong_phau_thuat option:selected").text(),
-      $("#ngaybd_khang_sinh_khong_phau_thuat").val(),
-      $("#ngaykt_khang_sinh_khong_phau_thuat").val(),
-      $("#lieu_khang_sinh_khong_phau_thuat").val(),
-    ]).draw(false);
+  $("#submit_khang_sinh_khong_phau_thuat").on("click", () => {
+    if ($("#select_khang_sinh_khong_phau_thuat").val() != null)
+      khang_sinh_khong_phau_thuat.row.add([
+        $("#select_khang_sinh_khong_phau_thuat").val(),
+        $("#select_khang_sinh_khong_phau_thuat option:selected").text(),
+        $("#ngaybd_khang_sinh_khong_phau_thuat").val(),
+        $("#ngaykt_khang_sinh_khong_phau_thuat").val(),
+        $("#lieu_khang_sinh_khong_phau_thuat").val(),
+      ]).draw(false);
   });
 
-  $(".modal-footer button").on("click", function () {
+  $(".modal-footer button").on("click", () => {
     $(".modal-body input").val(null);
     $(".modal-body select").val($(".modal-body select option:first").val());;
   });
 
-  $("#buttonStepNext, #buttonStepBack").click(function () {
-    var stringJson = '';
-    name.forEach(element => { stringJson += getPair(element) });
+  $("#buttonStepNext, #buttonStepBack").click(() => {
+    name.forEach(element => getPair(element));
     if ($("[name='khang_sinh'][value='1']").is(":checked"))
-      stringJson += getTable("khang_sinh_khong_phau_thuat");
-    sessionStorage.step7 = "{" + stringJson.slice(0, -1) + "}"
+      getTable("khang_sinh_khong_phau_thuat")
+    sessionStorage.form = JSON.stringify(form);
+
+    $("#main").html('<div class="d-flex justify-content-center mt-5"><div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only"><h3>Đang tải...</span></div></h3></div>');
   });
 });

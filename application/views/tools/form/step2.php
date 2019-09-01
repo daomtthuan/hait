@@ -10,7 +10,8 @@
   }
 </style>
 <script>
-  var antibiotic_list = "<?php echo base_url('ajax/antibiotic-list') ?>";
+  if (sessionStorage.form == null) location = "<?php echo base_url($role) ?>";
+  const antibiotic_list = "<?php echo base_url('ajax/antibiotic-list') ?>";
 </script>
 <h1 class="h3 mb-4 text-gray-800">PHIẾU GIÁM SÁT NGANG NHIỄM KHUẨN BỆNH VIỆN</h1>
 <hr class="sidebar-divider">

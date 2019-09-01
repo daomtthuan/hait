@@ -2,40 +2,41 @@
  * @author Daomtthuan
  * @email dao.mt.thuan@gmail.com
  * @create date 2019-08-09 18:27:17
- * @modify date 2019-08-09 18:28:24
+ * @modify date 2019-09-01 17:36:27
  */
 
-function getPair(name) {
-  switch ($("[name='" + name + "']").attr("type")) {
-    case "radio":
-      var value = $("[name='" + name + "']:checked").val();
-      if (value != undefined) return '"' + name + '":"' + value + '",';
-      break;
+$(document).ready(() => {
 
-    default:
-      var value = $("[name='" + name + "']").val();
-      if (value != "") return '"' + name + '":"' + value + '",';
-      break;
-  }
-  return '';
-}
+  let form = JSON.parse(sessionStorage.form);
 
-function putInto(step, name) {
-  if (step.hasOwnProperty(name))
+  function getPair(name) {
     switch ($("[name='" + name + "']").attr("type")) {
       case "radio":
-        $("[name='" + name + "'][value='" + step[name] + "']").prop("checked", true);
+        form[name] = $("[name='" + name + "']:checked").val();
         break;
 
       default:
-        $("[name='" + name + "']").val(step[name]);
+        form[name] = $("[name='" + name + "']").val();
         break;
     }
-}
 
-$(document).ready(function () {
+    if (form[name] == "" || form[name] == undefined) delete form[name];
+  }
 
-  const name = [
+  function putInto(name) {
+    if (form.hasOwnProperty(name))
+      switch ($("[name='" + name + "']").attr("type")) {
+        case "radio":
+          $("[name='" + name + "'][value='" + form[name] + "']").prop("checked", true);
+          break;
+
+        default:
+          $("[name='" + name + "']").val(form[name]);
+          break;
+      }
+  }
+
+  let name = [
     "ngay_vao_khoa",
     "ngay_vao_vien",
     "msba",
@@ -49,19 +50,19 @@ $(document).ready(function () {
     "chan_doan_xac_dinh",
     "nhiem_khuan_luc_vao"];
 
-  if (sessionStorage.step1 != null) {
-    var step1 = JSON.parse(sessionStorage.step1);
-    name.forEach(element => putInto(step1, element));
-  }
+  name.forEach(element => putInto(element));
 
   if ($("#ngay_dieu_tra").val() == "") {
     var now = new Date();
-    $("#ngay_dieu_tra").val(now.getFullYear() + "-" + (("0" + (now.getMonth() + 1)).slice(-2)) + "-" + (("0" + now.getDate()).slice(-2)));
+    let value = now.getFullYear() + "-" + (("0" + (now.getMonth() + 1)).slice(-2)) + "-" + (("0" + now.getDate()).slice(-2));
+    $("#ngay_dieu_tra").val(value);
+    form.ngay_dieu_tra = value;
   }
 
-  $("#buttonStepNext").click(function () {
-    var stringJson = '';
-    name.forEach(element => { stringJson += getPair(element) });
-    sessionStorage.step1 = "{" + stringJson.slice(0, -1) + "}"
+  $("#buttonStepNext").click(() => {
+    name.forEach(element => getPair(element));
+    sessionStorage.form = JSON.stringify(form);
+
+    $("#main").html('<div class="d-flex justify-content-center mt-5"><div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only"><h3>Đang tải...</span></div></h3></div>');
   });
 });

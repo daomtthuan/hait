@@ -2,28 +2,29 @@
  * @author Daomtthuan
  * @email dao.mt.thuan@gmail.com
  * @create date 2019-08-09 18:28:32
- * @modify date 2019-08-09 18:29:47
+ * @modify date 2019-09-01 17:39:46
  */
 
-function getPair(name) {
-  var value = $("[name='" + name + "']:checked").val();
-  if (value != undefined) return '"' + name + '":"' + value + '",';
-  else return '';
-}
+$(document).ready(() => {
 
-function putInto(step, name) {
-  if (step.hasOwnProperty(name))
-    $("[name='" + name + "'][value='" + step[name] + "']").prop("checked", true);
-}
+  let form = JSON.parse(sessionStorage.form);
+  let part = form.phau_thuat;
 
-$(document).ready(function () {
-
-  var part = JSON.parse(sessionStorage.step6).phau_thuat;
   if (part != null)
     $("#buttonStepBack").attr("href", $("#buttonStepBack").attr("href") + "/7-" + part);
   else $("#buttonStepBack").attr("href", $("#buttonStepBack").attr("href") + "/6");
 
-  const name = [
+  function getPair(name) {
+    form[name] = $("[name='" + name + "']:checked").val();
+    if (form[name] == undefined) delete form[name];
+  }
+
+  function putInto(name) {
+    if (form.hasOwnProperty(name))
+      $("[name='" + name + "'][value='" + form[name] + "']").prop("checked", true);
+  }
+
+  let name = [
     "ket_qua_dieu_tri",
     "nam_vien"
   ];
@@ -39,42 +40,57 @@ $(document).ready(function () {
     }
   });
 
-  if (sessionStorage.step8 != null) {
-    var step8 = JSON.parse(sessionStorage.step8);
-    name.forEach(element => putInto(step8, element));
+  name.forEach(element => putInto(element));
+  if ($("[name='ket_qua_dieu_tri']:checked").val() == "5") {
+    $(".ket_qua_dieu_tri").fadeIn(200);
+    $(".ket_qua_dieu_tri input").removeAttr("readonly");
   }
 
-  $("#buttonStepBack").click(function () {
-    var stringJson = '';
-    name.forEach(element => { stringJson += getPair(element) });
-    sessionStorage.step8 = "{" + stringJson.slice(0, -1) + "}"
+  $("#buttonStepBack").click(() => {
+    name.forEach(element => getPair(element));
+    sessionStorage.form = JSON.stringify(form);
+
+    $("#main").html('<div class="d-flex justify-content-center mt-5"><div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only"><h3>Đang tải...</span></div></h3></div>');
   });
 
-  $("#buttonSubmit").click(function (event) {
-    event.preventDefault();
+  $("#buttonSubmit").click(() => {
 
-    var stringJson = '';
-    name.forEach(element => { stringJson += getPair(element) });
-    sessionStorage.step8 = "{" + stringJson.slice(0, -1) + "}"
+    name.forEach(element => getPair(element));
+    sessionStorage.form = JSON.stringify(form);
 
-    var stringJson = '{"form_id":"' + sessionStorage.form_id + '",';
-    for (var i = 1; i <= 8; i++) {
-      stringJson += ('"step' + i + '":' + sessionStorage.getItem("step" + i) + ',');
-    }
-    stringJson = stringJson.slice(0, -1) + "}";
+    let data = form;
+    data.danh_sach_khang_sinh = [];
+    [
+      "vp_khang_sinh",
+      "nktn_khang_sinh",
+      "nkh_khang_sinh",
+      "nkvm_khang_sinh",
+      "khang_sinh_truoc_phau_thuat",
+      "khang_sinh_du_phong",
+      "khang_sinh_sau_phau_thuat",
+      "khang_sinh_khong_phau_thuat"
+    ].forEach(list => {
+      if (data.hasOwnProperty(list)) {
+        data[list].forEach(element => data.danh_sach_khang_sinh.push(element));
+        delete data[list];
+      }
+    });
+
     $.ajax({
-      url: update_form,
+      url: updateUrl,
       type: "post",
-      data: post,
+      data: data,
       contentType: "application/json;charset=UTF-8",
       success: function () {
         $("#success").modal("toggle");
-        //sessionStorage.clear();
+        sessionStorage.clear();
       },
       error: function () {
         $("#error").modal("toggle");
       }
     });
+
+    $("#main").html('<div class="d-flex justify-content-center mt-5"><div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only"><h3>Đang tải...</span></div></h3></div>');
   });
 
 });
