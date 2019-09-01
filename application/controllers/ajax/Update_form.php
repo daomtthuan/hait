@@ -14,8 +14,6 @@ class Update_Form extends REST_Controller
 	function index_post()
 	{
 		$data = $this->post(NULL,TRUE);
-		//log_message("debug",$data);
-		$dulieu = (object) $data;
 		$form_id=$data['form_id'];
 		$this->Form_model->update_content($form_id,json_encode($data));
 		if($form_id){
@@ -26,8 +24,9 @@ class Update_Form extends REST_Controller
 			//Them moi
 			$this->$form_id=$this->Form_model->insert_new_form(1,'Khoa noi',1,"CHINH");
 		}
-		log_message('debug', "Form id:". $data["form_id"]);
-		if(isset($data["step1"])){
+		log_message('debug', "Form id:". $data['form_id']);
+		/*
+		 if(isset($data["step1"])){
 			$this->Value_model->insert($data["step1"],$form_id,"step1");
 		}
 		if(isset($data["step2"])){
@@ -87,6 +86,8 @@ class Update_Form extends REST_Controller
 		//Check list
 		$this->List_ks_model->create_list();
 		$this->response(array('status' => 'failed'));
+		 * */
+
 	    /*
 		$result=true;
 		if ($result === FALSE) {
