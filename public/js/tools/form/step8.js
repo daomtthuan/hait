@@ -79,7 +79,7 @@ $(document).ready(() => {
     $.ajax({
       url: updateUrl,
       type: "post",
-      data: data,
+      data: JSON.stringify(data),
       contentType: "application/json;charset=UTF-8",
       success: function () {
         $("#success").modal("toggle");
