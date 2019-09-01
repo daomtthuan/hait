@@ -5,6 +5,15 @@
  * @modify date 2019-08-15 00:32:15
  */
 
+var edit = function (id) {
+  // $("#main").html('<div class="d-flex justify-content-center mt-5"><div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only"><h3>Đang tải...</span></div></h3></div>');
+  //$.getJSON(editUrl + id, data => sessionStorage.form = JSON.stringify(data)).done(() => location = btneditHref).fail(() => $("#error").modal("toggle"));
+
+  $.getJSON(editUrl + id, data => {
+    alert(data);
+  });
+}
+
 $(document).ready(function () {
 
   $(".dataTables_wrapper>:first-child>div").attr("class", "col-sm-12 col-lg-6");
@@ -44,16 +53,16 @@ $(document).ready(function () {
       switch (element.status) {
         case "unfinished":
           tool = `
-          <a id="`+ element.form_id +`" class="btn-finish btn btn-primary btn-sm" href=""><i class="fas fa-check"></i></a>
-          <a id="`+ element.form_id +`" class="btn-edit btn btn-secondary btn-sm" href="`+ editUrl + `"><i class="fas fa-pen"></i></a>
-          <a id="`+ element.form_id +`" class="btn-delete btn btn-danger btn-sm" href=""><i class="fas fa-trash-alt"></i></a>`;
+          <a id-form="`+ element.form_id + `" class="btn-finish btn btn-primary btn-sm" href="#"><i class="fas fa-check"></i></a>
+          <a id-form="`+ element.form_id + `" class="btn-edit btn btn-secondary btn-sm" href="#" onclick="edit(` + element.form_id + `)"><i class="fas fa-pen"></i></a>
+          <a id-form="`+ element.form_id + `" class="btn-delete btn btn-danger btn-sm" href="#"><i class="fas fa-trash-alt"></i></a>`;
           break;
 
         case "verifying":
-          tool = `<a id="`+ element.form_id +`" class="btn-view btn btn-secondary btn-sm" href=""><i class="fas fa-eye"></i></a>`;
+          tool = `<a id="` + element.form_id + `" class="btn-view btn btn-secondary btn-sm" href=""><i class="fas fa-eye"></i></a>`;
           break;
         case "verified":
-          tool = `<a id="`+ element.form_id +`" class="btn-view btn btn-secondary btn-sm" href=""><i class="fas fa-eye"></i></a>`;
+          tool = `<a id="` + element.form_id + `" class="btn-view btn btn-secondary btn-sm" href=""><i class="fas fa-eye"></i></a>`;
           break;
       }
 
@@ -66,5 +75,5 @@ $(document).ready(function () {
         tool
       ]).draw(true);
     });
-  });
+  }).fail(() => $("#error").modal("toggle"));
 });
