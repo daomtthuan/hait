@@ -63,7 +63,7 @@ class Form_model extends CI_Model
 	/*
 	 * Lấy mảng json
 	 * */
-	public  function get_json($form_id){
+	public function get_json($form_id){
 		$this->db->select('content');
 		$this->db->where('form_id', $form_id);
 		$query = $this->db->get('form');
