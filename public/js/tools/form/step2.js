@@ -2,36 +2,39 @@
  * @author Daomtthuan
  * @email dao.mt.thuan@gmail.com
  * @create date 2019-08-09 18:28:32
- * @modify date 2019-09-01 17:36:40
+ * @modify date 2019-09-01 18:14:25
  */
 
 $(document).ready(() => {
 
   let form = JSON.parse(sessionStorage.form);
 
-  function getPair(name) {
+  function getPair(part, name) {
+    if (!form.hasOwnProperty(part)) form[part] = {};
+
     switch ($("[name='" + name + "']").attr("type")) {
       case "radio":
-        form[name] = $("[name='" + name + "']:checked").val();
+        form[part][name] = $("[name='" + name + "']:checked").val();
         break;
 
       default:
-        form[name] = $("[name='" + name + "']").val();
+        form[part][name] = $("[name='" + name + "']").val();
         break;
     }
 
-    if (form[name] == "" || form[name] == undefined) delete form[name];
+    if (form[part][name] == "" || form[part][name] == undefined) delete form[part][name];
   }
 
-  function putInto(name) {
-    if (form.hasOwnProperty(name))
+  function putInto(part, name) {
+    if (!form.hasOwnProperty(part)) form[part] = {};
+    if (form[part].hasOwnProperty(name))
       switch ($("[name='" + name + "']").attr("type")) {
         case "radio":
-          $("[name='" + name + "'][value='" + form[name] + "']").prop("checked", true);
+          $("[name='" + name + "'][value='" + form[part][name] + "']").prop("checked", true);
           break;
 
         default:
-          $("[name='" + name + "']").val(form[name]);
+          $("[name='" + name + "']").val(form[part][name]);
           break;
       }
   }
@@ -188,34 +191,34 @@ $(document).ready(() => {
   });
 
 
-  if (form.hasOwnProperty("nkbv")) {
-    form.nkbv.forEach(element => {
-      $("[name='nkbv'][value='" + element + "']").prop("checked", true);
+  if (form.hasOwnProperty("loai_nkbv")) {
+    form.loai_nkbv.forEach(element => {
+      $("[name='loai_nkbv'][value='" + element + "']").prop("checked", true);
       switch (element) {
         case "1":
-          vp_name.forEach(element => putInto(element));
+          vp_name.forEach(element => putInto("vp", element));
           break;
         case "2":
-          nktn_name.forEach(element => putInto(element));
+          nktn_name.forEach(element => putInto("nktn", element));
           break;
         case "3":
-          nkh_name.forEach(element => putInto(element));
+          nkh_name.forEach(element => putInto("nkh", element));
           break;
         case "4":
-          nkvm_name.forEach(element => putInto(element));
+          nkvm_name.forEach(element => putInto("nkvm", element));
           break;
       }
     });
   }
 
-  $("#nkbv tbody tr td [type='checkbox']").on("click", function () {
+  $("#loai_nkbv tbody tr td [type='checkbox']").on("click", function () {
     if ($(this).is(":checked"))
       $("." + $(this).attr("id")).prop("disabled", false);
     else
       $("." + $(this).attr("id")).prop("disabled", true);
   });
 
-  $("#nkbv tbody tr td [type='checkbox']").each(function () {
+  $("#loai_nkbv tbody tr td [type='checkbox']").each(function () {
     if ($(this).is(":checked"))
       $("." + $(this).attr("id")).prop("disabled", false);
     else
@@ -300,21 +303,21 @@ $(document).ready(() => {
   });
 
   $("#buttonStepNext, #buttonStepBack").click(() => {
-    let nkbv = [];
-    $("[name='nkbv']:checked").each(function () { nkbv.push($(this).val()) });
-    if (nkbv.length > 0) form.nkbv = nkbv;
+    let loai_nkbv = [];
+    $("[name='loai_nkbv']:checked").each(function () { loai_nkbv.push($(this).val()) });
+    if (loai_nkbv.length > 0) form.loai_nkbv = loai_nkbv;
 
-    if ($("[name='nkbv'][value='1']").is(":checked"))
-      vp_name.forEach(element => getPair(element));
+    if ($("[name='loai_nkbv'][value='1']").is(":checked"))
+      vp_name.forEach(element => getPair("vp", element));
 
-    if ($("[name='nkbv'][value='2']").is(":checked"))
-      nktn_name.forEach(element => getPair(element));
+    if ($("[name='loai_nkbv'][value='2']").is(":checked"))
+      nktn_name.forEach(element => getPair("nktn", element));
 
-    if ($("[name='nkbv'][value='3']").is(":checked"))
-      nkh_name.forEach(element => getPair(element));
+    if ($("[name='loai_nkbv'][value='3']").is(":checked"))
+      nkh_name.forEach(element => getPair("nkh", element));
 
-    if ($("[name='nkbv'][value='4']").is(":checked"))
-      nkvm_name.forEach(element => getPair(element));
+    if ($("[name='loai_nkbv'][value='4']").is(":checked"))
+      nkvm_name.forEach(element => getPair("nkvm", element));
 
     tableName.forEach(element => getTable(element));
     sessionStorage.form = JSON.stringify(form);
