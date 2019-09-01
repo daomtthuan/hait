@@ -25,6 +25,7 @@ class Update_Form extends REST_Controller
 			$this->$form_id=$this->Form_model->insert_new_form(1,'Khoa noi',1,"CHINH");
 		}
 		log_message('debug', "Form id:". $data['form_id']);
+		$this->Value_model->insert($data,$form_id,"all");
 		/*
 		 if(isset($data["step1"])){
 			$this->Value_model->insert($data["step1"],$form_id,"step1");
