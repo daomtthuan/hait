@@ -10,7 +10,8 @@
   }
 </style>
 <script>
-  var antibiotic_list = "<?php echo base_url('ajax/antibiotic-list') ?>";
+  if (sessionStorage.form == null) location = "<?php echo base_url($role) ?>";
+  const antibiotic_list = "<?php echo base_url('ajax/antibiotic-list') ?>";
 </script>
 <h1 class="h3 mb-4 text-gray-800">PHIẾU GIÁM SÁT NGANG NHIỄM KHUẨN BỆNH VIỆN</h1>
 <hr class="sidebar-divider">
@@ -24,7 +25,7 @@
       <div class="row">
         <div class="col-12">
           <div class="table-responsive-lg">
-            <table id="nkbv" class="table table-sm table-bordered" style="width:100%">
+            <table id="loai_nkbv" class="table table-sm table-bordered" style="width:100%">
               <thead class="thead-light">
                 <tr>
                   <th scope="col">Loại nhiễm khuẩn</th>
@@ -37,7 +38,7 @@
                 <tr>
                   <td>
                     <div class="custom-control custom-checkbox mt-2">
-                      <input type="checkbox" id="viem_phoi" name="nkbv" class="custom-control-input" value="1">
+                      <input type="checkbox" id="viem_phoi" name="loai_nkbv" class="custom-control-input" value="1">
                       <label class="custom-control-label" for="viem_phoi">Viêm phổi</label>
                     </div>
                   </td>
@@ -56,7 +57,7 @@
                 <tr>
                   <td>
                     <div class="custom-control custom-checkbox mt-2">
-                      <input type="checkbox" id="nhiem_khuan_tiet_nieu" name="nkbv" class="custom-control-input" value="2">
+                      <input type="checkbox" id="nhiem_khuan_tiet_nieu" name="loai_nkbv" class="custom-control-input" value="2">
                       <label class="custom-control-label" for="nhiem_khuan_tiet_nieu">Nhiễm khuẩn tiết niệu</label>
                     </div>
                   </td>
@@ -75,7 +76,7 @@
                 <tr>
                   <td>
                     <div class="custom-control custom-checkbox mt-2">
-                      <input type="checkbox" id="nhiem_khuan_huyet" name="nkbv" class="custom-control-input" value="3">
+                      <input type="checkbox" id="nhiem_khuan_huyet" name="loai_nkbv" class="custom-control-input" value="3">
                       <label class="custom-control-label" for="nhiem_khuan_huyet">Nhiễm khuẩn huyết</label>
                     </div>
                   </td>
@@ -94,7 +95,7 @@
                 <tr>
                   <td>
                     <div class="custom-control custom-checkbox mt-2">
-                      <input type="checkbox" id="nhiem_khuan_vet_mo" name="nkbv" class="custom-control-input" value="4">
+                      <input type="checkbox" id="nhiem_khuan_vet_mo" name="loai_nkbv" class="custom-control-input" value="4">
                       <label class="custom-control-label" for="nhiem_khuan_vet_mo">Nhiễm khuẩn vết mổ</label>
                     </div>
                   </td>

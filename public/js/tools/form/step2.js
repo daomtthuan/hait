@@ -2,64 +2,67 @@
  * @author Daomtthuan
  * @email dao.mt.thuan@gmail.com
  * @create date 2019-08-09 18:28:32
- * @modify date 2019-08-30 15:32:23
+ * @modify date 2019-09-01 18:14:25
  */
 
-function getPair(name) {
-  switch ($("[name='" + name + "']").attr("type")) {
-    case "radio":
-      var value = $("[name='" + name + "']:checked").val();
-      if (value != undefined) return '"' + name + '":"' + value + '",';
-      break;
+$(document).ready(() => {
 
-    default:
-      var value = $("[name='" + name + "']").val();
-      if (value != "") return '"' + name + '":"' + value + '",';
-      break;
-  }
-  return '';
-}
+  let form = JSON.parse(sessionStorage.form);
 
-function putInto(step, name) {
-  if (step.hasOwnProperty(name))
+  function getPair(part, name) {
+    if (!form.hasOwnProperty(part)) form[part] = {};
+
     switch ($("[name='" + name + "']").attr("type")) {
       case "radio":
-        $("[name='" + name + "'][value='" + step[name] + "']").prop("checked", true);
+        form[part][name] = $("[name='" + name + "']:checked").val();
         break;
 
       default:
-        $("[name='" + name + "']").val(step[name]);
+        form[part][name] = $("[name='" + name + "']").val();
         break;
     }
-}
 
-function getTable(table) {
-  if (!$("#" + table + " td").hasClass("dataTables_empty")) {
-    var Rows = [];
-    var $headers = $("#" + table + " th");
-    $("#" + table + " tbody tr").each(function (index) {
-      $cells = $(this).find("td");
-      Rows[index] = {};
-      $cells.each(function (cellIndex) {
-        if ($(this).html() != "") Rows[index][$($headers[cellIndex]).attr("name")] = $(this).html();
-      });
-    });
-    return '"' + table + '":' + JSON.stringify(Rows) + ',';
+    if (form[part][name] == "" || form[part][name] == undefined) delete form[part][name];
   }
-  return '';
-}
 
-$(document).ready(function () {
+  function putInto(part, name) {
+    if (!form.hasOwnProperty(part)) form[part] = {};
+    if (form[part].hasOwnProperty(name))
+      switch ($("[name='" + name + "']").attr("type")) {
+        case "radio":
+          $("[name='" + name + "'][value='" + form[part][name] + "']").prop("checked", true);
+          break;
 
-  $.getJSON(antibiotic_list, function (data) {
-    data.forEach(element => $(".select_khang_sinh").append("<option class='d-none' value='" + element.ma_khang_sinh + "'>" + element.ten_khang_sinh + "</option>"));
-  });
+        default:
+          $("[name='" + name + "']").val(form[part][name]);
+          break;
+      }
+  }
+
+  function getTable(table) {
+    if (!$("#" + table + " td").hasClass("dataTables_empty")) {
+      let Rows = [];
+      let $headers = $("#" + table + " th");
+      $("#" + table + " tbody tr").each(function (index) {
+        $cells = $(this).find("td");
+        Rows[index] = {};
+        $cells.each(function (cellIndex) {
+          if ($(this).html() != "")
+            Rows[index][$($headers[cellIndex]).attr("name")] = $(this).html();
+        });
+        Rows[index].ksd = table;
+      });
+      form[table] = Rows;
+    }
+  }
+
+  $.getJSON(antibiotic_list, data => data.forEach(element => $(".select_khang_sinh").append("<option class='d-none' value='" + element.ma_khang_sinh + "'>" + element.ten_khang_sinh + "</option>")));
 
   $(".dataTables_wrapper>:first-child>div").attr("class", "col-sm-12 col-lg-6");
   $(".dataTables_length label select").addClass("ml-1");
   $(".dataTables_filter label input").addClass("ml-2");
 
-  const vp_name = [
+  let vp_name = [
     "vp_ngay_xuat_hien",
     "vp_trieu_chung",
     "vp_sot",
@@ -84,7 +87,7 @@ $(document).ready(function () {
     "vp_ten_vi_khuan"
   ];
 
-  const nktn_name = [
+  let nktn_name = [
     "nktn_ngay_xuat_hien",
     "nktn_trieu_chung",
     "nktn_sot",
@@ -99,7 +102,7 @@ $(document).ready(function () {
     "nktn_ten_vi_khuan"
   ];
 
-  const nkh_name = [
+  let nkh_name = [
     "nkh_ngay_xuat_hien",
     "nkh_trieu_chung",
     "nkh_sot",
@@ -113,7 +116,7 @@ $(document).ready(function () {
     "nkh_ten_vi_khuan"
   ];
 
-  const nkvm_name = [
+  let nkvm_name = [
     "nkvm_ngay_xuat_hien",
     "nkvm_trieu_chung",
     "nkvm_loai_vet_mo",
@@ -137,9 +140,14 @@ $(document).ready(function () {
     "nkvm_ten_vi_khuan"
   ];
 
-  const tableName = ["vp_khang_sinh", "nktn_khang_sinh", "nkh_khang_sinh", "nkvm_khang_sinh"];
+  let tableName = [
+    "vp_khang_sinh",
+    "nktn_khang_sinh",
+    "nkh_khang_sinh",
+    "nkvm_khang_sinh"
+  ];
 
-  const config = {
+  let config = {
     "language": {
       "decimal": "",
       "emptyTable": "Không có dữ liệu",
@@ -166,69 +174,51 @@ $(document).ready(function () {
     }
   };
 
-  var table = [
+  let table = [
     $("#vp_khang_sinh").DataTable(config),
     $("#nktn_khang_sinh").DataTable(config),
     $("#nkh_khang_sinh").DataTable(config),
     $("#nkvm_khang_sinh").DataTable(config)
   ];
 
-  if (JSON.parse(sessionStorage.step2)[tableName[0]] != null)
-    JSON.parse(sessionStorage.step2)[tableName[0]].forEach(element => table[0].row.add([
-      element.ma_khang_sinh == null ? "" : element.ma_khang_sinh,
-      element.ten_khang_sinh == null ? "" : element.ten_khang_sinh,
-      element.ket_qua == null ? "" : element.ket_qua
-    ]).draw(false));
-  if (JSON.parse(sessionStorage.step2)[tableName[1]] != null)
-    JSON.parse(sessionStorage.step2)[tableName[1]].forEach(element => table[1].row.add([
-      element.ma_khang_sinh == null ? "" : element.ma_khang_sinh,
-      element.ten_khang_sinh == null ? "" : element.ten_khang_sinh,
-      element.ket_qua == null ? "" : element.ket_qua
-    ]).draw(false));
-  if (JSON.parse(sessionStorage.step2)[tableName[2]] != null)
-    JSON.parse(sessionStorage.step2)[tableName[2]].forEach(element => table[2].row.add([
-      element.ma_khang_sinh == null ? "" : element.ma_khang_sinh,
-      element.ten_khang_sinh == null ? "" : element.ten_khang_sinh,
-      element.ket_qua == null ? "" : element.ket_qua
-    ]).draw(false));
-  if (JSON.parse(sessionStorage.step2)[tableName[3]] != null)
-    JSON.parse(sessionStorage.step2)[tableName[3]].forEach(element => table[3].row.add([
-      element.ma_khang_sinh == null ? "" : element.ma_khang_sinh,
-      element.ten_khang_sinh == null ? "" : element.ten_khang_sinh,
-      element.ket_qua == null ? "" : element.ket_qua
-    ]).draw(false));
+  tableName.forEach((element, index) => {
+    if (form.hasOwnProperty(element))
+      form[element].forEach(element => table[index].row.add([
+        element.ma_khang_sinh == null ? "" : element.ma_khang_sinh,
+        element.ten_khang_sinh == null ? "" : element.ten_khang_sinh,
+        element.ket_qua == null ? "" : element.ket_qua
+      ]).draw(false));
+  });
 
-  if (sessionStorage.step2 != null) {
-    var step2 = JSON.parse(sessionStorage.step2);
-    if (step2.hasOwnProperty("nkbv")) {
-      step2.nkbv.forEach(element => {
-        $("[name='nkbv'][value='" + element + "']").prop("checked", true);
-        switch (element) {
-          case "1":
-            vp_name.forEach(element => putInto(step2.vp, element));
-            break;
-          case "2":
-            nktn_name.forEach(element => putInto(step2.nktn, element));
-            break;
-          case "3":
-            nkh_name.forEach(element => putInto(step2.nkh, element));
-            break;
-          case "4":
-            nkvm_name.forEach(element => putInto(step2.nkvm, element));
-            break;
-        }
-      });
-    }
+
+  if (form.hasOwnProperty("loai_nkbv")) {
+    form.loai_nkbv.forEach(element => {
+      $("[name='loai_nkbv'][value='" + element + "']").prop("checked", true);
+      switch (element) {
+        case "1":
+          vp_name.forEach(element => putInto("vp", element));
+          break;
+        case "2":
+          nktn_name.forEach(element => putInto("nktn", element));
+          break;
+        case "3":
+          nkh_name.forEach(element => putInto("nkh", element));
+          break;
+        case "4":
+          nkvm_name.forEach(element => putInto("nkvm", element));
+          break;
+      }
+    });
   }
 
-  $("#nkbv tbody tr td [type='checkbox']").on("click", function () {
+  $("#loai_nkbv tbody tr td [type='checkbox']").on("click", function () {
     if ($(this).is(":checked"))
       $("." + $(this).attr("id")).prop("disabled", false);
     else
       $("." + $(this).attr("id")).prop("disabled", true);
   });
 
-  $("#nkbv tbody tr td [type='checkbox']").each(function () {
+  $("#loai_nkbv tbody tr td [type='checkbox']").each(function () {
     if ($(this).is(":checked"))
       $("." + $(this).attr("id")).prop("disabled", false);
     else
@@ -251,7 +241,7 @@ $(document).ready(function () {
   if ($("#nkvm_loai_vet_mo_nong").is(":checked")) $(".nkvm_loai_vet_mo_nong").fadeIn(200);
   else if ($("#nkvm_loai_vet_mo_sau").is(":checked")) $(".nkvm_loai_vet_mo_sau").fadeIn(200);
 
-  table.forEach(function (element, index) {
+  table.forEach((element, index) => {
     $("#" + tableName[index] + " tbody").on("click", "tr", function () {
       if ($(this).hasClass("table-primary")) {
         $(this).removeClass("table-primary");
@@ -262,31 +252,29 @@ $(document).ready(function () {
       }
     });
 
-    $("#xoa_" + tableName[index]).click(function () {
+    $("#xoa_" + tableName[index]).click(() => {
       $("#select_khang_sinh option[value='" + $("#" + tableName[index] + ">tbody>tr.table-primary>td:eq(0)").text() + "']").removeClass(modal.substring(1));
       element.row(".table-primary").remove().draw(false);
     });
   });
 
-  var modal = "";
+  let modal = "";
 
-  $(".btn_modal").click(function () {
-    modal = $(this).attr("data-target");
-  });
+  $(".btn_modal").click(function () { modal = $(this).attr("data-target") });
 
-  $("[data-target='#modal_khang_sinh']").click(function () {
+  $("[data-target='#modal_khang_sinh']").click(() => {
     $(modal).modal("hide");
     $("#select_khang_sinh option").not("." + modal.substring(1)).removeClass("d-none");
   });
 
-  $('#modal_khang_sinh').on("hidden.bs.modal", function () {
+  $('#modal_khang_sinh').on("hidden.bs.modal", () => {
     $("#select_khang_sinh option").addClass("d-none");
     $(modal).modal("show");
   })
 
-  $("#submit_khang_sinh").on("click", function () {
+  $("#submit_khang_sinh").on("click", () => {
     if ($("#select_khang_sinh").val() != null) {
-      var
+      let
         ma_khang_sinh = $("#select_khang_sinh").val(),
         ten_khang_sinh = $("#select_khang_sinh option:selected").text(),
         ket_qua = $("[name='ket_qua']:checked").length == 0 ? "" : $("[name='ket_qua']:checked").val();
@@ -309,42 +297,31 @@ $(document).ready(function () {
     }
   });
 
-  $("#modal_khang_sinh .modal-footer button").on("click", function () {
+  $("#modal_khang_sinh .modal-footer button").on("click", () => {
     $("#modal_khang_sinh .modal-body input").prop("checked", false);
     $("#modal_khang_sinh .modal-body select").val($(".modal-body select option:first").val());
   });
 
-  $("#buttonStepNext, #buttonStepBack").click(function () {
-    var stringJson = '';
-    var nkbv = [];
-    $("[name='nkbv']:checked").each(function () { nkbv.push($(this).val()); });
-    stringJson += '"nkbv":' + JSON.stringify(nkbv) + ',';
+  $("#buttonStepNext, #buttonStepBack").click(() => {
+    let loai_nkbv = [];
+    $("[name='loai_nkbv']:checked").each(function () { loai_nkbv.push($(this).val()) });
+    if (loai_nkbv.length > 0) form.loai_nkbv = loai_nkbv;
 
-    if ($("[name='nkbv'][value='1']").is(":checked")) {
-      stringJson += ('"vp":{');
-      vp_name.forEach(element => { stringJson += getPair(element) });
-      stringJson = stringJson.slice(0, -1) + "},";
-    }
+    if ($("[name='loai_nkbv'][value='1']").is(":checked"))
+      vp_name.forEach(element => getPair("vp", element));
 
-    if ($("[name='nkbv'][value='2']").is(":checked")) {
-      stringJson += ('"nktn":{');
-      nktn_name.forEach(element => { stringJson += getPair(element) });
-      stringJson = stringJson.slice(0, -1) + "},";
-    }
+    if ($("[name='loai_nkbv'][value='2']").is(":checked"))
+      nktn_name.forEach(element => getPair("nktn", element));
 
-    if ($("[name='nkbv'][value='3']").is(":checked")) {
-      stringJson += ('"nkh":{');
-      nkh_name.forEach(element => { stringJson += getPair(element) });
-      stringJson = stringJson.slice(0, -1) + "},";
-    }
+    if ($("[name='loai_nkbv'][value='3']").is(":checked"))
+      nkh_name.forEach(element => getPair("nkh", element));
 
-    if ($("[name='nkbv'][value='4']").is(":checked")) {
-      stringJson += ('"nkvm":{');
-      nkvm_name.forEach(element => { stringJson += getPair(element) });
-      stringJson = stringJson.slice(0, -1) + "},";
-    }
+    if ($("[name='loai_nkbv'][value='4']").is(":checked"))
+      nkvm_name.forEach(element => getPair("nkvm", element));
 
-    tableName.forEach(element => { stringJson += getTable(element) });
-    sessionStorage.step2 = "{" + stringJson.slice(0, -1) + "}";
+    tableName.forEach(element => getTable(element));
+    sessionStorage.form = JSON.stringify(form);
+
+    $("#main").html('<div class="d-flex justify-content-center mt-5"><div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only"><h3>Đang tải...</span></div></h3></div>');
   });
 });

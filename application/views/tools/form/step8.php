@@ -1,5 +1,6 @@
 <script>
-  var update_form = "<?php echo base_url('ajax/update-form')?>";
+  if (sessionStorage.form == null) location = "<?php echo base_url($role) ?>";
+  const updateUrl = "<?php echo base_url('ajax/update-form')?>";
 </script>
 <h1 class="h3 mb-4 text-gray-800">PHIẾU GIÁM SÁT NGANG NHIỄM KHUẨN BỆNH VIỆN</h1>
 <hr class="sidebar-divider">
@@ -57,7 +58,7 @@
 </form>
 <div class="row mt-3">
   <a id="buttonStepBack" class="btn btn-secondary ml-2" href="<?php echo base_url($role.'/form') ?>">Trở về</a>
-  <a id="buttonSubmit" class="btn btn-primary ml-auto mr-2" href="">Hoàn thành</a>
+  <a id="buttonSubmit" class="btn btn-primary ml-auto mr-2" href="#">Hoàn thành</a>
 </div>
 <div id="success" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog shadow-lg" role="document">
