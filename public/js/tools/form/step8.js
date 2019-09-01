@@ -65,7 +65,7 @@ $(document).ready(function () {
     $.ajax({
       url: update_form,
       type: "post",
-      data: post,
+      data: stringJson,
       contentType: "application/json;charset=UTF-8",
       success: function () {
         $("#success").modal("toggle");
