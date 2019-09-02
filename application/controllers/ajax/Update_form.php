@@ -14,8 +14,9 @@ class Update_Form extends REST_Controller
 	function index_post()
 	{
 		$data = $this->post(NULL,TRUE);
+		$dataObject =(Object)$data;
 		$form_id=$data['form_id'];
-		$this->Form_model->update_content($form_id,json_encode($data));
+		$this->Form_model->update_content($form_id,$dataObject->stringJSON);
 		if($form_id){
 			//Cap nhat
 			$this->Value_model->delete($form_id);
