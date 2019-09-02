@@ -9,6 +9,7 @@ $(document).ready(() => {
   $("#new_form").click(function (e) {
     e.preventDefault();
     $("#main").html('<div class="d-flex justify-content-center mt-5"><div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only"><h3>Đang tải...</span></div></h3></div>');
+
     let href = this.href;
     let form = {};
     $.get(new_form, data => form.form_id = data).done(() => {
