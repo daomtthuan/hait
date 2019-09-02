@@ -16,8 +16,10 @@ $(document).ready(() => {
         "password": $("#inputPassword").val(),
         "remember": "true"
       },
-      success: function (output, status, xhr) {
-        alert(xhr.getResponseHeader("Content-Type"));
+      success: function (data, textStatus, jQxhr) {
+        //alert(xhr.getResponseHeader("Content-Type"));
+        //alert(xhr.getAllResponseHeaders());
+		  alert(data);
       },
       error: function () {
         alert("Fail");
