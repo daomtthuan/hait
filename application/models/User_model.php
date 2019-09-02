@@ -23,6 +23,12 @@ class User_model extends CI_Model
 		$this->db->where('user_id', $user_id);
 		$this->db->delete('user');
 	}
+	function info($id){
+		$this->db->where('id',$id);
+		$query = $this->db->get("view_user");
+		$result = $query->row();
+		return $result;
+	}
 }
 
 /* End of file .php */

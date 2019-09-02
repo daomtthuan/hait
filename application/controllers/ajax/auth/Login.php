@@ -23,4 +23,15 @@ class Login extends REST_Controller
 			$this->response(NULL, REST_Controller::HTTP_NOT_FOUND);
 		}
 	}
+	function index_get()
+	{
+	 	$result= $this->ion_auth->logged_in();
+
+		if ($result) {
+			$this->response($result, REST_Controller::HTTP_OK);
+		} else {
+			$this->response($result, REST_Controller::HTTP_NOT_FOUND);
+		}
+	}
+
 }
