@@ -42,7 +42,7 @@
                     <label for="inputUsername">Tên đăng nhập</label>
                   </div>
                   <div class="form-label-group">
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Mật khẩu" value="123456" required>
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Mật khẩu" value="password" required>
                     <label for="inputPassword">Mật khẩu</label>
                   </div>
                   <button id="buttonLogin" value="Đăng nhập" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2">Đăng nhập</button>
@@ -65,7 +65,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha256-fzFFyH01cBVPYzl16KT40wqjhgPtq6FFUB6ckN2+GGw=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
   <script>
-    const loginUrl = "<?php echo base_url('ajax/auth/login') ?>";
+    const
+      loginUrl = "<?php echo base_url('ajax/auth/login') ?>",
+      baseUrl = "<?php echo base_url() ?>";
   </script>
   <script src="<?php echo base_url('public/js/general/login.js') ?>"></script>
 </body>
