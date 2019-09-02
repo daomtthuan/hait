@@ -15,7 +15,7 @@ class Update_Form extends REST_Controller
 	{
 		$data = $this->post(NULL,TRUE);
 		$dataObject =(Object)$data;
-		$form_id=$data['form_id'];
+		$form_id=$dataObject->form_id;
 		$this->Form_model->update_content($form_id,$dataObject->stringJSON);
 		if($form_id){
 			//Cap nhat
@@ -27,8 +27,18 @@ class Update_Form extends REST_Controller
 		}
 		log_message('debug', "Form id:". $data['form_id']);
 		$this->Value_model->insert($data,$form_id,"all");
+		$this->update_nk($dataObject->vp,"VP",$form_id);
+
 		/*
-		 if(isset($data["step1"])){
+		 *
+		if($dataObject->vp){
+			$vp_id="";
+			$vp=(array)$dataObject->vp;
+			$this->$vp_id=$this->Form_model->insert_new_form(1,'Khoa noi',1,"VP");
+			$this->meta->add($form_id,$vp_id);
+			$this->Value_model->insert($vp,$form_id,"VP");
+		}
+		if(isset($data["step1"])){
 			$this->Value_model->insert($data["step1"],$form_id,"step1");
 		}
 		if(isset($data["step2"])){
@@ -100,4 +110,13 @@ class Update_Form extends REST_Controller
 	    */
 
 	}
+	function update_nk($array,$name,$form_id){
+		if($array){
+			$id="";
+			$this->$id=$this->Form_model->insert_new_form(1,'Khoa noi',1,$name);
+			$this->meta->add($form_id,$id);
+			$this->Value_model->insert($array,$form_id,$name);
+		}
+	}
+
 }
