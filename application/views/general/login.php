@@ -20,34 +20,32 @@
     <div class="row no-gutter">
       <div class="d-none d-md-flex col-md-4 col-lg-6">
       </div>
-      <div class="col-md-8 col-lg-6 bg-light">
+      <div class="col-md-8 col-lg-6 bg-light shadow-lg">
         <div class="login d-flex align-items-center py-5">
           <div class="container">
             <div class="row">
               <div class="col-md-9 col-lg-8 mx-auto">
                 <div class="text-center mb-5">
+                  <h6>Copyright &copy; Daomtthuan 2019</h6>
                   <h4 class="text-primary font-weight-bold mb-0">HAIT</h4>
                   <img src="<?php echo base_url('public/img/logo_color.png') ?>" alt="">
                   <h4>
                     <small>HỆ THỐNG QUẢN LÝ</small><br>
                     <span class="text-primary mb-0">GIÁM SÁT NHIỄM KHUẨN BỆNH VIỆN</span>
                   </h4>
+                  <h6><small>Phiên bản 1.0.0</small></h6>
                 </div>
                 <h4 class="login-heading mb-4">Đăng nhập</h4>
-                <form method="post" id="FormLogin" name="FormLogin">
+                <form>
                   <div class="form-label-group">
-                    <input type="text" id="inputUsername" name="inputUsername" class="form-control" placeholder="Tên đăng nhập" required autofocus>
+                    <input type="text" id="inputUsername" class="form-control" placeholder="Tên đăng nhập" value="admin@admin.com" required autofocus>
                     <label for="inputUsername">Tên đăng nhập</label>
                   </div>
                   <div class="form-label-group">
-                    <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Mật khẩu" required>
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Mật khẩu" value="123456" required>
                     <label for="inputPassword">Mật khẩu</label>
                   </div>
-                  <div class="custom-control custom-checkbox mb-3">
-                    <input type="checkbox" class="custom-control-input" id="inputRemember" name="inputRemember">
-                    <label class="custom-control-label" for="inputRemember">Ghi nhớ mật khẩu</label>
-                  </div>
-                  <button id="buttonSubmit" name="buttonSubmit" value="Đăng nhập" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Đăng nhập</button>
+                  <button id="buttonLogin" value="Đăng nhập" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2">Đăng nhập</button>
                   <div class="text-right">
                     <a href="#" class="small">Quên mật khẩu?</a><br>
                     <a href="#" class="h5 mr-1"><i class="fab fa-facebook-f"></i></a>
@@ -61,14 +59,15 @@
           </div>
         </div>
       </div>
-      <div class="col-md-8 col-lg-6 offset-md-4 offset-lg-6 fixed-bottom text-center">
-        <h6><small>Phiên bản 1.0.0</small><br><span>Copyright &copy; Daomtthuan 2019</span></h6>
-      </div>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha256-fzFFyH01cBVPYzl16KT40wqjhgPtq6FFUB6ckN2+GGw=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
+  <script>
+    const loginUrl = "<?php echo base_url('ajax/auth/login') ?>";
+  </script>
+  <script src="<?php echo base_url('public/js/general/login.js') ?>"></script>
 </body>
 
 </html>
