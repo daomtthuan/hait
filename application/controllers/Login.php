@@ -18,7 +18,7 @@ class Login extends CI_Controller
 
 	public function index()
 	{
-		redirect('user');
+		redirect('login');
 		/*
 		if (!$this->ion_auth->logged_in()) {
 			// redirect them to the login page
