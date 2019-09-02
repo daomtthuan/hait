@@ -16,7 +16,7 @@ class User extends REST_Controller
 		$this->load->model('User_model');
 		$data=$this->User_model->info($id);
 		$data=(array)$data;
-		$data['admin']=true;
+		$data['admin']=$this->ion_auth->is_admin();
 		$data=(object)$data;
 		if ($data) {
 			$this->response($data, REST_Controller::HTTP_OK);
