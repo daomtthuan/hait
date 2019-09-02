@@ -40,6 +40,13 @@ class Meta_link_model extends CI_Model
 			return false;
 		}
 	}
+	function get_relate($main_form_id)
+	{
+		$this->db->where('main_form_id',$main_form_id);
+		$query = $this->db->get('meta_link');
+		$data=$query->result_array();
+		return $data;
+	}
 }
 
 /* End of file .php */

@@ -112,8 +112,13 @@ class Update_Form extends REST_Controller
 	}
 	function update_nk($array,$name,$form_id){
 		if($array){
-			$id="";
-			$this->$id=$this->Form_model->insert_new_form(1,'Khoa noi',1,$name);
+			$relates = $this->meta->get_relate($form_id);
+			if($relates){
+				foreach (relates as $relate){
+					$this->Form_model->delete($relate);
+				}
+			}
+			$id=$this->Form_model->insert_new_form(1,'Khoa noi',1,$name);
 			$this->meta->add($form_id,$id);
 			$this->Value_model->insert($array,$form_id,$name);
 		}
