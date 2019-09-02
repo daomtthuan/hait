@@ -16,10 +16,13 @@ class Login extends REST_Controller
 		$password = $data['password'];
 		$remember = $data['remember']; // remember the user
 		$result= $this->ion_auth->login($identity, $password, $remember);
-		
 		log_message("debug","user: ".$identity." has been login ".$result);
 		if ($result) {
-			$this->response($result, REST_Controller::HTTP_OK);
+			if(!$this->ion_auth->is_admin()){
+				$this->response("user", REST_Controller::HTTP_OK);
+			} else{
+				$this->response("admin", REST_Controller::HTTP_OK);
+			}
 		} else {
 			$this->response(NULL, REST_Controller::HTTP_NOT_FOUND);
 		}
