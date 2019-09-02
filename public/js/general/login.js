@@ -8,18 +8,16 @@
 $(document).ready(() => {
   $("#buttonLogin").click(function (e) {
     e.preventDefault();
-    let account = {
-      mail: $("#inputUsername").val(),
-      password: $("#inputPassword").val(),
-      remember: true
-    };
     $.ajax({
       url: loginUrl,
       type: "post",
-      data: JSON.stringify(account),
-      contentType: "application/json;charset=UTF-8",
-      success: function (data) {
-        alert(data);
+      data: {
+        "mail": $("#inputUsername").val(),
+        "password": $("#inputPassword").val(),
+        "remember": "true"
+      },
+      success: function (output, status, xhr) {
+        alert(xhr.getResponseHeader("Content-Type"));
       },
       error: function () {
         alert("Fail");
