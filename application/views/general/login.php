@@ -36,16 +36,16 @@
                   <h6><small>Phiên bản 1.0.0</small></h6>
                 </div>
                 <h4 class="login-heading mb-4">Đăng nhập</h4>
-                <form>
+                <form action="" method="POST">
                   <div class="form-label-group">
-                    <input type="text" id="inputUsername" class="form-control" placeholder="Tên đăng nhập" value="admin@admin.com" required autofocus>
+                    <input type="text" id="inputUsername" name="inputUsername" class="form-control" placeholder="Tên đăng nhập" value="admin@admin.com" required autofocus>
                     <label for="inputUsername">Tên đăng nhập</label>
                   </div>
                   <div class="form-label-group">
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Mật khẩu" value="password" required>
+                    <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Mật khẩu" value="password" required>
                     <label for="inputPassword">Mật khẩu</label>
                   </div>
-                  <button id="buttonLogin" value="Đăng nhập" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2">Đăng nhập</button>
+                  <button type="submit" id="buttonLogin" value="Đăng nhập" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2">Đăng nhập</button>
                   <div class="text-right">
                     <a href="#" class="small">Quên mật khẩu?</a><br>
                     <a href="#" class="h5 mr-1"><i class="fab fa-facebook-f"></i></a>
