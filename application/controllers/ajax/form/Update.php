@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 require(APPPATH . '/libraries/REST_Controller.php');
 
-class Update_Form extends REST_Controller
+class Update extends REST_Controller
 {
 	public function __construct($config = 'rest')
 	{
