@@ -35,7 +35,7 @@ class Login extends CI_Controller
 				}
 				else
 				{
-					redirect('login', 'index');
+					redirect('', 'index');
 				}
 			}
 		}
@@ -55,7 +55,7 @@ class Login extends CI_Controller
 		$this->ion_auth->logout();
 
 		// redirect them to the login page
-		redirect('login', 'index');
+		redirect('', 'index');
 	}
 
 }

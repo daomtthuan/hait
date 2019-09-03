@@ -8,7 +8,7 @@ class User extends MY_Controller {
 		$this->load->library('ion_auth');
 		if (!$this->ion_auth->in_group('user'))
 		{
-			redirect('login', 'index');
+			redirect('', 'index');
 		}
 	}
 
