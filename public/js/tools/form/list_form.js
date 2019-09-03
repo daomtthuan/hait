@@ -72,7 +72,6 @@ $(document).ready(function () {
         element.msba,
         element.ho_ten_bn,
         element.nam_sinh,
-        element.chan_doan_xac_dinh,
         tool
       ]).draw(true);
     });
