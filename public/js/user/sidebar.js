@@ -15,6 +15,6 @@ $(document).ready(() => {
     $.get(new_form, data => form.form_id = data).done(() => {
       sessionStorage.form = JSON.stringify(form);
       location = href;
-    }).fail(() => $("#error").modal("toggle"));
+    }).fail(() => alert("Đã có lỗi xảy ra. Vui lòng liên hệ Bộ phận hỗ trợ để khắc phục"));
   });
 });

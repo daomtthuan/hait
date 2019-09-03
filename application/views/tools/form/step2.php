@@ -1,3 +1,9 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+<script>
+  if (sessionStorage.form == null) location = "<?php echo base_url($role) ?>";
+  const antibiotic_list = "<?php echo base_url('ajax/antibiotic-list') ?>";
+  const updateUrl = "<?php echo base_url('ajax/update-form')?>";
+</script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/dataTables.bootstrap4.min.css" integrity="sha256-F+DaKAClQut87heMIC6oThARMuWne8+WzxIDT7jXuPA=" crossorigin="anonymous">
 <style>
   .dataTables_length,
@@ -9,10 +15,6 @@
     text-align: center
   }
 </style>
-<script>
-  if (sessionStorage.form == null) location = "<?php echo base_url($role) ?>";
-  const antibiotic_list = "<?php echo base_url('ajax/antibiotic-list') ?>";
-</script>
 <h1 class="h3 mb-4 text-gray-800">PHIẾU GIÁM SÁT NGANG NHIỄM KHUẨN BỆNH VIỆN</h1>
 <hr class="sidebar-divider">
 <div class="mb-2"><small>* Vui lòng điền đầy đủ thông tin bên dưới</small></div>
@@ -119,9 +121,10 @@
     </div>
   </div>
 </form>
-<div class="row mt-3">
-  <a id="buttonStepBack" class="btn btn-secondary ml-2" href="<?php echo base_url($role.'/form/1') ?>">Trở về</a>
-  <a id="buttonStepNext" class="btn btn-primary ml-auto mr-2" href="<?php echo base_url($role.'/form/3') ?>">Kế tiếp</a>
+<div class="mt-3 text-center">
+  <a id="buttonStepBack" class="btn btn-dark mr-2" href="<?php echo base_url($role.'/form/1') ?>"><i class="fas fa-angle-left"></i></a>
+  <a id="buttonSubmit" class="btn btn-primary mr-2" href="#">Lưu</a>
+  <a id="buttonStepNext" class="btn btn-dark" href="<?php echo base_url($role.'/form/3') ?>"><i class="fas fa-angle-right"></i></a>
 </div>
 <div id="modal_viem_phoi" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="title_viem_phoi" aria-hidden="true">
   <div class="modal-dialog modal-xl" role="document">
@@ -1107,17 +1110,6 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
         <button id="submit_khang_sinh" type="button" class="btn btn-primary">Thêm vào</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div id="error" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog shadow-lg" role="document">
-    <div class="modal-content">
-      <div class="alert alert-danger m-0" role="alert">
-        <h4 class="alert-heading">Lỗi!</h4>
-        <p>Có lỗi trong quá trình tạo biểu mẫu, vui lòng liên hệ với Bộ phân hỗ trợ để khắc phục</p>
-        <a href="<?php echo base_url($role) ?>">Trang chủ</a><br>
       </div>
     </div>
   </div>

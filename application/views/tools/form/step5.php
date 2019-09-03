@@ -1,5 +1,7 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <script>
   if (sessionStorage.form == null) location = "<?php echo base_url($role) ?>";
+  const updateUrl = "<?php echo base_url('ajax/update-form')?>";
 </script>
 <h1 class="h3 mb-4 text-gray-800">PHIẾU GIÁM SÁT NGANG NHIỄM KHUẨN BỆNH VIỆN</h1>
 <hr class="sidebar-divider">
@@ -227,19 +229,9 @@
     </div>
   </div>
 </form>
-<div class="row mt-3">
-  <a id="buttonStepBack" class="btn btn-secondary ml-2" href="<?php echo base_url($role.'/form/4') ?>">Trở về</a>
-  <a id="buttonStepNext" class="btn btn-primary ml-auto mr-2" href="<?php echo base_url($role.'/form/6') ?>">Kế tiếp</a>
-</div>
-<div id="error" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog shadow-lg" role="document">
-    <div class="modal-content">
-      <div class="alert alert-danger m-0" role="alert">
-        <h4 class="alert-heading">Lỗi!</h4>
-        <p>Có lỗi trong quá trình tạo biểu mẫu, vui lòng liên hệ với Bộ phân hỗ trợ để khắc phục</p>
-        <a href="<?php echo base_url($role) ?>">Trang chủ</a><br>
-      </div>
-    </div>
-  </div>
+<div class="mt-3 text-center">
+  <a id="buttonStepBack" class="btn btn-dark mr-2" href="<?php echo base_url($role.'/form/4') ?>"><i class="fas fa-angle-left"></i></a>
+  <a id="buttonSubmit" class="btn btn-primary mr-2" href="#">Lưu</a>
+  <a id="buttonStepNext" class="btn btn-dark" href="<?php echo base_url($role.'/form/6') ?>"><i class="fas fa-angle-right"></i></a>
 </div>
 <script defer src="<?php echo base_url('public/js/tools/form/step5.js') ?>"></script>

@@ -56,9 +56,10 @@
     </div>
   </div>
 </form>
-<div class="row mt-3">
-  <a id="buttonStepBack" class="btn btn-secondary ml-2" href="<?php echo base_url($role.'/form') ?>">Trở về</a>
-  <a id="buttonSubmit" class="btn btn-primary ml-auto mr-2" href="#">Hoàn thành</a>
+<div class="mt-3 text-center">
+  <a id="buttonStepBack" class="btn btn-dark mr-2" href="<?php echo base_url($role.'/form') ?>"><i class="fas fa-angle-left"></i></a>
+  <a id="buttonSubmit" class="btn btn-primary mr-2" href="#">Lưu</a>
+  <button class="btn btn-secondary" disabled><i class="fas fa-angle-right"></i></button>
 </div>
 <div id="success" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog shadow-lg" role="document">
@@ -68,17 +69,6 @@
         <a href="<?php echo base_url($role) ?>">Trang chủ</a><br>
         <hr>
         <a href="<?php echo base_url($role.'/waiting-send-list') ?>">Danh sách biểu mẫu chờ gửi</a>
-      </div>
-    </div>
-  </div>
-</div>
-<div id="error" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog shadow-lg" role="document">
-    <div class="modal-content">
-      <div class="alert alert-danger m-0" role="alert">
-        <h4 class="alert-heading">Lỗi!</h4>
-        <p>Có lỗi trong quá trình tạo biểu mẫu, vui lòng liên hệ với Bộ phân hỗ trợ để khắc phục</p>
-        <a href="<?php echo base_url($role) ?>">Trang chủ</a><br>
       </div>
     </div>
   </div>

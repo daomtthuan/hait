@@ -6,11 +6,10 @@
  */
 
 var edit = function (id) {
-  // $("#main").html('<div class="d-flex justify-content-center mt-5"><div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only"><h3>Đang tải...</span></div></h3></div>');
-  //$.getJSON(editUrl + id, data => sessionStorage.form = JSON.stringify(data)).done(() => location = btneditHref).fail(() => $("#error").modal("toggle"));
-
-  $.getJSON(editUrl + id, data => {
-    alert(data);
+  $("#main").html('<div class="d-flex justify-content-center mt-5"><div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only"><h3>Đang tải...</span></div></h3></div>');
+  $.getJSON(editUrl + id, form => {
+    sessionStorage.form = form;
+    location = formUrl;
   });
 }
 
@@ -53,9 +52,11 @@ $(document).ready(function () {
       switch (element.status) {
         case "unfinished":
           tool = `
+          <div class="text-center">
           <a id-form="`+ element.form_id + `" class="btn-finish btn btn-primary btn-sm" href="#"><i class="fas fa-check"></i></a>
           <a id-form="`+ element.form_id + `" class="btn-edit btn btn-secondary btn-sm" href="#" onclick="edit(` + element.form_id + `)"><i class="fas fa-pen"></i></a>
-          <a id-form="`+ element.form_id + `" class="btn-delete btn btn-danger btn-sm" href="#"><i class="fas fa-trash-alt"></i></a>`;
+          <a id-form="`+ element.form_id + `" class="btn-delete btn btn-danger btn-sm" href="#"><i class="fas fa-trash-alt"></i></a>
+          </div>`;
           break;
 
         case "verifying":
@@ -75,5 +76,5 @@ $(document).ready(function () {
         tool
       ]).draw(true);
     });
-  }).fail(() => $("#error").modal("toggle"));
+  }).fail(() => alert("Đã có lỗi xảy ra. Vui lòng liên hệ Bộ phận hỗ trợ để khắc phục"));
 });
