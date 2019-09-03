@@ -7,18 +7,42 @@ class Login extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		//$this->load->database();
-		//$this->load->library(['ion_auth', 'form_validation']);
-		//$this->load->helper(['url', 'language']);
-
-		//$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
-
-		//$this->lang->load('auth');
+		$this->load->library('ion_auth');
+		if (!$this->ion_auth->logged_in())
+		{
+			//redirect them to the login page
+			redirect(base_url(general/login),'refresh');
+		}
 	}
 
 	public function index()
 	{
-		$this->load->view('general/login');
+		if($this->input->post())
+		{
+			//here we will verify the inputs;
+			$this->form_validation->set_rules('general/login', 'Đăng nhập');
+			$this->load->library('form_validation');
+			$this->form_validation->set_rules('identity', 'Identity', 'required');
+			$this->form_validation->set_rules('password', 'Password', 'required');
+			$this->form_validation->set_rules('remember','Remember me','integer');
+			if($this->form_validation->run()===TRUE)
+			{
+				$remember = (bool) $this->input->post('remember');
+				if ($this->ion_auth->login($this->input->post('identity'), $this->input->post('password'), $remember))
+				{
+					if(!$this->ion_auth->is_admin()){
+						redirect(base_url('admin'));
+					} else{
+						redirect(base_url('user'));
+					}
+				}
+				else
+				{
+					$this->session->set_flashdata('message',$this->ion_auth->errors());
+					redirect('admin/user/login', 'refresh');
+				}
+			}
+		}
 		/*
 		if (!$this->ion_auth->logged_in()) {
 			// redirect them to the login page
@@ -57,16 +81,6 @@ class Login extends CI_Controller
 		}
 		*/
 	}
-
-	public function check_login()
-	{
-		$identity = $this->input->post('inputUsername');
-		$password = $this->input->post('inputPassword');
-		$remember = TRUE; // remember the user
-		$this->ion_auth->login($identity, $password, $remember);
-
-	}
-
 	public function logout()
 	{
 		$this->data['title'] = "Logout";
