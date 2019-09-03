@@ -4,7 +4,12 @@ class Admin extends MY_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		//$this->load->model('Login_model');
+		$this->load->library('ion_auth');
+		if (!$this->ion_auth->is_admin())
+		{
+			$this->session->set_flashdata('message', 'You must be an admin to view this page');
+			redirect('login', 'index');
+		}
 	}
 
 	public function index()
