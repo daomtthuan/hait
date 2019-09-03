@@ -109,7 +109,6 @@ class Form_model extends CI_Model
 			$this->db->where('form_id', $id);
 			$this->db->delete('form');
 		}
-
 }
 
 /* End of file Form_model.php */
