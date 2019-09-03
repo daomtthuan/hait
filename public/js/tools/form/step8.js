@@ -83,15 +83,11 @@ $(document).ready(() => {
 			data: JSON.stringify(data),
 			contentType: "application/json;charset=UTF-8",
 			success: function () {
-				$("#success").modal("toggle");
-				//sessionStorage.clear();
+				alert("Lưu thành công");
 			},
 			error: function () {
-				$("#error").modal("toggle");
+				alert("Đã có lỗi xảy ra. Vui lòng liên hệ Bộ phận hỗ trợ để khắc phục");
 			}
 		});
-
-		$("#main").html('<div class="d-flex justify-content-center mt-5"><div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only"><h3>Đang tải...</span></div></h3></div>');
 	});
-
 });
