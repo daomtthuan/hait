@@ -42,7 +42,7 @@ class Admin extends MY_Controller {
 		}
 
 		$data['role'] = 'admin';
-		$data['main'] = 'tools/form/list_form';
+		$data['main'] = 'admin/tool/form/list_form';
 
 		$this->load->view('general/layout',$data);
 	}
