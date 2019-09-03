@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 require(APPPATH . '/libraries/REST_Controller.php');
+
 class Update_Form extends REST_Controller
 {
 	public function __construct($config = 'rest')
@@ -8,122 +9,58 @@ class Update_Form extends REST_Controller
 		parent::__construct($config);
 		$this->load->model('Value_model');
 		$this->load->model('Form_model');
-		$this->load->model('Meta_link_model','meta');
+		$this->load->model('Meta_link_model', 'meta');
 		$this->load->model('List_ks_model');
 	}
+
 	function index_post()
 	{
-		$data = $this->post(NULL,TRUE);
-		$dataObject =(Object)$data;
-		$form_id=$dataObject->form_id;
-		$this->Form_model->update_content($form_id,$dataObject->stringJSON);
-		if($form_id){
+		$data = $this->post(NULL, TRUE);
+		$dataObject = (Object)$data;
+		$form_id = $dataObject->form_id;
+		$this->Form_model->update_content($form_id, $dataObject->stringJSON);
+		if ($form_id) {
 			//Cap nhat
 			$this->Value_model->delete($form_id);
 			$this->meta->delete($form_id);
 		} else {
 			//Them moi
-			$this->$form_id=$this->Form_model->insert_new_form(1,'Khoa noi',1,"CHINH");
+			$this->$form_id = $this->Form_model->insert_new_form(1, 'Khoa noi', 1, "CHINH");
 		}
-		log_message('debug', "Form id:". $data['form_id']);
-		$this->Value_model->insert($data,$form_id,"all");
-		$this->update_nk($dataObject->vp,"VP",$form_id);
-		$this->update_nk($dataObject->nktn,"nktn",$form_id);
-		$this->update_nk($dataObject->nkh,"nkh",$form_id);
-		$this->update_nk($dataObject->nkvm,"nkvm",$form_id);
-
-		/*
-		 *
-		if($dataObject->vp){
-			$vp_id="";
-			$vp=(array)$dataObject->vp;
-			$this->$vp_id=$this->Form_model->insert_new_form(1,'Khoa noi',1,"VP");
-			$this->meta->add($form_id,$vp_id);
-			$this->Value_model->insert($vp,$form_id,"VP");
+		log_message('debug', "Form id:" . $data['form_id']);
+		$this->Value_model->insert($data, $form_id, "all");
+		if(isset($dataObject->vp)){
+			$this->update_nk($dataObject->vp, "VP", $form_id);
 		}
-		if(isset($data["step1"])){
-			$this->Value_model->insert($data["step1"],$form_id,"step1");
+		if(isset($dataObject->nktn)){
+			$this->update_nk($dataObject->nktn, "nktn", $form_id);
 		}
-		if(isset($data["step2"])){
-			//log_message('debug',"Bước 2");
-			//Lấy dữ liệu step 2
-			$arr = $data["step2"];
-			//Lấy dữ liệu nhiễm khuẩn bệnh viện
-			//Nếu có nhiễm khuẩn bệnh viện thì tiến hành insert
-			if($arr){
-				if(isset($arr["vp"])){
-					//insert viêm phổi
-					$vp_id="";
-					$this->$vp_id=$this->Form_model->insert_new_form(1,'Khoa noi',1,"VP");
-					$this->meta->add($form_id,$vp_id);
-					$this->Value_model->insert($arr["vp"],$form_id,"VP");
-				}
-				if(isset($arr["nktn"])){
-					//insert nhiễm khuẩn tiết niệu
-					$nktn_id=$this->Form_model->insert_new_form(1,'Khoa noi',1,"NKTN");
-					$this->meta->add($form_id,$nktn_id);
-					$this->Value_model->insert($arr["nktn"],$form_id,"NKTN");
-				}
-				if(isset($arr["nkh"])){
-					//insert nhiễm khuẩn huyết
-					$nkh_id=$this->Form_model->insert_new_form(1,'Khoa noi',1,"NKH");
-					$this->meta->add($form_id,$nkh_id);
-					$this->Value_model->insert($arr["nkh"],$form_id,"NKH");
-				}
-				if(isset($arr["nkvm"])){
-					//insert nhiễm khuẩn vết mổ
-					$nkvm_id=$this->Form_model->insert_new_form(1,'Khoa noi',1,"NKVM");
-					$this->meta->add($form_id,$nkvm_id);
-					$this->Value_model->insert($arr["nkvm"],$form_id,"NKVM");
-				}
-			}
-
-			//$this->Value_model->step2($data["step2"],$form_id);
+		if(isset($dataObject->nkh)){
+			$this->update_nk($dataObject->nkh, "nkh", $form_id);
 		}
-		if(isset($data["step3"])){
-			$this->Value_model->insert($data["step3"],$form_id,"step3");
+		if(isset($dataObject->nkvm)){
+			$this->update_nk($dataObject->nkvm, "nkvm", $form_id);
 		}
-		if(isset($data["step4"])){
-			$this->Value_model->insert($data["step4"],$form_id,"step4");
+		if(isset($dataObject->danh_sach_khang_sinh)){
+			$this->update_khangsinh($dataObject->danh_sach_khang_sinh,$form_id);
 		}
-		if(isset($data["step5"])){
-			$this->Value_model->insert($data["step5"],$form_id,"step5");
-		}
-		if(isset($data["step6"])){
-			$this->Value_model->insert($data["step6"],$form_id,"step6");
-		}
-		if(isset($data["step7"])){
-			$this->Value_model->insert($data["step7"],$form_id,"step7");
-		}
-		if(isset($data["step8"])){
-			$this->Value_model->insert($data["step8"],$form_id,"step8");
-		}
-		//Check list
-		$this->List_ks_model->create_list();
-		$this->response(array('status' => 'failed'));
-		 * */
-
-	    /*
-		$result=true;
-		if ($result === FALSE) {
-			$this->response(array('status' => 'failed'));
-		} else {
-			$this->response(array('status' => 'success'));
-		}
-	    */
-
+		$this->response(array('status' => 'success'));
 	}
-	function update_nk($array,$name,$form_id){
-		if($array){
+
+	function update_nk($array, $name, $form_id)
+	{
+		if ($array) {
 			$relates = $this->meta->get_relate($form_id);
-			if(isset($relates)){
-				foreach (relates as $relate){
-					$this->Form_model->delete($relate);
-				}
-			}
-			$id=$this->Form_model->insert_new_form(1,'Khoa noi',1,$name);
-			$this->meta->add($form_id,$id);
-			$this->Value_model->insert($array,$form_id,$name);
+
+			$id = $this->Form_model->insert_new_form(1, 'Khoa noi', 1, $name);
+			$this->meta->add($form_id, $id);
+			$this->Value_model->insert($array, $form_id, $name);
+		}
+	}
+	function update_khangsinh($array,$form_id){
+		$array=(array)$array;
+		if($array){
+
 		}
 	}
 

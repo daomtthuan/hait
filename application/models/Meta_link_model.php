@@ -44,7 +44,7 @@ class Meta_link_model extends CI_Model
 	{
 		$this->db->where('main_form_id',$main_form_id);
 		$query = $this->db->get('meta_link');
-		$data=$query->result_array();
+		$data=$query->result();
 		return $data;
 	}
 }
