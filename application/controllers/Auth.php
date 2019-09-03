@@ -499,6 +499,7 @@ class Auth extends CI_Controller
 				'last_name' => $this->input->post('last_name'),
 				'company' => $this->input->post('company'),
 				'phone' => $this->input->post('phone'),
+				'room_id' => $this->input->post('room_id')
 			];
 		}
 		if ($this->form_validation->run() === TRUE && $this->ion_auth->register($identity, $password, $email, $additional_data))
@@ -549,6 +550,12 @@ class Auth extends CI_Controller
 				'id' => 'phone',
 				'type' => 'text',
 				'value' => $this->form_validation->set_value('phone'),
+			];
+			$this->data['room'] = [
+				'name' => 'room',
+				'id' => 'room',
+				'type' => 'text',
+				'value' => $this->form_validation->set_value('room'),
 			];
 			$this->data['password'] = [
 				'name' => 'password',

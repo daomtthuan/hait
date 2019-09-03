@@ -40,6 +40,10 @@
             <?php echo lang('create_user_phone_label', 'phone');?> <br />
             <?php echo form_input($phone);?>
       </p>
+		<p>
+			<?php echo lang('create_user_room_label', 'rom');?> <br />
+			<?php echo form_input($room);?>
+		</p>
 
       <p>
             <?php echo lang('create_user_password_label', 'password');?> <br />

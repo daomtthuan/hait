@@ -28,6 +28,9 @@ class Update_Form extends REST_Controller
 		log_message('debug', "Form id:". $data['form_id']);
 		$this->Value_model->insert($data,$form_id,"all");
 		$this->update_nk($dataObject->vp,"VP",$form_id);
+		$this->update_nk($dataObject->nktn,"nktn",$form_id);
+		$this->update_nk($dataObject->nkh,"nkh",$form_id);
+		$this->update_nk($dataObject->nkvm,"nkvm",$form_id);
 
 		/*
 		 *
@@ -113,7 +116,7 @@ class Update_Form extends REST_Controller
 	function update_nk($array,$name,$form_id){
 		if($array){
 			$relates = $this->meta->get_relate($form_id);
-			if($relates){
+			if(isset($relates)){
 				foreach (relates as $relate){
 					$this->Form_model->delete($relate);
 				}

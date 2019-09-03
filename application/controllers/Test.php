@@ -77,7 +77,11 @@ class Test extends MY_Controller {
 		$content=$this->Form_model->get_json(7);
 		print_r($content);
 	}
-
+	public function relate(){
+		$this->load->model('Meta_link_model','meta');
+		$relates = $this->meta->get_relate();
+		print_r($relates);
+	}
 }
 
 /* End of file Controllername.php */
