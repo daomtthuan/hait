@@ -5,6 +5,11 @@ class User extends MY_Controller {
 
 	public function __construct()	{
 		parent::__construct();
+		$this->load->library('ion_auth');
+		if (!$this->ion_auth->in_group('user'))
+		{
+			redirect('login', 'index');
+		}
 	}
 
 	public function index()	{
