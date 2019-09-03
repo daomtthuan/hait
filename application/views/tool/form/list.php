@@ -14,7 +14,7 @@
   const
     formUrl = "<?php echo base_url($role.'/form/1') ?>",
     formApi = "<?php echo base_url('ajax/form/get/form') ?>/",
-    listApi = "<?php echo base_url('ajax/form/get/list/verifying') ?>";
+    listApi = "<?php echo base_url('ajax/form/get/list/unfinished') ?>";
 </script>
 <div class="col-12 border">
   <div class="table-responsive-lg my-2">
@@ -35,4 +35,4 @@
 </div>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js" integrity="sha256-t5ZQTZsbQi8NxszC10CseKjJ5QeMw5NINtOXQrESGSU=" crossorigin="anonymous" defer></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/dataTables.bootstrap4.min.js" integrity="sha256-hJ44ymhBmRPJKIaKRf3DSX5uiFEZ9xB/qx8cNbJvIMU=" crossorigin="anonymous" defer></script>
-<script defer src="<?php echo base_url('public/js/user/tool/form/list_form.js') ?>"></script>
+<script defer src="<?php echo base_url('public/js/tool/form/list_'.$role.'.js') ?>"></script>

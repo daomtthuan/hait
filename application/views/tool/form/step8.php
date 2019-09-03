@@ -60,4 +60,4 @@
   <a id="buttonSubmit" class="btn btn-primary mr-2" href="#">Lưu</a>
   <button class="btn btn-secondary" disabled><i class="fas fa-angle-right"></i></button>
 </div>
-<script defer src="<?php echo base_url('public/js/user/tool/form/step8.js') ?>"></script>
+<script defer src="<?php echo base_url('public/js/tool/form/step8.js') ?>"></script>

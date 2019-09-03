@@ -46,7 +46,7 @@ class User extends MY_Controller {
 
 		$data['role'] = 'user';
 		$data['page_title'] = 'Tạo mới biểu mẫu - Bước '.(($step == '7_1' || $step == '7_2' ) ? '7' : $step);
-		$data['main'] = 'user/tool/form/step'.$step;
+		$data['main'] = 'tool/form/step'.$step;
 
 		$this->load->view('general/layout',$data);
 	}
@@ -60,7 +60,7 @@ class User extends MY_Controller {
 		}
 
 		$data['role'] = 'user';
-		$data['main'] = 'user/tool/form/list_form';
+		$data['main'] = 'tool/form/list';
 
 		$this->load->view('general/layout',$data);
 	}

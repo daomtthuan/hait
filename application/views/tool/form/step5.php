@@ -233,4 +233,4 @@
   <a id="buttonSubmit" class="btn btn-primary mr-2" href="#">Lưu</a>
   <a id="buttonStepNext" class="btn btn-dark" href="<?php echo base_url($role.'/form/6') ?>"><i class="fas fa-angle-right"></i></a>
 </div>
-<script defer src="<?php echo base_url('public/js/user/tool/form/step5.js') ?>"></script>
+<script defer src="<?php echo base_url('public/js/tool/form/step5.js') ?>"></script>

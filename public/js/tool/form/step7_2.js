@@ -2,7 +2,7 @@
  * @author Daomtthuan
  * @email dao.mt.thuan@gmail.com
  * @create date 2019-08-09 18:28:32
- * @modify date 2019-09-01 17:39:49
+ * @modify date 2019-09-04 00:05:14
  */
 
 $(document).ready(() => {
@@ -163,8 +163,10 @@ $(document).ready(() => {
 
   $("#buttonSubmit").click(() => {
 
-		name.forEach(element => getPair(element));
-		sessionStorage.form = JSON.stringify(form);
+    name.forEach(element => getPair(element));
+    if ($("[name='khang_sinh'][value='1']").is(":checked"))
+      getTable("khang_sinh_khong_phau_thuat")
+    sessionStorage.form = JSON.stringify(form);
 
 		let data = form;
 		data.danh_sach_khang_sinh = [];

@@ -2,7 +2,7 @@
  * @author Daomtthuan
  * @email dao.mt.thuan@gmail.com
  * @create date 2019-08-09 18:28:32
- * @modify date 2019-09-01 17:39:57
+ * @modify date 2019-09-04 00:05:05
  */
 
 $(document).ready(() => {
@@ -71,40 +71,81 @@ $(document).ready(() => {
   });
 
   $("#buttonSubmit").click(() => {
+    form.phau_thuat = $("[name='phau_thuat']:checked").val();
+    if (form.phau_thuat == undefined) delete form.phau_thuat;
 
-		name.forEach(element => getPair(element));
-		sessionStorage.form = JSON.stringify(form);
+    if (form.phau_thuat == 1)
+      [
+        "khang_sinh",
+        "khang_sinh_khong_phau_thuat",
+        "muc_dich_su_dung"
+      ].forEach(element => form[element] = undefined);
+    else if (form.phau_thuat == 2)
+      [
+        "vi_tri_phau_thuat",
+        "ngay_phau_thuat",
+        "loai_phau_thuat",
+        "implant",
+        "phau_thuat_noi_soi",
+        "thoi_gian",
+        "diem_asa",
+        "loai_vet_mo",
+        "gay_me",
+        "gay_te",
+        "dan_luu",
+        "nkvm",
+        "dan_luu_tai_vm",
+        "dan_luu_ngoai_vm",
+        "dan_luu_kin",
+        "so_ngay_dat_dan_luu",
+        "loai_nhiem_khuan_vm",
+        "bieu_hien_sot",
+        "bieu_hien_do",
+        "bieu_hien_sung",
+        "bieu_hien_dau",
+        "phau_thuat_lai",
+        "dich_vet_mo",
+        "toac_vet_mo_tu_nhien",
+        "chu_dong_mo_vm",
+        "chay_mu",
+        "trieu_chung_chi_diem",
+        "khang_sinh_truoc_phau_thuat",
+        "khang_sinh_du_phong",
+        "khang_sinh_sau_phau_thuat"
+      ].forEach(element => form[element] = undefined);
 
-		let data = form;
-		data.danh_sach_khang_sinh = [];
-		data.stringJSON = JSON.stringify(form);
-		[
-			"vp_khang_sinh",
-			"nktn_khang_sinh",
-			"nkh_khang_sinh",
-			"nkvm_khang_sinh",
-			"khang_sinh_truoc_phau_thuat",
-			"khang_sinh_du_phong",
-			"khang_sinh_sau_phau_thuat",
-			"khang_sinh_khong_phau_thuat"
-		].forEach(list => {
-			if (data.hasOwnProperty(list)) {
-				data[list].forEach(element => data.danh_sach_khang_sinh.push(element));
-				delete data[list];
-			}
-		});
+    sessionStorage.form = JSON.stringify(form);
 
-		$.ajax({
-			url: updateApi,
-			type: "post",
-			data: JSON.stringify(data),
-			contentType: "application/json;charset=UTF-8",
-			success: function () {
-				alert("Lưu thành công");
-			},
-			error: function () {
-				alert("Đã có lỗi xảy ra. Vui lòng liên hệ Bộ phận hỗ trợ để khắc phục");
-			}
-		});
-	});
+    let data = form;
+    data.danh_sach_khang_sinh = [];
+    data.stringJSON = JSON.stringify(form);
+    [
+      "vp_khang_sinh",
+      "nktn_khang_sinh",
+      "nkh_khang_sinh",
+      "nkvm_khang_sinh",
+      "khang_sinh_truoc_phau_thuat",
+      "khang_sinh_du_phong",
+      "khang_sinh_sau_phau_thuat",
+      "khang_sinh_khong_phau_thuat"
+    ].forEach(list => {
+      if (data.hasOwnProperty(list)) {
+        data[list].forEach(element => data.danh_sach_khang_sinh.push(element));
+        delete data[list];
+      }
+    });
+
+    $.ajax({
+      url: updateApi,
+      type: "post",
+      data: JSON.stringify(data),
+      contentType: "application/json;charset=UTF-8",
+      success: function () {
+        alert("Lưu thành công");
+      },
+      error: function () {
+        alert("Đã có lỗi xảy ra. Vui lòng liên hệ Bộ phận hỗ trợ để khắc phục");
+      }
+    });
+  });
 });

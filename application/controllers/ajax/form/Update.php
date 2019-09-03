@@ -30,7 +30,7 @@ class Update extends REST_Controller
 		log_message('debug', "Form id:" . $data['form_id']);
 		$this->Value_model->insert($data, $form_id, "all");
 		if(isset($dataObject->vp)){
-			$this->update_nk($dataObject->vp, "VP", $form_id);
+			$this->update_nk($dataObject->vp, "vp", $form_id);
 		}
 		if(isset($dataObject->nktn)){
 			$this->update_nk($dataObject->nktn, "nktn", $form_id);

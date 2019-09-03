@@ -2,7 +2,7 @@
  * @author Daomtthuan
  * @email dao.mt.thuan@gmail.com
  * @create date 2019-08-09 18:27:17
- * @modify date 2019-09-01 17:36:27
+ * @modify date 2019-09-04 00:04:49
  */
 
 $(document).ready(() => {
@@ -68,8 +68,8 @@ $(document).ready(() => {
 
   $("#buttonSubmit").click(() => {
 
-		name.forEach(element => getPair(element));
-		sessionStorage.form = JSON.stringify(form);
+    name.forEach(element => getPair(element));
+    sessionStorage.form = JSON.stringify(form);
 
 		let data = form;
 		data.danh_sach_khang_sinh = [];

@@ -2,7 +2,7 @@
  * @author Daomtthuan
  * @email dao.mt.thuan@gmail.com
  * @create date 2019-08-09 18:28:32
- * @modify date 2019-09-01 18:14:25
+ * @modify date 2019-09-04 00:04:50
  */
 
 $(document).ready(() => {
@@ -327,8 +327,24 @@ $(document).ready(() => {
 
   $("#buttonSubmit").click(() => {
 
-		name.forEach(element => getPair(element));
-		sessionStorage.form = JSON.stringify(form);
+    let loai_nkbv = [];
+    $("[name='loai_nkbv']:checked").each(function () { loai_nkbv.push($(this).val()) });
+    if (loai_nkbv.length > 0) form.loai_nkbv = loai_nkbv;
+
+    if ($("[name='loai_nkbv'][value='1']").is(":checked"))
+      vp_name.forEach(element => getPair("vp", element));
+
+    if ($("[name='loai_nkbv'][value='2']").is(":checked"))
+      nktn_name.forEach(element => getPair("nktn", element));
+
+    if ($("[name='loai_nkbv'][value='3']").is(":checked"))
+      nkh_name.forEach(element => getPair("nkh", element));
+
+    if ($("[name='loai_nkbv'][value='4']").is(":checked"))
+      nkvm_name.forEach(element => getPair("nkvm", element));
+
+    tableName.forEach(element => getTable(element));
+    sessionStorage.form = JSON.stringify(form);
 
 		let data = form;
 		data.danh_sach_khang_sinh = [];

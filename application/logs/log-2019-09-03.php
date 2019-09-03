@@ -19917,3 +19917,2317 @@ INFO - 2019-09-03 18:50:29 --> File loaded: D:\Programs\Xampp\htdocs\hait\applic
 INFO - 2019-09-03 18:50:29 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\general/layout.php
 INFO - 2019-09-03 18:50:29 --> Final output sent to browser
 DEBUG - 2019-09-03 18:50:29 --> Total execution time: 0.0379
+INFO - 2019-09-03 18:59:26 --> Config Class Initialized
+INFO - 2019-09-03 18:59:26 --> Hooks Class Initialized
+DEBUG - 2019-09-03 18:59:26 --> UTF-8 Support Enabled
+INFO - 2019-09-03 18:59:26 --> Utf8 Class Initialized
+INFO - 2019-09-03 18:59:26 --> URI Class Initialized
+INFO - 2019-09-03 18:59:26 --> Router Class Initialized
+INFO - 2019-09-03 18:59:26 --> Output Class Initialized
+INFO - 2019-09-03 18:59:26 --> Security Class Initialized
+DEBUG - 2019-09-03 18:59:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 18:59:26 --> Input Class Initialized
+INFO - 2019-09-03 18:59:26 --> Language Class Initialized
+INFO - 2019-09-03 18:59:26 --> Loader Class Initialized
+INFO - 2019-09-03 18:59:26 --> Helper loaded: url_helper
+INFO - 2019-09-03 18:59:26 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 18:59:26 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 18:59:26 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 18:59:26 --> Controller Class Initialized
+DEBUG - 2019-09-03 18:59:26 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 18:59:26 --> Email Class Initialized
+INFO - 2019-09-03 18:59:26 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 18:59:26 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 18:59:26 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 18:59:26 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 18:59:26 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 18:59:26 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 18:59:26 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\user/sidebar.php
+INFO - 2019-09-03 18:59:26 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\tool/form/list.php
+INFO - 2019-09-03 18:59:26 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\general/layout.php
+INFO - 2019-09-03 18:59:26 --> Final output sent to browser
+DEBUG - 2019-09-03 18:59:26 --> Total execution time: 0.0291
+INFO - 2019-09-03 18:59:26 --> Config Class Initialized
+INFO - 2019-09-03 18:59:26 --> Hooks Class Initialized
+DEBUG - 2019-09-03 18:59:26 --> UTF-8 Support Enabled
+INFO - 2019-09-03 18:59:26 --> Utf8 Class Initialized
+INFO - 2019-09-03 18:59:26 --> URI Class Initialized
+INFO - 2019-09-03 18:59:26 --> Router Class Initialized
+INFO - 2019-09-03 18:59:26 --> Output Class Initialized
+INFO - 2019-09-03 18:59:26 --> Security Class Initialized
+DEBUG - 2019-09-03 18:59:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 18:59:26 --> Input Class Initialized
+INFO - 2019-09-03 18:59:26 --> Language Class Initialized
+INFO - 2019-09-03 18:59:26 --> Loader Class Initialized
+INFO - 2019-09-03 18:59:26 --> Helper loaded: url_helper
+INFO - 2019-09-03 18:59:26 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 18:59:26 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 18:59:26 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 18:59:26 --> Controller Class Initialized
+DEBUG - 2019-09-03 18:59:26 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/rest.php
+INFO - 2019-09-03 18:59:26 --> Helper loaded: inflector_helper
+INFO - 2019-09-03 18:59:26 --> Language file loaded: language/english/rest_controller_lang.php
+INFO - 2019-09-03 18:59:26 --> Model "Form_model" initialized
+INFO - 2019-09-03 18:59:26 --> Final output sent to browser
+DEBUG - 2019-09-03 18:59:26 --> Total execution time: 0.1601
+INFO - 2019-09-03 18:59:31 --> Config Class Initialized
+INFO - 2019-09-03 18:59:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 18:59:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 18:59:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 18:59:31 --> URI Class Initialized
+INFO - 2019-09-03 18:59:31 --> Router Class Initialized
+INFO - 2019-09-03 18:59:31 --> Output Class Initialized
+INFO - 2019-09-03 18:59:31 --> Security Class Initialized
+DEBUG - 2019-09-03 18:59:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 18:59:31 --> Input Class Initialized
+INFO - 2019-09-03 18:59:31 --> Language Class Initialized
+INFO - 2019-09-03 18:59:31 --> Loader Class Initialized
+INFO - 2019-09-03 18:59:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 18:59:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 18:59:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 18:59:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 18:59:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 18:59:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/rest.php
+INFO - 2019-09-03 18:59:31 --> Helper loaded: inflector_helper
+INFO - 2019-09-03 18:59:31 --> Language file loaded: language/english/rest_controller_lang.php
+INFO - 2019-09-03 18:59:31 --> Model "Form_model" initialized
+INFO - 2019-09-03 18:59:31 --> Final output sent to browser
+DEBUG - 2019-09-03 18:59:31 --> Total execution time: 0.0254
+INFO - 2019-09-03 18:59:31 --> Config Class Initialized
+INFO - 2019-09-03 18:59:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 18:59:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 18:59:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 18:59:31 --> URI Class Initialized
+INFO - 2019-09-03 18:59:31 --> Router Class Initialized
+INFO - 2019-09-03 18:59:31 --> Output Class Initialized
+INFO - 2019-09-03 18:59:31 --> Security Class Initialized
+DEBUG - 2019-09-03 18:59:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 18:59:31 --> Input Class Initialized
+INFO - 2019-09-03 18:59:31 --> Language Class Initialized
+INFO - 2019-09-03 18:59:31 --> Loader Class Initialized
+INFO - 2019-09-03 18:59:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 18:59:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 18:59:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 18:59:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 18:59:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 18:59:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 18:59:31 --> Email Class Initialized
+INFO - 2019-09-03 18:59:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 18:59:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 18:59:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 18:59:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 18:59:31 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 18:59:31 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 18:59:31 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\user/sidebar.php
+INFO - 2019-09-03 18:59:31 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\tool/form/step1.php
+INFO - 2019-09-03 18:59:31 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\general/layout.php
+INFO - 2019-09-03 18:59:31 --> Final output sent to browser
+DEBUG - 2019-09-03 18:59:31 --> Total execution time: 0.0309
+INFO - 2019-09-03 18:59:36 --> Config Class Initialized
+INFO - 2019-09-03 18:59:36 --> Hooks Class Initialized
+DEBUG - 2019-09-03 18:59:36 --> UTF-8 Support Enabled
+INFO - 2019-09-03 18:59:36 --> Utf8 Class Initialized
+INFO - 2019-09-03 18:59:36 --> URI Class Initialized
+INFO - 2019-09-03 18:59:36 --> Router Class Initialized
+INFO - 2019-09-03 18:59:36 --> Output Class Initialized
+INFO - 2019-09-03 18:59:36 --> Security Class Initialized
+DEBUG - 2019-09-03 18:59:36 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 18:59:36 --> Input Class Initialized
+INFO - 2019-09-03 18:59:36 --> Language Class Initialized
+INFO - 2019-09-03 18:59:36 --> Loader Class Initialized
+INFO - 2019-09-03 18:59:36 --> Helper loaded: url_helper
+INFO - 2019-09-03 18:59:36 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 18:59:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 18:59:36 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 18:59:36 --> Controller Class Initialized
+DEBUG - 2019-09-03 18:59:36 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 18:59:36 --> Email Class Initialized
+INFO - 2019-09-03 18:59:36 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 18:59:36 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 18:59:36 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 18:59:36 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 18:59:36 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 18:59:36 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 18:59:36 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\user/sidebar.php
+INFO - 2019-09-03 18:59:36 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\tool/form/step2.php
+INFO - 2019-09-03 18:59:36 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\general/layout.php
+INFO - 2019-09-03 18:59:36 --> Final output sent to browser
+DEBUG - 2019-09-03 18:59:36 --> Total execution time: 0.0398
+INFO - 2019-09-03 18:59:36 --> Config Class Initialized
+INFO - 2019-09-03 18:59:36 --> Hooks Class Initialized
+DEBUG - 2019-09-03 18:59:36 --> UTF-8 Support Enabled
+INFO - 2019-09-03 18:59:36 --> Utf8 Class Initialized
+INFO - 2019-09-03 18:59:36 --> URI Class Initialized
+INFO - 2019-09-03 18:59:36 --> Router Class Initialized
+INFO - 2019-09-03 18:59:36 --> Output Class Initialized
+INFO - 2019-09-03 18:59:36 --> Security Class Initialized
+DEBUG - 2019-09-03 18:59:36 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 18:59:36 --> Input Class Initialized
+INFO - 2019-09-03 18:59:36 --> Language Class Initialized
+INFO - 2019-09-03 18:59:36 --> Loader Class Initialized
+INFO - 2019-09-03 18:59:36 --> Helper loaded: url_helper
+INFO - 2019-09-03 18:59:36 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 18:59:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 18:59:36 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 18:59:36 --> Controller Class Initialized
+DEBUG - 2019-09-03 18:59:36 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/rest.php
+INFO - 2019-09-03 18:59:36 --> Helper loaded: inflector_helper
+INFO - 2019-09-03 18:59:36 --> Language file loaded: language/english/rest_controller_lang.php
+INFO - 2019-09-03 18:59:36 --> Model "Template_model" initialized
+INFO - 2019-09-03 18:59:36 --> Model "Khang_sinh_model" initialized
+INFO - 2019-09-03 18:59:36 --> Final output sent to browser
+DEBUG - 2019-09-03 18:59:36 --> Total execution time: 0.0643
+INFO - 2019-09-03 18:59:37 --> Config Class Initialized
+INFO - 2019-09-03 18:59:37 --> Hooks Class Initialized
+DEBUG - 2019-09-03 18:59:37 --> UTF-8 Support Enabled
+INFO - 2019-09-03 18:59:37 --> Utf8 Class Initialized
+INFO - 2019-09-03 18:59:37 --> URI Class Initialized
+INFO - 2019-09-03 18:59:37 --> Router Class Initialized
+INFO - 2019-09-03 18:59:37 --> Output Class Initialized
+INFO - 2019-09-03 18:59:37 --> Security Class Initialized
+DEBUG - 2019-09-03 18:59:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 18:59:37 --> Input Class Initialized
+INFO - 2019-09-03 18:59:37 --> Language Class Initialized
+INFO - 2019-09-03 18:59:37 --> Loader Class Initialized
+INFO - 2019-09-03 18:59:37 --> Helper loaded: url_helper
+INFO - 2019-09-03 18:59:37 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 18:59:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 18:59:37 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 18:59:37 --> Controller Class Initialized
+DEBUG - 2019-09-03 18:59:37 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 18:59:37 --> Email Class Initialized
+INFO - 2019-09-03 18:59:37 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 18:59:37 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 18:59:37 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 18:59:37 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 18:59:37 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 18:59:37 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 18:59:37 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\user/sidebar.php
+INFO - 2019-09-03 18:59:37 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\tool/form/step3.php
+INFO - 2019-09-03 18:59:37 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\general/layout.php
+INFO - 2019-09-03 18:59:37 --> Final output sent to browser
+DEBUG - 2019-09-03 18:59:37 --> Total execution time: 0.0397
+INFO - 2019-09-03 18:59:38 --> Config Class Initialized
+INFO - 2019-09-03 18:59:38 --> Hooks Class Initialized
+DEBUG - 2019-09-03 18:59:38 --> UTF-8 Support Enabled
+INFO - 2019-09-03 18:59:38 --> Utf8 Class Initialized
+INFO - 2019-09-03 18:59:38 --> URI Class Initialized
+INFO - 2019-09-03 18:59:38 --> Router Class Initialized
+INFO - 2019-09-03 18:59:38 --> Output Class Initialized
+INFO - 2019-09-03 18:59:38 --> Security Class Initialized
+DEBUG - 2019-09-03 18:59:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 18:59:38 --> Input Class Initialized
+INFO - 2019-09-03 18:59:38 --> Language Class Initialized
+INFO - 2019-09-03 18:59:38 --> Loader Class Initialized
+INFO - 2019-09-03 18:59:38 --> Helper loaded: url_helper
+INFO - 2019-09-03 18:59:38 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 18:59:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 18:59:38 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 18:59:38 --> Controller Class Initialized
+DEBUG - 2019-09-03 18:59:38 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 18:59:38 --> Email Class Initialized
+INFO - 2019-09-03 18:59:38 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 18:59:38 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 18:59:38 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 18:59:38 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 18:59:38 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 18:59:38 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 18:59:38 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\user/sidebar.php
+INFO - 2019-09-03 18:59:38 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\tool/form/step2.php
+INFO - 2019-09-03 18:59:38 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\general/layout.php
+INFO - 2019-09-03 18:59:38 --> Final output sent to browser
+DEBUG - 2019-09-03 18:59:38 --> Total execution time: 0.0298
+INFO - 2019-09-03 18:59:38 --> Config Class Initialized
+INFO - 2019-09-03 18:59:38 --> Hooks Class Initialized
+DEBUG - 2019-09-03 18:59:38 --> UTF-8 Support Enabled
+INFO - 2019-09-03 18:59:38 --> Utf8 Class Initialized
+INFO - 2019-09-03 18:59:38 --> URI Class Initialized
+INFO - 2019-09-03 18:59:38 --> Router Class Initialized
+INFO - 2019-09-03 18:59:38 --> Output Class Initialized
+INFO - 2019-09-03 18:59:38 --> Security Class Initialized
+DEBUG - 2019-09-03 18:59:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 18:59:38 --> Input Class Initialized
+INFO - 2019-09-03 18:59:38 --> Language Class Initialized
+INFO - 2019-09-03 18:59:38 --> Loader Class Initialized
+INFO - 2019-09-03 18:59:38 --> Helper loaded: url_helper
+INFO - 2019-09-03 18:59:38 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 18:59:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 18:59:38 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 18:59:38 --> Controller Class Initialized
+DEBUG - 2019-09-03 18:59:38 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/rest.php
+INFO - 2019-09-03 18:59:38 --> Helper loaded: inflector_helper
+INFO - 2019-09-03 18:59:38 --> Language file loaded: language/english/rest_controller_lang.php
+INFO - 2019-09-03 18:59:38 --> Model "Template_model" initialized
+INFO - 2019-09-03 18:59:38 --> Model "Khang_sinh_model" initialized
+INFO - 2019-09-03 18:59:38 --> Final output sent to browser
+DEBUG - 2019-09-03 18:59:38 --> Total execution time: 0.0385
+INFO - 2019-09-03 18:59:45 --> Config Class Initialized
+INFO - 2019-09-03 18:59:45 --> Hooks Class Initialized
+DEBUG - 2019-09-03 18:59:45 --> UTF-8 Support Enabled
+INFO - 2019-09-03 18:59:45 --> Utf8 Class Initialized
+INFO - 2019-09-03 18:59:45 --> URI Class Initialized
+INFO - 2019-09-03 18:59:45 --> Router Class Initialized
+INFO - 2019-09-03 18:59:45 --> Output Class Initialized
+INFO - 2019-09-03 18:59:45 --> Security Class Initialized
+DEBUG - 2019-09-03 18:59:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 18:59:45 --> Input Class Initialized
+INFO - 2019-09-03 18:59:45 --> Language Class Initialized
+INFO - 2019-09-03 18:59:45 --> Loader Class Initialized
+INFO - 2019-09-03 18:59:45 --> Helper loaded: url_helper
+INFO - 2019-09-03 18:59:45 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 18:59:45 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 18:59:45 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 18:59:45 --> Controller Class Initialized
+DEBUG - 2019-09-03 18:59:45 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 18:59:45 --> Email Class Initialized
+INFO - 2019-09-03 18:59:45 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 18:59:45 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 18:59:45 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 18:59:45 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 18:59:45 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 18:59:45 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 18:59:45 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\user/sidebar.php
+INFO - 2019-09-03 18:59:45 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\tool/form/step1.php
+INFO - 2019-09-03 18:59:45 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\general/layout.php
+INFO - 2019-09-03 18:59:45 --> Final output sent to browser
+DEBUG - 2019-09-03 18:59:45 --> Total execution time: 0.0404
+INFO - 2019-09-03 18:59:47 --> Config Class Initialized
+INFO - 2019-09-03 18:59:47 --> Hooks Class Initialized
+DEBUG - 2019-09-03 18:59:47 --> UTF-8 Support Enabled
+INFO - 2019-09-03 18:59:47 --> Utf8 Class Initialized
+INFO - 2019-09-03 18:59:47 --> URI Class Initialized
+INFO - 2019-09-03 18:59:47 --> Router Class Initialized
+INFO - 2019-09-03 18:59:47 --> Output Class Initialized
+INFO - 2019-09-03 18:59:47 --> Security Class Initialized
+DEBUG - 2019-09-03 18:59:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 18:59:47 --> Input Class Initialized
+INFO - 2019-09-03 18:59:47 --> Language Class Initialized
+INFO - 2019-09-03 18:59:47 --> Loader Class Initialized
+INFO - 2019-09-03 18:59:47 --> Helper loaded: url_helper
+INFO - 2019-09-03 18:59:47 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 18:59:47 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 18:59:47 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 18:59:47 --> Controller Class Initialized
+DEBUG - 2019-09-03 18:59:47 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 18:59:47 --> Email Class Initialized
+INFO - 2019-09-03 18:59:47 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 18:59:47 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 18:59:47 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 18:59:47 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 18:59:47 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 18:59:47 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 18:59:47 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\user/sidebar.php
+INFO - 2019-09-03 18:59:47 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\tool/form/step2.php
+INFO - 2019-09-03 18:59:47 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\general/layout.php
+INFO - 2019-09-03 18:59:47 --> Final output sent to browser
+DEBUG - 2019-09-03 18:59:47 --> Total execution time: 0.0394
+INFO - 2019-09-03 18:59:47 --> Config Class Initialized
+INFO - 2019-09-03 18:59:47 --> Hooks Class Initialized
+DEBUG - 2019-09-03 18:59:47 --> UTF-8 Support Enabled
+INFO - 2019-09-03 18:59:47 --> Utf8 Class Initialized
+INFO - 2019-09-03 18:59:47 --> URI Class Initialized
+INFO - 2019-09-03 18:59:47 --> Router Class Initialized
+INFO - 2019-09-03 18:59:47 --> Output Class Initialized
+INFO - 2019-09-03 18:59:47 --> Security Class Initialized
+DEBUG - 2019-09-03 18:59:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 18:59:47 --> Input Class Initialized
+INFO - 2019-09-03 18:59:47 --> Language Class Initialized
+INFO - 2019-09-03 18:59:47 --> Loader Class Initialized
+INFO - 2019-09-03 18:59:47 --> Helper loaded: url_helper
+INFO - 2019-09-03 18:59:47 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 18:59:47 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 18:59:47 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 18:59:47 --> Controller Class Initialized
+DEBUG - 2019-09-03 18:59:47 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/rest.php
+INFO - 2019-09-03 18:59:47 --> Helper loaded: inflector_helper
+INFO - 2019-09-03 18:59:47 --> Language file loaded: language/english/rest_controller_lang.php
+INFO - 2019-09-03 18:59:47 --> Model "Template_model" initialized
+INFO - 2019-09-03 18:59:47 --> Model "Khang_sinh_model" initialized
+INFO - 2019-09-03 18:59:47 --> Final output sent to browser
+DEBUG - 2019-09-03 18:59:47 --> Total execution time: 0.0393
+INFO - 2019-09-03 19:05:40 --> Config Class Initialized
+INFO - 2019-09-03 19:05:40 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:05:40 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:05:40 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:05:40 --> URI Class Initialized
+INFO - 2019-09-03 19:05:40 --> Router Class Initialized
+INFO - 2019-09-03 19:05:40 --> Output Class Initialized
+INFO - 2019-09-03 19:05:40 --> Security Class Initialized
+DEBUG - 2019-09-03 19:05:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:05:40 --> Input Class Initialized
+INFO - 2019-09-03 19:05:40 --> Language Class Initialized
+INFO - 2019-09-03 19:05:40 --> Loader Class Initialized
+INFO - 2019-09-03 19:05:40 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:05:40 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:05:40 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:05:40 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:05:40 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:05:40 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:05:40 --> Email Class Initialized
+INFO - 2019-09-03 19:05:40 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:05:40 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:05:40 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:05:40 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:05:40 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:05:40 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:05:40 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\user/sidebar.php
+INFO - 2019-09-03 19:05:40 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\tool/form/step2.php
+INFO - 2019-09-03 19:05:40 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\general/layout.php
+INFO - 2019-09-03 19:05:40 --> Final output sent to browser
+DEBUG - 2019-09-03 19:05:40 --> Total execution time: 0.0282
+INFO - 2019-09-03 19:05:41 --> Config Class Initialized
+INFO - 2019-09-03 19:05:41 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:05:41 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:05:41 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:05:41 --> URI Class Initialized
+INFO - 2019-09-03 19:05:41 --> Router Class Initialized
+INFO - 2019-09-03 19:05:41 --> Output Class Initialized
+INFO - 2019-09-03 19:05:41 --> Security Class Initialized
+DEBUG - 2019-09-03 19:05:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:05:41 --> Input Class Initialized
+INFO - 2019-09-03 19:05:41 --> Language Class Initialized
+INFO - 2019-09-03 19:05:41 --> Loader Class Initialized
+INFO - 2019-09-03 19:05:41 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:05:41 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:05:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:05:41 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:05:41 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:05:41 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/rest.php
+INFO - 2019-09-03 19:05:41 --> Helper loaded: inflector_helper
+INFO - 2019-09-03 19:05:41 --> Language file loaded: language/english/rest_controller_lang.php
+INFO - 2019-09-03 19:05:41 --> Model "Template_model" initialized
+INFO - 2019-09-03 19:05:41 --> Model "Khang_sinh_model" initialized
+INFO - 2019-09-03 19:05:41 --> Final output sent to browser
+DEBUG - 2019-09-03 19:05:41 --> Total execution time: 0.0287
+INFO - 2019-09-03 19:05:43 --> Config Class Initialized
+INFO - 2019-09-03 19:05:43 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:05:43 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:05:43 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:05:43 --> URI Class Initialized
+INFO - 2019-09-03 19:05:43 --> Router Class Initialized
+INFO - 2019-09-03 19:05:43 --> Output Class Initialized
+INFO - 2019-09-03 19:05:43 --> Security Class Initialized
+DEBUG - 2019-09-03 19:05:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:05:43 --> Input Class Initialized
+INFO - 2019-09-03 19:05:43 --> Language Class Initialized
+INFO - 2019-09-03 19:05:43 --> Loader Class Initialized
+INFO - 2019-09-03 19:05:43 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:05:43 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:05:43 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:05:43 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:05:43 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:05:43 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/rest.php
+INFO - 2019-09-03 19:05:43 --> Helper loaded: inflector_helper
+INFO - 2019-09-03 19:05:43 --> Language file loaded: language/english/rest_controller_lang.php
+INFO - 2019-09-03 19:05:43 --> Model "Value_model" initialized
+INFO - 2019-09-03 19:05:43 --> Model "Form_model" initialized
+INFO - 2019-09-03 19:05:43 --> Model "Meta_link_model" initialized
+INFO - 2019-09-03 19:05:43 --> Model "List_ks_model" initialized
+DEBUG - 2019-09-03 19:05:43 --> Form id:34
+ERROR - 2019-09-03 19:05:43 --> Severity: Notice --> Array to string conversion D:\Programs\Xampp\htdocs\hait\system\database\DB_query_builder.php 1592
+ERROR - 2019-09-03 19:05:43 --> Query error: Unknown column 'Array' in 'field list' - Invalid query: INSERT INTO `value` (`attribute_name`, `data_type`, `form_attribute_id`, `form_id`, `form_part`, `value`) VALUES ('ngay_dieu_tra','DATE','34_ngay_dieu_tra',34,'all','2019-09-03'), ('ngay_vao_khoa','Date','34_ngay_vao_khoa',34,'all','2019-09-13'), ('ngay_vao_vien','Date','34_ngay_vao_vien',34,'all','2019-09-25'), ('msba','Text','34_msba',34,'all','xzcxxz'), ('ho_ten_bn','Text','34_ho_ten_bn',34,'all','xZxZ'), ('nkvm','BOOLEAN','34_nkvm',34,'all',Array)
+INFO - 2019-09-03 19:05:43 --> Final output sent to browser
+DEBUG - 2019-09-03 19:05:43 --> Total execution time: 0.2020
+INFO - 2019-09-03 19:08:31 --> Config Class Initialized
+INFO - 2019-09-03 19:08:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:08:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:08:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:08:31 --> URI Class Initialized
+INFO - 2019-09-03 19:08:31 --> Router Class Initialized
+INFO - 2019-09-03 19:08:31 --> Output Class Initialized
+INFO - 2019-09-03 19:08:31 --> Security Class Initialized
+DEBUG - 2019-09-03 19:08:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:08:31 --> Input Class Initialized
+INFO - 2019-09-03 19:08:31 --> Language Class Initialized
+INFO - 2019-09-03 19:08:31 --> Loader Class Initialized
+INFO - 2019-09-03 19:08:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:08:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:08:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:08:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:08:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:08:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:08:31 --> Email Class Initialized
+INFO - 2019-09-03 19:08:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:08:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:08:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:08:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:08:31 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:08:31 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:08:31 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\user/sidebar.php
+INFO - 2019-09-03 19:08:31 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\tool/form/list.php
+INFO - 2019-09-03 19:08:31 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\general/layout.php
+INFO - 2019-09-03 19:08:31 --> Final output sent to browser
+DEBUG - 2019-09-03 19:08:31 --> Total execution time: 0.0405
+INFO - 2019-09-03 19:08:32 --> Config Class Initialized
+INFO - 2019-09-03 19:08:32 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:08:32 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:08:32 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:08:32 --> URI Class Initialized
+INFO - 2019-09-03 19:08:32 --> Router Class Initialized
+INFO - 2019-09-03 19:08:32 --> Output Class Initialized
+INFO - 2019-09-03 19:08:32 --> Security Class Initialized
+DEBUG - 2019-09-03 19:08:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:08:32 --> Input Class Initialized
+INFO - 2019-09-03 19:08:32 --> Language Class Initialized
+INFO - 2019-09-03 19:08:32 --> Loader Class Initialized
+INFO - 2019-09-03 19:08:32 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:08:32 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:08:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:08:32 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:08:32 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:08:32 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/rest.php
+INFO - 2019-09-03 19:08:32 --> Helper loaded: inflector_helper
+INFO - 2019-09-03 19:08:32 --> Language file loaded: language/english/rest_controller_lang.php
+INFO - 2019-09-03 19:08:32 --> Model "Form_model" initialized
+INFO - 2019-09-03 19:08:32 --> Final output sent to browser
+DEBUG - 2019-09-03 19:08:32 --> Total execution time: 0.0355
+INFO - 2019-09-03 19:08:39 --> Config Class Initialized
+INFO - 2019-09-03 19:08:39 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:08:39 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:08:39 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:08:39 --> URI Class Initialized
+INFO - 2019-09-03 19:08:39 --> Router Class Initialized
+INFO - 2019-09-03 19:08:39 --> Output Class Initialized
+INFO - 2019-09-03 19:08:39 --> Security Class Initialized
+DEBUG - 2019-09-03 19:08:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:08:39 --> Input Class Initialized
+INFO - 2019-09-03 19:08:39 --> Language Class Initialized
+INFO - 2019-09-03 19:08:39 --> Loader Class Initialized
+INFO - 2019-09-03 19:08:39 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:08:39 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:08:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:08:39 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:08:39 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:08:39 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:08:39 --> Email Class Initialized
+INFO - 2019-09-03 19:08:39 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:08:39 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:08:39 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:08:39 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:08:39 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:08:39 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:08:39 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\user/sidebar.php
+INFO - 2019-09-03 19:08:39 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\tool/form/list.php
+INFO - 2019-09-03 19:08:39 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\general/layout.php
+INFO - 2019-09-03 19:08:39 --> Final output sent to browser
+DEBUG - 2019-09-03 19:08:39 --> Total execution time: 0.0363
+INFO - 2019-09-03 19:08:40 --> Config Class Initialized
+INFO - 2019-09-03 19:08:40 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:08:40 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:08:40 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:08:40 --> URI Class Initialized
+INFO - 2019-09-03 19:08:40 --> Router Class Initialized
+INFO - 2019-09-03 19:08:40 --> Output Class Initialized
+INFO - 2019-09-03 19:08:40 --> Security Class Initialized
+DEBUG - 2019-09-03 19:08:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:08:40 --> Input Class Initialized
+INFO - 2019-09-03 19:08:40 --> Language Class Initialized
+INFO - 2019-09-03 19:08:40 --> Loader Class Initialized
+INFO - 2019-09-03 19:08:40 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:08:40 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:08:40 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:08:40 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:08:40 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:08:40 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/rest.php
+INFO - 2019-09-03 19:08:40 --> Helper loaded: inflector_helper
+INFO - 2019-09-03 19:08:40 --> Language file loaded: language/english/rest_controller_lang.php
+INFO - 2019-09-03 19:08:40 --> Model "Form_model" initialized
+INFO - 2019-09-03 19:08:40 --> Final output sent to browser
+DEBUG - 2019-09-03 19:08:40 --> Total execution time: 0.0282
+INFO - 2019-09-03 19:16:30 --> Config Class Initialized
+INFO - 2019-09-03 19:16:30 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:30 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:30 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:30 --> URI Class Initialized
+INFO - 2019-09-03 19:16:30 --> Router Class Initialized
+INFO - 2019-09-03 19:16:30 --> Output Class Initialized
+INFO - 2019-09-03 19:16:30 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:30 --> Input Class Initialized
+INFO - 2019-09-03 19:16:30 --> Language Class Initialized
+INFO - 2019-09-03 19:16:30 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:30 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:30 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:30 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:30 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:30 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:30 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:30 --> Email Class Initialized
+INFO - 2019-09-03 19:16:30 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:30 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:30 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:30 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:30 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:30 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:30 --> Config Class Initialized
+INFO - 2019-09-03 19:16:30 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:30 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:30 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:30 --> URI Class Initialized
+INFO - 2019-09-03 19:16:30 --> Router Class Initialized
+INFO - 2019-09-03 19:16:30 --> Output Class Initialized
+INFO - 2019-09-03 19:16:30 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:30 --> Input Class Initialized
+INFO - 2019-09-03 19:16:30 --> Language Class Initialized
+INFO - 2019-09-03 19:16:30 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:30 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:30 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:30 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:30 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:30 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:30 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:30 --> Email Class Initialized
+INFO - 2019-09-03 19:16:30 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:30 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:30 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:30 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:30 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:30 --> Config Class Initialized
+INFO - 2019-09-03 19:16:30 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:30 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:30 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:30 --> URI Class Initialized
+INFO - 2019-09-03 19:16:30 --> Router Class Initialized
+INFO - 2019-09-03 19:16:30 --> Output Class Initialized
+INFO - 2019-09-03 19:16:30 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:30 --> Input Class Initialized
+INFO - 2019-09-03 19:16:30 --> Language Class Initialized
+INFO - 2019-09-03 19:16:30 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:30 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:30 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:30 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:30 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:30 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:30 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:30 --> Email Class Initialized
+INFO - 2019-09-03 19:16:30 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:30 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:30 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:30 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:30 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:30 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:30 --> Config Class Initialized
+INFO - 2019-09-03 19:16:30 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:30 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:30 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:30 --> URI Class Initialized
+INFO - 2019-09-03 19:16:30 --> Router Class Initialized
+INFO - 2019-09-03 19:16:30 --> Output Class Initialized
+INFO - 2019-09-03 19:16:30 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:30 --> Input Class Initialized
+INFO - 2019-09-03 19:16:30 --> Language Class Initialized
+INFO - 2019-09-03 19:16:30 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:30 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:30 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:31 --> Email Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:31 --> Config Class Initialized
+INFO - 2019-09-03 19:16:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:31 --> URI Class Initialized
+INFO - 2019-09-03 19:16:31 --> Router Class Initialized
+INFO - 2019-09-03 19:16:31 --> Output Class Initialized
+INFO - 2019-09-03 19:16:31 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:31 --> Input Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language Class Initialized
+INFO - 2019-09-03 19:16:31 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:31 --> Email Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:31 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Config Class Initialized
+INFO - 2019-09-03 19:16:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:31 --> URI Class Initialized
+INFO - 2019-09-03 19:16:31 --> Router Class Initialized
+INFO - 2019-09-03 19:16:31 --> Output Class Initialized
+INFO - 2019-09-03 19:16:31 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:31 --> Input Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language Class Initialized
+INFO - 2019-09-03 19:16:31 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:31 --> Email Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:31 --> Config Class Initialized
+INFO - 2019-09-03 19:16:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:31 --> URI Class Initialized
+INFO - 2019-09-03 19:16:31 --> Router Class Initialized
+INFO - 2019-09-03 19:16:31 --> Output Class Initialized
+INFO - 2019-09-03 19:16:31 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:31 --> Input Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language Class Initialized
+INFO - 2019-09-03 19:16:31 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:31 --> Email Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:31 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Config Class Initialized
+INFO - 2019-09-03 19:16:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:31 --> URI Class Initialized
+INFO - 2019-09-03 19:16:31 --> Router Class Initialized
+INFO - 2019-09-03 19:16:31 --> Output Class Initialized
+INFO - 2019-09-03 19:16:31 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:31 --> Input Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language Class Initialized
+INFO - 2019-09-03 19:16:31 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:31 --> Email Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:31 --> Config Class Initialized
+INFO - 2019-09-03 19:16:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:31 --> URI Class Initialized
+INFO - 2019-09-03 19:16:31 --> Router Class Initialized
+INFO - 2019-09-03 19:16:31 --> Output Class Initialized
+INFO - 2019-09-03 19:16:31 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:31 --> Input Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language Class Initialized
+INFO - 2019-09-03 19:16:31 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:31 --> Email Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:31 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Config Class Initialized
+INFO - 2019-09-03 19:16:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:31 --> URI Class Initialized
+INFO - 2019-09-03 19:16:31 --> Router Class Initialized
+INFO - 2019-09-03 19:16:31 --> Output Class Initialized
+INFO - 2019-09-03 19:16:31 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:31 --> Input Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language Class Initialized
+INFO - 2019-09-03 19:16:31 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:31 --> Email Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:31 --> Config Class Initialized
+INFO - 2019-09-03 19:16:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:31 --> URI Class Initialized
+INFO - 2019-09-03 19:16:31 --> Router Class Initialized
+INFO - 2019-09-03 19:16:31 --> Output Class Initialized
+INFO - 2019-09-03 19:16:31 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:31 --> Input Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language Class Initialized
+INFO - 2019-09-03 19:16:31 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:31 --> Email Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:31 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Config Class Initialized
+INFO - 2019-09-03 19:16:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:31 --> URI Class Initialized
+INFO - 2019-09-03 19:16:31 --> Router Class Initialized
+INFO - 2019-09-03 19:16:31 --> Output Class Initialized
+INFO - 2019-09-03 19:16:31 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:31 --> Input Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language Class Initialized
+INFO - 2019-09-03 19:16:31 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:31 --> Email Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:31 --> Config Class Initialized
+INFO - 2019-09-03 19:16:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:31 --> URI Class Initialized
+INFO - 2019-09-03 19:16:31 --> Router Class Initialized
+INFO - 2019-09-03 19:16:31 --> Output Class Initialized
+INFO - 2019-09-03 19:16:31 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:31 --> Input Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language Class Initialized
+INFO - 2019-09-03 19:16:31 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:31 --> Email Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:31 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Config Class Initialized
+INFO - 2019-09-03 19:16:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:31 --> URI Class Initialized
+INFO - 2019-09-03 19:16:31 --> Router Class Initialized
+INFO - 2019-09-03 19:16:31 --> Output Class Initialized
+INFO - 2019-09-03 19:16:31 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:31 --> Input Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language Class Initialized
+INFO - 2019-09-03 19:16:31 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:31 --> Email Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:31 --> Config Class Initialized
+INFO - 2019-09-03 19:16:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:31 --> URI Class Initialized
+INFO - 2019-09-03 19:16:31 --> Router Class Initialized
+INFO - 2019-09-03 19:16:31 --> Output Class Initialized
+INFO - 2019-09-03 19:16:31 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:31 --> Input Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language Class Initialized
+INFO - 2019-09-03 19:16:31 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:31 --> Email Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:31 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Config Class Initialized
+INFO - 2019-09-03 19:16:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:31 --> URI Class Initialized
+INFO - 2019-09-03 19:16:31 --> Router Class Initialized
+INFO - 2019-09-03 19:16:31 --> Output Class Initialized
+INFO - 2019-09-03 19:16:31 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:31 --> Input Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language Class Initialized
+INFO - 2019-09-03 19:16:31 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:31 --> Email Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:31 --> Config Class Initialized
+INFO - 2019-09-03 19:16:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:31 --> URI Class Initialized
+INFO - 2019-09-03 19:16:31 --> Router Class Initialized
+INFO - 2019-09-03 19:16:31 --> Output Class Initialized
+INFO - 2019-09-03 19:16:31 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:31 --> Input Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language Class Initialized
+INFO - 2019-09-03 19:16:31 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:31 --> Email Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:31 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Config Class Initialized
+INFO - 2019-09-03 19:16:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:31 --> URI Class Initialized
+INFO - 2019-09-03 19:16:31 --> Router Class Initialized
+INFO - 2019-09-03 19:16:31 --> Output Class Initialized
+INFO - 2019-09-03 19:16:31 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:31 --> Input Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language Class Initialized
+INFO - 2019-09-03 19:16:31 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:31 --> Email Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:31 --> Config Class Initialized
+INFO - 2019-09-03 19:16:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:31 --> URI Class Initialized
+INFO - 2019-09-03 19:16:31 --> Router Class Initialized
+INFO - 2019-09-03 19:16:31 --> Output Class Initialized
+INFO - 2019-09-03 19:16:31 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:31 --> Input Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language Class Initialized
+INFO - 2019-09-03 19:16:31 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:31 --> Email Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:31 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Config Class Initialized
+INFO - 2019-09-03 19:16:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:31 --> URI Class Initialized
+INFO - 2019-09-03 19:16:31 --> Router Class Initialized
+INFO - 2019-09-03 19:16:31 --> Output Class Initialized
+INFO - 2019-09-03 19:16:31 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:31 --> Input Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language Class Initialized
+INFO - 2019-09-03 19:16:31 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:31 --> Email Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:31 --> Config Class Initialized
+INFO - 2019-09-03 19:16:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:31 --> URI Class Initialized
+INFO - 2019-09-03 19:16:31 --> Router Class Initialized
+INFO - 2019-09-03 19:16:31 --> Output Class Initialized
+INFO - 2019-09-03 19:16:31 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:31 --> Input Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language Class Initialized
+INFO - 2019-09-03 19:16:31 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:31 --> Email Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:31 --> Config Class Initialized
+INFO - 2019-09-03 19:16:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:31 --> URI Class Initialized
+INFO - 2019-09-03 19:16:31 --> Router Class Initialized
+INFO - 2019-09-03 19:16:31 --> Output Class Initialized
+INFO - 2019-09-03 19:16:31 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:31 --> Input Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language Class Initialized
+INFO - 2019-09-03 19:16:31 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:31 --> Email Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:31 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Config Class Initialized
+INFO - 2019-09-03 19:16:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:31 --> URI Class Initialized
+INFO - 2019-09-03 19:16:31 --> Router Class Initialized
+INFO - 2019-09-03 19:16:31 --> Output Class Initialized
+INFO - 2019-09-03 19:16:31 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:31 --> Input Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language Class Initialized
+INFO - 2019-09-03 19:16:31 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:31 --> Email Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:31 --> Config Class Initialized
+INFO - 2019-09-03 19:16:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:31 --> URI Class Initialized
+INFO - 2019-09-03 19:16:31 --> Router Class Initialized
+INFO - 2019-09-03 19:16:31 --> Output Class Initialized
+INFO - 2019-09-03 19:16:31 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:31 --> Input Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language Class Initialized
+INFO - 2019-09-03 19:16:31 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:31 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:31 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:31 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:31 --> Email Class Initialized
+INFO - 2019-09-03 19:16:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:31 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:31 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:31 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:31 --> Config Class Initialized
+INFO - 2019-09-03 19:16:31 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:31 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:31 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:32 --> URI Class Initialized
+INFO - 2019-09-03 19:16:32 --> Router Class Initialized
+INFO - 2019-09-03 19:16:32 --> Output Class Initialized
+INFO - 2019-09-03 19:16:32 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:32 --> Input Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language Class Initialized
+INFO - 2019-09-03 19:16:32 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:32 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:32 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:32 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:32 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:32 --> Email Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:32 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:32 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:32 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:32 --> Config Class Initialized
+INFO - 2019-09-03 19:16:32 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:32 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:32 --> URI Class Initialized
+INFO - 2019-09-03 19:16:32 --> Router Class Initialized
+INFO - 2019-09-03 19:16:32 --> Output Class Initialized
+INFO - 2019-09-03 19:16:32 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:32 --> Input Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language Class Initialized
+INFO - 2019-09-03 19:16:32 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:32 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:32 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:32 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:32 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:32 --> Email Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:32 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:32 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:32 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:32 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Config Class Initialized
+INFO - 2019-09-03 19:16:32 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:32 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:32 --> URI Class Initialized
+INFO - 2019-09-03 19:16:32 --> Router Class Initialized
+INFO - 2019-09-03 19:16:32 --> Output Class Initialized
+INFO - 2019-09-03 19:16:32 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:32 --> Input Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language Class Initialized
+INFO - 2019-09-03 19:16:32 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:32 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:32 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:32 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:32 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:32 --> Email Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:32 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:32 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:32 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:32 --> Config Class Initialized
+INFO - 2019-09-03 19:16:32 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:32 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:32 --> URI Class Initialized
+INFO - 2019-09-03 19:16:32 --> Router Class Initialized
+INFO - 2019-09-03 19:16:32 --> Output Class Initialized
+INFO - 2019-09-03 19:16:32 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:32 --> Input Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language Class Initialized
+INFO - 2019-09-03 19:16:32 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:32 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:32 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:32 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:32 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:32 --> Email Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:32 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:32 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:32 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:32 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Config Class Initialized
+INFO - 2019-09-03 19:16:32 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:32 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:32 --> URI Class Initialized
+INFO - 2019-09-03 19:16:32 --> Router Class Initialized
+INFO - 2019-09-03 19:16:32 --> Output Class Initialized
+INFO - 2019-09-03 19:16:32 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:32 --> Input Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language Class Initialized
+INFO - 2019-09-03 19:16:32 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:32 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:32 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:32 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:32 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:32 --> Email Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:32 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:32 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:32 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:32 --> Config Class Initialized
+INFO - 2019-09-03 19:16:32 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:32 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:32 --> URI Class Initialized
+INFO - 2019-09-03 19:16:32 --> Router Class Initialized
+INFO - 2019-09-03 19:16:32 --> Output Class Initialized
+INFO - 2019-09-03 19:16:32 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:32 --> Input Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language Class Initialized
+INFO - 2019-09-03 19:16:32 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:32 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:32 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:32 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:32 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:32 --> Email Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:32 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:32 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:32 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:32 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Config Class Initialized
+INFO - 2019-09-03 19:16:32 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:32 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:32 --> URI Class Initialized
+INFO - 2019-09-03 19:16:32 --> Router Class Initialized
+INFO - 2019-09-03 19:16:32 --> Output Class Initialized
+INFO - 2019-09-03 19:16:32 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:32 --> Input Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language Class Initialized
+INFO - 2019-09-03 19:16:32 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:32 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:32 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:32 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:32 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:32 --> Email Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:32 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:32 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:32 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:32 --> Config Class Initialized
+INFO - 2019-09-03 19:16:32 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:32 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:32 --> URI Class Initialized
+INFO - 2019-09-03 19:16:32 --> Router Class Initialized
+INFO - 2019-09-03 19:16:32 --> Output Class Initialized
+INFO - 2019-09-03 19:16:32 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:32 --> Input Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language Class Initialized
+INFO - 2019-09-03 19:16:32 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:32 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:32 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:32 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:32 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:32 --> Email Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:32 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:32 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:32 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:32 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Config Class Initialized
+INFO - 2019-09-03 19:16:32 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:32 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:32 --> URI Class Initialized
+INFO - 2019-09-03 19:16:32 --> Router Class Initialized
+INFO - 2019-09-03 19:16:32 --> Output Class Initialized
+INFO - 2019-09-03 19:16:32 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:32 --> Input Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language Class Initialized
+INFO - 2019-09-03 19:16:32 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:32 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:32 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:32 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:32 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:32 --> Email Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:32 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:32 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:32 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:32 --> Config Class Initialized
+INFO - 2019-09-03 19:16:32 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:32 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:32 --> URI Class Initialized
+INFO - 2019-09-03 19:16:32 --> Router Class Initialized
+INFO - 2019-09-03 19:16:32 --> Output Class Initialized
+INFO - 2019-09-03 19:16:32 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:32 --> Input Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language Class Initialized
+INFO - 2019-09-03 19:16:32 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:32 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:32 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:32 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:32 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:32 --> Email Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:32 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:32 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:32 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:32 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Config Class Initialized
+INFO - 2019-09-03 19:16:32 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:32 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:32 --> URI Class Initialized
+INFO - 2019-09-03 19:16:32 --> Router Class Initialized
+INFO - 2019-09-03 19:16:32 --> Output Class Initialized
+INFO - 2019-09-03 19:16:32 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:32 --> Input Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language Class Initialized
+INFO - 2019-09-03 19:16:32 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:32 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:32 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:32 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:32 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:32 --> Email Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:32 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:32 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:32 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:32 --> Config Class Initialized
+INFO - 2019-09-03 19:16:32 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:32 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:32 --> URI Class Initialized
+INFO - 2019-09-03 19:16:32 --> Router Class Initialized
+INFO - 2019-09-03 19:16:32 --> Output Class Initialized
+INFO - 2019-09-03 19:16:32 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:32 --> Input Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language Class Initialized
+INFO - 2019-09-03 19:16:32 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:32 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:32 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:32 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:32 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:32 --> Email Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:32 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:32 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:32 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:32 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Config Class Initialized
+INFO - 2019-09-03 19:16:32 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:32 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:32 --> URI Class Initialized
+INFO - 2019-09-03 19:16:32 --> Router Class Initialized
+INFO - 2019-09-03 19:16:32 --> Output Class Initialized
+INFO - 2019-09-03 19:16:32 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:32 --> Input Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language Class Initialized
+INFO - 2019-09-03 19:16:32 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:32 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:32 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:32 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:32 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:32 --> Email Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:32 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:32 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:32 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:32 --> Config Class Initialized
+INFO - 2019-09-03 19:16:32 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:32 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:32 --> URI Class Initialized
+INFO - 2019-09-03 19:16:32 --> Router Class Initialized
+INFO - 2019-09-03 19:16:32 --> Output Class Initialized
+INFO - 2019-09-03 19:16:32 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:32 --> Input Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language Class Initialized
+INFO - 2019-09-03 19:16:32 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:32 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:32 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:32 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:32 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:32 --> Email Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:32 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:32 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:32 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:32 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Config Class Initialized
+INFO - 2019-09-03 19:16:32 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:32 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:32 --> URI Class Initialized
+INFO - 2019-09-03 19:16:32 --> Router Class Initialized
+INFO - 2019-09-03 19:16:32 --> Output Class Initialized
+INFO - 2019-09-03 19:16:32 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:32 --> Input Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language Class Initialized
+INFO - 2019-09-03 19:16:32 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:32 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:32 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:32 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:32 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:32 --> Email Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:32 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:32 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:32 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:32 --> Config Class Initialized
+INFO - 2019-09-03 19:16:32 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:32 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:32 --> URI Class Initialized
+INFO - 2019-09-03 19:16:32 --> Router Class Initialized
+INFO - 2019-09-03 19:16:32 --> Output Class Initialized
+INFO - 2019-09-03 19:16:32 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:32 --> Input Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language Class Initialized
+INFO - 2019-09-03 19:16:32 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:32 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:32 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:32 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:32 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:32 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:32 --> Email Class Initialized
+INFO - 2019-09-03 19:16:32 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:32 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:32 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:32 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:32 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:32 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:37 --> Config Class Initialized
+INFO - 2019-09-03 19:16:37 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:37 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:37 --> URI Class Initialized
+INFO - 2019-09-03 19:16:37 --> Router Class Initialized
+INFO - 2019-09-03 19:16:37 --> Output Class Initialized
+INFO - 2019-09-03 19:16:37 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:37 --> Input Class Initialized
+INFO - 2019-09-03 19:16:37 --> Language Class Initialized
+INFO - 2019-09-03 19:16:37 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:37 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:37 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:37 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:37 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:37 --> Email Class Initialized
+INFO - 2019-09-03 19:16:37 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:37 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:37 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:37 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:37 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:37 --> Config Class Initialized
+INFO - 2019-09-03 19:16:37 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:37 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:37 --> URI Class Initialized
+INFO - 2019-09-03 19:16:37 --> Router Class Initialized
+INFO - 2019-09-03 19:16:37 --> Output Class Initialized
+INFO - 2019-09-03 19:16:37 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:37 --> Input Class Initialized
+INFO - 2019-09-03 19:16:37 --> Language Class Initialized
+INFO - 2019-09-03 19:16:37 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:37 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:37 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:37 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:37 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:37 --> Email Class Initialized
+INFO - 2019-09-03 19:16:37 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:37 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:37 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:37 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:37 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:37 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:37 --> Config Class Initialized
+INFO - 2019-09-03 19:16:37 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:37 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:37 --> URI Class Initialized
+INFO - 2019-09-03 19:16:37 --> Router Class Initialized
+INFO - 2019-09-03 19:16:37 --> Output Class Initialized
+INFO - 2019-09-03 19:16:37 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:37 --> Input Class Initialized
+INFO - 2019-09-03 19:16:37 --> Language Class Initialized
+INFO - 2019-09-03 19:16:37 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:37 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:37 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:37 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:37 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:37 --> Email Class Initialized
+INFO - 2019-09-03 19:16:37 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:37 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:37 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:37 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:37 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:37 --> Config Class Initialized
+INFO - 2019-09-03 19:16:37 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:37 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:37 --> URI Class Initialized
+INFO - 2019-09-03 19:16:37 --> Router Class Initialized
+INFO - 2019-09-03 19:16:37 --> Output Class Initialized
+INFO - 2019-09-03 19:16:37 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:37 --> Input Class Initialized
+INFO - 2019-09-03 19:16:37 --> Language Class Initialized
+INFO - 2019-09-03 19:16:37 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:37 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:37 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:37 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:37 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:37 --> Email Class Initialized
+INFO - 2019-09-03 19:16:37 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:37 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:37 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:37 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:37 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:37 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:37 --> Config Class Initialized
+INFO - 2019-09-03 19:16:37 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:37 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:37 --> URI Class Initialized
+INFO - 2019-09-03 19:16:37 --> Router Class Initialized
+INFO - 2019-09-03 19:16:37 --> Output Class Initialized
+INFO - 2019-09-03 19:16:37 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:37 --> Input Class Initialized
+INFO - 2019-09-03 19:16:37 --> Language Class Initialized
+INFO - 2019-09-03 19:16:37 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:37 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:37 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:37 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:37 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:37 --> Email Class Initialized
+INFO - 2019-09-03 19:16:37 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:37 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:37 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:37 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:37 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:37 --> Config Class Initialized
+INFO - 2019-09-03 19:16:37 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:37 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:37 --> URI Class Initialized
+INFO - 2019-09-03 19:16:37 --> Router Class Initialized
+INFO - 2019-09-03 19:16:37 --> Output Class Initialized
+INFO - 2019-09-03 19:16:37 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:37 --> Input Class Initialized
+INFO - 2019-09-03 19:16:37 --> Language Class Initialized
+INFO - 2019-09-03 19:16:37 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:37 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:37 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:37 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:37 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:37 --> Email Class Initialized
+INFO - 2019-09-03 19:16:37 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:37 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:37 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:37 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:37 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:37 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:37 --> Config Class Initialized
+INFO - 2019-09-03 19:16:37 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:37 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:37 --> URI Class Initialized
+INFO - 2019-09-03 19:16:37 --> Router Class Initialized
+INFO - 2019-09-03 19:16:37 --> Output Class Initialized
+INFO - 2019-09-03 19:16:37 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:37 --> Input Class Initialized
+INFO - 2019-09-03 19:16:37 --> Language Class Initialized
+INFO - 2019-09-03 19:16:37 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:37 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:37 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:37 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:37 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:37 --> Email Class Initialized
+INFO - 2019-09-03 19:16:37 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:37 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:37 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:37 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:37 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:37 --> Config Class Initialized
+INFO - 2019-09-03 19:16:37 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:37 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:37 --> URI Class Initialized
+INFO - 2019-09-03 19:16:37 --> Router Class Initialized
+INFO - 2019-09-03 19:16:37 --> Output Class Initialized
+INFO - 2019-09-03 19:16:37 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:37 --> Input Class Initialized
+INFO - 2019-09-03 19:16:37 --> Language Class Initialized
+INFO - 2019-09-03 19:16:37 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:37 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:37 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:37 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:37 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:37 --> Email Class Initialized
+INFO - 2019-09-03 19:16:37 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:37 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:37 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:37 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:37 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:37 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:37 --> Config Class Initialized
+INFO - 2019-09-03 19:16:37 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:37 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:37 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:37 --> URI Class Initialized
+INFO - 2019-09-03 19:16:37 --> Router Class Initialized
+INFO - 2019-09-03 19:16:37 --> Output Class Initialized
+INFO - 2019-09-03 19:16:38 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:38 --> Input Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language Class Initialized
+INFO - 2019-09-03 19:16:38 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:38 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:38 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:38 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:38 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:38 --> Email Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:38 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:38 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:38 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:38 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:38 --> Config Class Initialized
+INFO - 2019-09-03 19:16:38 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:38 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:38 --> URI Class Initialized
+INFO - 2019-09-03 19:16:38 --> Router Class Initialized
+INFO - 2019-09-03 19:16:38 --> Output Class Initialized
+INFO - 2019-09-03 19:16:38 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:38 --> Input Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language Class Initialized
+INFO - 2019-09-03 19:16:38 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:38 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:38 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:38 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:38 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:38 --> Email Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:38 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:38 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:38 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:38 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:38 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:38 --> Config Class Initialized
+INFO - 2019-09-03 19:16:38 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:38 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:38 --> URI Class Initialized
+INFO - 2019-09-03 19:16:38 --> Router Class Initialized
+INFO - 2019-09-03 19:16:38 --> Output Class Initialized
+INFO - 2019-09-03 19:16:38 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:38 --> Input Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language Class Initialized
+INFO - 2019-09-03 19:16:38 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:38 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:38 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:38 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:38 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:38 --> Email Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:38 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:38 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:38 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:38 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:38 --> Config Class Initialized
+INFO - 2019-09-03 19:16:38 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:38 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:38 --> URI Class Initialized
+INFO - 2019-09-03 19:16:38 --> Router Class Initialized
+INFO - 2019-09-03 19:16:38 --> Output Class Initialized
+INFO - 2019-09-03 19:16:38 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:38 --> Input Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language Class Initialized
+INFO - 2019-09-03 19:16:38 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:38 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:38 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:38 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:38 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:38 --> Email Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:38 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:38 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:38 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:38 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:38 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:38 --> Config Class Initialized
+INFO - 2019-09-03 19:16:38 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:38 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:38 --> URI Class Initialized
+INFO - 2019-09-03 19:16:38 --> Router Class Initialized
+INFO - 2019-09-03 19:16:38 --> Output Class Initialized
+INFO - 2019-09-03 19:16:38 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:38 --> Input Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language Class Initialized
+INFO - 2019-09-03 19:16:38 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:38 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:38 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:38 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:38 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:38 --> Email Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:38 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:38 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:38 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:38 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:38 --> Config Class Initialized
+INFO - 2019-09-03 19:16:38 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:38 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:38 --> URI Class Initialized
+INFO - 2019-09-03 19:16:38 --> Router Class Initialized
+INFO - 2019-09-03 19:16:38 --> Output Class Initialized
+INFO - 2019-09-03 19:16:38 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:38 --> Input Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language Class Initialized
+INFO - 2019-09-03 19:16:38 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:38 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:38 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:38 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:38 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:38 --> Email Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:38 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:38 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:38 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:38 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:38 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:38 --> Config Class Initialized
+INFO - 2019-09-03 19:16:38 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:38 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:38 --> URI Class Initialized
+INFO - 2019-09-03 19:16:38 --> Router Class Initialized
+INFO - 2019-09-03 19:16:38 --> Output Class Initialized
+INFO - 2019-09-03 19:16:38 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:38 --> Input Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language Class Initialized
+INFO - 2019-09-03 19:16:38 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:38 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:38 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:38 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:38 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:38 --> Email Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:38 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:38 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:38 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:38 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:38 --> Config Class Initialized
+INFO - 2019-09-03 19:16:38 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:38 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:38 --> URI Class Initialized
+INFO - 2019-09-03 19:16:38 --> Router Class Initialized
+INFO - 2019-09-03 19:16:38 --> Output Class Initialized
+INFO - 2019-09-03 19:16:38 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:38 --> Input Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language Class Initialized
+INFO - 2019-09-03 19:16:38 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:38 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:38 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:38 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:38 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:38 --> Email Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:38 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:38 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:38 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:38 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:38 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:38 --> Config Class Initialized
+INFO - 2019-09-03 19:16:38 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:38 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:38 --> URI Class Initialized
+INFO - 2019-09-03 19:16:38 --> Router Class Initialized
+INFO - 2019-09-03 19:16:38 --> Output Class Initialized
+INFO - 2019-09-03 19:16:38 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:38 --> Input Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language Class Initialized
+INFO - 2019-09-03 19:16:38 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:38 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:38 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:38 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:38 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:38 --> Email Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:38 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:38 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:38 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:38 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:38 --> Config Class Initialized
+INFO - 2019-09-03 19:16:38 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:38 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:38 --> URI Class Initialized
+INFO - 2019-09-03 19:16:38 --> Router Class Initialized
+INFO - 2019-09-03 19:16:38 --> Output Class Initialized
+INFO - 2019-09-03 19:16:38 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:38 --> Input Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language Class Initialized
+INFO - 2019-09-03 19:16:38 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:38 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:38 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:38 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:38 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:38 --> Email Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:38 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:38 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:38 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:38 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:38 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:38 --> Config Class Initialized
+INFO - 2019-09-03 19:16:38 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:38 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:38 --> URI Class Initialized
+INFO - 2019-09-03 19:16:38 --> Router Class Initialized
+INFO - 2019-09-03 19:16:38 --> Output Class Initialized
+INFO - 2019-09-03 19:16:38 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:38 --> Input Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language Class Initialized
+INFO - 2019-09-03 19:16:38 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:38 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:38 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:38 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:38 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:38 --> Email Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:38 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:38 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:38 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:38 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:38 --> Config Class Initialized
+INFO - 2019-09-03 19:16:38 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:38 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:38 --> URI Class Initialized
+INFO - 2019-09-03 19:16:38 --> Router Class Initialized
+INFO - 2019-09-03 19:16:38 --> Output Class Initialized
+INFO - 2019-09-03 19:16:38 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:38 --> Input Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language Class Initialized
+INFO - 2019-09-03 19:16:38 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:38 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:38 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:38 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:38 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:38 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:38 --> Email Class Initialized
+INFO - 2019-09-03 19:16:38 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:38 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:38 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:38 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:38 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:38 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:48 --> Config Class Initialized
+INFO - 2019-09-03 19:16:48 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:48 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:48 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:48 --> URI Class Initialized
+INFO - 2019-09-03 19:16:48 --> Router Class Initialized
+INFO - 2019-09-03 19:16:48 --> Output Class Initialized
+INFO - 2019-09-03 19:16:48 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:48 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:48 --> Input Class Initialized
+INFO - 2019-09-03 19:16:48 --> Language Class Initialized
+INFO - 2019-09-03 19:16:48 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:48 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:48 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:48 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:48 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:48 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:48 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:48 --> Email Class Initialized
+INFO - 2019-09-03 19:16:48 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:48 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:48 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:48 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:48 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:48 --> Config Class Initialized
+INFO - 2019-09-03 19:16:48 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:48 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:48 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:48 --> URI Class Initialized
+INFO - 2019-09-03 19:16:48 --> Router Class Initialized
+INFO - 2019-09-03 19:16:48 --> Output Class Initialized
+INFO - 2019-09-03 19:16:48 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:48 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:48 --> Input Class Initialized
+INFO - 2019-09-03 19:16:48 --> Language Class Initialized
+INFO - 2019-09-03 19:16:48 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:48 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:48 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:48 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:48 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:48 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:48 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:48 --> Email Class Initialized
+INFO - 2019-09-03 19:16:48 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:48 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:48 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:48 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:48 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:48 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\general/login.php
+INFO - 2019-09-03 19:16:48 --> Final output sent to browser
+DEBUG - 2019-09-03 19:16:48 --> Total execution time: 0.0376
+INFO - 2019-09-03 19:16:49 --> Config Class Initialized
+INFO - 2019-09-03 19:16:49 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:49 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:49 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:49 --> URI Class Initialized
+INFO - 2019-09-03 19:16:49 --> Router Class Initialized
+INFO - 2019-09-03 19:16:49 --> Output Class Initialized
+INFO - 2019-09-03 19:16:49 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:49 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:49 --> Input Class Initialized
+INFO - 2019-09-03 19:16:49 --> Language Class Initialized
+INFO - 2019-09-03 19:16:49 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:49 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:49 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:49 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:49 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:49 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:49 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:49 --> Email Class Initialized
+INFO - 2019-09-03 19:16:49 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:49 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:49 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:49 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:49 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:49 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\general/login.php
+INFO - 2019-09-03 19:16:49 --> Helper loaded: form_helper
+INFO - 2019-09-03 19:16:49 --> Form Validation Class Initialized
+INFO - 2019-09-03 19:16:49 --> Language file loaded: language/english/form_validation_lang.php
+INFO - 2019-09-03 19:16:50 --> Helper loaded: date_helper
+INFO - 2019-09-03 19:16:50 --> Config Class Initialized
+INFO - 2019-09-03 19:16:50 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:50 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:50 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:50 --> URI Class Initialized
+INFO - 2019-09-03 19:16:50 --> Router Class Initialized
+INFO - 2019-09-03 19:16:50 --> Output Class Initialized
+INFO - 2019-09-03 19:16:50 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:50 --> Input Class Initialized
+INFO - 2019-09-03 19:16:50 --> Language Class Initialized
+INFO - 2019-09-03 19:16:50 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:50 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:50 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:50 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:50 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:50 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:50 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:50 --> Email Class Initialized
+INFO - 2019-09-03 19:16:50 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:50 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:50 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:50 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:50 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:50 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:50 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\admin/sidebar.php
+INFO - 2019-09-03 19:16:50 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\admin/home.php
+INFO - 2019-09-03 19:16:50 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\general/layout.php
+INFO - 2019-09-03 19:16:50 --> Final output sent to browser
+DEBUG - 2019-09-03 19:16:50 --> Total execution time: 0.0369
+INFO - 2019-09-03 19:16:55 --> Config Class Initialized
+INFO - 2019-09-03 19:16:55 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:55 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:55 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:55 --> URI Class Initialized
+INFO - 2019-09-03 19:16:55 --> Router Class Initialized
+INFO - 2019-09-03 19:16:55 --> Output Class Initialized
+INFO - 2019-09-03 19:16:55 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:55 --> Input Class Initialized
+INFO - 2019-09-03 19:16:55 --> Language Class Initialized
+INFO - 2019-09-03 19:16:55 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:55 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:55 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:55 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:55 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:55 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:55 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:55 --> Email Class Initialized
+INFO - 2019-09-03 19:16:55 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:55 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:55 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:55 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:55 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:55 --> Config Class Initialized
+INFO - 2019-09-03 19:16:55 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:55 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:55 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:55 --> URI Class Initialized
+INFO - 2019-09-03 19:16:55 --> Router Class Initialized
+INFO - 2019-09-03 19:16:55 --> Output Class Initialized
+INFO - 2019-09-03 19:16:55 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:55 --> Input Class Initialized
+INFO - 2019-09-03 19:16:55 --> Language Class Initialized
+INFO - 2019-09-03 19:16:55 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:55 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:55 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:55 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:55 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:55 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:55 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:55 --> Email Class Initialized
+INFO - 2019-09-03 19:16:55 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:55 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:55 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:55 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:55 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:16:55 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:55 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\admin/sidebar.php
+INFO - 2019-09-03 19:16:55 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\admin/home.php
+INFO - 2019-09-03 19:16:55 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\general/layout.php
+INFO - 2019-09-03 19:16:55 --> Final output sent to browser
+DEBUG - 2019-09-03 19:16:55 --> Total execution time: 0.0359
+INFO - 2019-09-03 19:16:59 --> Config Class Initialized
+INFO - 2019-09-03 19:16:59 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:59 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:59 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:59 --> URI Class Initialized
+INFO - 2019-09-03 19:16:59 --> Router Class Initialized
+INFO - 2019-09-03 19:16:59 --> Output Class Initialized
+INFO - 2019-09-03 19:16:59 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:59 --> Input Class Initialized
+INFO - 2019-09-03 19:16:59 --> Language Class Initialized
+INFO - 2019-09-03 19:16:59 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:59 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:59 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:59 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:59 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:59 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:59 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:59 --> Email Class Initialized
+INFO - 2019-09-03 19:16:59 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:59 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:59 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:59 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:59 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:59 --> Config Class Initialized
+INFO - 2019-09-03 19:16:59 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:16:59 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:16:59 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:16:59 --> URI Class Initialized
+INFO - 2019-09-03 19:16:59 --> Router Class Initialized
+INFO - 2019-09-03 19:16:59 --> Output Class Initialized
+INFO - 2019-09-03 19:16:59 --> Security Class Initialized
+DEBUG - 2019-09-03 19:16:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:16:59 --> Input Class Initialized
+INFO - 2019-09-03 19:16:59 --> Language Class Initialized
+INFO - 2019-09-03 19:16:59 --> Loader Class Initialized
+INFO - 2019-09-03 19:16:59 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:16:59 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:16:59 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:16:59 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:16:59 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:16:59 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:16:59 --> Email Class Initialized
+INFO - 2019-09-03 19:16:59 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:16:59 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:16:59 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:16:59 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:16:59 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:16:59 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\general/login.php
+INFO - 2019-09-03 19:16:59 --> Final output sent to browser
+DEBUG - 2019-09-03 19:16:59 --> Total execution time: 0.0346
+INFO - 2019-09-03 19:17:06 --> Config Class Initialized
+INFO - 2019-09-03 19:17:06 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:17:06 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:17:06 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:17:06 --> URI Class Initialized
+INFO - 2019-09-03 19:17:06 --> Router Class Initialized
+INFO - 2019-09-03 19:17:06 --> Output Class Initialized
+INFO - 2019-09-03 19:17:06 --> Security Class Initialized
+DEBUG - 2019-09-03 19:17:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:17:06 --> Input Class Initialized
+INFO - 2019-09-03 19:17:06 --> Language Class Initialized
+INFO - 2019-09-03 19:17:06 --> Loader Class Initialized
+INFO - 2019-09-03 19:17:06 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:17:06 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:17:06 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:17:06 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:17:06 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:17:06 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:17:06 --> Email Class Initialized
+INFO - 2019-09-03 19:17:06 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:17:06 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:17:06 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:17:06 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:17:06 --> Model "Ion_auth_model" initialized
+INFO - 2019-09-03 19:17:06 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\general/login.php
+INFO - 2019-09-03 19:17:06 --> Helper loaded: form_helper
+INFO - 2019-09-03 19:17:06 --> Form Validation Class Initialized
+INFO - 2019-09-03 19:17:06 --> Language file loaded: language/english/form_validation_lang.php
+INFO - 2019-09-03 19:17:06 --> Helper loaded: date_helper
+INFO - 2019-09-03 19:17:06 --> Config Class Initialized
+INFO - 2019-09-03 19:17:06 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:17:06 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:17:06 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:17:06 --> URI Class Initialized
+INFO - 2019-09-03 19:17:06 --> Router Class Initialized
+INFO - 2019-09-03 19:17:06 --> Output Class Initialized
+INFO - 2019-09-03 19:17:06 --> Security Class Initialized
+DEBUG - 2019-09-03 19:17:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:17:06 --> Input Class Initialized
+INFO - 2019-09-03 19:17:06 --> Language Class Initialized
+INFO - 2019-09-03 19:17:06 --> Loader Class Initialized
+INFO - 2019-09-03 19:17:06 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:17:06 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:17:06 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:17:06 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:17:06 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:17:06 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:17:06 --> Email Class Initialized
+INFO - 2019-09-03 19:17:06 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:17:06 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:17:06 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:17:06 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:17:06 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:17:06 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:17:06 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\user/sidebar.php
+INFO - 2019-09-03 19:17:06 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\user/home.php
+INFO - 2019-09-03 19:17:06 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\general/layout.php
+INFO - 2019-09-03 19:17:06 --> Final output sent to browser
+DEBUG - 2019-09-03 19:17:06 --> Total execution time: 0.0356
+INFO - 2019-09-03 19:17:13 --> Config Class Initialized
+INFO - 2019-09-03 19:17:13 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:17:13 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:17:13 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:17:13 --> URI Class Initialized
+INFO - 2019-09-03 19:17:13 --> Router Class Initialized
+INFO - 2019-09-03 19:17:13 --> Output Class Initialized
+INFO - 2019-09-03 19:17:13 --> Security Class Initialized
+DEBUG - 2019-09-03 19:17:13 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:17:13 --> Input Class Initialized
+INFO - 2019-09-03 19:17:13 --> Language Class Initialized
+INFO - 2019-09-03 19:17:13 --> Loader Class Initialized
+INFO - 2019-09-03 19:17:13 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:17:13 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:17:13 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:17:13 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:17:13 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:17:13 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/ion_auth.php
+INFO - 2019-09-03 19:17:13 --> Email Class Initialized
+INFO - 2019-09-03 19:17:13 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2019-09-03 19:17:13 --> Helper loaded: cookie_helper
+INFO - 2019-09-03 19:17:13 --> Helper loaded: language_helper
+DEBUG - 2019-09-03 19:17:13 --> Session class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:17:13 --> Model "Ion_auth_model" initialized
+DEBUG - 2019-09-03 19:17:13 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2019-09-03 19:17:13 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\user/sidebar.php
+INFO - 2019-09-03 19:17:13 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\tool/form/list.php
+INFO - 2019-09-03 19:17:13 --> File loaded: D:\Programs\Xampp\htdocs\hait\application\views\general/layout.php
+INFO - 2019-09-03 19:17:13 --> Final output sent to browser
+DEBUG - 2019-09-03 19:17:13 --> Total execution time: 0.0390
+INFO - 2019-09-03 19:17:14 --> Config Class Initialized
+INFO - 2019-09-03 19:17:14 --> Hooks Class Initialized
+DEBUG - 2019-09-03 19:17:14 --> UTF-8 Support Enabled
+INFO - 2019-09-03 19:17:14 --> Utf8 Class Initialized
+INFO - 2019-09-03 19:17:14 --> URI Class Initialized
+INFO - 2019-09-03 19:17:14 --> Router Class Initialized
+INFO - 2019-09-03 19:17:14 --> Output Class Initialized
+INFO - 2019-09-03 19:17:14 --> Security Class Initialized
+DEBUG - 2019-09-03 19:17:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-09-03 19:17:14 --> Input Class Initialized
+INFO - 2019-09-03 19:17:14 --> Language Class Initialized
+INFO - 2019-09-03 19:17:14 --> Loader Class Initialized
+INFO - 2019-09-03 19:17:14 --> Helper loaded: url_helper
+INFO - 2019-09-03 19:17:14 --> Database Driver Class Initialized
+DEBUG - 2019-09-03 19:17:14 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-09-03 19:17:14 --> Session: Class initialized using 'files' driver.
+INFO - 2019-09-03 19:17:14 --> Controller Class Initialized
+DEBUG - 2019-09-03 19:17:14 --> Config file loaded: D:\Programs\Xampp\htdocs\hait\application\config/rest.php
+INFO - 2019-09-03 19:17:14 --> Helper loaded: inflector_helper
+INFO - 2019-09-03 19:17:14 --> Language file loaded: language/english/rest_controller_lang.php
+INFO - 2019-09-03 19:17:14 --> Model "Form_model" initialized
+INFO - 2019-09-03 19:17:14 --> Final output sent to browser
+DEBUG - 2019-09-03 19:17:14 --> Total execution time: 0.0331
