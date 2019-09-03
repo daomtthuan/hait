@@ -14,23 +14,6 @@ class Admin extends MY_Controller {
 
 	public function index()
 	{
-		// $user=$this->session->userdata('login');
-		// if($user){
-		// 	if($role =$this->Login_model->check_role($user)){
-		// 		if($role=='admin'){
-		// 			$data['main']='user/home';
-		// 			$data['page_title'] = ucfirst('Trang quản trị');
-		// 			$data['script'] = ucfirst('');
-		// 			$this->load->view('general/layout',$data);
-		// 		} elseif ($role=='user'){
-		// 			redirect( base_url('user') );
-		// 		} else{
-		// 			$this->load->view('general/login');
-		// 			print_r('The account role not set');
-		// 		}
-		// 	}
-		// }
-
 		$data['role'] = 'admin';
 		$data['page_title'] = 'Trang chủ';
 		$data['main']= 'admin/home';
