@@ -22,7 +22,6 @@ class List_Form extends REST_Controller
 		$this->load->model('Form_model');
 		$data = $this->Form_model->get_form($para);
 		$this->response($data, REST_Controller::HTTP_OK);
-		}
 	}
 
 }
