@@ -2,7 +2,7 @@
  * @author Daomtthuan
  * @email dao.mt.thuan@gmail.com
  * @create date 2019-08-09 18:27:17
- * @modify date 2019-09-04 00:04:49
+ * @modify date 2019-09-04 03:09:58
  */
 
 $(document).ready(() => {
@@ -53,7 +53,7 @@ $(document).ready(() => {
   name.forEach(element => putInto(element));
 
   if ($("#ngay_dieu_tra").val() == "") {
-    var now = new Date();
+    let now = new Date();
     let value = now.getFullYear() + "-" + (("0" + (now.getMonth() + 1)).slice(-2)) + "-" + (("0" + now.getDate()).slice(-2));
     $("#ngay_dieu_tra").val(value);
     form.ngay_dieu_tra = value;

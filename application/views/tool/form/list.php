@@ -13,9 +13,16 @@
 <script>
   const
     formApi = "<?php echo base_url('ajax/form/get/form') ?>/",
-    listApi = "<?php echo base_url('ajax/form/get/list/unfinished') ?>";
+    statusApi = "<?php echo base_url('ajax/form/Status') ?>/",
+    listApi = "<?php echo base_url('ajax/form/get/list') ?>/";
 </script>
-<div class="col-12 border">
+<div class="col-12 border border-primary p-4 bg-white">
+  <div class="row">
+    <div class="col-lg-4"><button id="unfinished" class="btn-show btn btn-secondary btn-block my-2">Chưa hoàn thành</button></div>
+    <div class="col-lg-4 col-sm-6"><button id="verifying" class="btn-show btn btn-secondary btn-block my-2">Chờ kiểm duyệt</button></div>
+    <div class="col-lg-4 col-sm-6"><button id="verified" class="btn-show btn btn-secondary btn-block my-2">Đã kiểm duyệt</button></div>
+  </div>
+  <hr>
   <div class="table-responsive-lg my-2">
     <table id="list" class="table table-sm table-bordered table-hover" style="width:100%">
       <thead class="thead-light">

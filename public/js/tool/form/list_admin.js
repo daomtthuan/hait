@@ -2,16 +2,8 @@
  * @author Daomtthuan
  * @email dao.mt.thuan@gmail.com
  * @create date 2019-08-09 18:28:32
- * @modify date 2019-09-04 00:04:42
+ * @modify date 2019-09-04 00:04:44
  */
-
-var edit = function (id) {
-  $("#main").html('<div class="d-flex justify-content-center mt-5"><div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only"><h3>Đang tải...</span></div></h3></div>');
-  $.getJSON(formApi + id, form => {
-    sessionStorage.form = form;
-    location = formUrl;
-  });
-}
 
 $(document).ready(function () {
 
@@ -19,7 +11,7 @@ $(document).ready(function () {
   $(".dataTables_length label select").addClass("ml-1");
   $(".dataTables_filter label input").addClass("ml-2");
 
-  var list = $('#list').DataTable({
+  let list = $('#list').DataTable({
     "language": {
       "decimal": "",
       "emptyTable": "Không có dữ liệu",
@@ -46,34 +38,70 @@ $(document).ready(function () {
     }
   });
 
-  $.getJSON(listApi, data => {
-    data.forEach(element => {
-      var tool = "";
-      switch (element.status) {
-        case "unfinished":
-          tool = `
-          <div class="text-center">
-          <a id-form="`+ element.form_id + `" class="btn-finish btn btn-primary btn-sm" href="#"><i class="fas fa-check"></i></a>
-          <a id-form="`+ element.form_id + `" class="btn-edit btn btn-secondary btn-sm" href="#" onclick="edit(` + element.form_id + `)"><i class="fas fa-pen"></i></a>
-          <a id-form="`+ element.form_id + `" class="btn-delete btn btn-danger btn-sm" href="#"><i class="fas fa-trash-alt"></i></a>
-          </div>`;
-          break;
+  function show(type) {
 
-        case "verifying":
-          tool = `<a id="` + element.form_id + `" class="btn-view btn btn-secondary btn-sm" href=""><i class="fas fa-eye"></i></a>`;
-          break;
-        case "verified":
-          tool = `<a id="` + element.form_id + `" class="btn-view btn btn-secondary btn-sm" href=""><i class="fas fa-eye"></i></a>`;
-          break;
-      }
+    if (list.data().count()) list.clear().draw(true);
 
-      list.row.add([
-        element.date_create,
-        element.msba,
-        element.ho_ten_bn,
-        element.nam_sinh,
-        tool
-      ]).draw(true);
-    });
-  }).fail(() => alert("Đã có lỗi xảy ra. Vui lòng liên hệ Bộ phận hỗ trợ để khắc phục"));
+    $.getJSON(listApi + type, data => {
+      data.forEach(element => {
+        let tool = "";
+        switch (element.status) {
+          case "unfinished":
+            tool =
+              `<div class="text-center">
+                <button id-form="`+ element.form_id + `" class="btn-finish btn btn-primary btn-sm my-1""><i class="fas fa-check"></i></button>
+                <button id-form="`+ element.form_id + `" class="btn-edit btn btn-secondary btn-sm my-1"><i class="fas fa-pen"></i></button>
+                <button id-form="`+ element.form_id + `" class="btn-delete btn btn-danger btn-sm my-1"><i class="fas fa-trash-alt"></i></button>
+              </div>`;
+            break;
+
+          case "verifying":
+            tool =
+              `<div class="text-center">
+                <button id-form="` + element.form_id + `" class="btn-view btn btn-secondary btn-sm my-1" href=""><i class="fas fa-eye"></i></button>
+              </div>`;
+            break;
+          case "verified":
+            tool =
+              `<div class="text-center">
+                <button id-form="` + element.form_id + `" class="btn-view btn btn-secondary btn-sm my-1" href=""><i class="fas fa-eye"></i></button>
+              </div>`;
+            break;
+        }
+
+        list.row.add([
+          element.date_create,
+          element.msba,
+          element.ho_ten_bn,
+          element.nam_sinh,
+          tool
+        ]).draw(true);
+      });
+    }).done(() => {
+
+      $(".btn-finish").click(function () {
+        let element = $(this);
+        $.get(statusApi + element.attr("id-form") + "/verifying", () => {
+          list.row(element.closest("tr")).remove().draw(true);
+        }).fail(() => alert("Đã có lỗi xảy ra. Vui lòng liên hệ Bộ phận hỗ trợ để khắc phục"));
+      });
+
+      $(".btn-edit").click(function () {
+        $("#main").html('<div class="d-flex justify-content-center mt-5"><div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only"><h3>Đang tải...</span></div></h3></div>');
+        $.getJSON(formApi + $(this).attr("id-form"), form => {
+          sessionStorage.form = form;
+          location = formUrl;
+        }).fail(() => alert("Đã có lỗi xảy ra. Vui lòng liên hệ Bộ phận hỗ trợ để khắc phục"));
+      });
+
+    }).fail(() => alert("Đã có lỗi xảy ra. Vui lòng liên hệ Bộ phận hỗ trợ để khắc phục"));
+  }
+
+  $(".btn-show").click(function () {
+    $(".btn-show").removeClass("btn-primary").addClass("btn-secondary");
+    $(this).addClass("btn-primary").removeClass("btn-secondary");
+    show($(this).attr("id"));
+  });
+
+  $("#verifying").click();
 });
