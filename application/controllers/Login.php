@@ -16,22 +16,22 @@ class Login extends CI_Controller
 	}
 	public function index()
 	{
+		if($this->ion_auth->logged_in()){
+			$this->check_role();
+		}
+
 		if($this->input->post())
 		{
-			//here we will verify the inputs;
+			print_r($this->input->post());
 			$this->load->library('form_validation');
-			$this->form_validation->set_rules('identity', 'Identity', 'required');
-			$this->form_validation->set_rules('password', 'Password', 'required');
-			$this->form_validation->set_rules('remember','Remember me','integer');
+			$this->form_validation->set_rules('inputUsername', 'inputUsername', 'required');
+			$this->form_validation->set_rules('inputPassword', 'inputPassword', 'required');
 			if($this->form_validation->run()===TRUE)
 			{
-				$remember = (bool) $this->input->post('remember');
-				if ($this->ion_auth->login($this->input->post('identity'), $this->input->post('password'), $remember))
+				$remember =true;
+				if ($this->ion_auth->login($this->input->post('inputUsername'), $this->input->post('inputPassword'), $remember))
 				{
-					if(!$this->ion_auth->is_admin()){
-						redirect(base_url('user'));
-					}
-					redirect(redirect(admin));
+					$this->check_role();
 				}
 				else
 				{
@@ -77,6 +77,13 @@ class Login extends CI_Controller
 			}
 		}
 		*/
+	}
+	public function check_role(){
+		if(!$this->ion_auth->is_admin()){
+			redirect(base_url('user'));
+		} else{
+			redirect(base_url('admin'));
+		}
 	}
 	public function logout()
 	{
