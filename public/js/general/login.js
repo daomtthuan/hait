@@ -20,10 +20,11 @@ $(document).ready(() => {
       success: role => {
         if (role == "admin") {
           role = "user";
-          account.role = role;
-          sessionStorage.account = JSON.stringify(account);
-          location = baseUrl + account.role;
+
         }
+		  account.role = role;
+		  sessionStorage.account = JSON.stringify(account);
+		  location = baseUrl + account.role;
       },
       error: () => alert("Đăng nhập không thành công")
     });

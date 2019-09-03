@@ -21,10 +21,7 @@ class List_Form extends REST_Controller
 	{
 		$this->load->model('Form_model');
 		$data = $this->Form_model->get_form($para);
-		if ($data) {
-			$this->response($data, REST_Controller::HTTP_OK);
-		} else {
-			$this->response(NULL, REST_Controller::HTTP_NOT_FOUND);
+		$this->response($data, REST_Controller::HTTP_OK);
 		}
 	}
 
