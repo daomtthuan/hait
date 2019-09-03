@@ -61,16 +61,4 @@
   <a id="buttonSubmit" class="btn btn-primary mr-2" href="#">Lưu</a>
   <button class="btn btn-secondary" disabled><i class="fas fa-angle-right"></i></button>
 </div>
-<div id="success" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog shadow-lg" role="document">
-    <div class="modal-content">
-      <div class="alert alert-primary m-0" role="alert">
-        <h4 class="alert-heading">Tạo mới biểu mẫu khảo sát thành công!</h4>
-        <a href="<?php echo base_url($role) ?>">Trang chủ</a><br>
-        <hr>
-        <a href="<?php echo base_url($role.'/waiting-send-list') ?>">Danh sách biểu mẫu chờ gửi</a>
-      </div>
-    </div>
-  </div>
-</div>
 <script defer src="<?php echo base_url('public/js/tools/form/step8.js') ?>"></script>
