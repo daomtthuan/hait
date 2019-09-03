@@ -23,28 +23,29 @@ class Update extends REST_Controller
 			//Cap nhat
 			$this->Value_model->delete($form_id);
 			$this->meta->delete($form_id);
+
+			log_message('debug', "Form id:" . $data['form_id']);
+			$this->Value_model->insert($data, $form_id, "all");
+			if(isset($dataObject->vp)){
+				$this->update_nk($dataObject->vp, "vp", $form_id);
+			}
+			if(isset($dataObject->nktn)){
+				$this->update_nk($dataObject->nktn, "nktn", $form_id);
+			}
+			if(isset($dataObject->nkh)){
+				$this->update_nk($dataObject->nkh, "nkh", $form_id);
+			}
+			if(isset($dataObject->nkvm)){
+				$this->update_nk($dataObject->nkvm, "nkvm", $form_id);
+			}
+			if(isset($dataObject->danh_sach_khang_sinh)){
+				$this->update_khangsinh($dataObject->danh_sach_khang_sinh,$form_id);
+			}
+			$this->response(array('status' => 'success'));
 		} else {
 			//Them moi
-			$this->$form_id = $this->Form_model->insert_new_form(1, 'Khoa noi', 1, "CHINH");
+			$this->response(NULL, REST_Controller::HTTP_NOT_FOUND);
 		}
-		log_message('debug', "Form id:" . $data['form_id']);
-		$this->Value_model->insert($data, $form_id, "all");
-		if(isset($dataObject->vp)){
-			$this->update_nk($dataObject->vp, "vp", $form_id);
-		}
-		if(isset($dataObject->nktn)){
-			$this->update_nk($dataObject->nktn, "nktn", $form_id);
-		}
-		if(isset($dataObject->nkh)){
-			$this->update_nk($dataObject->nkh, "nkh", $form_id);
-		}
-		if(isset($dataObject->nkvm)){
-			$this->update_nk($dataObject->nkvm, "nkvm", $form_id);
-		}
-		if(isset($dataObject->danh_sach_khang_sinh)){
-			$this->update_khangsinh($dataObject->danh_sach_khang_sinh,$form_id);
-		}
-		$this->response(array('status' => 'success'));
 	}
 
 	function update_nk($array, $name, $form_id)

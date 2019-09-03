@@ -12,7 +12,6 @@
 </style>
 <script>
   const
-    formUrl = "<?php echo base_url($role.'/form/1') ?>",
     formApi = "<?php echo base_url('ajax/form/get/form') ?>/",
     listApi = "<?php echo base_url('ajax/form/get/list/unfinished') ?>";
 </script>
