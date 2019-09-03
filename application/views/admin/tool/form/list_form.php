@@ -13,8 +13,8 @@
 <script>
   const
     formUrl = "<?php echo base_url($role.'/form/1') ?>",
-    formApi = "<?php echo base_url('ajax/form') ?>/",
-    listApi = "<?php echo base_url('ajax/list-form/verifying') ?>";
+    formApi = "<?php echo base_url('ajax/form/get/form') ?>/",
+    listApi = "<?php echo base_url('ajax/form/get/list/verifying') ?>";
 </script>
 <div class="col-12 border">
   <div class="table-responsive-lg my-2">
