@@ -19,8 +19,8 @@ class Get extends REST_Controller
 				$this->response($data, REST_Controller::HTTP_OK);
 				break;
 
+			// * Chức năng: lấy form thông qua id
 			case 'form':
-				// * Chức năng: lấy form thông qua id
 				$this->load->model('Form_model', 'form');
 				$forms = $this->form->get_json($para);
 				if ($forms) {
