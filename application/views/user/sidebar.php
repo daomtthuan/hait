@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <script>
-  const updateApi = "<?php echo base_url('ajax/update-form')?>";
+  const updateApi = "<?php echo base_url('ajax/form/update')?>";
 </script>
 <li class="nav-item">
   <a class="nav-link" href="<?php echo base_url($role)?>">
