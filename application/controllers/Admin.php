@@ -36,6 +36,22 @@ class Admin extends MY_Controller {
 		$this->load->view('general/layout',$data);
 	}
 
+	public function information()	{
+		$data['role'] = 'admin';
+		$data['page_title'] = 'Thông tin tài khoản';
+		$data['main']= 'general/information';
+
+		$this->load->view('general/layout',$data);
+	}
+
+	public function alert()	{
+		$data['role'] = 'admin';
+		$data['page_title'] = 'Thông báo';
+		$data['main']= 'general/alert';
+
+		$this->load->view('general/layout',$data);
+	}
+
 	public function list_form($status)	{
 		switch ($status) {
 			case 'unfinished': $data['page_title'] = 'Danh sách biểu mẫu - Chưa hoàn thành'; break;

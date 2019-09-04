@@ -102,12 +102,8 @@
 
 						<div class="topbar-divider d-none d-sm-block"></div>
 						<li class="nav-item dropdown no-arrow">
-							<a class="nav-link dropdown-toggle" href="" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<span class="mr-2 d-none d-lg-inline text-gray-600 small text-primary">
-									User
-									<!--
-									<img class="img-profile rounded-circle" src="" alt="">
-									-->
+							<a class="nav-link dropdown-toggle text-primary" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<h3 class="mb-0"><i class="fas fa-user-circle"></i></h3>
 							</a>
 							<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
 								<a class="dropdown-item" href="<?php echo base_url($role.'/information')?>">
@@ -165,11 +161,14 @@
 				<div class="modal-body">Bạn có chắc muốn đăng xuất?</div>
 				<div class="modal-footer">
 					<button class="btn btn-secondary" type="button" data-dismiss="modal">Huỷ bỏ</button>
-					<a class="btn btn-primary" href="<?php echo base_url('login/logout') ?>">Đăng xuất</a>
+					<a class="btn btn-primary" href="<?php echo base_url('logout') ?>">Đăng xuất</a>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script>
+    const accountApi = "<?php echo base_url('ajax/auth/account') ?>";
+  </script>
 </body>
 
 </html>
