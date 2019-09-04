@@ -36,6 +36,11 @@ $(document).ready(() => {
       }
   }
 
+  let account = JSON.parse(localStorage.account);
+  $("#company_name").val(account.company_name);
+  $("#room_name").val(account.room_name);
+  $("#company_name").val(account.company_name);
+
   let name = [
     "ngay_vao_khoa",
     "ngay_vao_vien",

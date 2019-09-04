@@ -83,14 +83,15 @@ $(document).ready(function () {
         let element = $(this);
         $.get(statusApi + element.attr("id-form") + "/verifying", () => {
           list.row(element.closest("tr")).remove().draw(true);
+          alert("Gửi kiểm duyệt thành công");
         }).fail(() => alert("Đã có lỗi xảy ra. Vui lòng liên hệ Bộ phận hỗ trợ để khắc phục"));
       });
 
       $(".btn-edit").click(function () {
         $("#main").html('<div class="d-flex justify-content-center mt-5"><div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only"><h3>Đang tải...</span></div></h3></div>');
-        $.getJSON(formApi + $(this).attr("id-form"), form => {
-          sessionStorage.form = form;
+        $.getJSON(formApi + $(this).attr("id-form"), form => sessionStorage.form = form).done(() => {
           location = formUrl;
+          $("#modalNewForm").modal("hide");
         }).fail(() => alert("Đã có lỗi xảy ra. Vui lòng liên hệ Bộ phận hỗ trợ để khắc phục"));
       });
 

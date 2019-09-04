@@ -18,6 +18,8 @@
 	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha256-fzFFyH01cBVPYzl16KT40wqjhgPtq6FFUB6ckN2+GGw=" crossorigin="anonymous"></script>
 	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
 	<script defer src="<?php echo base_url('public/js/general/theme.min.js') ?>"></script>
+	<script>const accountApi = "<?php echo base_url('ajax/auth/account') ?>"</script>
+	<script defer src="<?php echo base_url('public/js/general/layout.js') ?>"></script>
 </head>
 
 <body id="page-top">
@@ -51,6 +53,7 @@
 
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item dropdown no-arrow mx-1">
+							<!--
 							<a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<i class="fas fa-bell fa-fw"></i>
 								<!--
@@ -61,7 +64,7 @@
 								<h6 class="dropdown-header">
 									Thông báo
 								</h6>
-								<!--
+
 								<a class="dropdown-item d-flex align-items-center" href="#">
 									<div class="mr-3">
 										<div class="icon-circle bg-primary">
@@ -110,25 +113,30 @@
 									<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-500"></i>
 									Thông tin tài khoản
 								</a>
+								<!--
 								<a class="dropdown-item" href="#">
 									<i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-500"></i>
 									Cài đặt
+								-->
 								</a>
-								<a class="dropdown-item" href="#">
+								<a class="dropdown-item" href="#" data-toggle="modal" data-target="#supportModal">
 									<i class="fas fa-phone fa-sm fa-fw mr-2 text-gray-500"></i>
 									Liên hệ hỗ trợ
 								</a>
+								<!--
 								<a class="dropdown-item" href="#">
 									<i class="fas fa-comments fa-sm fa-fw mr-2 text-gray-500"></i>
 									Góp ý phản hồi
 								</a>
+
 								<div class="dropdown-divider"></div>
 								<a id="themeDark" class="dropdown-item cursor-pointer disabled">
 									<i id="toggleTheme" class="fas fa-toggle-off mr-2 text-gray-500"></i>
 									Giao diện tối <small>(sắp có)</small>
 								</a>
+								-->
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">
+								<a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
 									<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-500"></i>
 									Đănng xuất
 								</a>
@@ -152,6 +160,29 @@
 	<a class="scroll-to-top rounded" href="#page-top">
 		<i class="fas fa-angle-up"></i>
 	</a>
+	<div class="modal fade" id="supportModal" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title text-primary" id="modal-label">Hỗ trợ</h5>
+				</div>
+				<div class="modal-body">
+					<h6>Liên hệ với Bộ phận hỗ trợ</h6>
+					<dl>
+						<dt>Điện thoại</dt>
+						<dd>0939908568</dd>
+						<dt>Email</dt>
+						<dd>dao.mt.thuan@gmail.com</dd>
+						<dt>Facebook</dt>
+						<dd><a href="https://www.facebook.com/dao.mt.thuan">https://www.facebook.com/dao.mt.thuan</a></dd>
+					</dl>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-secondary" type="button" data-dismiss="modal">Đóng</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -161,14 +192,11 @@
 				<div class="modal-body">Bạn có chắc muốn đăng xuất?</div>
 				<div class="modal-footer">
 					<button class="btn btn-secondary" type="button" data-dismiss="modal">Huỷ bỏ</button>
-					<a class="btn btn-primary" href="<?php echo base_url('logout') ?>">Đăng xuất</a>
+					<a id="btn-logout" class="btn btn-primary" href="<?php echo base_url('logout') ?>">Đăng xuất</a>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script>
-    const accountApi = "<?php echo base_url('ajax/auth/account') ?>";
-  </script>
 </body>
 
 </html>
