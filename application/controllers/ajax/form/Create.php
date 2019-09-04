@@ -7,10 +7,13 @@ class Create extends REST_Controller
 	{
 		parent::__construct($config);
 		$this->load->model('Form_model');
+		$this->load->model('Room_model');
+        $this->load->library('ion_auth');
 	}
 	function index_get()
 	{
-		$form_id=$this->Form_model->insert_new_form(1,'Khoa noi',1,"CHINH");
+        $user = $this->ion_auth->user()->row();
+		$form_id=$this->Form_model->insert_new_form($user->id,$this->Room_model->get_name($user->company),$user->company,"CHINH");
 		if ($form_id) {
 			$this->response($form_id, REST_Controller::HTTP_OK);
 		} else {

@@ -11,6 +11,7 @@ class Update extends REST_Controller
 		$this->load->model('Form_model');
 		$this->load->model('Meta_link_model', 'meta');
 		$this->load->model('List_ks_model');
+        $this->load->library('ion_auth');
 	}
 
 	function index_post()
@@ -52,7 +53,8 @@ class Update extends REST_Controller
 	{
 		if ($array) {
 			$relates = $this->meta->get_relate($form_id);
-
+            $user = $this->ion_auth->user()->row();
+            $form_id=$this->Form_model->insert_new_form($user->id,$this->Room_model->get_name($user->company),$user->company,$name);
 			$id = $this->Form_model->insert_new_form(1, 'Khoa noi', 1, $name);
 			$this->meta->add($form_id, $id);
 			$this->Value_model->insert($array, $form_id, $name);

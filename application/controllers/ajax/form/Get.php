@@ -8,7 +8,6 @@ class Get extends REST_Controller
 	{
 		parent::__construct($config);
 	}
-
 	function index_get($type, $para)
 	{
 		switch (strtolower($type)) {
