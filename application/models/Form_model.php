@@ -86,7 +86,8 @@ class Form_model extends CI_Model
                     $query = $this->db->query("call pivot_gridview");
                     $data = $query->result_array();
                 } else{
-                    $proc = "CALL pivot_gridview_user(?)";
+                    log_message("debug","get user pivot");
+                    $proc = "CALL pivot_view_user(?)";
                     $data = array('user' => $id);
                     $result = $this->db->query($proc, $data);
                     $data = $result->result_array();
