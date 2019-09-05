@@ -132,6 +132,7 @@ $(document).ready(() => {
   });
 
   tableName.forEach(element => {
+    $("#modal_" + element).remove();
     $("#them_" + element).remove();
     $("#xoa_" + element).remove();
   });
