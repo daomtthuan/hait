@@ -10,7 +10,7 @@ class Get extends REST_Controller
 		$this->load->model('Template_model');
 	}
 
-	function index_get()
+	function index_get($id)
 	{
 		$data=$this->Template_model->get_value($id);
 		if ($data) {

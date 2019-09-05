@@ -12,13 +12,12 @@ class Get extends REST_Controller
 	{
 		switch (strtolower($type)) {
 			case 'list':
-                // * Chức năng: lấy danh sách form thông qua status
 				$this->load->model('Form_model');
 				$data = $this->Form_model->get_form($para);
 				$this->response($data, REST_Controller::HTTP_OK);
 				break;
 			case 'form':
-                // * Chức năng: lấy form thông qua id
+                // Chức năng: lấy form thông qua
 				$this->load->model('Form_model', 'form');
 				$forms = $this->form->get_json($para);
 				if ($forms) {
