@@ -7,10 +7,10 @@
 
 $(document).ready(() => {
 
-  $("input").prop("disabled", true);
-  $("textarea").prop("disabled", true);
+  $("#main input").prop("disabled", true);
+  $("#main textarea").prop("disabled", true);
   $("#buttonSubmit").remove();
-  $("[data-target='#modal_khang_sinh']").remove();
+  $("#main [data-target='#modal_khang_sinh']").remove();
   $('#modal_khang_sinh').remove();
 
   let form = JSON.parse(sessionStorage.form);
