@@ -9,6 +9,7 @@ class Form_model extends CI_Model
 	public function __construct()
 	{
 		parent::__construct();
+        $this->load->library('ion_auth');
 	}
 	/*
 	 * Chức năng: Thêm form mới
@@ -77,18 +78,37 @@ class Form_model extends CI_Model
 	 * */
 	public function get_form($status)
 	{
+        $user = $this->ion_auth->user()->row();
+        $id=$user->id;
 		switch ($status) {
 			case 'all':
-				$query = $this->db->query("call pivot_gridview");
-				$data = $query->result_array();
+			    $data = array();
+                if($this->ion_auth->is_admin()){
+                    $query = $this->db->query("call pivot_gridview");
+                    $data = $query->result_array();
+                } else{
+                    $proc = "CALL pivot_gridview_user(?)";
+                    $data = array('user' => $id);
+                    $result = $this->db->query($proc, $data);
+                    $data = $result->result_array();
+                }
 				return $data;
 				break;
 			default:
-				$get_form = "CALL get_form(?)";
-				$data = array('para' => $status);
-				$result = $this->db->query($get_form, $data);
-				//$query=$this->db->query("call get_form(".$status.")");
-				$data = $result->result_array();
+                $data = array();
+                if($this->ion_auth->is_admin()){
+                    $get_form = "CALL get_form(?)";
+                    $data = array('para' => $status);
+                    $result = $this->db->query($get_form, $data);
+                    //$query=$this->db->query("call get_form(".$status.")");
+                    $data = $result->result_array();
+                } else{
+                    $get_form = "CALL get_form_user(?,?)";
+                    $data = array('para' => $status,'user'=>$id);
+                    $result = $this->db->query($get_form, $data);
+                    //$query=$this->db->query("call get_form(".$status.")");
+                    $data = $result->result_array();
+                }
 				return $data;
 		}
 	}
