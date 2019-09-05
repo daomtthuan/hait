@@ -90,8 +90,16 @@ $(document).ready(function () {
       $(".btn-edit").click(function () {
         $("#main").html('<div class="d-flex justify-content-center mt-5"><div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only"><h3>Đang tải...</span></div></h3></div>');
         $.getJSON(formApi + $(this).attr("id-form"), form => sessionStorage.form = form).done(() => {
-          location = formUrl;
+          location = editUrl;
           $("#modalNewForm").modal("hide");
+        }).fail(() => alert("Đã có lỗi xảy ra. Vui lòng liên hệ Bộ phận hỗ trợ để khắc phục"));
+      });
+
+      $(".btn-delete").click(function () {
+        let element = $(this);
+        $.get(deleteApi + element.attr("id-form"), () => {
+          list.row(element.closest("tr")).remove().draw(true);
+          alert("Xoá thành công");
         }).fail(() => alert("Đã có lỗi xảy ra. Vui lòng liên hệ Bộ phận hỗ trợ để khắc phục"));
       });
 

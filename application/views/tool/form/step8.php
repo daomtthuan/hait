@@ -56,8 +56,8 @@
   </div>
 </form>
 <div class="mt-3 text-center">
-  <a id="buttonStepBack" class="btn btn-dark mr-2" href="<?php echo base_url($role.'/form') ?>"><i class="fas fa-angle-left"></i></a>
-  <a id="buttonSubmit" class="btn btn-primary mr-2" href="#">Lưu</a>
+  <a id="buttonStepBack" class="btn btn-dark mr-2" href="<?php echo base_url($role.'/form'.'/'.$type) ?>"><i class="fas fa-angle-left"></i></a>
+  <a id="buttonSubmit" class="d-none btn btn-primary mr-2" href="#">Lưu</a>
   <button class="btn btn-secondary" disabled><i class="fas fa-angle-right"></i></button>
 </div>
-<script defer src="<?php echo base_url('public/js/tool/form/step8.js') ?>"></script>
+<script defer src="<?php echo base_url('public/js/tool/form/'.$type.'/step8.js') ?>"></script>

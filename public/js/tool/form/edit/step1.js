@@ -1,8 +1,8 @@
 /**
  * @author Daomtthuan
  * @email dao.mt.thuan@gmail.com
- * @create date 2019-08-09 18:28:32
- * @modify date 2019-09-04 00:05:08
+ * @create date 2019-08-09 18:27:17
+ * @modify date 2019-09-04 03:09:58
  */
 
 $(document).ready(() => {
@@ -36,60 +36,45 @@ $(document).ready(() => {
       }
   }
 
+  let account = JSON.parse(localStorage.account);
+  $("#company_name").val(account.company_name);
+  $("#room_name").val(account.room_name);
+  $("#company_name").val(account.company_name);
+
   let name = [
-    "tho_may_xam_nhap",
-    "dat_noi_khi_quan",
-    "mo_khi_quan",
-    "dat_ong_thong_tieu",
-    "dat_ong_thong_tmtt",
-    "duong_truyen_tmnv",
-    "dat_ong_thong_da_day",
-    "ngaybd_tho_may_xam_nhap",
-    "ngaybd_dat_noi_khi_quan",
-    "ngaybd_mo_khi_quan",
-    "ngaybd_dat_ong_thong_tieu",
-    "ngaybd_dat_ong_thong_tmtt",
-    "ngaybd_duong_truyen_tmnv",
-    "ngaybd_dat_ong_thong_da_day",
-    "ngaykt_tho_may_xam_nhap",
-    "ngaykt_dat_noi_khi_quan",
-    "ngaykt_mo_khi_quan",
-    "ngaykt_dat_ong_thong_tieu",
-    "ngaykt_dat_ong_thong_tmtt",
-    "ngaykt_duong_truyen_tmnv",
-    "ngaykt_dat_ong_thong_da_day",
-    "khac_step5"
-  ];
+    "ngay_vao_khoa",
+    "ngay_vao_vien",
+    "msba",
+    "ngay_dieu_tra",
+    "ho_ten_bn",
+    "nam_sinh",
+    "gioi_tinh",
+    "noi_chuyen_toi",
+    "chan_doan_luc_vao",
+    "ngay_ra_vien",
+    "chan_doan_xac_dinh",
+    "nhiem_khuan_luc_vao"];
 
   name.forEach(element => putInto(element));
 
-  $("[type='radio'][value='1']:checked").each(function () {
-    $("." + $(this).attr("name")).fadeIn(200);
-    $("." + $(this).attr("name") + " input").removeAttr("readonly");
-  });
+  if ($("#ngay_dieu_tra").val() == "") {
+    let now = new Date();
+    let value = now.getFullYear() + "-" + (("0" + (now.getMonth() + 1)).slice(-2)) + "-" + (("0" + now.getDate()).slice(-2));
+    $("#ngay_dieu_tra").val(value);
+    form.ngay_dieu_tra = value;
+  }
 
-  $("[type='radio']").on("click", function () {
-    if ($(this).val() == "1") {
-      $("." + $(this).attr("name")).fadeIn(200);
-      $("." + $(this).attr("name") + " input").removeAttr("readonly");
-    }
-    else {
-      $("." + $(this).attr("name")).fadeOut(200);
-      $("." + $(this).attr("name") + " input").attr("readonly", "readonly").val(null);
-    }
-  });
-
-  $("#buttonStepNext, #buttonStepBack").click(function () {
+  $("#buttonStepNext").click(() => {
     name.forEach(element => getPair(element));
     sessionStorage.form = JSON.stringify(form);
 
     $("#main").html('<div class="d-flex justify-content-center mt-5"><div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only"><h3>Đang tải...</span></div></h3></div>');
   });
 
-  $("#buttonSubmit").click(() => {
+  $("#buttonSubmit").removeClass("d-none").click(() => {
 
-		name.forEach(element => getPair(element));
-		sessionStorage.form = JSON.stringify(form);
+    name.forEach(element => getPair(element));
+    sessionStorage.form = JSON.stringify(form);
 
 		let data = form;
 		data.danh_sach_khang_sinh = [];

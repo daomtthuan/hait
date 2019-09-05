@@ -2,7 +2,7 @@
  * @author Daomtthuan
  * @email dao.mt.thuan@gmail.com
  * @create date 2019-08-09 18:28:32
- * @modify date 2019-09-04 00:05:00
+ * @modify date 2019-09-04 00:05:08
  */
 
 $(document).ready(() => {
@@ -37,16 +37,47 @@ $(document).ready(() => {
   }
 
   let name = [
-    "thuoc_ucmd",
-    "thuoc_steroid",
-    "thuoc_loet_da_day",
-    "dieu_tri_hoa_hoc",
-    "dieu_tri_tia_xa",
-    "truyen_mau",
-    "khac_step3"
+    "tho_may_xam_nhap",
+    "dat_noi_khi_quan",
+    "mo_khi_quan",
+    "dat_ong_thong_tieu",
+    "dat_ong_thong_tmtt",
+    "duong_truyen_tmnv",
+    "dat_ong_thong_da_day",
+    "ngaybd_tho_may_xam_nhap",
+    "ngaybd_dat_noi_khi_quan",
+    "ngaybd_mo_khi_quan",
+    "ngaybd_dat_ong_thong_tieu",
+    "ngaybd_dat_ong_thong_tmtt",
+    "ngaybd_duong_truyen_tmnv",
+    "ngaybd_dat_ong_thong_da_day",
+    "ngaykt_tho_may_xam_nhap",
+    "ngaykt_dat_noi_khi_quan",
+    "ngaykt_mo_khi_quan",
+    "ngaykt_dat_ong_thong_tieu",
+    "ngaykt_dat_ong_thong_tmtt",
+    "ngaykt_duong_truyen_tmnv",
+    "ngaykt_dat_ong_thong_da_day",
+    "khac_step5"
   ];
 
   name.forEach(element => putInto(element));
+
+  $("[type='radio'][value='1']:checked").each(function () {
+    $("." + $(this).attr("name")).fadeIn(200);
+    $("." + $(this).attr("name") + " input").removeAttr("readonly");
+  });
+
+  $("[type='radio']").on("click", function () {
+    if ($(this).val() == "1") {
+      $("." + $(this).attr("name")).fadeIn(200);
+      $("." + $(this).attr("name") + " input").removeAttr("readonly");
+    }
+    else {
+      $("." + $(this).attr("name")).fadeOut(200);
+      $("." + $(this).attr("name") + " input").attr("readonly", "readonly").val(null);
+    }
+  });
 
   $("#buttonStepNext, #buttonStepBack").click(function () {
     name.forEach(element => getPair(element));
@@ -55,7 +86,7 @@ $(document).ready(() => {
     $("#main").html('<div class="d-flex justify-content-center mt-5"><div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only"><h3>Đang tải...</span></div></h3></div>');
   });
 
-  $("#buttonSubmit").click(() => {
+  $("#buttonSubmit").removeClass("d-none").click(() => {
 
 		name.forEach(element => getPair(element));
 		sessionStorage.form = JSON.stringify(form);

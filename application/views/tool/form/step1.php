@@ -126,7 +126,7 @@
 </form>
 <div class="mt-3 mb-3 text-center">
   <button class="btn btn-secondary mr-2" disabled><i class="fas fa-angle-left"></i></button>
-  <a id="buttonSubmit" class="btn btn-primary mr-2" href="#">Lưu</a>
-  <a id="buttonStepNext" class="btn btn-dark" href="<?php echo base_url($role.'/form/2') ?>"><i class="fas fa-angle-right"></i></a>
+  <a id="buttonSubmit" class="d-none btn btn-primary mr-2" href="#">Lưu</a>
+  <a id="buttonStepNext" class="btn btn-dark" href="<?php echo base_url($role.'/form'.'/'.$type.'/2') ?>"><i class="fas fa-angle-right"></i></a>
 </div>
-<script defer src="<?php echo base_url('public/js/tool/form/step1.js') ?>"></script>
+<script defer src="<?php echo base_url('public/js/tool/form/'.$type.'/step1.js') ?>"></script>

@@ -163,8 +163,8 @@
   </div>
 </form>
 <div class="mt-3 text-center">
-  <a id="buttonStepBack" class="btn btn-dark mr-2" href="<?php echo base_url($role.'/form/3') ?>"><i class="fas fa-angle-left"></i></a>
-  <a id="buttonSubmit" class="btn btn-primary mr-2" href="#">Lưu</a>
-  <a id="buttonStepNext" class="btn btn-dark" href="<?php echo base_url($role.'/form/5') ?>"><i class="fas fa-angle-right"></i></a>
+  <a id="buttonStepBack" class="btn btn-dark mr-2" href="<?php echo base_url($role.'/form'.'/'.$type.'/3') ?>"><i class="fas fa-angle-left"></i></a>
+  <a id="buttonSubmit" class="d-none btn btn-primary mr-2" href="#">Lưu</a>
+  <a id="buttonStepNext" class="btn btn-dark" href="<?php echo base_url($role.'/form'.'/'.$type.'/5') ?>"><i class="fas fa-angle-right"></i></a>
 </div>
-<script defer src="<?php echo base_url('public/js/tool/form/step4.js') ?>"></script>
+<script defer src="<?php echo base_url('public/js/tool/form/'.$type.'/step4.js') ?>"></script>

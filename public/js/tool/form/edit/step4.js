@@ -59,7 +59,7 @@ $(document).ready(() => {
     $("#main").html('<div class="d-flex justify-content-center mt-5"><div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only"><h3>Đang tải...</span></div></h3></div>');
   });
 
-  $("#buttonSubmit").click(() => {
+  $("#buttonSubmit").removeClass("d-none").click(() => {
 
 		name.forEach(element => getPair(element));
 		sessionStorage.form = JSON.stringify(form);
