@@ -63,6 +63,14 @@ class Admin extends MY_Controller {
 
 		$this->load->view('general/layout',$data);
 	}
+
+	public function list_nkbv()	{
+		$data['role'] = 'admin';
+		$data['page_title'] = 'Danh sách nhiễm khuẩn bệnh viện';
+		$data['main'] = 'tool/analysis/list_nkbv';
+
+		$this->load->view('general/layout',$data);
+	}
 }
 
 ?>

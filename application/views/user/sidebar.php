@@ -12,12 +12,12 @@
   </a>
 </li>
 <hr class="sidebar-divider">
-<div class="sidebar-heading d-none d-md-bock">
+<li class="sidebar-heading d-none d-md-bock">
   Nhiễm khuẩn bệnh viện
-</div>
-<div class="sidebar-heading d-md-none">
+</li>
+<li class="sidebar-heading d-md-none">
   NKBV
-</div>
+</li>
 <li class="nav-item">
   <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
     <i class="fas fa-file"></i>
