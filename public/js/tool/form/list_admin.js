@@ -56,8 +56,7 @@ $(document).ready(function () {
           case "verifying":
             tool =
               `<div class="text-center">
-                <button id-form="`+ element.form_id + `" class="btn-verify btn btn-primary btn-sm my-1""><i class="fas fa-check"></i></button>
-                <button id-form="` + element.form_id + `" class="btn-view btn btn-secondary btn-sm my-1" href=""><i class="fas fa-eye"></i></button>
+                <button id-form="`+ element.form_id + `" class="btn-view btn btn-primary btn-sm my-1""><i class="fas fa-check"></i></button>
               </div>`;
             break;
           case "verified":

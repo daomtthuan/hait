@@ -60,4 +60,20 @@
   <a id="buttonSubmit" class="d-none btn btn-primary mr-2" href="#">Lưu</a>
   <button class="btn btn-secondary" disabled><i class="fas fa-angle-right"></i></button>
 </div>
+<div class="modal fade" id="modalNKBV" tabindex="-1" role="dialog" aria-labelledby="modalNKBVLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-primary" id="modalNKBVLabel">Xác nhận nhiễm khuẩn</h5>
+      </div>
+      <div class="modal-body">
+        <p class="text-danger">Có Nhiễm khuẩn bệnh viện hay không?</p>
+      </div>
+      <div class="modal-footer">
+        <button nkbv="0" type="button" class="btn btn-secondary">Không</button>
+        <button nkbv="1" type="button" class="btn btn-primary">Có</button>
+      </div>
+    </div>
+  </div>
+</div>
 <script defer src="<?php echo base_url('public/js/tool/form/'.$type.'/step8.js') ?>"></script>
