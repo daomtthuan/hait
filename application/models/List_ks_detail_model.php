@@ -11,7 +11,7 @@ class List_ks_detail_model extends CI_Model
 		$this->db->insert('list_ks_detail',$data);
 	}
 	public function get(){
-		$query = $this->db->get('lis_ks_detail');
+		$query = $this->db->get('list_ks_detail');
 		$data=$query->result_array();
 		return $data;
 	}
@@ -22,7 +22,7 @@ class List_ks_detail_model extends CI_Model
 	}
 	public function delete($list_id){
 		$this->db->where('list_id', $list_id);
-		$this->db->delete('lis_ks_detail');
+		$this->db->delete('list_ks_detail');
 	}
 }
 

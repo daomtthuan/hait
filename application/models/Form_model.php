@@ -35,7 +35,6 @@ class Form_model extends CI_Model
 		$lastid = $this->db->insert_id();
 		return $lastid;
 	}
-
 	/*
 	 * Chức năng: Cập nhật trạng thái form
 	 * Tham số: $form_id: mã form

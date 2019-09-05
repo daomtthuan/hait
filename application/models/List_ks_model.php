@@ -29,8 +29,10 @@ class List_ks_model extends CI_Model
         $this->db->where('form_id', $id);
         $query = $this->db->get('list_ks');
         $row = $query->row();
-        $list_id=$row->list_id;
-        return $list_id;
+        if(isset($row->list_id)){
+            $list_id =$row->list_id;
+            return $list_id;
+        }
     }
 }
 
