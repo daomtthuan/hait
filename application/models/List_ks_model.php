@@ -9,6 +9,8 @@ class List_ks_model extends CI_Model
 	}
 	public function add($data){
 		$this->db->insert('list_ks',$data);
+        $lastid = $this->db->insert_id();
+        return $lastid;
 	}
 	public function get(){
 		$query = $this->db->get('list_ks');
@@ -20,11 +22,8 @@ class List_ks_model extends CI_Model
 		$this->db->update('list_ks', $data);
 	}
 	public function delete($id){
-		$this->db->where('list_id', $id);
+		$this->db->where('form_id', $id);
 		$this->db->delete('list_ks');
-	}
-	public function create_list($data){
-
 	}
 }
 
