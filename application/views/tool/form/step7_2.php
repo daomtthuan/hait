@@ -15,8 +15,8 @@
 </style>
 <script>
   let part = JSON.parse(sessionStorage.form).phau_thuat;
-  if (part == null) location = "<?php echo base_url('user/form/6')?>";
-  else if (part == 1) location = "<?php echo base_url('user/form/7-1')?>";
+  if (part == null) location = "<?php echo base_url($role.'/form'.'/'.$type.'/6')?>";
+  else if (part == 1) location = "<?php echo base_url($role.'/form'.'/'.$type.'/7-1')?>";
   const antibiotic_list = "<?php echo base_url('ajax/antibiotic-list') ?>";
 </script>
 <h1 class="h3 mb-4 text-gray-800">PHIẾU GIÁM SÁT NGANG NHIỄM KHUẨN BỆNH VIỆN</h1>
@@ -90,9 +90,9 @@
   </div>
 </form>
 <div class="mt-3 text-center">
-  <a id="buttonStepBack" class="btn btn-dark mr-2" href="<?php echo base_url($role.'/form/6') ?>"><i class="fas fa-angle-left"></i></a>
-  <a id="buttonSubmit" class="btn btn-primary mr-2" href="#">Lưu</a>
-  <a id="buttonStepNext" class="btn btn-dark" href="<?php echo base_url($role.'/form/8') ?>"><i class="fas fa-angle-right"></i></a>
+  <a id="buttonStepBack" class="btn btn-dark mr-2" href="<?php echo base_url($role.'/form'.'/'.$type.'/6') ?>"><i class="fas fa-angle-left"></i></a>
+  <a id="buttonSubmit" class="d-none btn btn-primary mr-2" href="#">Lưu</a>
+  <a id="buttonStepNext" class="btn btn-dark" href="<?php echo base_url($role.'/form'.'/'.$type.'/8') ?>"><i class="fas fa-angle-right"></i></a>
 </div>
 <div class="modal fade" id="modal_khang_sinh_khong_phau_thuat" tabindex="-1" role="dialog" aria-labelledby="title_khang_sinh_khong_phau_thuat" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -133,4 +133,4 @@
 </div>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js" integrity="sha256-t5ZQTZsbQi8NxszC10CseKjJ5QeMw5NINtOXQrESGSU=" crossorigin="anonymous" defer></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/dataTables.bootstrap4.min.js" integrity="sha256-hJ44ymhBmRPJKIaKRf3DSX5uiFEZ9xB/qx8cNbJvIMU=" crossorigin="anonymous" defer></script>
-<script defer src="<?php echo base_url('public/js/tool/form/step7_2.js') ?>"></script>
+<script defer src="<?php echo base_url('public/js/tool/form/'.$type.'/step7_2.js') ?>"></script>

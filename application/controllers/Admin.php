@@ -30,8 +30,9 @@ class Admin extends MY_Controller {
 		}
 
 		$data['role'] = 'user';
-		$data['page_title'] = 'Tạo mới biểu mẫu - Bước '.(($step == '7_1' || $step == '7_2' ) ? '7' : $step);
+		$data['page_title'] = 'Xem biểu mẫu - Bước '.(($step == '7_1' || $step == '7_2' ) ? '7' : $step);
 		$data['main'] = 'tool/form/step'.$step;
+		$data['type'] = 'view';
 
 		$this->load->view('general/layout',$data);
 	}
@@ -52,16 +53,10 @@ class Admin extends MY_Controller {
 		$this->load->view('general/layout',$data);
 	}
 
-	public function list_form($status)	{
-		switch ($status) {
-			case 'unfinished': $data['page_title'] = 'Danh sách biểu mẫu - Chưa hoàn thành'; break;
-			case 'verifying': $data['page_title'] = 'Danh sách biểu mẫu - Chờ kiểm duyệt'; break;
-			case 'verified': $data['page_title'] = 'Danh sách biểu mẫu - Đã kiểm duyệt'; break;
-			default: show_404();
-		}
-
+	public function list_form()	{
 		$data['role'] = 'admin';
-		$data['main'] = 'tool/form/list';
+		$data['page_title'] = 'Danh sách biểu mẫu';
+		$data['main'] = 'tool/form/list_admin';
 
 		$this->load->view('general/layout',$data);
 	}

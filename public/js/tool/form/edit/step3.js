@@ -1,8 +1,8 @@
 /**
  * @author Daomtthuan
  * @email dao.mt.thuan@gmail.com
- * @create date 2019-08-09 18:27:17
- * @modify date 2019-09-04 03:09:58
+ * @create date 2019-08-09 18:28:32
+ * @modify date 2019-09-04 00:05:00
  */
 
 $(document).ready(() => {
@@ -36,45 +36,29 @@ $(document).ready(() => {
       }
   }
 
-  let account = JSON.parse(localStorage.account);
-  $("#company_name").val(account.company_name);
-  $("#room_name").val(account.room_name);
-  $("#company_name").val(account.company_name);
-
   let name = [
-    "ngay_vao_khoa",
-    "ngay_vao_vien",
-    "msba",
-    "ngay_dieu_tra",
-    "ho_ten_bn",
-    "nam_sinh",
-    "gioi_tinh",
-    "noi_chuyen_toi",
-    "chan_doan_luc_vao",
-    "ngay_ra_vien",
-    "chan_doan_xac_dinh",
-    "nhiem_khuan_luc_vao"];
+    "thuoc_ucmd",
+    "thuoc_steroid",
+    "thuoc_loet_da_day",
+    "dieu_tri_hoa_hoc",
+    "dieu_tri_tia_xa",
+    "truyen_mau",
+    "khac_step3"
+  ];
 
   name.forEach(element => putInto(element));
 
-  if ($("#ngay_dieu_tra").val() == "") {
-    let now = new Date();
-    let value = now.getFullYear() + "-" + (("0" + (now.getMonth() + 1)).slice(-2)) + "-" + (("0" + now.getDate()).slice(-2));
-    $("#ngay_dieu_tra").val(value);
-    form.ngay_dieu_tra = value;
-  }
-
-  $("#buttonStepNext").click(() => {
+  $("#buttonStepNext, #buttonStepBack").click(function () {
     name.forEach(element => getPair(element));
     sessionStorage.form = JSON.stringify(form);
 
     $("#main").html('<div class="d-flex justify-content-center mt-5"><div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only"><h3>Đang tải...</span></div></h3></div>');
   });
 
-  $("#buttonSubmit").click(() => {
+  $("#buttonSubmit").removeClass("d-none").click(() => {
 
-    name.forEach(element => getPair(element));
-    sessionStorage.form = JSON.stringify(form);
+		name.forEach(element => getPair(element));
+		sessionStorage.form = JSON.stringify(form);
 
 		let data = form;
 		data.danh_sach_khang_sinh = [];

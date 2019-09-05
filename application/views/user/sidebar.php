@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <script>
   const
-    formUrl = "<?php echo base_url($role.'/form/1') ?>",
+    editUrl = "<?php echo base_url($role.'/form/edit/1') ?>",
     newApi = "<?php echo base_url('ajax/form/create')?>",
     updateApi = "<?php echo base_url('ajax/form/update')?>";
 </script>
@@ -27,7 +27,7 @@
     <div class="bg-white py-2 collapse-inner rounded">
       <h6 class="collapse-header text-gray-700">Nhiễm khuẩn bệnh viện</h6>
       <a id="new-form" class="collapse-item text-dark" href="#" data-toggle="modal" data-target="#modalNewForm"><i class="fas fa-file-medical mr-2"></i>Tạo mới</a>
-      <a id="list-form" class="collapse-item text-dark" href="<?php echo base_url($role.'/list-form/unfinished')?>"><i class="fas fa-clipboard-list mr-2"></i>Danh sách</a>
+      <a id="list-form" class="collapse-item text-dark" href="<?php echo base_url($role.'/list-form')?>"><i class="fas fa-clipboard-list mr-2"></i>Danh sách</a>
     </div>
   </div>
 </li>

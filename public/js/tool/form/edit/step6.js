@@ -30,7 +30,7 @@ $(document).ready(() => {
         "khang_sinh",
         "khang_sinh_khong_phau_thuat",
         "muc_dich_su_dung"
-      ].forEach(element => form[element] = undefined);
+      ].forEach(element => delete form[element]);
     else if (form.phau_thuat == 2)
       [
         "vi_tri_phau_thuat",
@@ -63,14 +63,14 @@ $(document).ready(() => {
         "khang_sinh_truoc_phau_thuat",
         "khang_sinh_du_phong",
         "khang_sinh_sau_phau_thuat"
-      ].forEach(element => form[element] = undefined);
+      ].forEach(element => delete form[element]);
 
     sessionStorage.form = JSON.stringify(form);
 
     $("#main").html('<div class="d-flex justify-content-center mt-5"><div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only"><h3>Đang tải...</span></div></h3></div>');
   });
 
-  $("#buttonSubmit").click(() => {
+  $("#buttonSubmit").removeClass("d-none").click(() => {
     form.phau_thuat = $("[name='phau_thuat']:checked").val();
     if (form.phau_thuat == undefined) delete form.phau_thuat;
 
@@ -79,7 +79,7 @@ $(document).ready(() => {
         "khang_sinh",
         "khang_sinh_khong_phau_thuat",
         "muc_dich_su_dung"
-      ].forEach(element => form[element] = undefined);
+      ].forEach(element => delete form[element]);
     else if (form.phau_thuat == 2)
       [
         "vi_tri_phau_thuat",
@@ -112,7 +112,7 @@ $(document).ready(() => {
         "khang_sinh_truoc_phau_thuat",
         "khang_sinh_du_phong",
         "khang_sinh_sau_phau_thuat"
-      ].forEach(element => form[element] = undefined);
+      ].forEach(element => delete [element]);
 
     sessionStorage.form = JSON.stringify(form);
 

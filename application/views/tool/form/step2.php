@@ -121,9 +121,9 @@
   </div>
 </form>
 <div class="mt-3 text-center">
-  <a id="buttonStepBack" class="btn btn-dark mr-2" href="<?php echo base_url($role.'/form/1') ?>"><i class="fas fa-angle-left"></i></a>
-  <a id="buttonSubmit" class="btn btn-primary mr-2" href="#">Lưu</a>
-  <a id="buttonStepNext" class="btn btn-dark" href="<?php echo base_url($role.'/form/3') ?>"><i class="fas fa-angle-right"></i></a>
+  <a id="buttonStepBack" class="btn btn-dark mr-2" href="<?php echo base_url($role.'/form'.'/'.$type.'/1') ?>"><i class="fas fa-angle-left"></i></a>
+  <a id="buttonSubmit" class="d-none btn btn-primary mr-2" href="#">Lưu</a>
+  <a id="buttonStepNext" class="btn btn-dark" href="<?php echo base_url($role.'/form'.'/'.$type.'/3') ?>"><i class="fas fa-angle-right"></i></a>
 </div>
 <div id="modal_viem_phoi" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="title_viem_phoi" aria-hidden="true">
   <div class="modal-dialog modal-xl" role="document">
@@ -1115,4 +1115,4 @@
 </div>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js" integrity="sha256-t5ZQTZsbQi8NxszC10CseKjJ5QeMw5NINtOXQrESGSU=" crossorigin="anonymous" defer></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/dataTables.bootstrap4.min.js" integrity="sha256-hJ44ymhBmRPJKIaKRf3DSX5uiFEZ9xB/qx8cNbJvIMU=" crossorigin="anonymous" defer></script>
-<script defer src="<?php echo base_url('public/js/tool/form/step2.js') ?>"></script>
+<script defer src="<?php echo base_url('public/js/tool/form/'.$type.'/step2.js') ?>"></script>

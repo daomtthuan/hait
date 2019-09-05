@@ -49,15 +49,14 @@ $(document).ready(function () {
           case "unfinished":
             tool =
               `<div class="text-center">
-                <button id-form="`+ element.form_id + `" class="btn-finish btn btn-primary btn-sm my-1""><i class="fas fa-check"></i></button>
-                <button id-form="`+ element.form_id + `" class="btn-edit btn btn-secondary btn-sm my-1"><i class="fas fa-pen"></i></button>
-                <button id-form="`+ element.form_id + `" class="btn-delete btn btn-danger btn-sm my-1"><i class="fas fa-trash-alt"></i></button>
+                <button id-form="` + element.form_id + `" class="btn-view btn btn-secondary btn-sm my-1" href=""><i class="fas fa-eye"></i></button>
               </div>`;
             break;
 
           case "verifying":
             tool =
               `<div class="text-center">
+                <button id-form="`+ element.form_id + `" class="btn-verify btn btn-primary btn-sm my-1""><i class="fas fa-check"></i></button>
                 <button id-form="` + element.form_id + `" class="btn-view btn btn-secondary btn-sm my-1" href=""><i class="fas fa-eye"></i></button>
               </div>`;
             break;
@@ -79,18 +78,11 @@ $(document).ready(function () {
       });
     }).done(() => {
 
-      $(".btn-finish").click(function () {
+      $(".btn-verify").click(function () {
         let element = $(this);
-        $.get(statusApi + element.attr("id-form") + "/verifying", () => {
+        $.get(statusApi + element.attr("id-form") + "/verified", () => {
           list.row(element.closest("tr")).remove().draw(true);
-        }).fail(() => alert("Đã có lỗi xảy ra. Vui lòng liên hệ Bộ phận hỗ trợ để khắc phục"));
-      });
-
-      $(".btn-edit").click(function () {
-        $("#main").html('<div class="d-flex justify-content-center mt-5"><div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only"><h3>Đang tải...</span></div></h3></div>');
-        $.getJSON(formApi + $(this).attr("id-form"), form => {
-          sessionStorage.form = form;
-          location = formUrl;
+          alert("Duyệt thành công");
         }).fail(() => alert("Đã có lỗi xảy ra. Vui lòng liên hệ Bộ phận hỗ trợ để khắc phục"));
       });
 

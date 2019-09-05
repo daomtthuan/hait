@@ -31,7 +31,7 @@ $(document).ready(() => {
         success: () => {
           delete form.stringJSON;
           sessionStorage.form = JSON.stringify(form);
-          location = formUrl;
+          location = editUrl;
         },
         error: function () {
           alert("Đã có lỗi xảy ra. Vui lòng liên hệ Bộ phận hỗ trợ để khắc phục");
