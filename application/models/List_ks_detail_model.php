@@ -8,7 +8,7 @@ class List_ks_detail_model extends CI_Model
 		parent::__construct();
 	}
 	public function add($data){
-		$this->db->insert('lis_ks_detail',$data);
+		$this->db->insert('list_ks_detail',$data);
 	}
 	public function get(){
 		$query = $this->db->get('lis_ks_detail');
@@ -20,8 +20,7 @@ class List_ks_detail_model extends CI_Model
 		$this->db->where('list_id', $data['list_id']);
 		$this->db->update('lis_ks_detail', $data);
 	}
-	public function delete($id_ks,$list_id){
-		$this->db->where('id_ks', $id_ks);
+	public function delete($list_id){
 		$this->db->where('list_id', $list_id);
 		$this->db->delete('lis_ks_detail');
 	}

@@ -25,6 +25,13 @@ class List_ks_model extends CI_Model
 		$this->db->where('form_id', $id);
 		$this->db->delete('list_ks');
 	}
+    public function search_formid($id){
+        $this->db->where('form_id', $id);
+        $query = $this->db->get('list_ks');
+        $row = $query->row();
+        $list_id=$row->list_id;
+        return $list_id;
+    }
 }
 
 /* End of file .php */
