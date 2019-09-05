@@ -11,7 +11,7 @@ class Delete extends REST_Controller
 	}
 	function index_get($para)
 	{
-		$this->Form_model->delete_form($para);
+		$this->Form_model->delete($para);
 		$this->response("success", REST_Controller::HTTP_OK);
 	}
 }
