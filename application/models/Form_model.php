@@ -80,6 +80,11 @@ class Form_model extends CI_Model
         $user = $this->ion_auth->user()->row();
         $id=$user->id;
 		switch ($status) {
+            case 'nkbv':
+                $query = $this->db->query("call pivot_gridview_nkbv");
+                $data = $query->result_array();
+                return $data;
+                break;
 			case 'all':
 			    $data = array();
                 if($this->ion_auth->is_admin()){
