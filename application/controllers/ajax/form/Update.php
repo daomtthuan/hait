@@ -63,6 +63,9 @@ class Update extends REST_Controller
 	}
 	function update_khangsinh($array,$form_id){
         $this->load->model('List_ks_model');
+        $this->load->model('List_ks_detail_model');
+        $list_id=$this->List_ks_model->search_formid($form_id);
+        $this->List_ks_detail_model->delete($list_id);
         $this->List_ks_model->delete($form_id);
 		$array=(array)$array;
 		if($array){
@@ -72,19 +75,30 @@ class Update extends REST_Controller
                 'type' => 'My ks'
             );
            $list_id= $this->List_ks_model->add($data);
-            $this->load->model('List_ks_detail_model');
             foreach ($array as $value){
-                $value=(object)$value;
-                if(isset($value->ketqua)){
-                    $data = array(
-                        'list_id' => $list_id ,
-                        'ma_ks' => $value->ma_khang_sinh ,
-                        'full_name' =>$value->ten_khang_sinh ,
-                        'ket_qua' => $value->ket_qua,
-                        'ksd' =>$value->ksd
-                    );
-                    $this->List_ks_detail_model->add($data);
+                $data = array(
+                    'list_id' => $list_id ,
+                    'ma_ks' => $value['ma_khang_sinh'],
+                    'full_name' =>$value['ten_khang_sinh'] ,
+                    'ksd' =>$value['ksd']
+                );
+                if(isset($value['ngaybd'])){
+                    $data['ngay_bat_dau']=$value['ngaybd'];
                 }
+                if(isset($value['ngaykt'])){
+                    $data['ngay_ket_thuc']=$value['ngaykt'];
+                }
+                if(isset($value['lieu'])){
+                    $data['lieu_dung']=$value['lieu'];
+                }
+                if(isset($value['lieu1'])){
+                    $data['ngay_bat_dau']=$value['lieu1'];
+                }
+                if(isset($value['lieu2'])){
+                    $data['ngay_ket_thuc']=$value['lieu2'];
+                }
+                $this->List_ks_detail_model->add($data);
+
             }
 		}
 	}
