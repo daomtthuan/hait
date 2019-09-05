@@ -1,5 +1,8 @@
 <script>
   if (sessionStorage.form == null) location = "<?php echo base_url($role) ?>";
+  const
+    statusApi = "<?php echo base_url('ajax/form/Status') ?>/",
+    listUrl = "<?php echo base_url($role.'/list-form') ?>";
 </script>
 <h1 class="h3 mb-4 text-gray-800">PHIẾU GIÁM SÁT NGANG NHIỄM KHUẨN BỆNH VIỆN</h1>
 <hr class="sidebar-divider">
@@ -70,8 +73,8 @@
         <p class="text-danger">Có Nhiễm khuẩn bệnh viện hay không?</p>
       </div>
       <div class="modal-footer">
-        <button nkbv="0" type="button" class="btn btn-secondary">Không</button>
-        <button nkbv="1" type="button" class="btn btn-primary">Có</button>
+        <button nkbv="0" type="button" class="btn-nkbv btn btn-secondary">Không</button>
+        <button nkbv="1" type="button" class="btn-nkbv btn btn-primary">Có</button>
       </div>
     </div>
   </div>

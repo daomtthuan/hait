@@ -13,7 +13,6 @@
 <script>
   const
     formApi = "<?php echo base_url('ajax/form/get/form') ?>/",
-    statusApi = "<?php echo base_url('ajax/form/Status') ?>/",
     viewUrl = "<?php echo base_url('admin/form/view/1') ?>",
     listApi = "<?php echo base_url('ajax/form/get/list') ?>/";
 </script>

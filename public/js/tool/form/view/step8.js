@@ -38,42 +38,46 @@ $(document).ready(() => {
 	}
 
 
-	$("#buttonSubmit").removeClass("d-none").click(() => {
+	$("#buttonSubmit").removeClass("d-none").click(() => $("#modalNKBV").modal("show"));
 
-		$("#modalNKBV").modal("show");
-		// name.forEach(element => getPair(element));
-		// sessionStorage.form = JSON.stringify(form);
+	$(".btn-nkbv").click(function () {
+		form.nhiem_khuan_benh_vien = $(this).attr("nkbv");
+		sessionStorage.form = JSON.stringify(form);
 
-		// let data = form;
-		// data.danh_sach_khang_sinh = [];
-		// data.stringJSON = JSON.stringify(form);
-		// [
-		// 	"vp_khang_sinh",
-		// 	"nktn_khang_sinh",
-		// 	"nkh_khang_sinh",
-		// 	"nkvm_khang_sinh",
-		// 	"khang_sinh_truoc_phau_thuat",
-		// 	"khang_sinh_du_phong",
-		// 	"khang_sinh_sau_phau_thuat",
-		// 	"khang_sinh_khong_phau_thuat"
-		// ].forEach(list => {
-		// 	if (data.hasOwnProperty(list)) {
-		// 		data[list].forEach(element => data.danh_sach_khang_sinh.push(element));
-		// 		delete data[list];
-		// 	}
-		// });
+		let data = form;
+		data.danh_sach_khang_sinh = [];
+		data.stringJSON = JSON.stringify(form);
+		[
+			"vp_khang_sinh",
+			"nktn_khang_sinh",
+			"nkh_khang_sinh",
+			"nkvm_khang_sinh",
+			"khang_sinh_truoc_phau_thuat",
+			"khang_sinh_du_phong",
+			"khang_sinh_sau_phau_thuat",
+			"khang_sinh_khong_phau_thuat"
+		].forEach(list => {
+			if (data.hasOwnProperty(list)) {
+				data[list].forEach(element => data.danh_sach_khang_sinh.push(element));
+				delete data[list];
+			}
+		});
 
-		// $.ajax({
-		// 	url: updateApi,
-		// 	type: "post",
-		// 	data: JSON.stringify(data),
-		// 	contentType: "application/json;charset=UTF-8",
-		// 	success: function () {
-		// 		alert("Lưu thành công");
-		// 	},
-		// 	error: function () {
-		// 		alert("Đã có lỗi xảy ra. Vui lòng liên hệ Bộ phận hỗ trợ để khắc phục");
-		// 	}
-		// });
+		$.ajax({
+			url: updateApi,
+			type: "post",
+			data: JSON.stringify(data),
+			contentType: "application/json;charset=UTF-8",
+			success: () => {
+				$.get(statusApi + form.form_id + "/verified",
+					() => {
+						alert("Kiểm duyệt thành công");
+						location = listUrl;
+					}
+				).fail(() => alert("Đã có lỗi xảy ra. Vui lòng liên hệ Bộ phận hỗ trợ để khắc phục"))
+			},
+			error: () =>
+				alert("Đã có lỗi xảy ra. Vui lòng liên hệ Bộ phận hỗ trợ để khắc phục")
+		});
 	});
 });
