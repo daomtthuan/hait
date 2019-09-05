@@ -20,7 +20,18 @@ class Update extends REST_Controller
 		$data = $this->post(NULL, TRUE);
 		$dataObject = (Object)$data;
 		$form_id = $dataObject->form_id;
+		if(isset($dataObject->nhiem_khuan_benh_vien)){
+            $infection = $dataObject->nhiem_khuan_benh_vien;
+            $user = $this->ion_auth->user()->row();
+            $update_data=array(
+                "form_id"=>$form_id,
+                "infection" =>$infection,
+                "user_check" =>$user->id
+            );
+            $this->Form_model->update($update_data);
+        }
 		$this->Form_model->update_content($form_id, $dataObject->stringJSON);
+        $relates = $this->meta->get_relate($form_id);
 		if ($form_id) {
 			//Cap nhat
 			$this->Value_model->delete($form_id);
@@ -64,8 +75,10 @@ class Update extends REST_Controller
 	function update_khangsinh($array,$form_id){
         $this->load->model('List_ks_model');
         $this->load->model('List_ks_detail_model');
-        $list_id=$this->List_ks_model->search_formid($form_id);
-        $this->List_ks_detail_model->delete($list_id);
+        if($this->List_ks_model->search_formid($form_id)){
+            $list_id=$this->List_ks_model->search_formid($form_id);
+            $this->List_ks_detail_model->delete($list_id);
+        }
         $this->List_ks_model->delete($form_id);
 		$array=(array)$array;
 		if($array){
