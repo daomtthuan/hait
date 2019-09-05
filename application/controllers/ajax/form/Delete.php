@@ -9,7 +9,6 @@ class Delete extends REST_Controller
 		parent::__construct($config);
 		$this->load->model('Form_model');
 	}
-
 	function index_get($para)
 	{
 		$this->Form_model->delete_form($para);

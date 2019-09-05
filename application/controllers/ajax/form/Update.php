@@ -11,6 +11,8 @@ class Update extends REST_Controller
 		$this->load->model('Form_model');
 		$this->load->model('Meta_link_model', 'meta');
 		$this->load->model('List_ks_model');
+        $this->load->library('ion_auth');
+        $this->load->model('Room_model');
 	}
 
 	function index_post()
@@ -52,16 +54,38 @@ class Update extends REST_Controller
 	{
 		if ($array) {
 			$relates = $this->meta->get_relate($form_id);
-
+            $user = $this->ion_auth->user()->row();
+            $form_id=$this->Form_model->insert_new_form($user->id,$this->Room_model->get_name($user->company),$user->company,$name);
 			$id = $this->Form_model->insert_new_form(1, 'Khoa noi', 1, $name);
 			$this->meta->add($form_id, $id);
 			$this->Value_model->insert($array, $form_id, $name);
 		}
 	}
 	function update_khangsinh($array,$form_id){
+        $this->load->model('List_ks_model');
+        $this->List_ks_model->delete($form_id);
 		$array=(array)$array;
 		if($array){
-
+            $data = array(
+                'form_id' => $form_id ,
+                'description' => $form_id ,
+                'type' => 'My ks'
+            );
+           $list_id= $this->List_ks_model->add($data);
+            $this->load->model('List_ks_detail_model');
+            foreach ($array as $value){
+                $value=(object)$value;
+                if(isset($value->ketqua)){
+                    $data = array(
+                        'list_id' => $list_id ,
+                        'ma_ks' => $value->ma_khang_sinh ,
+                        'full_name' =>$value->ten_khang_sinh ,
+                        'ket_qua' => $value->ket_qua,
+                        'ksd' =>$value->ksd
+                    );
+                    $this->List_ks_detail_model->add($data);
+                }
+            }
 		}
 	}
 
