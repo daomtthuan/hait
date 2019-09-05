@@ -7,8 +7,8 @@
 
 $(document).ready(() => {
 
-  $("input").prop("disabled", true);
-  $("textarea").prop("disabled", true);
+  $("#main input").prop("disabled", true);
+  $("#main textarea").prop("disabled", true);
   $("#buttonSubmit").remove();
 
   let form = JSON.parse(sessionStorage.form);

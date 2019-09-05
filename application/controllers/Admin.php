@@ -21,7 +21,10 @@ class Admin extends MY_Controller {
 		$this->load->view('general/layout',$data);
 	}
 
-	public function form($step = '1')	{
+	public function form($type, $step = '1')	{
+
+		if(strtolower($type) != 'view') show_404();
+
 		switch ($step) {
 			case '1': case '2': case '3': case '4': case '5': case '6': case '8': break;
 			case '7-1':	$step = '7_1'; break;
@@ -29,7 +32,7 @@ class Admin extends MY_Controller {
 			default: show_404();
 		}
 
-		$data['role'] = 'user';
+		$data['role'] = 'admin';
 		$data['page_title'] = 'Xem biểu mẫu - Bước '.(($step == '7_1' || $step == '7_2' ) ? '7' : $step);
 		$data['main'] = 'tool/form/step'.$step;
 		$data['type'] = 'view';

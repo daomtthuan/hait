@@ -7,7 +7,7 @@
 
 $(document).ready(() => {
 
-  $("input").prop("disabled", true);
+  $("#main input").prop("disabled", true);
   $("#buttonSubmit").remove();
   $("#xoa_khang_sinh_khong_phau_thuat").remove();
   $("#them_khang_sinh_khong_phau_thuat").remove();

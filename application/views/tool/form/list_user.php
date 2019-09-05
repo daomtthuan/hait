@@ -15,6 +15,7 @@
     formApi = "<?php echo base_url('ajax/form/get/form') ?>/",
     statusApi = "<?php echo base_url('ajax/form/Status') ?>/",
     listApi = "<?php echo base_url('ajax/form/get/list') ?>/",
+    viewUrl = "<?php echo base_url('user/form/view/1') ?>",
     deleteApi = "<?php echo base_url('ajax/form/delete') ?>/";
 </script>
 <div class="col-12 border border-primary p-4 bg-white">
