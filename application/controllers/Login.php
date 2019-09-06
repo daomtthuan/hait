@@ -22,6 +22,7 @@ class Login extends CI_Controller
 
 		if($this->input->post())
 		{
+			print_r($this->input->post());
 			$this->load->library('form_validation');
 			$this->form_validation->set_rules('inputUsername', 'inputUsername', 'required');
 			$this->form_validation->set_rules('inputPassword', 'inputPassword', 'required');
