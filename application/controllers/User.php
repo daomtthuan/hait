@@ -13,27 +13,27 @@ class User extends MY_Controller {
 	}
 
 	public function index()	{
-		$data['role'] = 'user';
+		$data['role'] = 'User';
 		$data['page_title'] = 'Trang chủ';
-		$data['main']= 'user/home';
+		$data['main']= 'User/Home';
 
-		$this->load->view('general/layout',$data);
+		$this->load->view('general/Layout',$data);
 	}
 
 	public function information()	{
-		$data['role'] = 'user';
+		$data['role'] = 'User';
 		$data['page_title'] = 'Thông tin tài khoản';
-		$data['main']= 'general/information';
+		$data['main']= 'general/Information';
 
-		$this->load->view('general/layout',$data);
+		$this->load->view('general/Layout',$data);
 	}
 
 	public function alert()	{
-		$data['role'] = 'user';
+		$data['role'] = 'User';
 		$data['page_title'] = 'Thông báo';
-		$data['main']= 'general/alert';
+		$data['main']= 'general/Alert';
 
-		$this->load->view('general/layout',$data);
+		$this->load->view('general/Layout',$data);
 	}
 
 	public function form($type, $step = '1')	{
@@ -50,19 +50,19 @@ class User extends MY_Controller {
 			default: show_404();
 		}
 
-		$data['role'] = 'user';
+		$data['role'] = 'User';
 		$data['main'] = 'tool/form/step'.$step;
 		$data['type'] = strtolower($type);
 
-		$this->load->view('general/layout',$data);
+		$this->load->view('general/Layout',$data);
 	}
 
 	public function list_form()	{
-		$data['role'] = 'user';
+		$data['role'] = 'User';
 		$data['page_title'] = 'Danh sách biểu mẫu';
-		$data['main'] = 'tool/form/list_user';
+		$data['main'] = 'tool/form/List_User';
 
-		$this->load->view('general/layout',$data);
+		$this->load->view('general/Layout',$data);
 	}
 
 }

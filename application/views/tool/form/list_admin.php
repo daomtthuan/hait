@@ -12,9 +12,9 @@
 </style>
 <script>
   const
-    formApi = "<?php echo base_url('ajax/form/get/form') ?>/",
-    viewUrl = "<?php echo base_url('admin/form/view/1') ?>",
-    listApi = "<?php echo base_url('ajax/form/get/list') ?>/";
+    formApi = "<?php echo base_url('ajax/form/Get/form') ?>/",
+    viewUrl = "<?php echo base_url('Admin/form/view/1') ?>",
+    listApi = "<?php echo base_url('ajax/form/Get/list') ?>/";
 </script>
 <div class="col-12 border border-primary p-4 bg-white">
   <div class="row">
@@ -41,4 +41,4 @@
 </div>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js" integrity="sha256-t5ZQTZsbQi8NxszC10CseKjJ5QeMw5NINtOXQrESGSU=" crossorigin="anonymous" defer></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/dataTables.bootstrap4.min.js" integrity="sha256-hJ44ymhBmRPJKIaKRf3DSX5uiFEZ9xB/qx8cNbJvIMU=" crossorigin="anonymous" defer></script>
-<script defer src="<?php echo base_url('public/js/tool/form/list_'.$role.'.js') ?>"></script>
+<script defer src="<?php echo base_url('public/js/tool/form/List_'.$role.'.js') ?>"></script>

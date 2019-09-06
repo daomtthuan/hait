@@ -2,8 +2,8 @@
 <script>
   const
     editUrl = "<?php echo base_url($role.'/form/edit/1') ?>",
-    newApi = "<?php echo base_url('ajax/form/create')?>",
-    updateApi = "<?php echo base_url('ajax/form/update')?>";
+    newApi = "<?php echo base_url('ajax/form/Create')?>",
+    updateApi = "<?php echo base_url('ajax/form/Update')?>";
 </script>
 <li class="nav-item">
   <a class="nav-link" href="<?php echo base_url($role)?>">
@@ -73,4 +73,4 @@
     </form>
   </div>
 </div>
-<script defer src="<?php echo base_url('public/js/user/sidebar.js') ?>"></script>
+<script defer src="<?php echo base_url('public/js/user/Sidebar.js') ?>"></script>

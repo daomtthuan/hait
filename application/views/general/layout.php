@@ -10,16 +10,16 @@
 	<meta name="description" content="HAIT - Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link type="image/x-icon" rel="shortcut icon" href="<?php echo base_url('./public/img/logoicon.ico') ?>">
+	<link type="image/x-icon" rel="shortcut icon" href="<?php echo base_url('./public/img/Logoicon.ico') ?>">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous">
-	<link href="<?php echo base_url('public/css/theme.min.css') ?>" rel="stylesheet">
-	<link href="<?php echo base_url('public/css/custom.css') ?>" rel="stylesheet">
+	<link href="<?php echo base_url('public/css/Theme.min.css') ?>" rel="stylesheet">
+	<link href="<?php echo base_url('public/css/Custom.css') ?>" rel="stylesheet">
 	<script defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha256-fzFFyH01cBVPYzl16KT40wqjhgPtq6FFUB6ckN2+GGw=" crossorigin="anonymous"></script>
 	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
-	<script defer src="<?php echo base_url('public/js/general/theme.min.js') ?>"></script>
-	<script>const accountApi = "<?php echo base_url('ajax/auth/account') ?>"</script>
-	<script defer src="<?php echo base_url('public/js/general/layout.js') ?>"></script>
+	<script defer src="<?php echo base_url('public/js/general/Theme.min.js') ?>"></script>
+	<script>const accountApi = "<?php echo base_url('ajax/auth/Account') ?>"</script>
+	<script defer src="<?php echo base_url('public/js/general/Layout.js') ?>"></script>
 </head>
 
 <body id="page-top">
@@ -28,7 +28,7 @@
 			<li>
 				<div class="sidebar-brand d-flex align-items-center justify-content-center">
 					<div class="sidebar-brand-icon">
-						<img id="logo" src="<?php echo base_url('public/img/logo.png') ?>" width="33" height="33" alt="">
+						<img id="logo" src="<?php echo base_url('public/img/Logo.png') ?>" width="33" height="33" alt="">
 					</div>
 					<div class="sidebar-brand-text mx-3 cursor-default">HAIT</div>
 				</div>
@@ -151,7 +151,7 @@
 			<footer class="sticky-footer bg-white mt-3">
 				<div class="container my-auto">
 					<div class="copyright text-center my-auto">
-						<h6><small>Phiên bản 1.0.0</small><br><span>Copyright &copy; Daomtthuan 2019</span></h6>
+						<h6><small>Phiên bản 1.0.0</small></h6>
 					</div>
 				</div>
 			</footer>
@@ -192,7 +192,7 @@
 				<div class="modal-body">Bạn có chắc muốn đăng xuất?</div>
 				<div class="modal-footer">
 					<button class="btn btn-secondary" type="button" data-dismiss="modal">Huỷ bỏ</button>
-					<a id="btn-logout" class="btn btn-primary" href="<?php echo base_url('logout') ?>">Đăng xuất</a>
+					<a id="btn-logout" class="btn btn-primary" href="<?php echo base_url('Logout') ?>">Đăng xuất</a>
 				</div>
 			</div>
 		</div>
