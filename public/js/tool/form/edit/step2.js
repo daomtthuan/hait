@@ -56,7 +56,7 @@ $(document).ready(() => {
     }
   }
 
-  $.getJSON(antibiotic_list, data => data.forEach(element => $(".select_khang_sinh").append("<option class='d-none' value='" + element.ma_khang_sinh + "'>" + element.ten_khang_sinh + "</option>")));
+  $.getJSON(antibioticApi, data => data.forEach(element => $(".select_khang_sinh").append("<option class='d-none' value='" + element.ma_khang_sinh + "'>" + element.ten_khang_sinh + "</option>")));
 
   $(".dataTables_wrapper>:first-child>div").attr("class", "col-sm-12 col-lg-6");
   $(".dataTables_length label select").addClass("ml-1");

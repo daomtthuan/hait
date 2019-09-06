@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <script>
   if (sessionStorage.form == null) location = "<?php echo base_url($role) ?>";
-  const antibiotic_list = "<?php echo base_url('ajax/antibiotic-list') ?>";
+  const antibioticApi = "<?php echo base_url('ajax/antibiotic') ?>";
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/dataTables.bootstrap4.min.css" integrity="sha256-F+DaKAClQut87heMIC6oThARMuWne8+WzxIDT7jXuPA=" crossorigin="anonymous">
 <style>

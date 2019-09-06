@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 require(APPPATH . '/libraries/REST_Controller.php');
-class Antibiotic_List extends REST_Controller
+class Antibiotic extends REST_Controller
 {
 
 	public function __construct($config = 'rest')
