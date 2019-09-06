@@ -32,12 +32,11 @@ class Update extends REST_Controller
         }
 		$this->Form_model->update_content($form_id, $dataObject->stringJSON);
         $relates = $this->meta->get_relate($form_id);
+        log_message('debug', "Form id:" . $data['form_id']);
 		if ($form_id) {
 			//Cap nhat
 			$this->Value_model->delete($form_id);
 			$this->meta->delete($form_id);
-
-			log_message('debug', "Form id:" . $data['form_id']);
 			$this->Value_model->insert($data, $form_id, "all");
 			if(isset($dataObject->vp)){
 				$this->update_nk($dataObject->vp, "vp", $form_id);
