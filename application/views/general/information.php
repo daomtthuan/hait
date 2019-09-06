@@ -39,4 +39,4 @@
     </div>
   </form>
 </div>
-<script defer src="<?php echo base_url('public/js/general/Information.js') ?>"></script>
+<script defer src="<?php echo base_url('public/js/general/information.js') ?>"></script>

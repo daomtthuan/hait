@@ -14,11 +14,11 @@ class Admin extends MY_Controller {
 
 	public function index()
 	{
-		$data['role'] = 'Admin';
+		$data['role'] = 'admin';
 		$data['page_title'] = 'Trang chủ';
-		$data['main']= 'Admin/Home';
+		$data['main']= 'admin/home';
 
-		$this->load->view('general/Layout',$data);
+		$this->load->view('general/layout',$data);
 	}
 
 	public function form($type, $step = '1')	{
@@ -32,44 +32,44 @@ class Admin extends MY_Controller {
 			default: show_404();
 		}
 
-		$data['role'] = 'Admin';
+		$data['role'] = 'admin';
 		$data['page_title'] = 'Xem biểu mẫu - Bước '.(($step == '7_1' || $step == '7_2' ) ? '7' : $step);
-		$data['main'] = 'tool/form/Step'.$step;
+		$data['main'] = 'tool/form/step'.$step;
 		$data['type'] = 'view';
 
-		$this->load->view('general/Layout',$data);
+		$this->load->view('general/layout',$data);
 	}
 
 	public function information()	{
-		$data['role'] = 'Admin';
+		$data['role'] = 'admin';
 		$data['page_title'] = 'Thông tin tài khoản';
-		$data['main']= 'general/Information';
+		$data['main']= 'general/information';
 
-		$this->load->view('general/Layout',$data);
+		$this->load->view('general/layout',$data);
 	}
 
 	public function alert()	{
-		$data['role'] = 'Admin';
+		$data['role'] = 'admin';
 		$data['page_title'] = 'Thông báo';
-		$data['main']= 'general/Alert';
+		$data['main']= 'general/alert';
 
-		$this->load->view('general/Layout',$data);
+		$this->load->view('general/layout',$data);
 	}
 
 	public function list_form()	{
-		$data['role'] = 'Admin';
+		$data['role'] = 'admin';
 		$data['page_title'] = 'Danh sách biểu mẫu';
-		$data['main'] = 'tool/form/List_Admin';
+		$data['main'] = 'tool/form/list_admin';
 
-		$this->load->view('general/Layout',$data);
+		$this->load->view('general/layout',$data);
 	}
 
 	public function list_nkbv()	{
-		$data['role'] = 'Admin';
+		$data['role'] = 'admin';
 		$data['page_title'] = 'Danh sách nhiễm khuẩn bệnh viện';
-		$data['main'] = 'tool/analysis/List_Nkbv';
+		$data['main'] = 'tool/analysis/list_nkbv';
 
-		$this->load->view('general/Layout',$data);
+		$this->load->view('general/layout',$data);
 	}
 }
 

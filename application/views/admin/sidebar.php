@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <script>
-  const updateApi = "<?php echo base_url('ajax/Form/Update')?>";
+  const updateApi = "<?php echo base_url('ajax/form/update')?>";
 </script>
 <li class="nav-item">
   <a class="nav-link" href="<?php echo base_url($role)?>">
@@ -42,4 +42,4 @@
     </div>
   </div>
 </li>
-<script defer src="<?php echo base_url('public/js/admin/Sidebar.js') ?>"></script>
+<script defer src="<?php echo base_url('public/js/admin/sidebar.js') ?>"></script>

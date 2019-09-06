@@ -111,4 +111,4 @@
   <a id="buttonSubmit" class="d-none btn btn-primary mr-2" href="#">Lưu</a>
   <a id="buttonStepNext" class="btn btn-dark" href="<?php echo base_url($role.'/form'.'/'.$type.'/4') ?>"><i class="fas fa-angle-right"></i></a>
 </div>
-<script defer src="<?php echo base_url('public/js/tool/form/'.$type.'/Step3.js') ?>"></script>
+<script defer src="<?php echo base_url('public/js/tool/form/'.$type.'/step3.js') ?>"></script>

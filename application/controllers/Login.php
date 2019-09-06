@@ -11,7 +11,7 @@ class Login extends CI_Controller
 		if (!$this->ion_auth->logged_in())
 		{
 			//redirect them to the login page
-			$this->load->view('general/Login');
+			$this->load->view('general/login');
 		}
 	}
 	public function index()
@@ -41,9 +41,9 @@ class Login extends CI_Controller
 	}
 	public function check_role(){
 		if(!$this->ion_auth->is_admin()){
-			redirect(base_url('User'));
+			redirect(base_url('user'));
 		} else{
-			redirect(base_url('Admin'));
+			redirect(base_url('admin'));
 		}
 	}
 	public function logout()

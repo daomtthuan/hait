@@ -79,4 +79,4 @@
     </div>
   </div>
 </div>
-<script defer src="<?php echo base_url('public/js/tool/form/'.$type.'/Step8.js') ?>"></script>
+<script defer src="<?php echo base_url('public/js/tool/form/'.$type.'/step8.js') ?>"></script>

@@ -17,7 +17,7 @@
   let part = JSON.parse(sessionStorage.form).phau_thuat;
   if (part == null) location = "<?php echo base_url($role.'/form'.'/'.$type.'/6')?>";
   else if (part == 2) location = "<?php echo base_url($role.'/form'.'/'.$type.'/7-2')?>";
-  const antibiotic_list = "<?php echo base_url('ajax/Antibiotic-List') ?>";
+  const antibiotic_list = "<?php echo base_url('ajax/antibiotic-list') ?>";
 </script>
 <h1 class="h3 mb-4 text-gray-800">PHIẾU GIÁM SÁT NGANG NHIỄM KHUẨN BỆNH VIỆN</h1>
 <hr class="sidebar-divider">
@@ -596,4 +596,4 @@
 </div>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js" integrity="sha256-t5ZQTZsbQi8NxszC10CseKjJ5QeMw5NINtOXQrESGSU=" crossorigin="anonymous" defer></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/dataTables.bootstrap4.min.js" integrity="sha256-hJ44ymhBmRPJKIaKRf3DSX5uiFEZ9xB/qx8cNbJvIMU=" crossorigin="anonymous" defer></script>
-<script defer src="<?php echo base_url('public/js/tool/form/'.$type.'/Step7_1.js') ?>"></script>
+<script defer src="<?php echo base_url('public/js/tool/form/'.$type.'/step7_1.js') ?>"></script>

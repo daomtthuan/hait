@@ -9,10 +9,10 @@
   <meta name="description" content="HAIT - Hệ Thống Quản Lý Giám Sát Nhiễm Khuẩn Bệnh Viện">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link type="image/x-icon" rel="shortcut icon" href="<?php echo base_url('./public/img/Logoicon.ico') ?>">
+  <link type="image/x-icon" rel="shortcut icon" href="<?php echo base_url('./public/img/logoicon.ico') ?>">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous">
-  <link href="<?php echo base_url('public/css/Theme.min.css') ?>" rel="stylesheet">
-  <link href="<?php echo base_url('public/css/Login.min.css') ?>" rel="stylesheet">
+  <link href="<?php echo base_url('public/css/theme.min.css') ?>" rel="stylesheet">
+  <link href="<?php echo base_url('public/css/login.min.css') ?>" rel="stylesheet">
 </head>
 
 <body>
@@ -26,8 +26,9 @@
             <div class="row">
               <div class="col-md-9 col-lg-8 mx-auto">
                 <div class="text-center mb-5">
+                  <h6>Copyright &copy; Daomtthuan 2019</h6>
                   <h4 class="text-primary font-weight-bold mb-0">HAIT</h4>
-                  <img src="<?php echo base_url('public/img/Logo_Color.png') ?>" alt="">
+                  <img src="<?php echo base_url('public/img/logo_color.png') ?>" alt="">
                   <h4>
                     <small>HỆ THỐNG QUẢN LÝ</small><br>
                     <span class="text-primary mb-0">GIÁM SÁT NHIỄM KHUẨN BỆNH VIỆN</span>

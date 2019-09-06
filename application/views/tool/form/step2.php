@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <script>
   if (sessionStorage.form == null) location = "<?php echo base_url($role) ?>";
-  const antibiotic_list = "<?php echo base_url('ajax/Antibiotic-List') ?>";
+  const antibiotic_list = "<?php echo base_url('ajax/antibiotic-list') ?>";
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/dataTables.bootstrap4.min.css" integrity="sha256-F+DaKAClQut87heMIC6oThARMuWne8+WzxIDT7jXuPA=" crossorigin="anonymous">
 <style>
@@ -1115,4 +1115,4 @@
 </div>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js" integrity="sha256-t5ZQTZsbQi8NxszC10CseKjJ5QeMw5NINtOXQrESGSU=" crossorigin="anonymous" defer></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/dataTables.bootstrap4.min.js" integrity="sha256-hJ44ymhBmRPJKIaKRf3DSX5uiFEZ9xB/qx8cNbJvIMU=" crossorigin="anonymous" defer></script>
-<script defer src="<?php echo base_url('public/js/tool/form/'.$type.'/Step2.js') ?>"></script>
+<script defer src="<?php echo base_url('public/js/tool/form/'.$type.'/step2.js') ?>"></script>
