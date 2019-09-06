@@ -170,11 +170,20 @@
 					<h6>Liên hệ với Bộ phận hỗ trợ</h6>
 					<dl>
 						<dt>Điện thoại</dt>
-						<dd>0939908568</dd>
+						<dd>
+							<a href="tel:+84939908568">+84 939908568</a><br>
+							<a href="tel:+84973267408">+84 973267408</a><br>
+						</dd>
 						<dt>Email</dt>
-						<dd>dao.mt.thuan@gmail.com</dd>
+						<dd>
+							<a href="mailto:dao.mt.thuan@gmail.com">dao.mt.thuan@gmail.com</a><br>
+							<a href="mailto:npduytech@gmail.com">npduytech@gmail.com</a><br>
+						</dd>
 						<dt>Facebook</dt>
-						<dd><a href="https://www.facebook.com/dao.mt.thuan">https://www.facebook.com/dao.mt.thuan</a></dd>
+						<dd>
+							<a href="https://www.facebook.com/dao.mt.thuan">https://www.facebook.com/dao.mt.thuan</a><br>
+							<a href="https://www.facebook.com/duy.zuize">https://www.facebook.com/duy.zuize</a><br>
+						</dd>
 					</dl>
 				</div>
 				<div class="modal-footer">
