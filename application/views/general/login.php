@@ -26,7 +26,6 @@
             <div class="row">
               <div class="col-md-9 col-lg-8 mx-auto">
                 <div class="text-center mb-5">
-                  <h6>Copyright &copy; Daomtthuan 2019</h6>
                   <h4 class="text-primary font-weight-bold mb-0">HAIT</h4>
                   <img src="<?php echo base_url('public/img/logo_color.png') ?>" alt="">
                   <h4>
