@@ -1,9 +1,9 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+<?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 <script>
-  const updateApi = "<?php echo base_url('ajax/form/update')?>";
+  const updateApi = "<?php echo base_url('ajax/form/update') ?>";
 </script>
 <li class="nav-item">
-  <a class="nav-link" href="<?php echo base_url($role)?>">
+  <a class="nav-link" href="<?php echo base_url($role) ?>">
     <i class="fas fa-home"></i>
     <span>Trang chủ</span>
   </a>
@@ -26,7 +26,7 @@
   <div id="collapseForm" class="collapse" aria-labelledby="headingTwo" data-parent="#sidebar">
     <div class="bg-white py-2 collapse-inner rounded">
       <h6 class="collapse-header text-gray-700">Nhiễm khuẩn bệnh viện</h6>
-      <a id="list-form" class="collapse-item text-dark" href="<?php echo base_url($role.'/list-form')?>"><i class="fas fa-clipboard-list mr-2"></i>Danh sách</a>
+      <a id="list-form" class="collapse-item text-dark" href="<?php echo base_url($role . '/list-form') ?>"><i class="fas fa-clipboard-list mr-2"></i>Danh sách</a>
     </div>
   </div>
 </li>
@@ -37,8 +37,10 @@
   </a>
   <div id="collapseAnalysis" class="collapse" aria-labelledby="headingTwo" data-parent="#sidebar">
     <div class="bg-white py-2 collapse-inner rounded">
-      <h6 class="collapse-header text-gray-700">Nhiễm khuẩn bệnh viện</h6>
-      <a id="list-form" class="collapse-item text-dark" href="<?php echo base_url($role.'/list-nkbv')?>"><i class="fas fa-clipboard-list mr-2"></i>Danh sách</a>
+      <h6 class="collapse-header text-gray-700">Danh sách</h6>
+      <a id="list-form" class="collapse-item text-dark" href="<?php echo base_url($role . '/list-bieumau') ?>"><i class="fas fa-clipboard-list mr-2"></i>Biểu mẫu NKBV</a>
+      <a id="list-form" class="collapse-item text-dark" href="<?php echo base_url($role . '/list-bn-dieutra-nkbv') ?>"><i class="fas fa-clipboard-list mr-2"></i>Điều tra bn n.khuẩn</a>
+      <a id="list-form" class="collapse-item text-dark" href="<?php echo base_url($role . '/baocao-sobo-kq-giamsat') ?>"><i class="fas fa-clipboard-list mr-2"></i>Báo cáo sơ bộ</a>
     </div>
   </div>
 </li>

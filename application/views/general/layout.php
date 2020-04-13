@@ -1,4 +1,4 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+<?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,11 +14,13 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous">
 	<link href="<?php echo base_url('public/css/theme.min.css') ?>" rel="stylesheet">
 	<link href="<?php echo base_url('public/css/custom.css') ?>" rel="stylesheet">
-	<script defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha256-fzFFyH01cBVPYzl16KT40wqjhgPtq6FFUB6ckN2+GGw=" crossorigin="anonymous"></script>
-	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha256-fzFFyH01cBVPYzl16KT40wqjhgPtq6FFUB6ckN2+GGw=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
 	<script defer src="<?php echo base_url('public/js/general/theme.min.js') ?>"></script>
-	<script>const accountApi = "<?php echo base_url('ajax/auth/account') ?>"</script>
+	<script>
+		const accountApi = "<?php echo base_url('ajax/auth/account') ?>"
+	</script>
 	<script defer src="<?php echo base_url('public/js/general/layout.js') ?>"></script>
 </head>
 
@@ -34,7 +36,7 @@
 				</div>
 			</li>
 			<hr class="sidebar-divider my-0">
-			<?php $this->load->view($role.'/sidebar') ?>
+			<?php $this->load->view($role . '/sidebar') ?>
 			<hr class="sidebar-divider d-none d-md-block">
 			<div class="text-center d-none d-md-inline">
 				<button class="rounded-circle border-0" id="sidebarToggle"></button>
@@ -99,7 +101,7 @@
 									</div>
 								</a>
 								-->
-								<a class="dropdown-item text-center small text-gray-500" href="<?php echo base_url($role.'/alert')?>">Xem tất cả</a>
+								<a class="dropdown-item text-center small text-gray-500" href="<?php echo base_url($role . '/alert') ?>">Xem tất cả</a>
 							</div>
 						</li>
 
@@ -109,7 +111,7 @@
 								<h3 class="mb-0"><i class="fas fa-user-circle"></i></h3>
 							</a>
 							<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-								<a class="dropdown-item" href="<?php echo base_url($role.'/information')?>">
+								<a class="dropdown-item" href="<?php echo base_url($role . '/information') ?>">
 									<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-500"></i>
 									Thông tin tài khoản
 								</a>
